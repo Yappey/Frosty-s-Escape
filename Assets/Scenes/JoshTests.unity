@@ -126,6 +126,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 198852, guid: c3081b15f641c6d4891563bbb61d4471, type: 2}
+      propertyPath: m_TagString
+      value: Frosty
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c3081b15f641c6d4891563bbb61d4471, type: 2}
   m_IsPrefabParent: 0
@@ -294,7 +298,7 @@ GameObject:
   - 114: {fileID: 1064571516}
   m_Layer: 0
   m_Name: Sphere 1
-  m_TagString: Untagged
+  m_TagString: Frosty
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
