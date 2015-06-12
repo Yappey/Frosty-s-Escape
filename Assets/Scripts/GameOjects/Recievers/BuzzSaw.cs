@@ -28,7 +28,11 @@ public class BuzzSaw : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(Vector3.forward, _fRotationSpeed);
+        if (_vWayPointArray[_iCurrWayPoint] == _vWayPointArray[1])
+            transform.Rotate(Vector3.forward, _fRotationSpeed); 
+        else
+            transform.Rotate(Vector3.forward, -_fRotationSpeed); 
+
 
         _fTimerToMove += Time.deltaTime;
 
