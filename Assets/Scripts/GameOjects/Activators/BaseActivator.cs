@@ -9,7 +9,7 @@ public class BaseActivator : MonoBehaviour {
 	public int state = 0;
 
 
-	public void Activate()
+	public virtual void Activate()
 	{
 
 	}
