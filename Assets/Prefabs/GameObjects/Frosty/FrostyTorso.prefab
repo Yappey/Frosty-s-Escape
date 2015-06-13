@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 484756}
   - 58: {fileID: 5885992}
+  - 114: {fileID: 11408260}
   m_Layer: 0
   m_Name: Grounder
   m_TagString: Untagged
@@ -143,7 +144,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 129620}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: -.0500000007}
   serializedVersion: 2
@@ -161,6 +162,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: .379999995
+--- !u!114 &11408260
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a3579ff50a5144ba0efce213ea024a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11414730
 MonoBehaviour:
   m_ObjectHideFlags: 1
