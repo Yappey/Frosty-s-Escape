@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Spikes : MonoBehaviour {
+public class Spikes : BaseReceiver {
 
 	private Vector3 originalPosition;
 	private Vector3 tarPosition;
@@ -15,18 +15,16 @@ public class Spikes : MonoBehaviour {
 	void Start () {
 		originalPosition = gameObject.transform.position;
 		tarPosition = new Vector3 (originalPosition.x, originalPosition.y - spaceToMoveDown, originalPosition.z);
-		//Make sure spikes always start activated
 	}
 
 
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (Input.GetKeyDown (KeyCode.DownArrow)) { //Replace with !activated
+		if (state == 0)
 			down = true;
-		}
 
-		if (Input.GetKeyDown (KeyCode.UpArrow)) //Replace with activated
+		if (state == 1) 
 		{
 			up = true;
 			down = false;
@@ -44,5 +42,14 @@ public class Spikes : MonoBehaviour {
 				gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, originalPosition, speed * Time.deltaTime);
 			}
 		}
+	}
+
+	public override void Process() {
+		if (state == 0) 
+			state = 1;
+		
+		else 
+			state = 0;
+
 	}
 }
