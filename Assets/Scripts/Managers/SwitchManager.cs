@@ -6,6 +6,7 @@ public class SwitchManager : MonoBehaviour {
 	public bool HeadSelected;
 	public bool TorsoSelected;
 	public bool BaseSelected;
+    public float attachdistance;
 
 	// Prefab GameObjects
 	public GameObject Frosty;
@@ -22,6 +23,7 @@ public class SwitchManager : MonoBehaviour {
 	public GameObject Active;
 
 
+
 	// Use this for initialization
 	void Start () {
 	
@@ -30,6 +32,9 @@ public class SwitchManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetButtonDown("Head")) {
+            HeadSelected = true;
+            TorsoSelected = false;
+            BaseSelected = false;
 			Active.GetComponent<Frostyehavior>().isActive = false;
 			Head.GetComponent<Frostyehavior>().isActive = true;
             Active = Head;
@@ -84,70 +89,138 @@ public class SwitchManager : MonoBehaviour {
 	
 	void HeadDetach()
 	{
-		GameObject clone = Instantiate (prehead);
-		Frosty.GetComponent<Frostyehavior> ().headAttached = false;
-		clone.GetComponent<Frostyehavior> ().isActive = true;
-		Frosty.GetComponent<Frostyehavior> ().isActive = false;
+        if (Head.GetComponent<Frostyehavior>().torsoAttached)
+        {
+            Active.GetComponent<Frostyehavior>().isActive = false;
+            Head = Instantiate(prehead);
+            Head.GetComponent<Frostyehavior>().isActive = true;
+            Head.transform.position = Active.transform.position;
+            if (Torso.GetComponent<Frostyehavior>().baseAttached)
+            {
+                Destroy(Torso);
+                Base = Torso = Instantiate(pretorsobase);
+                Base.transform.position = Head.transform.position;
+            }
+            else
+            {
+                Destroy(Torso);
+                Torso = Instantiate(pretorso);
+                Torso.transform.position = Head.transform.position;
+            }
+            Active = Head; 
+        } 
 	}
 	
 	void TorsoDetach()
 	{
-		GameObject clone = Instantiate (pretorso);
-		Frosty.GetComponent<Frostyehavior> ().torsoAttached = false;
-		if (Frosty.GetComponent<Frostyehavior> ().headAttached) {
-			GameObject clone2 = Instantiate(prehead);
-			Frosty.GetComponent<Frostyehavior>().headAttached = false;
-			clone2.GetComponent<Frostyehavior>().isActive = false;
-		}
-		clone.GetComponent<Frostyehavior> ().isActive = true;
-		Frosty.GetComponent<Frostyehavior> ().isActive = false;
+        if (Torso.GetComponent<Frostyehavior>().headAttached || Torso.GetComponent<Frostyehavior>().baseAttached)
+        {
+            Torso = Instantiate(pretorso);
+            Torso.transform.position = Active.transform.position;
+            Torso.GetComponent<Frostyehavior>().isActive = true;
+            Active.GetComponent<Frostyehavior>().isActive = false;
+            if (Active.GetComponent<Frostyehavior>().headAttached && Active.GetComponent<Frostyehavior>().baseAttached)
+            {
+                Destroy(Head);
+                Head = Instantiate(prehead);
+                Base = Instantiate(prebase);
+                Head.GetComponent<Frostyehavior>().isActive = false;
+                Base.GetComponent<Frostyehavior>().isActive = false;
+                Head.transform.position = Base.transform.position = Torso.transform.position;
+            }
+            else if (Active.GetComponent<Frostyehavior>().headAttached)
+            {
+                Destroy(Head);
+                Head = Instantiate(prehead);
+                Head.GetComponent<Frostyehavior>().isActive = false;
+                Head.transform.position = Torso.transform.position;
+            }
+            else
+            {
+                Destroy(Base);
+                Base = Instantiate(prebase);
+                Base.GetComponent<Frostyehavior>().isActive = false;
+                Base.transform.position = Torso.transform.position;
+            }
+            Active = Torso; 
+        }
 	}
 
 	void BaseDetach()
 	{
-		GameObject clone = Instantiate (prebase);
-		Frosty.GetComponent<Frostyehavior> ().baseAttached = false;
-		clone.GetComponent<Frostyehavior> ().isActive = true;
-		Frosty.GetComponent<Frostyehavior> ().isActive = false;
+        if (Base.GetComponent<Frostyehavior>().torsoAttached)
+        {
+            Base = Instantiate(prebase);
+            Base.GetComponent<Frostyehavior>().isActive = true;
+            Base.transform.position = Active.transform.position;
+            Active.GetComponent<Frostyehavior>().isActive = false;
+            if(Active.GetComponent<Frostyehavior>().headAttached)
+            {
+                Destroy(Head);
+                Head = Torso = Instantiate(preheadtorso);
+                Head.transform.position = Torso.transform.position = Base.transform.position;
+            }
+            else
+            {
+                Destroy(Torso);
+                Torso = Instantiate(pretorso);
+                Torso.transform.position = Base.transform.position;
+            }
+            Active = Base; 
+        }
 	}
 
     void HeadAttach()
     {
-        if(Head.GetComponent<Frostyehavior>().torsoAttached && !Head.GetComponent<Frostyehavior>().baseAttached)
+        if(Head.GetComponent<Frostyehavior>().torsoAttached && 
+            !Head.GetComponent<Frostyehavior>().baseAttached && 
+            (Head.transform.position - Base.transform.position).magnitude < attachdistance)
         {
-            Destroy(Head);
             Destroy(Base);
             Active = Instantiate(Frosty);
+            Active.transform.position = Head.transform.position;
+            Destroy(Head);
             Head = Active;
             Torso = Active;
             Base = Active;
             Active.GetComponent<Frostyehavior>().isActive = true;
         }
-        else if(!Head.GetComponent<Frostyehavior>().torsoAttached && Torso.GetComponent<Frostyehavior>().baseAttached)
+        else if (!Head.GetComponent<Frostyehavior>().torsoAttached && 
+            Torso.GetComponent<Frostyehavior>().baseAttached &&
+            (Head.transform.position - Torso.transform.position).magnitude < attachdistance)
         {
-            Destroy(Head);
             Destroy(Base);
             Active = Instantiate(Frosty);
+            Active.transform.position = Head.transform.position;
+            Destroy(Head);
             Head = Active;
             Torso = Active;
             Base = Active;
             Active.GetComponent<Frostyehavior>().isActive = true;
         }
-        else if(!Head.GetComponent<Frostyehavior>().torsoAttached && !Torso.GetComponent<Frostyehavior>().baseAttached)
+        else if (!Head.GetComponent<Frostyehavior>().torsoAttached && 
+            (Head.transform.position - Torso.transform.position).magnitude < attachdistance &&
+            !Torso.GetComponent<Frostyehavior>().baseAttached && 
+            !((Head.transform.position - Base.transform.position).magnitude < attachdistance))
         {
-            Destroy(Head);
             Destroy(Torso);
             Active = Instantiate(preheadtorso);
+            Active.transform.position = Head.transform.position;
+            Destroy(Head);
             Head = Active;
             Torso = Active;
             Active.GetComponent<Frostyehavior>().isActive = true;
         }
-        else if (!Head.GetComponent<Frostyehavior>().torsoAttached && !Torso.GetComponent<Frostyehavior>().baseAttached)
+        else if (!Head.GetComponent<Frostyehavior>().torsoAttached && 
+            (Head.transform.position - Torso.transform.position).magnitude < attachdistance && 
+            !Torso.GetComponent<Frostyehavior>().baseAttached && 
+            (Head.transform.position - Base.transform.position).magnitude < attachdistance)
         {
-            Destroy(Head);
             Destroy(Base);
             Destroy(Torso);
             Active = Instantiate(Frosty);
+            Active.transform.position = Head.transform.position;
+            Destroy(Head);
             Head = Active;
             Torso = Active;
             Base = Active;
@@ -157,41 +230,56 @@ public class SwitchManager : MonoBehaviour {
 
     void TorsoAttach()
     {
-        if (Torso.GetComponent<Frostyehavior>().headAttached && !Torso.GetComponent<Frostyehavior>().baseAttached)
+        if (Torso.GetComponent<Frostyehavior>().headAttached && 
+            !Torso.GetComponent<Frostyehavior>().baseAttached && 
+            (Head.transform.position - Base.transform.position).magnitude < attachdistance)
         {
-            Destroy(Torso);
             Destroy(Base);
             Active = Instantiate(Frosty);
+            Active.transform.position = Torso.transform.position;
+            Destroy(Torso);
             Head = Active;
             Torso = Active;
             Base = Active;
             Active.GetComponent<Frostyehavior>().isActive = true;
         }
-        else if (!Torso.GetComponent<Frostyehavior>().torsoAttached && !Torso.GetComponent<Frostyehavior>().baseAttached /* head attach*/)
+        else if (!Torso.GetComponent<Frostyehavior>().headAttached && 
+            (Torso.transform.position - Head.transform.position).magnitude < attachdistance && 
+            !Torso.GetComponent<Frostyehavior>().baseAttached && 
+            (Torso.transform.position - Base.transform.position).magnitude < attachdistance/* both attach*/)
         {
             Destroy(Head);
+            Destroy(Base);
+            Active = Instantiate(Frosty);
+            Active.transform.position = Torso.transform.position;
             Destroy(Torso);
+            Head = Active;
+            Torso = Active;
+            Base = Active;
+            Active.GetComponent<Frostyehavior>().isActive = true;
+        }
+        else if (!Torso.GetComponent<Frostyehavior>().headAttached && 
+            (Head.transform.position - Torso.transform.position).magnitude < attachdistance && 
+            !Torso.GetComponent<Frostyehavior>().baseAttached && 
+            !((Torso.transform.position - Base.transform.position).magnitude < attachdistance/* head attach*/))
+        {
+            Destroy(Head);
             Active = Instantiate(preheadtorso);
+            Active.transform.position = Torso.transform.position;
+            Destroy(Torso);
             Head = Active;
             Torso = Active;
             Active.GetComponent<Frostyehavior>().isActive = true;
         }
-        else if (!Torso.GetComponent<Frostyehavior>().torsoAttached && !Torso.GetComponent<Frostyehavior>().baseAttached /* base attach*/)
+        else if (!Torso.GetComponent<Frostyehavior>().headAttached && 
+            !((Head.transform.position - Torso.transform.position).magnitude < attachdistance) && 
+            !Torso.GetComponent<Frostyehavior>().baseAttached && 
+            (Torso.transform.position - Base.transform.position).magnitude < attachdistance /* base attach*/)
         {
-            Destroy(Torso);
             Destroy(Base);
             Active = Instantiate(pretorsobase);
-            Torso = Active;
-            Base = Active;
-            Active.GetComponent<Frostyehavior>().isActive = true;
-        }
-        else if (!Torso.GetComponent<Frostyehavior>().torsoAttached && !Torso.GetComponent<Frostyehavior>().baseAttached /* both attach*/)
-        {
-            Destroy(Head);
+            Active.transform.position = Torso.transform.position;
             Destroy(Torso);
-            Destroy(Base);
-            Active = Instantiate(pretorsobase);
-            Head = Active;
             Torso = Active;
             Base = Active;
             Active.GetComponent<Frostyehavior>().isActive = true;
@@ -200,31 +288,41 @@ public class SwitchManager : MonoBehaviour {
 
     void BaseAttach()
     {
-        if (Base.GetComponent<Frostyehavior>().torsoAttached && !Base.GetComponent<Frostyehavior>().headAttached)
+        if (Base.GetComponent<Frostyehavior>().torsoAttached && 
+            (Head.transform.position - Base.transform.position).magnitude < attachdistance && 
+            !Base.GetComponent<Frostyehavior>().headAttached)
         {
             Destroy(Head);
-            Destroy(Base);
             Active = Instantiate(Frosty);
+            Active.transform.position = Base.transform.position;
+            Destroy(Base);
             Head = Active;
             Torso = Active;
             Base = Active;
             Active.GetComponent<Frostyehavior>().isActive = true;
         }
-        else if (!Base.GetComponent<Frostyehavior>().torsoAttached && Torso.GetComponent<Frostyehavior>().headAttached)
+        else if (!Base.GetComponent<Frostyehavior>().torsoAttached &&
+            (Torso.transform.position - Base.transform.position).magnitude < attachdistance && 
+            Torso.GetComponent<Frostyehavior>().headAttached)
         {
             Destroy(Head);
-            Destroy(Base);
             Active = Instantiate(Frosty);
+            Active.transform.position = Base.transform.position;
+            Destroy(Base);
             Head = Active;
             Torso = Active;
             Base = Active;
             Active.GetComponent<Frostyehavior>().isActive = true;
         }
-        else if (!Base.GetComponent<Frostyehavior>().torsoAttached && !Torso.GetComponent<Frostyehavior>().headAttached)
+        else if (!Base.GetComponent<Frostyehavior>().torsoAttached &&
+            (Torso.transform.position - Base.transform.position).magnitude < attachdistance &&
+            !Torso.GetComponent<Frostyehavior>().headAttached && 
+            !((Head.transform.position - Base.transform.position).magnitude < attachdistance))
         {
-            Destroy(Base);
             Destroy(Torso);
             Active = Instantiate(pretorsobase);
+            Active.transform.position = Base.transform.position;
+            Destroy(Base);
             Base = Active;
             Torso = Active;
             Active.GetComponent<Frostyehavior>().isActive = true;
@@ -233,8 +331,9 @@ public class SwitchManager : MonoBehaviour {
         {
             Destroy(Head);
             Destroy(Torso);
-            Destroy(Base);
             Active = Instantiate(Frosty);
+            Active.transform.position = Base.transform.position;
+            Destroy(Base);
             Head = Active;
             Torso = Active;
             Base = Active;
