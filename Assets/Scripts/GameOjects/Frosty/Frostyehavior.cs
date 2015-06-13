@@ -50,6 +50,11 @@ public class Frostyehavior : MonoBehaviour {
 				rgbd.AddForce(new Vector2(0.0f, jumpVelocity), ForceMode2D.Impulse);
 				isGrounded = false;
 			}
+
+			if (Input.GetButtonDown("Activate"))
+			{
+				ActivateNearest();
+			}
 		}
 		else
 		{
@@ -79,8 +84,8 @@ public class Frostyehavior : MonoBehaviour {
 					closest = act;
 				}
 			}
-
-			closest.GetComponent<BaseActivator>().Activate();
+			if (closest != null)
+				closest.GetComponent<BaseActivator>().Activate();
 		}
 	}
 
