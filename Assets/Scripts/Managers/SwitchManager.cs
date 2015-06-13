@@ -23,6 +23,9 @@ public class SwitchManager : MonoBehaviour {
 	public GameObject Active;
 
 
+    //test ints
+    public int test = 0;
+
 
 	// Use this for initialization
 	void Start () {
@@ -355,11 +358,12 @@ public class SwitchManager : MonoBehaviour {
         }
     }
 
-	GameObject FindActive()
+	public GameObject FindActive()
 	{
 		GameObject[] frostys = GameObject.FindGameObjectsWithTag ("Frosty");
 		foreach(GameObject frosty in frostys)
 		{
+            test++;
 			if(frosty.GetComponent<Frostyehavior>().isActive)
 				return frosty;
 		}
