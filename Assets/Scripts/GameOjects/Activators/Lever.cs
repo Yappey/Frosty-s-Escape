@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Lever : MonoBehaviour {
+public class Lever : BaseActivator {
 
 	// Use this for initialization
 	void Start () {
@@ -12,4 +12,15 @@ public class Lever : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    public void Actiate()
+    {
+        foreach(BaseReceiver receiver in receivers)
+        {
+            state++;
+            if (state > 1)
+                state = 0;
+            receiver.Process();
+        }
+    }
 }

@@ -245,8 +245,22 @@ public class SwitchManager : MonoBehaviour {
         }
         else if (!Torso.GetComponent<Frostyehavior>().headAttached && 
             (Torso.transform.position - Head.transform.position).magnitude < attachdistance && 
-            !Torso.GetComponent<Frostyehavior>().baseAttached && 
-            (Torso.transform.position - Base.transform.position).magnitude < attachdistance/* both attach*/)
+            Torso.GetComponent<Frostyehavior>().baseAttached)
+        {
+            Destroy(Head);
+            Destroy(Base);
+            Active = Instantiate(Frosty);
+            Active.transform.position = Torso.transform.position;
+            Destroy(Torso);
+            Head = Active;
+            Torso = Active;
+            Base = Active;
+            Active.GetComponent<Frostyehavior>().isActive = true;
+        }
+        else if (!Torso.GetComponent<Frostyehavior>().headAttached &&
+        (Torso.transform.position - Head.transform.position).magnitude < attachdistance &&
+        !Torso.GetComponent<Frostyehavior>().baseAttached &&
+        (Torso.transform.position - Base.transform.position).magnitude < attachdistance/* both attach*/)
         {
             Destroy(Head);
             Destroy(Base);
