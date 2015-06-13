@@ -8,6 +8,8 @@ public class Frostyehavior : MonoBehaviour {
 	public float jumpVelocity = 10;
 	public float snowballVelocity = 10;
 
+	public float activateRange = 1.0f;
+
 	public bool isActive;
 	public bool isGrounded;
 
@@ -62,7 +64,23 @@ public class Frostyehavior : MonoBehaviour {
 	{
 		if (isActive)
 		{
+			GameObject[] activators = GameObject.FindGameObjectsWithTag("Activator");
+			GameObject closest = null;
+			float minDistance = activateRange;
+			foreach(GameObject act in activators)
+			{
+				Vector3 myPos = new Vector3(transform.position.x, transform.position.y);
+				Vector3 actPos = new Vector3(act.transform.position.x, act.transform.position.y);
+				float distance = (myPos - actPos).magnitude;
 
+				if (distance < minDistance)
+				{
+					minDistance = distance;
+					closest = act;
+				}
+			}
+
+			closest.GetComponent<BaseActivator>().Activate();
 		}
 	}
 
