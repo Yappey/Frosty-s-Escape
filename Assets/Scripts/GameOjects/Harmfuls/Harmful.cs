@@ -11,6 +11,7 @@ public class Harmful : MonoBehaviour {
 
 	public bool isActive = true;
 	public bool instaKill = false;
+	public bool isCrushing = false;
 	public bool destroyOnCollision = true;
 	public float damage = 1.0f;
 	public float lifetime = 2.0f;
@@ -54,6 +55,13 @@ public class Harmful : MonoBehaviour {
 	{
 		if (col.gameObject.tag == "Frosty")
 		{
+			if (instaKill)
+			{
+				if ((isCrushing && col.gameObject.GetComponent<Frostyehavior>().isGrounded) || !isCrushing)
+				{
+					// TODO: INSTAKILL
+				}
+			}
 			// TODO: Hurt Frosty.  Dependent on Health Bar.
 
 
