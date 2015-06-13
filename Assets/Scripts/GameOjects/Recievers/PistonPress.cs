@@ -17,12 +17,12 @@ public class PistonPress : BaseReceiver {
 	// Use this for initialization
 	void Start () {
 		dropTimer = dropTime;
-		upPosition = gameObject.transform.position; 
+		upPosition = gameObject.transform.position;
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		//if (state) {
+		if (state == 1) {
 			if (gameObject.transform.position == upPosition) {
 				grounded = false;
 			}
@@ -44,14 +44,14 @@ public class PistonPress : BaseReceiver {
 					gameObject.transform.position = Vector3.MoveTowards (gameObject.transform.position, upPosition, raiseSpeed * Time.deltaTime);
 				}
 			}
-		//}
+		}
 
-		//else {
+		else {
 			gameObject.transform.position = Vector3.MoveTowards (gameObject.transform.position, upPosition, raiseSpeed * Time.deltaTime);
 			grounded = false;
 			dropTimer = 0;
 			gameObject.GetComponent<Rigidbody2D> ().gravityScale = 0;
-		//}
+		}
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
@@ -62,13 +62,12 @@ public class PistonPress : BaseReceiver {
 		}
 	}
 
-	//public override void Process() {
-		//if (state == 0) {
-		//	state = 1
-		//}
-
-		//if (state == 1) {
-		//	state = 0
-		//}
-	//}
+	public override void Process() {
+		if (state == 0) 
+			state = 1;
+		
+		else 
+			state = 0;
+		
+	}
 }

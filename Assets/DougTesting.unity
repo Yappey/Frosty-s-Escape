@@ -87,33 +87,6 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &42439124
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 42439125}
-  m_Layer: 0
-  m_Name: Ceiling
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &42439125
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 42439124}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.84000003, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1917981956}
-  m_RootOrder: 2
 --- !u!1 &187552774
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,6 +183,7 @@ GameObject:
   - 212: {fileID: 308355603}
   - 61: {fileID: 308355602}
   - 114: {fileID: 308355601}
+  - 114: {fileID: 308355605}
   m_Layer: 0
   m_Name: Spikes
   m_TagString: Untagged
@@ -228,6 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81e9cee142e2b14694c022748242d3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 1
   spaceToMoveDown: .349999994
   speed: 2
 --- !u!61 &308355602
@@ -281,6 +256,85 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!114 &308355605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 308355600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66ef93f75fc64594099dde80e073492a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 1
+  instaKill: 1
+  isCrushing: 0
+  destroyOnCollision: 0
+  damage: 1
+  lifetime: 2
+  lifeType: 0
+--- !u!1 &907749718
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 907749719}
+  - 68: {fileID: 907749721}
+  - 114: {fileID: 907749720}
+  m_Layer: 0
+  m_Name: SlamDeathCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &907749719
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 907749718}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.73000002, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2025037892}
+  m_RootOrder: 1
+--- !u!114 &907749720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 907749718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66ef93f75fc64594099dde80e073492a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 1
+  instaKill: 1
+  isCrushing: 1
+  destroyOnCollision: 0
+  damage: 1
+  lifetime: 2
+  lifeType: 0
+--- !u!68 &907749721
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 907749718}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: -1.61845696, y: .0363676548}
+  - {x: 1.64477372, y: 0}
 --- !u!1 &1138777423
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,6 +409,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!1 &1232997006
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1232997007}
+  - 68: {fileID: 1232997009}
+  - 114: {fileID: 1232997008}
+  m_Layer: 0
+  m_Name: Ceiling
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1232997007
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1232997006}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.00999999978, y: 1.84000003, z: 0}
+  m_LocalScale: {x: .411486059, y: .148882061, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1917981956}
+  m_RootOrder: 2
+--- !u!114 &1232997008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1232997006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66ef93f75fc64594099dde80e073492a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 1
+  instaKill: 1
+  isCrushing: 1
+  destroyOnCollision: 0
+  damage: 1
+  lifetime: 2
+  lifeType: 0
+--- !u!68 &1232997009
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1232997006}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: -1.61845696, y: .0363676548}
+  - {x: 1.64477372, y: 0}
 --- !u!1 &1307283559
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,8 +556,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1359810031}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.31900001, z: 0}
-  m_LocalScale: {x: .75, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 1.70099998, z: 0}
+  m_LocalScale: {x: .75, y: .209999993, z: 1}
   m_Children: []
   m_Father: {fileID: 1917981956}
   m_RootOrder: 0
@@ -458,7 +573,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slam: {fileID: 1845072794}
-  ceiling: {fileID: 42439124}
+  ceiling: {fileID: 1232997006}
 --- !u!61 &1359810034
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -631,7 +746,7 @@ Transform:
   m_Children:
   - {fileID: 1359810032}
   - {fileID: 2025037892}
-  - {fileID: 42439125}
+  - {fileID: 1232997007}
   m_Father: {fileID: 0}
   m_RootOrder: 4
 --- !u!1 &2025037891
@@ -660,10 +775,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2025037891}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.00999999978, y: .519999981, z: 0}
+  m_LocalPosition: {x: -.00999999978, y: 1.34899998, z: 0}
   m_LocalScale: {x: .411486059, y: .148882061, z: 1}
   m_Children:
   - {fileID: 1845072795}
+  - {fileID: 907749719}
   m_Father: {fileID: 1917981956}
   m_RootOrder: 1
 --- !u!61 &2025037893
@@ -705,6 +821,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a5eb3b2dc5812c4aa49f5af14f17160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 1
   dropTime: 1
   waitToRaise: 1
   raiseSpeed: 1
