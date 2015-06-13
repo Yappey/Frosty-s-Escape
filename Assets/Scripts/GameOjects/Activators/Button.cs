@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Button : MonoBehaviour {
+public class Button : BaseActivator {
 
 	// Use this for initialization
 	void Start () {
