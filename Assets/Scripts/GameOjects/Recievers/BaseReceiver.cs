@@ -3,13 +3,10 @@ using System.Collections;
 
 public class BaseReceiver : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	public int state = 0;
+
+	public virtual void Process()
+	{
+
 	}
 }
