@@ -364,10 +364,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
---- !u!4 &526215378 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 403528, guid: 4257f011a4445f3489dc5058c9d42480, type: 2}
-  m_PrefabInternal: {fileID: 2028483963}
 --- !u!1 &540565427
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,8 +641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   receivers:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1808693001}
   state: 0
   frosty: {fileID: 0}
   switchmanager: {fileID: 0}
@@ -898,7 +893,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 38158573}
-  - {fileID: 526215378}
+  - {fileID: 2028483964}
   - {fileID: 1858193458}
   - {fileID: 712106065}
   - {fileID: 1346290062}
@@ -1080,7 +1075,7 @@ MonoBehaviour:
   - 0
   - 0
   timer: 0
-  stoper: 0
+  stopImmediately: 0
   cyclical: 0
 --- !u!61 &1808693002
 BoxCollider2D:
@@ -1210,3 +1205,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4257f011a4445f3489dc5058c9d42480, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &2028483964 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 403528, guid: 4257f011a4445f3489dc5058c9d42480, type: 2}
+  m_PrefabInternal: {fileID: 2028483963}
