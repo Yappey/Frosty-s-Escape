@@ -225,7 +225,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1 &540565427
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,7 +252,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!1 &695282033
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,7 +412,7 @@ GameObject:
   - 114: {fileID: 1300331285}
   m_Layer: 0
   m_Name: Lever_0
-  m_TagString: Untagged
+  m_TagString: Activator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -429,8 +429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   receivers:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1808693001}
   state: 0
   frosty: {fileID: 0}
   switchmanager: {fileID: 0}
@@ -734,7 +733,7 @@ MonoBehaviour:
   - 0
   - 0
   timer: 0
-  stoper: 0
+  stopImmediately: 0
   cyclical: 0
 --- !u!61 &1808693002
 BoxCollider2D:
