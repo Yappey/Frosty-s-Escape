@@ -3,6 +3,10 @@ using System.Collections;
 
 public class Frostyehavior : MonoBehaviour {
 
+    public GameObject presnowball;
+    public GameObject snowball;
+    public float throwStrength;
+
 	public float moveSpeed = 10;
 	public float climbSpeed = 10;
 	public float jumpVelocity = 10;
@@ -62,6 +66,17 @@ public class Frostyehavior : MonoBehaviour {
 			vel.x = 0.0f;
 			rgbd.velocity = vel;
 		}
+        if (Input.GetButtonDown("Throw"))
+        {
+            snowball = Instantiate(presnowball);
+            snowball.transform.position = transform.GetChild(4).transform.position;
+            Vector3 curosr = GameObject.FindGameObjectWithTag("MainCamera")
+                .GetComponent<Camera>().ScreenToWorldPoint(Input.mousePosition);
+            curosr.z = transform.position.z;
+
+
+            snowball.GetComponent<Rigidbody2D>().AddForce((curosr - transform.position).normalized * throwStrength);
+        }
 	}
 
 	// Activates the nearest Activator
