@@ -390,7 +390,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!1 &695282033
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,7 +893,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 38158573}
-  - {fileID: 526215378}
+  - {fileID: 2028483964}
   - {fileID: 1858193458}
   - {fileID: 712106065}
   - {fileID: 1346290062}
@@ -1205,3 +1205,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4257f011a4445f3489dc5058c9d42480, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &2028483964 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 403528, guid: 4257f011a4445f3489dc5058c9d42480, type: 2}
+  m_PrefabInternal: {fileID: 2028483963}
