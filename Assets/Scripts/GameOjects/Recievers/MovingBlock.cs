@@ -80,7 +80,7 @@ public class MovingBlock : BaseReceiver {
 			}
 
 			else {
-				state = 0;
+				state = 1;
 			}
 		}
 	}
