@@ -10,6 +10,7 @@ public class MovingBlock : BaseReceiver {
 	private int currWaypoint = 0;
 	public bool stoper;
 	public bool cyclical;
+	private bool back = false;
 
 
 	// Use this for initialization
@@ -19,10 +20,6 @@ public class MovingBlock : BaseReceiver {
 		}
 		
 		gameObject.transform.position = waypoints [0].transform.position;
-
-		if (stoper) {
-			state = 1;
-		}
 	}
 	
 	// Update is called once per frame
@@ -33,11 +30,32 @@ public class MovingBlock : BaseReceiver {
 				
 				if ((waits.Length == waypoints.Length && timer >= waits [currWaypoint]) || timer >= waits [0]) {
 					timer = 0.0f;
-					
-					currWaypoint++;
-					
-					if (currWaypoint == waypoints.Length)
-						currWaypoint = 0;
+
+					if (cyclical) {
+						currWaypoint++;
+						
+						if (currWaypoint == waypoints.Length)
+							currWaypoint = 0;
+					}
+
+					else {
+						if (back) {
+							currWaypoint--;
+
+							if (currWaypoint == 0) {
+								back = false;
+							}
+						}
+
+						else {
+							currWaypoint++;
+							
+							if (currWaypoint == waypoints.Length) {
+								back = true;
+								currWaypoint--;
+							}
+						}
+					}
 				}
 			} 
 			
