@@ -11,7 +11,7 @@ public class HowToPlayMenuScript : MonoBehaviour
     public int _iCurrentPos = 0;
     public float _fWidth = 800.0f;
 
-    Vector3[] _vNextPosition = new Vector3[2];
+    //Vector3[] _vNextPosition = new Vector3[2];
     Vector3 _vOriginalPos;
 
     public GameObject testCanvas = null;

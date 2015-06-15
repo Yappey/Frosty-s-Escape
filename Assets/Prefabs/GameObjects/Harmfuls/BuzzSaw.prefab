@@ -8,8 +8,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 412294}
-  - 135: {fileID: 13557686}
   - 212: {fileID: 21284600}
+  - 58: {fileID: 5800158}
   - 114: {fileID: 11471806}
   - 114: {fileID: 11434258}
   m_Layer: 0
@@ -27,10 +27,23 @@ Transform:
   m_GameObject: {fileID: 178210}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.77650499, y: -1.42526865, z: 0}
-  m_LocalScale: {x: .100000001, y: .100000001, z: .100000001}
+  m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!58 &5800158
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178210}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2.36500001
 --- !u!114 &11434258
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -44,6 +57,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 1
   instaKill: 1
+  isCrushing: 0
   destroyOnCollision: 0
   damage: 1
   lifetime: 2
@@ -59,20 +73,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05b9994a3e66ad84b9aacad5def10a12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rotationSpeed: 100
-  _movementSpeed: 3
---- !u!135 &13557686
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 178210}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 2.33999991
-  m_Center: {x: 0, y: 0, z: 0}
+  _fRotationSpeed: 100
+  _fMovementSpeed: 3
 --- !u!212 &21284600
 SpriteRenderer:
   m_ObjectHideFlags: 1
