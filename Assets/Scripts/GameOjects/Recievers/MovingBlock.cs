@@ -76,7 +76,7 @@ public class MovingBlock : BaseReceiver {
 	public override void Process() {
 		if (state == 1)
 			state = 0;
-
-				state = 1;
-		}	}
+        else
+			state = 1;
+		}	
 }
