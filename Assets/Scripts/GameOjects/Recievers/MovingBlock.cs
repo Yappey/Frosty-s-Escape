@@ -79,5 +79,5 @@ public class MovingBlock : BaseReceiver {
 
 			else
 				state = 1;
-		}	
+	}	
 }
