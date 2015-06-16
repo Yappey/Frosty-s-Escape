@@ -22,6 +22,9 @@ public class SwitchManager : MonoBehaviour {
 	public GameObject Base;
 	public GameObject Active;
 
+	public AudioSource attachSnd;
+	public AudioSource detachSnd;
+
 
     //test ints
     public int test = 0;
@@ -94,6 +97,9 @@ public class SwitchManager : MonoBehaviour {
 	{
         if (Head.GetComponent<Frostyehavior>().torsoAttached)
         {
+			if (!detachSnd.isPlaying) {
+				detachSnd.Play();
+			}
             Active.GetComponent<Frostyehavior>().isActive = false;
             Head = Instantiate(prehead);
             Head.GetComponent<Frostyehavior>().isActive = true;
@@ -118,6 +124,9 @@ public class SwitchManager : MonoBehaviour {
 	{
         if (Torso.GetComponent<Frostyehavior>().headAttached || Torso.GetComponent<Frostyehavior>().baseAttached)
         {
+			if (!detachSnd.isPlaying) {
+				detachSnd.Play();
+			}
             Torso = Instantiate(pretorso);
             Torso.transform.position = Active.transform.position;
             Torso.GetComponent<Frostyehavior>().isActive = true;
@@ -153,6 +162,9 @@ public class SwitchManager : MonoBehaviour {
 	{
         if (Base.GetComponent<Frostyehavior>().torsoAttached)
         {
+			if (!detachSnd.isPlaying) {
+				detachSnd.Play();
+			}
             Base = Instantiate(prebase);
             Base.GetComponent<Frostyehavior>().isActive = true;
             Base.transform.position = Active.transform.position;
@@ -179,6 +191,10 @@ public class SwitchManager : MonoBehaviour {
             !Head.GetComponent<Frostyehavior>().baseAttached && 
             (Head.transform.position - Base.transform.position).magnitude < attachdistance)
         {
+			if (!attachSnd.isPlaying) {
+				attachSnd.Play();
+			}
+
             Destroy(Base);
             Active = Instantiate(Frosty);
             Active.transform.position = Head.transform.position;
@@ -192,6 +208,10 @@ public class SwitchManager : MonoBehaviour {
             Torso.GetComponent<Frostyehavior>().baseAttached &&
             (Head.transform.position - Torso.transform.position).magnitude < attachdistance)
         {
+			if (!attachSnd.isPlaying) {
+				attachSnd.Play();
+			}
+
             Destroy(Base);
             Active = Instantiate(Frosty);
             Active.transform.position = Head.transform.position;
@@ -206,6 +226,10 @@ public class SwitchManager : MonoBehaviour {
             !Torso.GetComponent<Frostyehavior>().baseAttached && 
             !((Head.transform.position - Base.transform.position).magnitude < attachdistance))
         {
+			if (!attachSnd.isPlaying) {
+				attachSnd.Play();
+			}
+
             Destroy(Torso);
             Active = Instantiate(preheadtorso);
             Active.transform.position = Head.transform.position;
@@ -219,6 +243,10 @@ public class SwitchManager : MonoBehaviour {
             !Torso.GetComponent<Frostyehavior>().baseAttached && 
             (Head.transform.position - Base.transform.position).magnitude < attachdistance)
         {
+			if (!attachSnd.isPlaying) {
+				attachSnd.Play();
+			}
+
             Destroy(Base);
             Destroy(Torso);
             Active = Instantiate(Frosty);
@@ -237,6 +265,10 @@ public class SwitchManager : MonoBehaviour {
             !Torso.GetComponent<Frostyehavior>().baseAttached && 
             (Head.transform.position - Base.transform.position).magnitude < attachdistance)
         {
+			if (!attachSnd.isPlaying) {
+				attachSnd.Play();
+			}
+
             Destroy(Base);
             Active = Instantiate(Frosty);
             Active.transform.position = Torso.transform.position;
@@ -250,6 +282,10 @@ public class SwitchManager : MonoBehaviour {
             (Torso.transform.position - Head.transform.position).magnitude < attachdistance && 
             Torso.GetComponent<Frostyehavior>().baseAttached)
         {
+			if (!attachSnd.isPlaying) {
+				attachSnd.Play();
+			}
+
             Destroy(Head);
             Destroy(Base);
             Active = Instantiate(Frosty);
@@ -265,6 +301,10 @@ public class SwitchManager : MonoBehaviour {
         !Torso.GetComponent<Frostyehavior>().baseAttached &&
         (Torso.transform.position - Base.transform.position).magnitude < attachdistance/* both attach*/)
         {
+			if (!attachSnd.isPlaying) {
+				attachSnd.Play();
+			}
+
             Destroy(Head);
             Destroy(Base);
             Active = Instantiate(Frosty);
@@ -280,6 +320,10 @@ public class SwitchManager : MonoBehaviour {
             !Torso.GetComponent<Frostyehavior>().baseAttached && 
             !((Torso.transform.position - Base.transform.position).magnitude < attachdistance/* head attach*/))
         {
+			if (!attachSnd.isPlaying) {
+				attachSnd.Play();
+			}
+
             Destroy(Head);
             Active = Instantiate(preheadtorso);
             Active.transform.position = Torso.transform.position;
@@ -293,6 +337,10 @@ public class SwitchManager : MonoBehaviour {
             !Torso.GetComponent<Frostyehavior>().baseAttached && 
             (Torso.transform.position - Base.transform.position).magnitude < attachdistance /* base attach*/)
         {
+			if (!attachSnd.isPlaying) {
+				attachSnd.Play();
+			}
+
             Destroy(Base);
             Active = Instantiate(pretorsobase);
             Active.transform.position = Torso.transform.position;
@@ -309,6 +357,10 @@ public class SwitchManager : MonoBehaviour {
             (Head.transform.position - Base.transform.position).magnitude < attachdistance && 
             !Base.GetComponent<Frostyehavior>().headAttached)
         {
+			if (!attachSnd.isPlaying) {
+				attachSnd.Play();
+			}
+
             Destroy(Head);
             Active = Instantiate(Frosty);
             Active.transform.position = Base.transform.position;
@@ -322,6 +374,10 @@ public class SwitchManager : MonoBehaviour {
             (Torso.transform.position - Base.transform.position).magnitude < attachdistance && 
             Torso.GetComponent<Frostyehavior>().headAttached)
         {
+			if (!attachSnd.isPlaying) {
+				attachSnd.Play();
+			}
+
             Destroy(Head);
             Active = Instantiate(Frosty);
             Active.transform.position = Base.transform.position;
@@ -336,6 +392,10 @@ public class SwitchManager : MonoBehaviour {
             !Torso.GetComponent<Frostyehavior>().headAttached && 
             !((Head.transform.position - Base.transform.position).magnitude < attachdistance))
         {
+			if (!attachSnd.isPlaying) {
+				attachSnd.Play();
+			}
+
             Destroy(Torso);
             Active = Instantiate(pretorsobase);
             Active.transform.position = Base.transform.position;
@@ -346,6 +406,10 @@ public class SwitchManager : MonoBehaviour {
         }
         else if (!Head.GetComponent<Frostyehavior>().torsoAttached && !Torso.GetComponent<Frostyehavior>().baseAttached)
         {
+			if (!attachSnd.isPlaying) {
+				attachSnd.Play();
+			}
+
             Destroy(Head);
             Destroy(Torso);
             Active = Instantiate(Frosty);
