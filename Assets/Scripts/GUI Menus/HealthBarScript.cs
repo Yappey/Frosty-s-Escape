@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class HealthBarScript : MonoBehaviour {
@@ -31,7 +31,18 @@ public class HealthBarScript : MonoBehaviour {
 	void Update () {
 		if (health > 0.0f) {
 			health -= Time.deltaTime;
-		}
+		} 
+
 		bar.localScale = new Vector3((barLength * health) / levelTime, bar.localScale.y, bar.localScale.z);
+	}
+
+	public void Hurt(float damage) {
+		if (health - damage > 0.0f) {
+			health -= damage;
+		}
+
+		else {
+			health = 0.0f;
+		}
 	}
 }
