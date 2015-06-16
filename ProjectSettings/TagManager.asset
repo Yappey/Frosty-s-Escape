@@ -7,6 +7,7 @@ TagManager:
   - Frosty
   - Ground
   - Activator
+  - Ladder
   layers:
   - Default
   - TransparentFX
