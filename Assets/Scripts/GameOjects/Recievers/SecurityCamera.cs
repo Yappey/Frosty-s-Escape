@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SecurityCamera : MonoBehaviour {
+public class SecurityCamera : BaseReceiver {
 
 	public bool isScanning = false;
 	public bool targetFound = false;
@@ -60,26 +60,32 @@ public class SecurityCamera : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		//transform.position += transform.right * Time.deltaTime;
-
-		UpdateViewMesh();
-		Quaternion qu = new Quaternion();
-		qu.eulerAngles = (-transform.rotation.eulerAngles);
-		lens.transform.FindChild("View").localRotation = qu;
-
-		SwitchManager sw = GameObject.FindGameObjectWithTag("SwitchManager").GetComponent<SwitchManager>();
-
-		if (Search(sw.FindHead().transform.FindChild("Head").gameObject) 
-		    || Search(sw.FindTorso().transform.FindChild("Torso").gameObject) 
-		    || Search(sw.FindBase().transform.FindChild("Base").gameObject))
+		if (state == 0)
 		{
-			if (!targetFound)
-				Spot ();
+			UpdateViewMesh();
+			Quaternion qu = new Quaternion();
+			qu.eulerAngles = (-transform.rotation.eulerAngles);
+			lens.transform.FindChild("View").localRotation = qu;
+
+			SwitchManager sw = GameObject.FindGameObjectWithTag("SwitchManager").GetComponent<SwitchManager>();
+
+			if (Search(sw.FindHead().transform.FindChild("Head").gameObject) 
+			    || Search(sw.FindTorso().transform.FindChild("Torso").gameObject) 
+			    || Search(sw.FindBase().transform.FindChild("Base").gameObject))
+			{
+				if (!targetFound)
+					Spot ();
+			}
+			else
+			{
+				if (targetFound)
+					Lost();
+			}
 		}
 		else
 		{
 			if (targetFound)
-				Lost();
+				Lost ();
 		}
 	}
 
@@ -115,7 +121,7 @@ public class SecurityCamera : MonoBehaviour {
 	// Updates the vertices of the view's mesh.
 	void UpdateViewMesh()
 	{
-		mesh.Clear();
+		//mesh.Clear();
 		//return new Mesh();
 		Vector2 dir1 = Vector2.Lerp(transform.right, transform.up, FOV / 180.0f);
 		Vector2 dir2 = Vector2.Lerp(transform.right, -transform.up, FOV / 180.0f);
@@ -162,5 +168,18 @@ public class SecurityCamera : MonoBehaviour {
 		mesh.triangles = tris;
 		//return msh;
 
+	}
+
+	public override void Process()
+	{
+		state = (state == 0) ? 1 : 0;
+		if (state == 0)
+		{
+			lens.transform.FindChild("View").gameObject.GetComponent<MeshRenderer>().enabled = true;
+		}
+		else
+		{
+			lens.transform.FindChild("View").gameObject.GetComponent<MeshRenderer>().enabled = false;
+		}
 	}
 }
