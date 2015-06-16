@@ -12,6 +12,7 @@ GameObject:
   - 50: {fileID: 5038764}
   - 58: {fileID: 5881092}
   - 58: {fileID: 5860096}
+  - 114: {fileID: 11414330}
   m_Layer: 0
   m_Name: FrostyHeadTorso
   m_TagString: Frosty
@@ -237,6 +238,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: .379999995
+--- !u!114 &11414330
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd18c56f45270d940a1946cd0210c6bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bLadder: 0
 --- !u!114 &11418812
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -248,10 +261,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea3e775f50ba6c748af33d18ac38e7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  presnowball: {fileID: 0}
+  snowball: {fileID: 0}
+  throwStrength: 0
   moveSpeed: 10
   climbSpeed: 10
   jumpVelocity: 6
   snowballVelocity: 10
+  activateRange: 1
   isActive: 0
   isGrounded: 0
   headAttached: 1

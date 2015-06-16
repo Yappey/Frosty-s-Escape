@@ -8,8 +8,8 @@ TagManager:
   - Ground
   - Activator
   - Icepatch
-  - Laser
-  layers:
+	Laser
+	Ladder  layers:
   - Default
   - TransparentFX
   - Ignore Raycast
