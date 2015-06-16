@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Activator
   - Icepatch
+  - Laser
   layers:
   - Default
   - TransparentFX
@@ -17,10 +18,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Frosty
+  - Snowball
+  - NonReflectBlock
+  - Laser
   - 
   - 
   - 

@@ -13,7 +13,7 @@ GameObject:
   - 58: {fileID: 5885262}
   - 58: {fileID: 5828242}
   - 58: {fileID: 5894234}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FrostyFull
   m_TagString: Frosty
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ GameObject:
   - 4: {fileID: 468800}
   - 58: {fileID: 5842312}
   - 114: {fileID: 11413390}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Grounder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 421724}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SnowballThrower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,7 +62,7 @@ GameObject:
   - 4: {fileID: 416472}
   - 33: {fileID: 3338708}
   - 23: {fileID: 2371430}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,7 +79,7 @@ GameObject:
   - 4: {fileID: 417786}
   - 33: {fileID: 3365440}
   - 23: {fileID: 2370592}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Torso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - 4: {fileID: 425362}
   - 33: {fileID: 3377534}
   - 23: {fileID: 2307244}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -521,7 +521,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 421724, guid: 0feef21e4f10d8341b793e308e8ffbff, type: 2}
       propertyPath: m_LocalPosition.x
-      value: .629999995
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 11457624, guid: 0feef21e4f10d8341b793e308e8ffbff, type: 2}
       propertyPath: presnowball
