@@ -20,7 +20,8 @@ public class LaserTurret : MonoBehaviour {
         {
             timer = 0.0f;
             GameObject temp = Instantiate(Laser);
-            temp.GetComponent<Rigidbody2D>().velocity = transform.right * speed;
+            temp.transform.position = transform.GetChild(0).position;
+            temp.GetComponent<Laser>().velocity = -transform.right * speed;
         }
 	}
 }

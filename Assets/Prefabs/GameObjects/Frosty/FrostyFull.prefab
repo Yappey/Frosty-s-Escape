@@ -4,22 +4,30 @@
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
+  m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
+  - 4: {fileID: 0}
   - 4: {fileID: 431462}
   - 114: {fileID: 11457624}
   - 50: {fileID: 5059990}
   - 58: {fileID: 5885262}
   - 58: {fileID: 5828242}
   - 58: {fileID: 5894234}
+  - 114: {fileID: 11485106}
+  - 4: {fileID: 0}
+  - 4: {fileID: 0}
+  - 4: {fileID: 0}
+  - 4: {fileID: 0}
+  - 4: {fileID: 0}
+  - 4: {fileID: 0}
   m_Layer: 0
   m_Name: FrostyFull
-  m_TagString: Frosty
+  m_TagString: 
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &122196
 GameObject:
   m_ObjectHideFlags: 0
@@ -30,7 +38,7 @@ GameObject:
   - 4: {fileID: 468800}
   - 58: {fileID: 5842312}
   - 114: {fileID: 11413390}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Grounder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +53,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 421724}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SnowballThrower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,7 +70,7 @@ GameObject:
   - 4: {fileID: 416472}
   - 33: {fileID: 3338708}
   - 23: {fileID: 2371430}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,7 +87,7 @@ GameObject:
   - 4: {fileID: 417786}
   - 33: {fileID: 3365440}
   - 23: {fileID: 2370592}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Torso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +104,7 @@ GameObject:
   - 4: {fileID: 425362}
   - 33: {fileID: 3377534}
   - 23: {fileID: 2307244}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +161,7 @@ Transform:
   m_RootOrder: 0
 --- !u!4 &431462
 Transform:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 120562}
@@ -275,7 +283,7 @@ MeshFilter:
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!50 &5059990
 Rigidbody2D:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 120562}
@@ -290,7 +298,7 @@ Rigidbody2D:
   m_CollisionDetection: 0
 --- !u!58 &5828242
 CircleCollider2D:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 120562}
@@ -316,7 +324,7 @@ CircleCollider2D:
   m_Radius: .469999999
 --- !u!58 &5885262
 CircleCollider2D:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 120562}
@@ -329,7 +337,7 @@ CircleCollider2D:
   m_Radius: .5
 --- !u!58 &5894234
 CircleCollider2D:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 120562}
@@ -353,7 +361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!114 &11457624
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 120562}
@@ -376,6 +384,18 @@ MonoBehaviour:
   torsoAttached: 1
   baseAttached: 1
   snowballLauncher: {fileID: 136688}
+--- !u!114 &11485106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 120562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd18c56f45270d940a1946cd0210c6bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bLadder: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

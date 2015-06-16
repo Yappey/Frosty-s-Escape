@@ -22,6 +22,8 @@ public class Snowball : MonoBehaviour {
             GameObject icpatch = Instantiate(preicepatch);
             icpatch.transform.position = coll.contacts[0].point;
             icpatch.transform.up = coll.contacts[0].normal;
+
+            icpatch.transform.SetParent(coll.gameObject.transform);
         }
         Destroy(gameObject);
     }

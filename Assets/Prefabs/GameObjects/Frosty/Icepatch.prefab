@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 471286}
   - 212: {fileID: 21245162}
   - 61: {fileID: 6155242}
+  - 114: {fileID: 11468322}
   m_Layer: 0
   m_Name: Icepatch
   m_TagString: Icepatch
@@ -24,8 +25,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 194988}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.13100004, y: -3.0769999, z: 0}
-  m_LocalScale: {x: .292187423, y: .0187497828, z: 1}
+  m_LocalPosition: {x: 13.1049995, y: .0804879963, z: 0}
+  m_LocalScale: {x: .292187423, y: .0815870315, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -42,6 +43,18 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 3.43000007, y: 3.42000008}
+--- !u!114 &11468322
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deb0b95217370964e8a23e3f8c61a626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 4
 --- !u!212 &21245162
 SpriteRenderer:
   m_ObjectHideFlags: 1
