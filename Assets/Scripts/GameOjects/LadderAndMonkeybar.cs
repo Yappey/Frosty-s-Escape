@@ -20,11 +20,11 @@ public class LadderAndMonkeybar : MonoBehaviour
         if (_bLadder)
         {
             if (Input.GetAxisRaw("Vertical") > 0)
-                GetComponent<Rigidbody2D>().velocity = new Vector3(0, 2.0f);
+                GetComponent<Rigidbody2D>().velocity = new Vector3(GetComponent<Rigidbody2D>().velocity.x, 2.0f);
             else if (Input.GetAxisRaw("Vertical") < 0)
-                GetComponent<Rigidbody2D>().velocity = new Vector3(0, -2.0f);
+				GetComponent<Rigidbody2D>().velocity = new Vector3(GetComponent<Rigidbody2D>().velocity.x, -2.0f);
             else
-                GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0);
+				GetComponent<Rigidbody2D>().velocity = new Vector3(GetComponent<Rigidbody2D>().velocity.x, 0);
 
             //_bLadder = false;
         }
