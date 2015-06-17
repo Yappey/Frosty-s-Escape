@@ -183,7 +183,7 @@ MonoBehaviour:
   TorsoSelected: 0
   BaseSelected: 0
   attachdistance: 1
-  Frosty: {fileID: 120562, guid: 0feef21e4f10d8341b793e308e8ffbff, type: 2}
+  Frosty: {fileID: 106942, guid: 0feef21e4f10d8341b793e308e8ffbff, type: 2}
   prehead: {fileID: 108586, guid: c9d912725935a7d4ca6c624e8f5c89a0, type: 2}
   pretorso: {fileID: 179718, guid: 90a324ae206f7e94d9e46d193f50fb53, type: 2}
   prebase: {fileID: 125192, guid: fb5aea04898e96444b5500b5060e111c, type: 2}
