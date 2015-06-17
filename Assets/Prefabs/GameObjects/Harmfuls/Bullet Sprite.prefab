@@ -77,7 +77,7 @@ MonoBehaviour:
   instaKill: 0
   isCrushing: 0
   destroyOnCollision: 1
-  damage: .200000003
+  damage: 2
   lifetime: 2
   lifeType: 0
 --- !u!114 &11485402

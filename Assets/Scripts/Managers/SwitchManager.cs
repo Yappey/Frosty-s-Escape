@@ -32,11 +32,14 @@ public class SwitchManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+	    Head = FindHead();
+	    Torso = FindTorso();
+	    Base = FindBase();
+	    Active = FindActive();
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () { 
 		if (Input.GetButtonDown("Head")) {
             HeadSelected = true;
             TorsoSelected = false;
