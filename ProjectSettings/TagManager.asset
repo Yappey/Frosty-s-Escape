@@ -4,14 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Frosty
-  - Ground
-  - Activator
-  - Icepatch
-	Laser
-	Ladder  layers:
-  - HealthBar
+  - Laser
   - SwitchManager
+  - Frosty
+  - Ladder
   layers:
   - Default
   - TransparentFX
@@ -21,10 +17,10 @@ TagManager:
   - UI
   - 
   - 
-  - Frosty
-  - Snowball
-  - NonReflectBlock
-  - Laser
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
