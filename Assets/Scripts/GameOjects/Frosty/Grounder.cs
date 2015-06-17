@@ -17,11 +17,13 @@ public class Grounder : MonoBehaviour {
 	
 	void OnTriggerStay2D(Collider2D col)
 	{
-		frost.isGrounded = true;
+		if (!col.CompareTag("Ladder"))
+			frost.isGrounded = true;
 	}
 	
 	void OnTriggerExit2D(Collider2D col)
 	{
+
 		frost.isGrounded = false;
 	}
 }
