@@ -14,7 +14,7 @@ GameObject:
   - 251: {fileID: 25110628}
   m_Layer: 0
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86,7 +86,7 @@ PlatformEffector2D:
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_UseOneWay: 1
+  m_UseOneWay: 0
   m_UseSideFriction: 0
   m_UseSideBounce: 1
   m_SideAngleVariance: 0

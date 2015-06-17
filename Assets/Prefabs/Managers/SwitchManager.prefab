@@ -11,7 +11,7 @@ GameObject:
   - 114: {fileID: 11433008}
   m_Layer: 0
   m_Name: SwitchManager
-  m_TagString: Untagged
+  m_TagString: SwitchManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,6 +53,8 @@ MonoBehaviour:
   Torso: {fileID: 0}
   PPtr<Object>: {fileID: 0}
   Active: {fileID: 0}
+  attachSnd: {fileID: 0}
+  detachSnd: {fileID: 0}
   test: 0
 --- !u!1001 &100100000
 Prefab:

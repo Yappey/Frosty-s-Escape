@@ -8,8 +8,8 @@ TagManager:
   - Ground
   - Activator
   - Icepatch
-	Laser
-	Ladder  layers:
+  - Laser
+  - Ladder
   - HealthBar
   - SwitchManager
   layers:
@@ -23,7 +23,7 @@ TagManager:
   - 
   - Frosty
   - Snowball
-  - NonReflectBlock
+  - NonCollidingBlock
   - Laser
   - 
   - 

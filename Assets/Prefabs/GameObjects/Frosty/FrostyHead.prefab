@@ -12,7 +12,7 @@ GameObject:
   - 50: {fileID: 5031040}
   - 58: {fileID: 5806468}
   - 114: {fileID: 11421474}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FrostyHead
   m_TagString: Frosty
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   presnowball: {fileID: 0}
   snowball: {fileID: 0}
-  throwStrength: 0
+  throwStrength: 1
   moveSpeed: 10
   climbSpeed: 10
   jumpVelocity: 7
