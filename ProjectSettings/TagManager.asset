@@ -8,8 +8,8 @@ TagManager:
   - Ground
   - Activator
   - Icepatch
-	Laser
-	Ladder  layers:
+  - Laser
+  - Ladder
   - HealthBar
   - SwitchManager
   layers:
