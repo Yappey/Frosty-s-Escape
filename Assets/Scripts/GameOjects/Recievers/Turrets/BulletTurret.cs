@@ -10,6 +10,7 @@ public class BulletTurret : MonoBehaviour {
     public float barragetime = 0.0f;
     public float barragetimer;
     public int bulletcount = 0;
+    public int bulletnumber;
 
 	// Use this for initialization
 	void Start () {
@@ -31,7 +32,7 @@ public class BulletTurret : MonoBehaviour {
                 temp.GetComponent<Bullet>().Velocity = -transform.right * speed; 
             }
         }	
-        if(bulletcount == 3)
+        if(bulletcount == bulletnumber)
         {
             time = 0;
             barragetime = 0;

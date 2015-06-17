@@ -12,7 +12,7 @@ public class Bullet : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.position += Velocity;
+        transform.position += Velocity * Time.deltaTime;
 	}
 
     void OnCollisionEnter2D(Collision2D coll)
