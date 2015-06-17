@@ -309,6 +309,48 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 387813667}
+--- !u!1001 &541423494
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 477784, guid: fa8a4f5a4e96a3847b4776638ea53299, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 477784, guid: fa8a4f5a4e96a3847b4776638ea53299, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 477784, guid: fa8a4f5a4e96a3847b4776638ea53299, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 477784, guid: fa8a4f5a4e96a3847b4776638ea53299, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 477784, guid: fa8a4f5a4e96a3847b4776638ea53299, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 477784, guid: fa8a4f5a4e96a3847b4776638ea53299, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 477784, guid: fa8a4f5a4e96a3847b4776638ea53299, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477784, guid: fa8a4f5a4e96a3847b4776638ea53299, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: fa8a4f5a4e96a3847b4776638ea53299, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &649361989
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,6 +656,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelname: LevelSelect
+  filename: 
+  volumetype: 
+  VolumeController: {fileID: 0}
+  getcomponentsinchildrencheck: 0
 --- !u!1 &1642380725
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,6 +872,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelname: HowToPlay
+  filename: 
+  volumetype: 
+  VolumeController: {fileID: 0}
+  getcomponentsinchildrencheck: 0
 --- !u!1 &1797576657
 GameObject:
   m_ObjectHideFlags: 0
@@ -954,6 +1004,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelname: Options
+  filename: 
+  volumetype: 
+  VolumeController: {fileID: 0}
+  getcomponentsinchildrencheck: 0
 --- !u!1 &1915242517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1082,3 +1136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelname: 
+  filename: 
+  volumetype: 
+  VolumeController: {fileID: 0}
+  getcomponentsinchildrencheck: 0

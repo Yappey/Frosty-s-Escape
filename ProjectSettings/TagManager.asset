@@ -4,6 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Laser
+  - SwitchManager
   - Frosty
   - Ground
   - Activator
@@ -21,10 +23,10 @@ TagManager:
   - UI
   - 
   - 
-  - Frosty
-  - Snowball
-  - NonReflectBlock
-  - Laser
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
