@@ -26,7 +26,7 @@ GameObject:
   - 212: {fileID: 21271192}
   - 114: {fileID: 11471752}
   m_Layer: 0
-  m_Name: Turret_2
+  m_Name: Laser Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 177864}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.01000023, y: -2.48639989, z: 0}
+  m_LocalPosition: {x: 6.94393539, y: -2.34967375, z: 0}
   m_LocalScale: {x: 2.58306289, y: 2.5830617, z: 2.5830617}
   m_Children:
   - {fileID: 480438}
@@ -52,7 +52,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 152888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.75999999, y: .187999994, z: 0}
+  m_LocalPosition: {x: -.476000011, y: .187999994, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 473238}
@@ -68,9 +68,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a895805e6cb05e84abb224bed8c02b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firerate: 4
+  state: 0
+  isScannig: 0
+  frequency: 1
+  projectileVelocity: 2
+  FOV: 30
+  startAngle: 0
+  endAngle: 0
   timer: 0
-  speed: 20
   Laser: {fileID: 179246, guid: 5ecb422f71ec7474eb183b6520facf00, type: 2}
 --- !u!212 &21271192
 SpriteRenderer:

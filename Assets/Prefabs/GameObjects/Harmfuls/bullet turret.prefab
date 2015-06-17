@@ -68,10 +68,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1436d0cc99226149866281ec51bba89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
+  isScannig: 0
+  frequency: 1
+  projectileVelocity: 5
+  FOV: 30
+  startAngle: 0
+  endAngle: 0
   bullet: {fileID: 143986, guid: cc309869cd2c9f44fbaffd1162f568a7, type: 2}
-  speed: 5
   time: 0
-  timer: .5
   barragetime: 0
   barragetimer: .100000001
   bulletcount: 0

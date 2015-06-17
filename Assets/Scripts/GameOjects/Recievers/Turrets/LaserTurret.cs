@@ -1,11 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LaserTurret : MonoBehaviour {
+public class LaserTurret : BaseTurret {
 
-    public float firerate;
     public float timer = 0.0f;
-    public float speed;
     public GameObject Laser;
 
 	// Use this for initialization
@@ -16,12 +14,12 @@ public class LaserTurret : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         timer += Time.deltaTime;
-        if(timer >= firerate)
+        if(timer >= frequency)
         {
             timer = 0.0f;
             GameObject temp = Instantiate(Laser);
             temp.transform.position = transform.GetChild(0).position;
-            temp.GetComponent<Laser>().velocity = -transform.right * speed;
+            temp.GetComponent<Laser>().velocity = -transform.right * projectileVelocity;
         }
 	}
 }
