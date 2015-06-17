@@ -11,6 +11,8 @@ GameObject:
   - 114: {fileID: 11469880}
   - 82: {fileID: 8286798}
   - 82: {fileID: 8286576}
+  - 114: {fileID: 11490236}
+  - 114: {fileID: 11425658}
   m_Layer: 0
   m_Name: SwitchManager
   m_TagString: SwitchManager
@@ -168,6 +170,18 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &11425658
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 113838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09db8cde9c0d2d94f92b4c5daffdfba7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effect: {fileID: 8286576}
 --- !u!114 &11469880
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -196,6 +210,18 @@ MonoBehaviour:
   attachSnd: {fileID: 8286576}
   detachSnd: {fileID: 8286798}
   test: 0
+--- !u!114 &11490236
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 113838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09db8cde9c0d2d94f92b4c5daffdfba7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effect: {fileID: 8286798}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
