@@ -434,7 +434,7 @@ public class SwitchManager : MonoBehaviour {
 		return null;
 	}
 
-	GameObject FindHead()
+	public GameObject FindHead()
 	{
 		GameObject[] frostys = GameObject.FindGameObjectsWithTag ("Frosty");
 		foreach (GameObject frosty in frostys) {
@@ -444,7 +444,7 @@ public class SwitchManager : MonoBehaviour {
 		return null;
 	}
 
-	GameObject FindTorso()
+	public GameObject FindTorso()
 	{
 		GameObject[] frostys = GameObject.FindGameObjectsWithTag ("Frosty");
 		foreach (GameObject frosty in frostys) {
@@ -454,7 +454,7 @@ public class SwitchManager : MonoBehaviour {
 		return null;
 	}
 
-	GameObject FindBase()
+	public GameObject FindBase()
 	{
 		GameObject[] frostys = GameObject.FindGameObjectsWithTag ("Frosty");
 		foreach (GameObject frosty in frostys) {

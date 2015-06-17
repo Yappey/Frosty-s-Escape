@@ -10,6 +10,9 @@ TagManager:
   - Icepatch
 	Laser
 	Ladder  layers:
+  - HealthBar
+  - SwitchManager
+  layers:
   - Default
   - TransparentFX
   - Ignore Raycast
