@@ -26,7 +26,7 @@ public class LadderAndMonkeybar : MonoBehaviour
             else
                 GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0);
 
-            _bLadder = false;
+            //_bLadder = false;
         }
     }
 
