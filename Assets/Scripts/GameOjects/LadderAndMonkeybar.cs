@@ -19,12 +19,19 @@ public class LadderAndMonkeybar : MonoBehaviour
 
         if (_bLadder)
         {
-            if (Input.GetAxisRaw("Vertical") > 0)
-                GetComponent<Rigidbody2D>().velocity = new Vector3(GetComponent<Rigidbody2D>().velocity.x, 2.0f);
-            else if (Input.GetAxisRaw("Vertical") < 0)
-				GetComponent<Rigidbody2D>().velocity = new Vector3(GetComponent<Rigidbody2D>().velocity.x, -2.0f);
-            else
+			if (GetComponent<Frostyehavior>().isActive)
+			{
+	            if (Input.GetAxisRaw("Vertical") > 0)
+	                GetComponent<Rigidbody2D>().velocity = new Vector3(GetComponent<Rigidbody2D>().velocity.x, 2.0f);
+	            else if (Input.GetAxisRaw("Vertical") < 0)
+					GetComponent<Rigidbody2D>().velocity = new Vector3(GetComponent<Rigidbody2D>().velocity.x, -2.0f);
+	            else
+					GetComponent<Rigidbody2D>().velocity = new Vector3(GetComponent<Rigidbody2D>().velocity.x, 0);
+			}
+			else
+			{
 				GetComponent<Rigidbody2D>().velocity = new Vector3(GetComponent<Rigidbody2D>().velocity.x, 0);
+			}
 
             //_bLadder = false;
         }
@@ -33,7 +40,7 @@ public class LadderAndMonkeybar : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collide)
     {
-        if (collide.tag == "Ladder" && GetComponent<Frostyehavior>().torsoAttached)
+		if (collide.tag == "Ladder" && GetComponent<Frostyehavior>().torsoAttached)
         {
             _bLadder = true;
             GetComponent<Rigidbody2D>().gravityScale = 0.0f;
@@ -42,11 +49,11 @@ public class LadderAndMonkeybar : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collide)
     {
-        if (collide.tag == "Ladder" && GetComponent<Frostyehavior>().torsoAttached)
-        {
+        //if (collide.tag == "Ladder" && GetComponent<Frostyehavior>().torsoAttached)
+        //{
             _bLadder = false;
             GetComponent<Rigidbody2D>().gravityScale = _fGravity; 
-        }
+        //}
 
     }
 }
