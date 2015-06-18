@@ -31,16 +31,18 @@ public class SwitchManager : MonoBehaviour
     public int test = 0;
 
 
-    // Use this for initialization
+	// Use this for initialization
     void Start()
     {
-
+        Head = FindHead();
+        Torso = FindTorso();
+        Base = FindBase();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Head"))
+        if (Input.GetButtonDown("Head"))        
         {
             SwitchHead();
         }
