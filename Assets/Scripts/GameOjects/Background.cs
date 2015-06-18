@@ -13,7 +13,7 @@ public class Background : MonoBehaviour {
 		XElement xRoot = XElement.Load("Volume");
 		XElement xType = xRoot.Element ("Music");
 		XAttribute xVolume = xType.Attribute("Volume");
-		vol = (float)Convert.ToDouble (xVolume);
+		vol = (float)Convert.ToDouble (xVolume.Value);
 
 		music.volume = vol;
 	}
@@ -23,7 +23,7 @@ public class Background : MonoBehaviour {
 		XElement xRoot = XElement.Load("Volume");
 		XElement xType = xRoot.Element ("Music");
 		XAttribute xVolume = xType.Attribute("Volume");
-		vol = (float)Convert.ToDouble (xVolume);
+		vol = (float)Convert.ToDouble (xVolume.Value);
 
 		if (music.volume != vol) {
 			music.volume = vol;

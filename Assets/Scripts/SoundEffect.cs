@@ -13,7 +13,7 @@ public class SoundEffect : MonoBehaviour {
 		XElement xRoot = XElement.Load("Volume");
 		XElement xType = xRoot.Element ("Sound");
 		XAttribute xVolume = xType.Attribute("Volume");
-		vol = (float)Convert.ToDouble (xVolume);
+		vol = (float)Convert.ToDouble (xVolume.Value);
 		
 		effect.volume = vol;
 	}
@@ -23,7 +23,7 @@ public class SoundEffect : MonoBehaviour {
 		XElement xRoot = XElement.Load("Volume");
 		XElement xType = xRoot.Element ("Sound");
 		XAttribute xVolume = xType.Attribute("Volume");
-		vol = (float)Convert.ToDouble (xVolume);
+		vol = (float)Convert.ToDouble (xVolume.Value);
 		
 		if (effect.volume != vol) {
 			effect.volume = vol;
