@@ -31,8 +31,21 @@ public class ButtonScript : MonoBehaviour {
 
     public void PlayOnClick()
     {
-        int nextlevel = 1;
+        int nextlevel = 6;
         //read file and get active level
+        XElement xRoot = XElement.Load("RatingSystem");
+        IEnumerable levels = xRoot.Elements();
+        foreach(XElement level in levels)
+        {
+            if(level.Attribute("Snowballs").Value == "0")
+            {
+                break;
+            }
+            nextlevel++;
+        }
+
+
+
         Application.LoadLevel(nextlevel);
     }
 
