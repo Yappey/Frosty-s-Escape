@@ -3,30 +3,30 @@ using System.Collections;
 using System.Xml.Linq;
 using System;
 
-public class Background : MonoBehaviour {
+public class SoundEffect : MonoBehaviour {
 
-	public AudioSource music;
+	public AudioSource effect;
 	private float vol;
-
+	
 	// Use this for initialization
 	void Start () {
 		XElement xRoot = XElement.Load("Volume");
-		XElement xType = xRoot.Element ("Music");
+		XElement xType = xRoot.Element ("Sound");
 		XAttribute xVolume = xType.Attribute("Volume");
 		vol = (float)Convert.ToDouble (xVolume.Value);
-
-		music.volume = vol;
+		
+		effect.volume = vol;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		XElement xRoot = XElement.Load("Volume");
-		XElement xType = xRoot.Element ("Music");
+		XElement xType = xRoot.Element ("Sound");
 		XAttribute xVolume = xType.Attribute("Volume");
 		vol = (float)Convert.ToDouble (xVolume.Value);
-
-		if (music.volume != vol) {
-			music.volume = vol;
+		
+		if (effect.volume != vol) {
+			effect.volume = vol;
 		}
 	}
 }

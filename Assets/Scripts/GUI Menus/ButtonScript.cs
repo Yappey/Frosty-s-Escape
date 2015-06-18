@@ -8,9 +8,8 @@ public class ButtonScript : MonoBehaviour {
     public string levelname;
     public string filename;
     public string volumetype;
-    public GameObject VolumeController;
-    float volumelevel = 0.0f;
-    public int getcomponentsinchildrencheck = 0;
+    public int levelnumber;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -18,25 +17,7 @@ public class ButtonScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    if(VolumeController != null)
-        {
-            XElement xRoot = XElement.Load(filename);
-            XElement xtype = xRoot.Element(volumetype);
-            XElement xvolume = xtype.Element("Volume");
-            volumelevel = (float)Convert.ToDouble(xvolume.Value);
-
-            float counter = 0.0f;
-            for (int i = 0; i < VolumeController.transform.childCount; i++ )
-            {
-                GameObject child = VolumeController.transform.GetChild(i).gameObject;
-                getcomponentsinchildrencheck++;
-                if (volumelevel > counter)
-                {
-                    child.gameObject.GetComponent<UnityEngine.UI.Image>().color = Color.blue;
-                    counter += 0.1f;
-                }
-            }
-        }
+	    
 	}
 
     public void ExitOnClick()
@@ -49,32 +30,171 @@ public class ButtonScript : MonoBehaviour {
         Application.LoadLevel(levelname);
     }
 
+    public void LoadAvailableLevelOnClick()
+    {
+        //read file and get active level
+        XElement xRoot = XElement.Load("RatingSystem");
+        IEnumerable levels = xRoot.Elements();
+        int i = 1;
+        foreach (XElement level in levels)
+        {
+            if (level.Attribute("Snowballs").Value == "0" && i >= levelnumber)
+            {
+                Application.LoadLevel(levelname);
+            }
+            i++;
+        }
+    }
+
     public void PlayOnClick()
     {
-        int nextlevel = 1;
+        int nextlevel = 6;
         //read file and get active level
+        XElement xRoot = XElement.Load("RatingSystem");
+        IEnumerable levels = xRoot.Elements();
+        foreach(XElement level in levels)
+        {
+            if(level.Attribute("Snowballs").Value == "0")
+            {
+                break;
+            }
+            nextlevel++;
+        }
+
+
+
         Application.LoadLevel(nextlevel);
     }
 
     public void VolumePlusOnClick()
     {
-        XElement xRoot = XElement.Load(filename);
-        XElement xtype = xRoot.Element(volumetype);
-        XElement xvolume = xtype.Element("Volume");
-        float level = (float)Convert.ToDouble(xvolume);
-        level += 0.1F;
-        xvolume.Value = level.ToString();
-        xRoot.Save(filename);
+        XElement xRoot = new XElement("Volume");
+        XElement xRoot2 = XElement.Load(filename);
+        IEnumerable elements = xRoot.Attributes();
+        if ("Master" != volumetype)
+        {
+            XElement xMaster = new XElement("Master");
+            xRoot.Add(xMaster);
+            XAttribute xVolume = new XAttribute("Volume", xRoot2.Element("Master").Attribute("Volume").Value);
+            xMaster.Add(xVolume);
+        }
+        else
+        {
+            XElement xMaster = new XElement("Master");
+            xRoot.Add(xMaster);
+            float volume = (float)Convert.ToDouble(xRoot2.Element("Master").Attribute("Volume").Value) + 0.1f;
+            if(volume > 1)
+                volume = 1.0f;
+            XAttribute xVolume = new XAttribute("Volume", volume);
+            xMaster.Add(xVolume);
+        }
+        if ("Sound" != volumetype)
+        {
+            XElement xMaster = new XElement("Sound");
+            xRoot.Add(xMaster);
+            XAttribute xVolume = new XAttribute("Volume", xRoot2.Element("Sound").Attribute("Volume").Value);
+            xMaster.Add(xVolume);
+        }
+        else
+        {
+            XElement xMaster = new XElement("Sound");
+            xRoot.Add(xMaster);
+            float volume = (float)Convert.ToDouble(xRoot2.Element("Sound").Attribute("Volume").Value) + 0.1f;
+            if (volume > 1)
+                volume = 1.0f;
+            XAttribute xVolume = new XAttribute("Volume", volume);
+            xMaster.Add(xVolume);
+        }
+        if ("Music" != volumetype)
+        {
+            XElement xMaster = new XElement("Music");
+            xRoot.Add(xMaster);
+            XAttribute xVolume = new XAttribute("Volume", xRoot2.Element("Music").Attribute("Volume").Value);
+            xMaster.Add(xVolume);
+        }
+        else
+        {
+            XElement xMaster = new XElement("Music");
+            xRoot.Add(xMaster);
+            float volume = (float)Convert.ToDouble(xRoot2.Element("Music").Attribute("Volume").Value) + 0.1f;
+            if (volume > 1)
+                volume = 1.0f;
+            XAttribute xVolume = new XAttribute("Volume", volume);
+            xMaster.Add(xVolume);
+        }
+        xRoot.Save(filename); 
+        //XElement xRoot = new XElement("Volume");
+        //XElement xMaster = new XElement("Master");
+        //xRoot.Add(xMaster);
+        //XAttribute xVolume = new XAttribute("Volume", 0);
+        //xMaster.Add(xVolume);
+        //XElement xSound = new XElement("Sound");
+        //xRoot.Add(xSound);
+        //XAttribute xVolume2 = new XAttribute("Volume", 0);
+        //xSound.Add(xVolume2); 
+        //XElement xMusic = new XElement("Music");
+        //xRoot.Add(xMusic);
+        //XAttribute xVolume3 = new XAttribute("Volume", 0);
+        //xMusic.Add(xVolume3);
+        //xRoot.Save(filename);
     }
 
     public void VolumeMinusOnClick()
     {
-        XElement xRoot = XElement.Load(filename);
-        XElement xtype = xRoot.Element(volumetype);
-        XElement xvolume = xtype.Element("Volume");
-        float level = (float)Convert.ToDouble(xvolume);
-        level += 0.1F;
-        xvolume.Value = level.ToString();
-        xRoot.Save(filename);
+        XElement xRoot = new XElement("Volume");
+        XElement xRoot2 = XElement.Load(filename);
+        IEnumerable elements = xRoot.Attributes();
+        if ("Master" != volumetype)
+        {
+            XElement xMaster = new XElement("Master");
+            xRoot.Add(xMaster);
+            XAttribute xVolume = new XAttribute("Volume", xRoot2.Element("Master").Attribute("Volume").Value);
+            xMaster.Add(xVolume);
+        }
+        else
+        {
+            XElement xMaster = new XElement("Master");
+            xRoot.Add(xMaster);
+            float volume = (float)Convert.ToDouble(xRoot2.Element("Master").Attribute("Volume").Value) - 0.1f;
+            if (volume < 0)
+                volume = 0f;
+            XAttribute xVolume = new XAttribute("Volume", volume);
+            xMaster.Add(xVolume);
+        }
+        if ("Sound" != volumetype)
+        {
+            XElement xMaster = new XElement("Sound");
+            xRoot.Add(xMaster);
+            XAttribute xVolume = new XAttribute("Volume", xRoot2.Element("Sound").Attribute("Volume").Value);
+            xMaster.Add(xVolume);
+        }
+        else
+        {
+            XElement xMaster = new XElement("Sound");
+            xRoot.Add(xMaster);
+            float volume = (float)Convert.ToDouble(xRoot2.Element("Sound").Attribute("Volume").Value) - 0.1f;
+            if (volume < 0)
+                volume = 0f;
+            XAttribute xVolume = new XAttribute("Volume", volume);
+            xMaster.Add(xVolume);
+        }
+        if ("Music" != volumetype)
+        {
+            XElement xMaster = new XElement("Music");
+            xRoot.Add(xMaster);
+            XAttribute xVolume = new XAttribute("Volume", xRoot2.Element("Music").Attribute("Volume").Value);
+            xMaster.Add(xVolume);
+        }
+        else
+        {
+            XElement xMaster = new XElement("Music");
+            xRoot.Add(xMaster);
+            float volume = (float)Convert.ToDouble(xRoot2.Element("Music").Attribute("Volume").Value) - 0.1f;
+            if (volume < 0)
+                volume = 0.0f;
+            XAttribute xVolume = new XAttribute("Volume", volume);
+            xMaster.Add(xVolume);
+        }
+        xRoot.Save(filename); 
     }
 }

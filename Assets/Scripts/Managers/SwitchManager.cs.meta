@@ -1,10 +1,22 @@
 fileFormatVersion: 2
 guid: 2b03519708fd51a4bbb27143d8558a24
-timeCreated: 1433955247
+timeCreated: 1434591616
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Frosty: {fileID: 106942, guid: 0feef21e4f10d8341b793e308e8ffbff, type: 2}
+  - prehead: {instanceID: 0}
+  - pretorso: {instanceID: 0}
+  - prebase: {instanceID: 0}
+  - preheadtorso: {instanceID: 0}
+  - pretorsobase: {instanceID: 0}
+  - Head: {instanceID: 0}
+  - Torso: {instanceID: 0}
+  - Base: {instanceID: 0}
+  - Active: {instanceID: 0}
+  - attachSnd: {instanceID: 0}
+  - detachSnd: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
