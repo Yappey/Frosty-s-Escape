@@ -37,6 +37,8 @@ public class SwitchManager : MonoBehaviour
         Head = FindHead();
         Torso = FindTorso();
         Base = FindBase();
+
+        Active = FindActive();
     }
 
     // Update is called once per frame
