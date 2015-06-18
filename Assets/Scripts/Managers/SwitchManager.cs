@@ -26,6 +26,9 @@ public class SwitchManager : MonoBehaviour
     public AudioSource attachSnd;
     public AudioSource detachSnd;
 
+    public int test1 = 0;
+    public int test2 = 0;
+
 
     //test ints
     public int test = 0;
@@ -406,7 +409,7 @@ public class SwitchManager : MonoBehaviour
             {
                 attachSnd.Play();
             }
-
+            test1++;
             Destroy(Torso);
             Active = Instantiate(pretorsobase);
             Active.transform.position = Base.transform.position;
@@ -415,13 +418,16 @@ public class SwitchManager : MonoBehaviour
             Torso = Active;
             Active.GetComponent<Frostyehavior>().isActive = true;
         }
-        else if (!Head.GetComponent<Frostyehavior>().torsoAttached && !Torso.GetComponent<Frostyehavior>().baseAttached)
+        else if (!Base.GetComponent<Frostyehavior>().torsoAttached &&
+            (Torso.transform.position - Base.transform.position).magnitude < attachdistance &&
+            !Torso.GetComponent<Frostyehavior>().headAttached &&
+            ((Head.transform.position - Base.transform.position).magnitude < attachdistance))
         {
             if (!attachSnd.isPlaying)
             {
                 attachSnd.Play();
             }
-
+            test2++;
             Destroy(Head);
             Destroy(Torso);
             Active = Instantiate(Frosty);
