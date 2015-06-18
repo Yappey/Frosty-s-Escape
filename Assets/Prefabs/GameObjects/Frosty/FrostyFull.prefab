@@ -365,7 +365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   presnowball: {fileID: 181698, guid: f02e4b48f9d7b3549af4d66ff13ff056, type: 2}
   snowball: {fileID: 0}
-  throwStrength: 1000
+  throwStrength: 10
   moveSpeed: 10
   climbSpeed: 10
   jumpVelocity: 7
