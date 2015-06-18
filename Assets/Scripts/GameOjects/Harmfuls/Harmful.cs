@@ -60,6 +60,7 @@ public class Harmful : MonoBehaviour {
 				if ((isCrushing && col.gameObject.GetComponent<Frostyehavior>().isGrounded) || !isCrushing)
 				{
 					// TODO: INSTAKILL
+					GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBarScript>().Instakill();
 				}
 			}
 			// TODO: Hurt Frosty.  Dependent on Health Bar.

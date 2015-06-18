@@ -251,7 +251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   presnowball: {fileID: 0}
   snowball: {fileID: 0}
-  throwStrength: 1
+  throwStrength: 10
   moveSpeed: 10
   climbSpeed: 10
   jumpVelocity: 7
