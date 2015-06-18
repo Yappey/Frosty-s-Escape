@@ -12,6 +12,7 @@ TagManager:
   - Ladder
   - HealthBar
   - SwitchManager
+  - MonkeyBar
   layers:
   - Default
   - TransparentFX
