@@ -53,13 +53,14 @@ public class Harmful : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D col)
 	{
-		if (col.gameObject.tag == "Frosty")
+		if (col.gameObject.tag == "Frosty" && isActive)
 		{
 			if (instaKill)
 			{
 				if ((isCrushing && col.gameObject.GetComponent<Frostyehavior>().isGrounded) || !isCrushing)
 				{
 					// TODO: INSTAKILL
+					GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBarScript>().Instakill();
 				}
 			}
 			// TODO: Hurt Frosty.  Dependent on Health Bar.
