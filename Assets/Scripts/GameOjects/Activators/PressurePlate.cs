@@ -7,8 +7,8 @@ public class PressurePlate : BaseActivator {
     bool isIn = false;
     float moveDistance = 0.05f;
     float timer = 0.0f;
-    public GameObject frosty;
-    public GameObject switchmanager;
+    //public GameObject frosty;
+    //public GameObject switchmanager;
 
     // Use this for initialization
     void Start()
@@ -22,10 +22,10 @@ public class PressurePlate : BaseActivator {
         if (timer > 0.0f && isIn)
         {
             timer -= Time.deltaTime;
-            if (timer < 0.0f)
+            if (timer <= 0.0f)
                 MoveOut();
         }
-        frosty = switchmanager.GetComponent<SwitchManager>().FindActive();
+        //frosty = switchmanager.GetComponent<SwitchManager>().FindActive();
     }
 
     override public void Activate()
@@ -35,20 +35,28 @@ public class PressurePlate : BaseActivator {
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (!isIn && frosty.GetComponent<Frostyehavior>().baseAttached)
+        if (!isIn)
         {
-            MoveIn();
-            timer = 0.8f;
+			if (col.transform.CompareTag("Weight") 
+			    || (col.GetComponent<Frostyehavior>() != null && col.GetComponent<Frostyehavior>().baseAttached))
+			{
+				MoveIn();
+				timer = 0.8f;
+			}
         }
     }
 
     void OnTriggerStay2D(Collider2D col)
     {
-        if (isIn && frosty.GetComponent<Frostyehavior>().baseAttached)
-        {
-            timer = 0.3f;
-        }
-    }
+		if (isIn)
+		{
+			if (col.CompareTag("Weight") 
+			    || (col.GetComponent<Frostyehavior>() != null && col.GetComponent<Frostyehavior>().baseAttached))
+			{
+				timer = 0.3f;
+			}
+		}
+	}
 
     void MoveIn()
     {

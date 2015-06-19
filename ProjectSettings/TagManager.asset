@@ -13,6 +13,7 @@ TagManager:
   - HealthBar
   - SwitchManager
   - MonkeyBar
+  - Weight
   layers:
   - Default
   - TransparentFX

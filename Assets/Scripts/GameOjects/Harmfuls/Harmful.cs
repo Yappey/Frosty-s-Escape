@@ -65,7 +65,7 @@ public class Harmful : MonoBehaviour {
 			}
 			// TODO: Hurt Frosty.  Dependent on Health Bar.
 
-			GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBarScript>().Health -= damage;
+			GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBarScript>().Hurt(damage);
 
 			if (destroyOnCollision)
 			{
