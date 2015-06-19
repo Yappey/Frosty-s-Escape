@@ -4,6 +4,7 @@ using System.Collections;
 public class HealthBarScript : MonoBehaviour {
 
 	public float health = 60.0f;
+	public GameObject shieldBar;
 
 	public float Health{
 		set{
@@ -35,28 +36,36 @@ public class HealthBarScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (health > 0.0f) {
-			health -= Time.deltaTime;
-			if (health <= 0.0f)
-			{
-				health = 0.0f;
-				OutOfHealth();
-			}
-		} 
-
-		bar.localScale = new Vector3((barLength * health) / levelTime, bar.localScale.y, bar.localScale.z);
+		if (!shieldBar.GetComponent<ShieldBar>().shieldOn) {
+			if (health > 0.0f) {
+				health -= Time.deltaTime;
+				if (health <= 0.0f)
+				{
+					health = 0.0f;
+					OutOfHealth();
+				}
+			} 
+			
+			bar.localScale = new Vector3((barLength * health) / levelTime, bar.localScale.y, bar.localScale.z);
+		}
 	}
 
 	public void Hurt(float damage) {
-		if (health - damage > 0.0f) {
-			health -= damage;
+		if (shieldBar.GetComponent<ShieldBar>().shieldOn) {
+			if (health - damage > 0.0f) {
+				health -= damage;
+			}
+			
+			else {
+				health = 0.0f;
+			}
+			if (health <= 0.0f)
+				OutOfHealth();
 		}
 
 		else {
-			health = 0.0f;
+			shieldBar.GetComponent<ShieldBar>().Hurt(damage);
 		}
-		if (health <= 0.0f)
-			OutOfHealth();
 	}
 
 	public void Instakill()

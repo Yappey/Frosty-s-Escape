@@ -13,6 +13,7 @@ GameObject:
   - 82: {fileID: 8266864}
   - 114: {fileID: 11493558}
   - 114: {fileID: 11430314}
+  - 114: {fileID: 11404940}
   m_Layer: 0
   m_Name: SwitchManager
   m_TagString: SwitchManager
@@ -172,7 +173,7 @@ AudioSource:
     m_PostInfinity: 2
 --- !u!114 &11404940
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141780}
