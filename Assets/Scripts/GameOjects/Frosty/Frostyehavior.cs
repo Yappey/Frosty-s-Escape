@@ -69,13 +69,14 @@ public class Frostyehavior : MonoBehaviour {
         if (Input.GetButtonDown("Throw"))
         {
             snowball = Instantiate(presnowball);
-            snowball.transform.position = transform.GetChild(4).transform.position;
+            snowball.transform.position = transform.FindChild("SnowballThrower").transform.position;
             Vector3 curosr = GameObject.FindGameObjectWithTag("MainCamera")
                 .GetComponent<Camera>().ScreenToWorldPoint(Input.mousePosition);
             curosr.z = transform.position.z;
 
 
-            snowball.GetComponent<Rigidbody2D>().AddForce((curosr - transform.position).normalized * throwStrength);
+            snowball.GetComponent<Rigidbody2D>().AddForce((curosr - transform.position).normalized * throwStrength, 
+			                                              ForceMode2D.Impulse);
         }
 	}
 
