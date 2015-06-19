@@ -13,6 +13,7 @@ TagManager:
   - HealthBar
   - SwitchManager
   - MonkeyBar
+  - LaserGrid
   layers:
   - Default
   - TransparentFX
