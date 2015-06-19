@@ -13,6 +13,10 @@ TagManager:
   - HealthBar
   - SwitchManager
   - MonkeyBar
+  - HUD
+  - Help
+  - Pause
+  - Options
   layers:
   - Default
   - TransparentFX
