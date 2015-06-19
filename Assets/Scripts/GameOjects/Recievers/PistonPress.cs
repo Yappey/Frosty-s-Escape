@@ -7,23 +7,30 @@ public class PistonPress : BaseReceiver {
 	private float dropTimer;
 	private float raiseTimer;
 
-	private bool grounded = false;
+	public bool grounded = false;
 
 	public float dropTime = 1;
 	public float waitToRaise = 1;
 	public float raiseSpeed = 2;
 
+	private float xposition;
+
 
 	// Use this for initialization
 	void Start () {
 		dropTimer = dropTime;
+		xposition = transform.parent.transform.position.x;
+		gameObject.transform.position = new Vector3(xposition, gameObject.transform.position.y, gameObject.transform.position.z);
+
 		upPosition = gameObject.transform.position;
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+		gameObject.transform.position = new Vector3(xposition, gameObject.transform.position.y, gameObject.transform.position.z);
+
 		if (state == 1) {
-			if (gameObject.transform.position == upPosition) {
+			if (Mathf.Abs(gameObject.transform.position.y - upPosition.y) < 0.001) {
 				grounded = false;
 			}
 			

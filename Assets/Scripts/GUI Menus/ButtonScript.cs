@@ -9,6 +9,7 @@ public class ButtonScript : MonoBehaviour {
     public string filename;
     public string volumetype;
     public int levelnumber;
+    
 
 	// Use this for initialization
 	void Start () {
@@ -30,15 +31,20 @@ public class ButtonScript : MonoBehaviour {
         Application.LoadLevel(levelname);
     }
 
+    public void ResumeOnClick()
+    {
+
+    }
+
     public void LoadAvailableLevelOnClick()
     {
         //read file and get active level
         XElement xRoot = XElement.Load("RatingSystem");
         IEnumerable levels = xRoot.Elements();
-        int i = 1;
+        int i = 5;
         foreach (XElement level in levels)
         {
-            if (level.Attribute("Snowballs").Value == "0" && i >= levelnumber)
+            if (level.Attribute("Snowballs").Value == "0" && i >= levelnumber + 5)
             {
                 Application.LoadLevel(levelname);
             }

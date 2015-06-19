@@ -17,9 +17,10 @@ public class Snowball : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        if(coll.gameObject.tag != "Icepatch")
+		if(!coll.contacts[0].collider.transform.CompareTag("Icepatch"))
         {
             GameObject icpatch = Instantiate(preicepatch);
+
             icpatch.transform.position = coll.contacts[0].point;
             icpatch.transform.up = coll.contacts[0].normal;
 
