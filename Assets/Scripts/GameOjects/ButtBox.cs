@@ -38,7 +38,7 @@ public class ButtBox : MonoBehaviour {
 	void OnTriggerExit2D(Collider2D col)
 	{
 		touchingButt = false;
-		if (!col.CompareTag("Frosty"))
+		if (!col.CompareTag("Frosty") && col.name != "Grounder")
 		    touchingGround = false;
 	}
 }
