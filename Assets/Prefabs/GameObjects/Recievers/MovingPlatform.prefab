@@ -18,6 +18,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &168350
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 485304}
+  - 68: {fileID: 6874970}
+  - 114: {fileID: 11489484}
+  m_Layer: 0
+  m_Name: SlamDeathCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &461668
 Transform:
   m_ObjectHideFlags: 1
@@ -25,10 +42,23 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 151880}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.8599999, y: -7.03000021, z: 0}
+  m_LocalPosition: {x: -70.9799957, y: -7.76000023, z: 0}
   m_LocalScale: {x: 1.22000003, y: .400000006, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 485304}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!4 &485304
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168350}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.65000021, z: 0}
+  m_LocalScale: {x: .888112426, y: .372205138, z: 1}
+  m_Children: []
+  m_Father: {fileID: 461668}
   m_RootOrder: 0
 --- !u!61 &6133638
 BoxCollider2D:
@@ -43,6 +73,20 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 3.43000007, y: 3.42000008}
+--- !u!68 &6874970
+EdgeCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168350}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: -1.61845696, y: .0363676548}
+  - {x: 1.64477372, y: 0}
 --- !u!114 &11444582
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -55,24 +99,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 1
-  waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  speeds:
-  - 5
-  - 5
-  - 5
-  - 5
-  waits:
-  - 0
-  - 0
-  - 0
-  - 0
+  waypoints: []
+  speeds: []
+  waits: []
   timer: 0
   stopImmediately: 0
   cyclical: 0
+--- !u!114 &11489484
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66ef93f75fc64594099dde80e073492a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 1
+  instaKill: 1
+  isCrushing: 1
+  destroyOnCollision: 0
+  damage: 1
+  lifetime: 2
+  lifeType: 0
 --- !u!212 &21280454
 SpriteRenderer:
   m_ObjectHideFlags: 1
