@@ -192,7 +192,7 @@ MonoBehaviour:
   climbSpeed: 10
   jumpVelocity: 7
   snowballVelocity: 10
-  activateRange: 1
+  activateRange: .699999988
   isActive: 0
   isGrounded: 0
   headAttached: 0
@@ -211,6 +211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bLadder: 0
+  _bMonkeyBar: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
