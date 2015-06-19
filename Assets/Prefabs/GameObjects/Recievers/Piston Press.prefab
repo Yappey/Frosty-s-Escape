@@ -12,6 +12,7 @@ GameObject:
   - 114: {fileID: 11404672}
   - 50: {fileID: 5076186}
   - 61: {fileID: 6154924}
+  - 114: {fileID: 11483030}
   m_Layer: 0
   m_Name: Slam
   m_TagString: Untagged
@@ -79,14 +80,13 @@ GameObject:
   m_Component:
   - 4: {fileID: 423872}
   - 68: {fileID: 6874234}
-  - 114: {fileID: 11470952}
   m_Layer: 0
   m_Name: SlamDeathCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &186394
 GameObject:
   m_ObjectHideFlags: 1
@@ -171,7 +171,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143366}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.3499999, y: -6.75, z: 0}
+  m_LocalPosition: {x: 3.23046732, y: -6.74245787, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 461226}
@@ -220,7 +220,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -291,6 +291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 1
+  grounded: 0
   dropTime: 1
   waitToRaise: 1
   raiseSpeed: 1
@@ -307,12 +308,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slam: {fileID: 186394}
   ceiling: {fileID: 154534}
---- !u!114 &11470952
+--- !u!114 &11473810
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 174106}
+  m_GameObject: {fileID: 154534}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66ef93f75fc64594099dde80e073492a, type: 3}
@@ -325,12 +326,12 @@ MonoBehaviour:
   damage: 1
   lifetime: 2
   lifeType: 0
---- !u!114 &11473810
+--- !u!114 &11483030
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 154534}
+  m_GameObject: {fileID: 116338}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66ef93f75fc64594099dde80e073492a, type: 3}
