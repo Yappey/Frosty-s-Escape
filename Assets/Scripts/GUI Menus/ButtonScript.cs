@@ -9,6 +9,8 @@ public class ButtonScript : MonoBehaviour {
     public string filename;
     public string volumetype;
     public int levelnumber;
+    public int testif1;
+    public int testif2;
     
 
 	// Use this for initialization
@@ -41,12 +43,21 @@ public class ButtonScript : MonoBehaviour {
         //read file and get active level
         XElement xRoot = XElement.Load("RatingSystem");
         IEnumerable levels = xRoot.Elements();
-        int i = 5;
+        int i = 1;
         foreach (XElement level in levels)
         {
-            if (level.Attribute("Snowballs").Value == "0" && i >= levelnumber + 5)
+            if(i == levelnumber)
             {
+                //testif1++;
                 Application.LoadLevel(levelname);
+            }
+            if(i == levelnumber - 1)
+            {
+                if (Convert.ToInt32(level.Attribute("Snowballs").Value) != 0)
+                {
+                    Application.LoadLevel(levelname);
+                }
+                break;
             }
             i++;
         }
@@ -76,7 +87,6 @@ public class ButtonScript : MonoBehaviour {
     {
         XElement xRoot = new XElement("Volume");
         XElement xRoot2 = XElement.Load(filename);
-        IEnumerable elements = xRoot.Attributes();
         if ("Master" != volumetype)
         {
             XElement xMaster = new XElement("Master");
@@ -149,7 +159,6 @@ public class ButtonScript : MonoBehaviour {
     {
         XElement xRoot = new XElement("Volume");
         XElement xRoot2 = XElement.Load(filename);
-        IEnumerable elements = xRoot.Attributes();
         if ("Master" != volumetype)
         {
             XElement xMaster = new XElement("Master");

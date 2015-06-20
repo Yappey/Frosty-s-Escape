@@ -13,13 +13,13 @@ public class MainMenuScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    if(Input.GetAxisRaw("Horizontal") > 0)
+	    if(Input.GetButtonDown("Right"))
         {
             selected++;
             if (selected >= Buttons.Length)
                 selected = 0;
         }
-        if (Input.GetAxisRaw("Horizontal") < 0)
+        if (Input.GetButtonDown("Left"))
         {
             selected--;
             if (selected < 0)
@@ -27,19 +27,27 @@ public class MainMenuScript : MonoBehaviour {
         }
         if(Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Return))
         {
-            Buttons[selected].GetComponent<ButtonScript>().LoadLevelOnClick();
+            if (selected != 0)
+            {
+                Buttons[selected].GetComponent<ButtonScript>().LoadLevelOnClick();
+            }
+            else
+            {
+                Buttons[selected].GetComponent<ButtonScript>().PlayOnClick();
+            }
         }
         int i = 0;
         foreach (UnityEngine.UI.Button button in Buttons)
         {
             if (i == selected)
             {
-                Buttons[selected].GetComponent<UnityEngine.UI.Image>().color = Color.gray; 
+                button.GetComponent<UnityEngine.UI.Image>().color = new Color(.5f,.5f,.5f,.4f);
             } 
             else
             {
-                Buttons[i].GetComponent<UnityEngine.UI.Image>().color = Color.white; 
+                button.GetComponent<UnityEngine.UI.Image>().color = Color.clear;
             }
+            i++;
         }
 
 	}

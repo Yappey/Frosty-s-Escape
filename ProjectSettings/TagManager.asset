@@ -20,6 +20,7 @@ TagManager:
   - Weight
   - ShieldBar
   - LaserGrid
+  - Security
   layers:
   - Default
   - TransparentFX
@@ -33,7 +34,7 @@ TagManager:
   - Snowball
   - NonCollidingBlock
   - Laser
-  - 
+  - steam
   - 
   - 
   - 
