@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11426362}
   m_Layer: 0
   m_Name: AC Vent
-  m_TagString: ACVent
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,7 +55,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aad93673748bacd4cbb0ced85ad08782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shieldBar: {fileID: 0}
 --- !u!198 &19880478
 ParticleSystem:
   m_ObjectHideFlags: 1

@@ -4,7 +4,7 @@ using System.Collections;
 public class HealthBarScript : MonoBehaviour {
 
 	public float health = 60.0f;
-	public GameObject shieldBar;
+	private GameObject shieldBar;
 
 	public float Health{
 		set{
@@ -28,6 +28,7 @@ public class HealthBarScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		shieldBar = GameObject.FindGameObjectWithTag ("ShieldBar");
 		levelTime = health;
 
 		bar = GetComponent<RectTransform> ();
@@ -51,7 +52,11 @@ public class HealthBarScript : MonoBehaviour {
 	}
 
 	public void Hurt(float damage) {
-		if (shieldBar.GetComponent<ShieldBar>().shieldOn) {
+		if (damage <= 0.0f) {
+			return;
+		}
+
+		if (!shieldBar.GetComponent<ShieldBar>().shieldOn) {
 			if (health - damage > 0.0f) {
 				health -= damage;
 			}
@@ -64,7 +69,7 @@ public class HealthBarScript : MonoBehaviour {
 		}
 
 		else {
-			shieldBar.GetComponent<ShieldBar>().Hurt(damage);
+			Hurt(shieldBar.GetComponent<ShieldBar>().Hurt(damage));
 		}
 	}
 

@@ -55,18 +55,18 @@ public class ShieldBar : MonoBehaviour {
 		}
 	}
 	
-	public void Hurt(float damage) {
+	public float Hurt(float damage) {
 		if (shield - damage > 0.0f) {
 			shield -= damage;
+			return 0;
 		}
-		
-		else {
-			shield = 0.0f;
-			shieldOn = false;
-			gameObject.GetComponent<UnityEngine.UI.Image>().color = new Vector4(gameObject.GetComponent<UnityEngine.UI.Image>().color.r,
-			                                                                    gameObject.GetComponent<UnityEngine.UI.Image>().color.g,
-			                                                                    gameObject.GetComponent<UnityEngine.UI.Image>().color.b, 0.0f);
-		}
-	}
 
+		damage -= shield;
+		shield = 0.0f;
+		shieldOn = false;
+		gameObject.GetComponent<UnityEngine.UI.Image>().color = new Vector4(gameObject.GetComponent<UnityEngine.UI.Image>().color.r,
+		                                                                    gameObject.GetComponent<UnityEngine.UI.Image>().color.g,
+		                                                                    gameObject.GetComponent<UnityEngine.UI.Image>().color.b, 0.0f);
+		return damage;
+	}
 }
