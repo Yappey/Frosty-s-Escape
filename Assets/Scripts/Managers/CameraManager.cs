@@ -6,13 +6,12 @@ public class CameraManager : MonoBehaviour
 
     public GameObject _gbFollowing;
     public Transform _tMapSize;
-    float _fFollowSpeed = 10.0f;
-    float _fOffSet = 2.5f;
+    public float _fFollowSpeed = 10.0f;
+    public float _fOffSet = 2.5f;
     float _fX, _fY;
     float _fHeight, _fWidth;
     float _fLeft, _fRight, _fTop, _fBottom;
     float _fMapLeft, _fMapRight, _fMapTop, _fMapBottom;
-    public bool _bBoundary;
 
     // Use this for initialization
     void Start()
