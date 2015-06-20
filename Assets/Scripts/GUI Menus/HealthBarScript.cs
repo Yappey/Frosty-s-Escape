@@ -4,6 +4,7 @@ using System.Collections;
 public class HealthBarScript : MonoBehaviour {
 
 	public float health = 60.0f;
+	private GameObject shieldBar;
 
 	public float Health{
 		set{
@@ -27,6 +28,7 @@ public class HealthBarScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		shieldBar = GameObject.FindGameObjectWithTag ("ShieldBar");
 		levelTime = health;
 
 		bar = GetComponent<RectTransform> ();
@@ -35,28 +37,41 @@ public class HealthBarScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (health > 0.0f) {
-			health -= Time.deltaTime;
-			if (health <= 0.0f)
-			{
-				health = 0.0f;
-				OutOfHealth();
-			}
-		} 
-
-		bar.localScale = new Vector3((barLength * health) / levelTime, bar.localScale.y, bar.localScale.z);
+        if (!shieldBar.GetComponent<ShieldBar>().shieldOn)
+        {
+			if (health > 0.0f) {
+				health -= Time.deltaTime;
+				if (health <= 0.0f)
+				{
+					health = 0.0f;
+					OutOfHealth();
+				}
+			} 
+			
+			bar.localScale = new Vector3((barLength * health) / levelTime, bar.localScale.y, bar.localScale.z);
+		}
 	}
 
 	public void Hurt(float damage) {
-		if (health - damage > 0.0f) {
-			health -= damage;
+		if (damage <= 0.0f) {
+			return;
+		}
+
+		if (!shieldBar.GetComponent<ShieldBar>().shieldOn) {
+			if (health - damage > 0.0f) {
+				health -= damage;
+			}
+			
+			else {
+				health = 0.0f;
+			}
+			if (health <= 0.0f)
+				OutOfHealth();
 		}
 
 		else {
-			health = 0.0f;
+			Hurt(shieldBar.GetComponent<ShieldBar>().Hurt(damage));
 		}
-		if (health <= 0.0f)
-			OutOfHealth();
 	}
 
 	public void Instakill()

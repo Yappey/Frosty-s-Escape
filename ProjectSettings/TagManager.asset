@@ -17,6 +17,9 @@ TagManager:
   - Help
   - Pause
   - Options
+  - Weight
+  - ShieldBar
+  - LaserGrid
   layers:
   - Default
   - TransparentFX

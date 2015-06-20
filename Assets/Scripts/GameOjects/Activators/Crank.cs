@@ -35,8 +35,8 @@ public class Crank : BaseActivator {
             frosty = torso = switchmanager.GetComponent<SwitchManager>().FindActive();
             torso = torso.transform.FindChild("Torso").gameObject; 
         }
-        if (Mathf.Abs(torso.transform.position.y - transform.position.y) < heightmanagment 
-            && Mathf.Abs(torso.transform.position.x - transform.position.x) < widthmanagment)
+        if (Mathf.Abs(torso.transform.position.y - transform.position.y) < heightmanagment && Mathf.Abs(torso.transform.position.x - transform.position.x) < widthmanagment)
+        if (Mathf.Abs(torso.transform.position.y - transform.position.y) < heightmanagment * 4 * transform.localScale.y && Mathf.Abs(torso.transform.position.x - transform.position.x) < widthmanagment * 4 * transform.localScale.x)
         {
             if (!torso.transform.parent.gameObject.GetComponent<Frostyehavior>().isActive)
                 switched = true;
