@@ -44,7 +44,10 @@ public class HowToPlayMenuScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(Input.GetButtonDown("Back"))
+        {
+            Application.LoadLevel("MainMenu");
+        }
         elapsedtime = /*Mathf.Min(Mathf.Abs(*/(-time.Ticks + System.DateTime.Now.Ticks) / 10000000.0f/*), 0.01f)*/;
         time = System.DateTime.Now;
         _fWidth = _gbTestCanvas.GetComponentInParent<RectTransform>().rect.width * _gbTestCanvas.transform.localScale.x;
