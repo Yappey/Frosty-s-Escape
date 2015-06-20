@@ -7,12 +7,14 @@ public class LadderAndMonkeybar : MonoBehaviour
     public bool _bLadder;
     public bool _bMonkeyBar;
     private float _fGravity;
+    float _fladderTimer;
     // Use this for initialization
     void Start()
     {
         _bLadder = false;
         _bMonkeyBar = false;
         _fGravity = GetComponent<Rigidbody2D>().gravityScale;
+        _fladderTimer = 0.1f;
 
     }
 
@@ -51,7 +53,7 @@ public class LadderAndMonkeybar : MonoBehaviour
 
                 if (Input.GetAxisRaw("Vertical") < 0)
                 {
-                    GetComponent<Rigidbody2D>().velocity = new Vector3(GetComponent<Rigidbody2D>().velocity.x, -15.0f);
+                    GetComponent<Rigidbody2D>().velocity = new Vector3(GetComponent<Rigidbody2D>().velocity.x, -1.0f);
                 }
                 else
                 {
@@ -63,8 +65,8 @@ public class LadderAndMonkeybar : MonoBehaviour
                 GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0);
             }
         }
-    }
 
+    }
 
     void OnTriggerStay2D(Collider2D collide)
     {
@@ -76,14 +78,18 @@ public class LadderAndMonkeybar : MonoBehaviour
 
         if (collide.tag == "MonkeyBar" && GetComponent<Frostyehavior>().torsoAttached)
         {
-            _bMonkeyBar = true;
-            GetComponent<Rigidbody2D>().gravityScale = 0.0f;
-
-            if (GetComponent<Frostyehavior>().baseAttached)
+            _fladderTimer -= Time.deltaTime;
+            if (_fladderTimer <= 0.0f)
             {
-                GameObject.FindGameObjectWithTag("SwitchManager").GetComponent<SwitchManager>().BaseDetach();
-                GameObject.FindGameObjectWithTag("SwitchManager").GetComponent<SwitchManager>().SwitchTorso();
+                _bMonkeyBar = true;
+                GetComponent<Rigidbody2D>().gravityScale = 0.0f;
 
+                if (GetComponent<Frostyehavior>().baseAttached)
+                {
+                    GameObject.FindGameObjectWithTag("SwitchManager").GetComponent<SwitchManager>().BaseDetach();
+                    GameObject.FindGameObjectWithTag("SwitchManager").GetComponent<SwitchManager>().SwitchTorso();
+
+                }
             }
         }
 
@@ -95,5 +101,6 @@ public class LadderAndMonkeybar : MonoBehaviour
         _bLadder = false;
         _bMonkeyBar = false;
         GetComponent<Rigidbody2D>().gravityScale = _fGravity;
+        _fladderTimer = 0.1f;
     }
 }
