@@ -17,6 +17,18 @@ public class Sign : BaseActivator {
 	// Update is called once per frame
 	void Update () {
 		frosty = switchmanager.GetComponent<SwitchManager>().FindActive();
+
+		float minDistance = frosty.GetComponent<Frostyehavior> ().activateRange;
+
+		Vector3 myPos = new Vector3(transform.position.x, transform.position.y);
+		Vector3 frostyPos = new Vector3(frosty.transform.position.x, frosty.transform.position.y);
+
+		float distance = (myPos - frostyPos).magnitude;
+		
+		if (distance > minDistance)
+		{
+			info.SetActive(false);
+		}
 	}
 
 	public override void Activate()
