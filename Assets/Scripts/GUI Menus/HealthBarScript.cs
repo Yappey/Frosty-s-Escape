@@ -37,7 +37,8 @@ public class HealthBarScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (!shieldBar.GetComponent<ShieldBar>().shieldOn) {
+        if (!shieldBar.GetComponent<ShieldBar>().shieldOn)
+        {
 			if (health > 0.0f) {
 				health -= Time.deltaTime;
 				if (health <= 0.0f)
