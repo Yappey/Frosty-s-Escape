@@ -15,6 +15,10 @@ public class OptionsMenuScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if(Input.GetButtonDown("Back"))
+        {
+            Application.LoadLevel("MainMenu");
+        }
         int i = 0;
         foreach (GameObject VolumeController in VolumeControllers)
         {
