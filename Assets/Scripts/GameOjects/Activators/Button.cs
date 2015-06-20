@@ -15,6 +15,7 @@ public class Button : BaseActivator {
 	void Update () {
         frosty = switchmanager.GetComponent<SwitchManager>().FindActive();
 	}
+
     public override void Activate()
     {
         if (frosty.GetComponent<Frostyehavior>().headAttached)

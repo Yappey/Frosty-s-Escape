@@ -3,11 +3,11 @@ using System.Collections;
 
 public class ACVent : MonoBehaviour {
 
-	public GameObject shieldBar;
+	private GameObject shieldBar;
 
 	// Use this for initialization
 	void Start () {
-	
+		shieldBar = GameObject.FindGameObjectWithTag ("ShieldBar");
 	}
 	
 	// Update is called once per frame
