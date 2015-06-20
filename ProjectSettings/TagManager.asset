@@ -20,6 +20,7 @@ TagManager:
   - Weight
   - ShieldBar
   - LaserGrid
+  - Security
   layers:
   - Default
   - TransparentFX
