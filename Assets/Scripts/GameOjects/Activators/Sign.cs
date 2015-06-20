@@ -23,7 +23,7 @@ public class Sign : BaseActivator {
 		Vector3 myPos = new Vector3(transform.position.x, transform.position.y);
 		Vector3 frostyPos = new Vector3(frosty.transform.position.x, frosty.transform.position.y);
 
-		float distance = (myPos - frostyPos).magnitude;
+		float distance = (frostyPos - myPos).magnitude;
 		
 		if (distance > minDistance)
 		{
