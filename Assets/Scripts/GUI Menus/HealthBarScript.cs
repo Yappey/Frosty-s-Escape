@@ -4,7 +4,9 @@ using System.Collections;
 public class HealthBarScript : MonoBehaviour {
 
 	public float health = 60.0f;
+	public float meltMultiplier = 2.0f;
 	private GameObject shieldBar;
+	private GameObject[] security;
 
 	public float Health{
 		set{
@@ -23,6 +25,7 @@ public class HealthBarScript : MonoBehaviour {
 	private float levelTime;
 	private RectTransform bar;
 	private float barLength;
+	private float meltSpeed = 1.0f;
 
 	public bool dontKillMe = false;
 
@@ -33,14 +36,21 @@ public class HealthBarScript : MonoBehaviour {
 
 		bar = GetComponent<RectTransform> ();
 		barLength = bar.localScale.x;
+		security = GameObject.FindGameObjectsWithTag("Security");
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		for (int i = 0; i < security.Length; i++) {
+			if (security[i].GetComponent<SecurityCamera>().targetFound) {
+				meltSpeed = meltMultiplier;
+			}
+		}
+
         if (!shieldBar.GetComponent<ShieldBar>().shieldOn)
         {
 			if (health > 0.0f) {
-				health -= Time.deltaTime;
+				health -= meltSpeed * Time.deltaTime;
 				if (health <= 0.0f)
 				{
 					health = 0.0f;

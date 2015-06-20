@@ -4,10 +4,13 @@ using System.Collections;
 public class ShieldBar : MonoBehaviour {
 
 	public float shield = 30.0f;
+	public float meltMultiplier = 2.0f;
 	public bool shieldOn;
 	private float shieldTime;
 	private RectTransform bar;
 	private float barLength;
+	private GameObject[] security;
+	private float meltSpeed = 1.0f;
 
 	
 	// Use this for initialization
@@ -21,17 +24,24 @@ public class ShieldBar : MonoBehaviour {
 		
 		bar = GetComponent<RectTransform> ();
 		barLength = bar.localScale.x;
+		security = GameObject.FindGameObjectsWithTag("Security");
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		for (int i = 0; i < security.Length; i++) {
+			if (security[i].GetComponent<SecurityCamera>().targetFound) {
+				meltSpeed = meltMultiplier;
+			}
+		}
+
 		if (shieldOn) {
 			gameObject.GetComponent<UnityEngine.UI.Image>().color = new Vector4(gameObject.GetComponent<UnityEngine.UI.Image>().color.r,
 			                                                                    gameObject.GetComponent<UnityEngine.UI.Image>().color.g,
 			                                                                    gameObject.GetComponent<UnityEngine.UI.Image>().color.b, 1.0f);
 
 			if (shield > 0.0f) {
-				shield -= Time.deltaTime;
+				shield -= meltSpeed * Time.deltaTime;
 				
 				if (shield <= 0.0f)
 				{
