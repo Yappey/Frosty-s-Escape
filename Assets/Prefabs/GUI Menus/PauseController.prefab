@@ -3242,10 +3242,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27bfd0ebb4146a8419e585e8067e06af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HUD: {fileID: 0}
+  HUD: {fileID: 146564}
   Pause: {fileID: 150388}
   Help: {fileID: 0}
   Options: {fileID: 0}
+  pauser: {fileID: 175884}
   paused: 0
 --- !u!114 &11409294
 MonoBehaviour:
@@ -3857,6 +3858,7 @@ MonoBehaviour:
   Pause: {fileID: 150388}
   Help: {fileID: 136546}
   Options: {fileID: 0}
+  pauser: {fileID: 0}
   paused: 0
 --- !u!114 &11424162
 MonoBehaviour:
@@ -4042,6 +4044,7 @@ MonoBehaviour:
   Pause: {fileID: 150388}
   Help: {fileID: 0}
   Options: {fileID: 199722}
+  pauser: {fileID: 0}
   paused: 0
 --- !u!114 &11426354
 MonoBehaviour:
@@ -4075,10 +4078,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27bfd0ebb4146a8419e585e8067e06af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HUD: {fileID: 0}
+  HUD: {fileID: 146564}
   Pause: {fileID: 150388}
   Help: {fileID: 136546}
   Options: {fileID: 199722}
+  pauser: {fileID: 175884}
   paused: 0
 --- !u!114 &11427504
 MonoBehaviour:
@@ -4962,6 +4966,7 @@ MonoBehaviour:
   Pause: {fileID: 126764}
   Help: {fileID: 0}
   Options: {fileID: 0}
+  pauser: {fileID: 0}
   paused: 0
 --- !u!114 &11442570
 MonoBehaviour:
@@ -5643,7 +5648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9481d506d4e8eb243b1f386437042019, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HUD: {fileID: 0}
+  HUD: {fileID: 146564}
   Pause: {fileID: 150388}
   Help: {fileID: 136546}
   Options: {fileID: 199722}
@@ -5891,6 +5896,7 @@ MonoBehaviour:
   Pause: {fileID: 109762}
   Help: {fileID: 0}
   Options: {fileID: 0}
+  pauser: {fileID: 0}
   paused: 0
 --- !u!114 &11458362
 MonoBehaviour:
@@ -5907,6 +5913,7 @@ MonoBehaviour:
   Pause: {fileID: 126764}
   Help: {fileID: 136546}
   Options: {fileID: 0}
+  pauser: {fileID: 0}
   paused: 0
 --- !u!114 &11458488
 MonoBehaviour:
@@ -6459,6 +6466,7 @@ MonoBehaviour:
   Pause: {fileID: 150388}
   Help: {fileID: 136546}
   Options: {fileID: 0}
+  pauser: {fileID: 0}
   paused: 0
 --- !u!114 &11468220
 MonoBehaviour:
@@ -7016,6 +7024,7 @@ MonoBehaviour:
   Pause: {fileID: 109762}
   Help: {fileID: 0}
   Options: {fileID: 0}
+  pauser: {fileID: 0}
   paused: 0
 --- !u!114 &11478646
 MonoBehaviour:
@@ -7299,6 +7308,7 @@ MonoBehaviour:
   Pause: {fileID: 109762}
   Help: {fileID: 0}
   Options: {fileID: 199722}
+  pauser: {fileID: 0}
   paused: 0
 --- !u!114 &11482546
 MonoBehaviour:
@@ -7353,10 +7363,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27bfd0ebb4146a8419e585e8067e06af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HUD: {fileID: 0}
-  Pause: {fileID: 0}
+  HUD: {fileID: 146564}
+  Pause: {fileID: 150388}
   Help: {fileID: 0}
   Options: {fileID: 0}
+  pauser: {fileID: 0}
   paused: 0
 --- !u!114 &11483652
 MonoBehaviour:
@@ -7373,6 +7384,7 @@ MonoBehaviour:
   Pause: {fileID: 150388}
   Help: {fileID: 0}
   Options: {fileID: 199722}
+  pauser: {fileID: 0}
   paused: 0
 --- !u!114 &11483702
 MonoBehaviour:
@@ -7415,6 +7427,7 @@ MonoBehaviour:
   Pause: {fileID: 126764}
   Help: {fileID: 0}
   Options: {fileID: 0}
+  pauser: {fileID: 0}
   paused: 0
 --- !u!114 &11484634
 MonoBehaviour:
@@ -7773,6 +7786,7 @@ MonoBehaviour:
   Pause: {fileID: 126764}
   Help: {fileID: 0}
   Options: {fileID: 199722}
+  pauser: {fileID: 0}
   paused: 0
 --- !u!114 &11491716
 MonoBehaviour:
@@ -7836,6 +7850,7 @@ MonoBehaviour:
   Pause: {fileID: 109762}
   Help: {fileID: 136546}
   Options: {fileID: 0}
+  pauser: {fileID: 0}
   paused: 0
 --- !u!114 &11493634
 MonoBehaviour:
