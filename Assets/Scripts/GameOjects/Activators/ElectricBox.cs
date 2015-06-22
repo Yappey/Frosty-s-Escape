@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ElectricBox : BaseActivator {
 
-
+    
 
 	// Use this for initialization
 	void Start () {
