@@ -3,7 +3,6 @@ using System.Collections;
 
 public class ElectricBox : BaseActivator {
 
-    public bool isToggle = false;
 
 
 	// Use this for initialization
@@ -13,7 +12,7 @@ public class ElectricBox : BaseActivator {
 	
 	// Update is called once per frame
 	void Update () {
-       // ElectricBoxDeactivate();
+
 	}
 
     void OnCollisionEnter2D(Collision2D collide)
