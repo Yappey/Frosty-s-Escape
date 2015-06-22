@@ -7,6 +7,7 @@ public class HealthBarScript : MonoBehaviour {
 	public float meltMultiplier = 2.0f;
 	private GameObject shieldBar;
 	private GameObject[] security;
+    public GameObject loser;
 
 	public float Health{
 		set{
@@ -31,6 +32,7 @@ public class HealthBarScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        loser = GameObject.FindGameObjectWithTag("Loser");
 		shieldBar = GameObject.FindGameObjectWithTag ("ShieldBar");
 		levelTime = health;
 
@@ -96,7 +98,8 @@ public class HealthBarScript : MonoBehaviour {
 	{
 		if (!dontKillMe)
 		{
-			Application.LoadLevelAsync(Application.loadedLevel);
+            loser.GetComponent<LoseScript>().Die();
+			//Application.LoadLevelAsync(Application.loadedLevel);
 		}
 	}
 }

@@ -23,6 +23,7 @@ TagManager:
   - Security
   - ElectricBox
   - Snowball
+  - Loser
   layers:
   - Default
   - TransparentFX
