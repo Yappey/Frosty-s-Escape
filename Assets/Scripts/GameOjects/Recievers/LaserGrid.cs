@@ -4,7 +4,6 @@ using System.Collections;
 public class LaserGrid : BaseReceiver
 {
     public bool _BActive = true;
-    bool _instantiate = false;
     GameObject _LaserGrid;
    
     

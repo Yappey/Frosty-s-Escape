@@ -380,6 +380,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: .319142133
       objectReference: {fileID: 0}
+    - target: {fileID: 21284600, guid: 02062b1e14bab164c9f88f44ad84209c, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cbf66a3441a77e24aa5d29319e064977,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 02062b1e14bab164c9f88f44ad84209c, type: 2}
   m_IsPrefabParent: 0
@@ -392,7 +397,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 447272, guid: d7294442931eba34893c99663969e891, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 20.8400002
+      value: 21.7000008
       objectReference: {fileID: 0}
     - target: {fileID: 447272, guid: d7294442931eba34893c99663969e891, type: 2}
       propertyPath: m_LocalPosition.y
@@ -842,6 +847,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 439076, guid: 05c8c0cb9b1e3334fb1bf392cf2f0814, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 439076, guid: 05c8c0cb9b1e3334fb1bf392cf2f0814, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 439076, guid: 05c8c0cb9b1e3334fb1bf392cf2f0814, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 05c8c0cb9b1e3334fb1bf392cf2f0814, type: 2}
   m_IsPrefabParent: 0
@@ -920,7 +937,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   receivers:
-  - {fileID: 2028773511}
   - {fileID: 884406135}
   state: 1
   isToggle: 1
