@@ -48,8 +48,8 @@ MonoBehaviour:
   rotationspersecond: 25
   fullrotation: 360
   rotationangle: 0
-  heightmanagment: .100000001
-  widthmanagment: .100000001
+  heightmanagment: 1
+  widthmanagment: 1
   hold: 1
   incremental: 0
   activated: 0

@@ -20,6 +20,9 @@ TagManager:
   - Weight
   - ShieldBar
   - LaserGrid
+  - Security
+  - ElectricBox
+  - Snowball
   layers:
   - Default
   - TransparentFX

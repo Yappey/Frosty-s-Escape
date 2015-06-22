@@ -13,6 +13,7 @@ public class Harmful : MonoBehaviour {
 	public bool instaKill = false;
 	public bool isCrushing = false;
 	public bool destroyOnCollision = true;
+	public bool isDamagePerSecond = false;
 	public float damage = 1.0f;
 	public float lifetime = 2.0f;
 	public lifetimeType lifeType = lifetimeType.none;
@@ -72,5 +73,37 @@ public class Harmful : MonoBehaviour {
 				Destroy(gameObject);
 			}
 		}
+	}
+
+	void OnTriggerEnter2D(Collider2D col)
+	{
+		if (col.gameObject.tag == "Frosty" && isActive)
+		{
+			if (instaKill)
+			{
+				if ((isCrushing && col.gameObject.GetComponent<Frostyehavior>().isGrounded) || !isCrushing)
+				{
+					// TODO: INSTAKILL
+					GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBarScript>().Instakill();
+				}
+			}
+			// TODO: Hurt Frosty.  Dependent on Health Bar.
+			
+			GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBarScript>().Hurt(damage);
+			
+			if (destroyOnCollision)
+			{
+				Destroy(gameObject);
+			}
+		}
+	}
+
+	void OnTriggerStay2D(Collider2D col)
+	{
+		if (col.gameObject.tag == "Frosty" && isActive && isDamagePerSecond)
+		{
+			GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBarScript>().Hurt(damage * Time.deltaTime);
+		}
+
 	}
 }
