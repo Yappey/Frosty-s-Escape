@@ -23,6 +23,7 @@ TagManager:
   - Security
   - ElectricBox
   - Snowball
+  - LeverRotator
   layers:
   - Default
   - TransparentFX

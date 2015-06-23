@@ -10,7 +10,7 @@ public class Frostyehavior : MonoBehaviour {
 	public float moveSpeed = 10;
 	public float climbSpeed = 10;
 	public float jumpVelocity = 10;
-	public float snowballVelocity = 10;
+	public float snowballVelocity = 50;
 
 	public float activateRange = 1.0f;
 
