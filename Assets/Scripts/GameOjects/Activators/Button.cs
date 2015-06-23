@@ -8,7 +8,7 @@ public class Button : BaseActivator {
 
 	// Use this for initialization
 	void Start () {
-		switchmanager = GameObject.FindGameObjectWithTag("SwitchManager");
+        switchmanager = GameObject.FindGameObjectWithTag("SwitchManager");
 	}
 	
 	// Update is called once per frame

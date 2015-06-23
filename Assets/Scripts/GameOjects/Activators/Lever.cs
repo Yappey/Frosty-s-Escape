@@ -7,7 +7,7 @@ public class Lever : BaseActivator {
     public GameObject switchmanager;
 	// Use this for initialization
 	void Start () {
-		switchmanager = GameObject.FindGameObjectWithTag("SwitchManager");
+        switchmanager = GameObject.FindGameObjectWithTag("SwitchManager");
 	}
 	
 	// Update is called once per frame

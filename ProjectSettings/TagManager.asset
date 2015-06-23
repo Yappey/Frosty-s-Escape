@@ -24,6 +24,7 @@ TagManager:
   - ElectricBox
   - Snowball
   - Loser
+  - LeverRotator
   layers:
   - Default
   - TransparentFX

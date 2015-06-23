@@ -31,12 +31,14 @@ public class CameraManager : MonoBehaviour
     void LateUpdate()
     {
 
-        GameObject[] snows = GameObject.FindGameObjectsWithTag("Frosty");
-        foreach (GameObject body in snows)
-        {
-            if (body.GetComponent<Frostyehavior>().isActive)
-                _gbFollowing = body;
-        }
+        //GameObject[] snows = GameObject.FindGameObjectsWithTag("Frosty");
+        //foreach (GameObject body in snows)
+        //{
+        //    if (body.GetComponent<Frostyehavior>().isActive)
+        //        _gbFollowing = body;
+        //}
+        _gbFollowing = GameObject.FindGameObjectWithTag("SwitchManager").GetComponent<SwitchManager>().FindActive();
+
         if (_gbFollowing)
         {
             float x = IncrementTowards(transform.position.x, _gbFollowing.transform.position.x, _fFollowSpeed);
@@ -70,18 +72,18 @@ public class CameraManager : MonoBehaviour
         }
     }
 
-    private float IncrementTowards(float n, float point, float a)
+    private float IncrementTowards(float currentPoint, float dest, float speed)
     {
-        if (n == point)
+        if (-currentPoint + dest <= speed * Time.deltaTime * Mathf.Sign(dest - currentPoint))
         {
-            return n;
+            return currentPoint;
         }
         else
         {
-            float direction = Mathf.Sign(point - n);
-            n += a * Time.deltaTime * direction;
+            float direction = Mathf.Sign(dest - currentPoint);
+            currentPoint += speed * Time.deltaTime * direction;
 
-            return (direction == Mathf.Sign(point - n)) ? n : point;
+            return (direction == Mathf.Sign(dest - currentPoint)) ? currentPoint : dest;
         }
     }
 

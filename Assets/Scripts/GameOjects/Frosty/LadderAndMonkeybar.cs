@@ -26,7 +26,7 @@ public class LadderAndMonkeybar : MonoBehaviour
         {
             if (GetComponent<Frostyehavior>().isActive)
             {
-                if (Input.GetAxisRaw("Vertical") > 0)
+                if (Input.GetAxis("Vertical") > 0)
                     GetComponent<Rigidbody2D>().velocity = new Vector3(GetComponent<Rigidbody2D>().velocity.x, 2.0f);
                 else if (Input.GetAxisRaw("Vertical") < 0)
                     GetComponent<Rigidbody2D>().velocity = new Vector3(GetComponent<Rigidbody2D>().velocity.x, -2.0f);
