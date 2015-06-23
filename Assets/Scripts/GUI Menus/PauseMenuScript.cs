@@ -7,7 +7,7 @@ public class PauseMenuScript : MonoBehaviour {
     public GameObject Pause;
     public GameObject Help;
     public GameObject Options;
-    public GameObject pauser;
+	public GameObject pauser;
     public bool paused = false;
 
 
@@ -26,7 +26,7 @@ public class PauseMenuScript : MonoBehaviour {
         Time.timeScale = 1.0f;
         HUD.SetActive(true);
         Pause.SetActive(false);
-        pauser.GetComponent<PuaseScript>().paused = false;  
+		pauser.GetComponent<PuaseScript> ().paused = false;
     }
 
     public void RestartOnClick()
