@@ -10,7 +10,7 @@ public class Frostyehavior : MonoBehaviour {
 	public float moveSpeed = 10;
 	public float climbSpeed = 10;
 	public float jumpVelocity = 10;
-	public float snowballVelocity = 10;
+	public float snowballVelocity = 50;
 
 	public float activateRange = 1.0f;
 
@@ -55,7 +55,7 @@ public class Frostyehavior : MonoBehaviour {
 				isGrounded = false;
 			}
 
-			if (Input.GetButtonDown("Activate"))
+			if (Input.GetButtonDown("Activate") && Time.timeScale > 0)
 			{
 				ActivateNearest();
 			}
@@ -66,17 +66,9 @@ public class Frostyehavior : MonoBehaviour {
 			vel.x = 0.0f;
 			rgbd.velocity = vel;
 		}
-        if (Input.GetButtonDown("Throw"))
+        if (Input.GetButtonDown("Throw") && Time.timeScale > 0)
         {
-            snowball = Instantiate(presnowball);
-            snowball.transform.position = transform.FindChild("SnowballThrower").transform.position;
-            Vector3 curosr = GameObject.FindGameObjectWithTag("MainCamera")
-                .GetComponent<Camera>().ScreenToWorldPoint(Input.mousePosition);
-            curosr.z = transform.position.z;
-
-
-            snowball.GetComponent<Rigidbody2D>().AddForce((curosr - transform.position).normalized * throwStrength, 
-			                                              ForceMode2D.Impulse);
+            LaunchSnowall();
         }
 	}
 
@@ -108,9 +100,17 @@ public class Frostyehavior : MonoBehaviour {
 	// Lobs a jolly Snowball
 	void LaunchSnowall()
 	{
-		if (isActive)
+		if (isActive && headAttached && torsoAttached && baseAttached)
 		{
+            snowball = Instantiate(presnowball);
+            snowball.transform.position = transform.FindChild("SnowballThrower").transform.position;
+            Vector3 curosr = GameObject.FindGameObjectWithTag("MainCamera")
+                .GetComponent<Camera>().ScreenToWorldPoint(Input.mousePosition);
+            curosr.z = transform.position.z;
 
+
+            snowball.GetComponent<Rigidbody2D>().AddForce((curosr - transform.position).normalized * throwStrength,
+                                                          ForceMode2D.Impulse);
 		}
 	}
 }

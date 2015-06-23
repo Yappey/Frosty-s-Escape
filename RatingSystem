@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <RatingSystem>
-  <Level1 Time="300" Snowballs="2" />
+  <Level1 Time="300" Snowballs="0" />
   <Level2 Time="300" Snowballs="0" />
 </RatingSystem>

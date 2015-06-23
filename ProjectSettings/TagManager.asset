@@ -21,6 +21,10 @@ TagManager:
   - ShieldBar
   - LaserGrid
   - Security
+  - ElectricBox
+  - Snowball
+  - Loser
+  - LeverRotator
   layers:
   - Default
   - TransparentFX

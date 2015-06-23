@@ -59,4 +59,9 @@ public class PauseMenuScript : MonoBehaviour {
         Pause.SetActive(true);
     }
 
+    public void ContinueOnClick()
+    {
+        Application.LoadLevel(Application.loadedLevel + 1);
+    }
+
 }
