@@ -148,6 +148,64 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1281456}
+--- !u!1001 &529905972
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 11442568, guid: c97a895074087b34ca01365177b01f65, type: 2}
+      propertyPath: buttons.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 401650, guid: c97a895074087b34ca01365177b01f65, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 52.6167526
+      objectReference: {fileID: 0}
+    - target: {fileID: 401650, guid: c97a895074087b34ca01365177b01f65, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 25.951086
+      objectReference: {fileID: 0}
+    - target: {fileID: 401650, guid: c97a895074087b34ca01365177b01f65, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 401650, guid: c97a895074087b34ca01365177b01f65, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 401650, guid: c97a895074087b34ca01365177b01f65, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 401650, guid: c97a895074087b34ca01365177b01f65, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 401650, guid: c97a895074087b34ca01365177b01f65, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 401650, guid: c97a895074087b34ca01365177b01f65, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442568, guid: c97a895074087b34ca01365177b01f65, type: 2}
+      propertyPath: buttons.Array.data[0]
+      value: 
+      objectReference: {fileID: 835903148}
+    - target: {fileID: 11442568, guid: c97a895074087b34ca01365177b01f65, type: 2}
+      propertyPath: currButton
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442568, guid: c97a895074087b34ca01365177b01f65, type: 2}
+      propertyPath: state
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c97a895074087b34ca01365177b01f65, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &835903145
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,6 +258,8 @@ MonoBehaviour:
   filename: 
   volumetype: 
   levelnumber: 0
+  testif1: 0
+  testif2: 0
 --- !u!114 &835903148
 MonoBehaviour:
   m_ObjectHideFlags: 0

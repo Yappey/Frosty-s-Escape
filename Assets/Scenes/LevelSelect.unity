@@ -346,7 +346,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 149610, guid: 468ce5c1989930447aea4044f96b04c7, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 468ce5c1989930447aea4044f96b04c7, type: 2}
@@ -843,7 +843,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -276, y: 197}
+  m_AnchoredPosition: {x: -276, y: -3}
   m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1390788442
@@ -863,6 +863,72 @@ MonoBehaviour:
   levelnumber: 1
   testif1: 0
   testif2: 0
+--- !u!1001 &1566336997
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 11442568, guid: c97a895074087b34ca01365177b01f65, type: 2}
+      propertyPath: buttons.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 401650, guid: c97a895074087b34ca01365177b01f65, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 52.6167526
+      objectReference: {fileID: 0}
+    - target: {fileID: 401650, guid: c97a895074087b34ca01365177b01f65, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 25.951086
+      objectReference: {fileID: 0}
+    - target: {fileID: 401650, guid: c97a895074087b34ca01365177b01f65, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 401650, guid: c97a895074087b34ca01365177b01f65, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 401650, guid: c97a895074087b34ca01365177b01f65, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 401650, guid: c97a895074087b34ca01365177b01f65, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 401650, guid: c97a895074087b34ca01365177b01f65, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 401650, guid: c97a895074087b34ca01365177b01f65, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442568, guid: c97a895074087b34ca01365177b01f65, type: 2}
+      propertyPath: buttons.Array.data[0]
+      value: 
+      objectReference: {fileID: 1390788438}
+    - target: {fileID: 11442568, guid: c97a895074087b34ca01365177b01f65, type: 2}
+      propertyPath: buttons.Array.data[1]
+      value: 
+      objectReference: {fileID: 1782361407}
+    - target: {fileID: 11442568, guid: c97a895074087b34ca01365177b01f65, type: 2}
+      propertyPath: buttons.Array.data[2]
+      value: 
+      objectReference: {fileID: 1852652043}
+    - target: {fileID: 11442568, guid: c97a895074087b34ca01365177b01f65, type: 2}
+      propertyPath: currButton
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442568, guid: c97a895074087b34ca01365177b01f65, type: 2}
+      propertyPath: state
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c97a895074087b34ca01365177b01f65, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1603973286
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,7 +1172,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -184, y: 197}
+  m_AnchoredPosition: {x: -146, y: -5}
   m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1782361406
@@ -1220,7 +1286,7 @@ GameObject:
   - 114: {fileID: 1852652042}
   m_Layer: 5
   m_Name: ButtonMenu
-  m_TagString: Untagged
+  m_TagString: Play
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1240,8 +1306,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: -230}
-  m_SizeDelta: {x: 662.799988, y: 30}
+  m_AnchoredPosition: {x: 184, y: -4}
+  m_SizeDelta: {x: 361.5, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1852652042
 MonoBehaviour:

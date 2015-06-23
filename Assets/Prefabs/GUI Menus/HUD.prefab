@@ -108,6 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 30
+  meltMultiplier: 5
   dontKillMe: 0
 --- !u!114 &11476118
 MonoBehaviour:
@@ -121,6 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shield: 15
+  meltMultiplier: 3
   shieldOn: 0
 --- !u!114 &11496070
 MonoBehaviour:
