@@ -74,7 +74,7 @@ public class CameraManager : MonoBehaviour
 
     private float IncrementTowards(float currentPoint, float dest, float speed)
     {
-        if (-currentPoint + dest <= speed * Time.deltaTime * Mathf.Sign(dest - currentPoint))
+        if (currentPoint == dest)
         {
             return currentPoint;
         }
@@ -90,11 +90,10 @@ public class CameraManager : MonoBehaviour
 
     void SetMapSize()
     {
-
         _fLeft = transform.position.x - _fWidth;
         _fRight = transform.position.x + _fWidth;
         _fTop = transform.position.y - _fHeight;
-        _fBottom = transform.position.y - _fHeight;
+        _fBottom = transform.position.y + _fHeight;
 
         _fMapLeft = _tMapSize.position.x - _tMapSize.localScale.x / 2;
         _fMapRight = _tMapSize.position.x + _tMapSize.localScale.x / 2;
