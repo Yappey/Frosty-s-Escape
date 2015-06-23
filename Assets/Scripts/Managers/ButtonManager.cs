@@ -76,41 +76,26 @@ public class ButtonManager : MonoBehaviour {
 				}
 
 				else if (state == WhereAmI.Win) {
-					GameObject pauser = GameObject.FindGameObjectWithTag("Pause");
+					GameObject win = GameObject.FindGameObjectWithTag("Respawn");
+
 					
+					if (currButton == 0 && win.GetComponent<WinBox>().levelIsWon) 
+						buttons[currButton].GetComponent<PauseMenuScript>().ContinueOnClick();
 					
-					if (currButton == 0 && pauser.GetComponent<PuaseScript>().paused) 
-						buttons[currButton].GetComponent<PauseMenuScript>().ResumOnClick();
-					
-					else if (currButton == 1 && pauser.GetComponent<PuaseScript>().paused)
+					else if (currButton == 1 && win.GetComponent<WinBox>().levelIsWon)
 						buttons[currButton].GetComponent<PauseMenuScript>().RestartOnClick();
 					
-					else if (currButton == 2 && pauser.GetComponent<PuaseScript>().paused)
-						buttons[currButton].GetComponent<PauseMenuScript>().OptionsOnClick();
-					
-					else if (currButton == 3 && pauser.GetComponent<PuaseScript>().paused)
-						buttons[currButton].GetComponent<PauseMenuScript>().HelpOnClick();
-					
-					else if (currButton > 3 && pauser.GetComponent<PuaseScript>().paused)
+					else if (currButton > 1 && win.GetComponent<WinBox>().levelIsWon)
 						buttons[currButton].GetComponent<ButtonScript>().LoadLevelOnClick();
 				}
 
 				else if (state == WhereAmI.Lose) {
-					GameObject pauser = GameObject.FindGameObjectWithTag("Pause");
-
-					if (currButton == 0 && pauser.GetComponent<PuaseScript>().paused) 
-						buttons[currButton].GetComponent<PauseMenuScript>().ResumOnClick();
+					GameObject loser = GameObject.FindGameObjectWithTag("Loser");
 					
-					else if (currButton == 1 && pauser.GetComponent<PuaseScript>().paused)
+					if (currButton == 0 && loser.GetComponent<LoseScript>().lost)
 						buttons[currButton].GetComponent<PauseMenuScript>().RestartOnClick();
 					
-					else if (currButton == 2 && pauser.GetComponent<PuaseScript>().paused)
-						buttons[currButton].GetComponent<PauseMenuScript>().OptionsOnClick();
-					
-					else if (currButton == 3 && pauser.GetComponent<PuaseScript>().paused)
-						buttons[currButton].GetComponent<PauseMenuScript>().HelpOnClick();
-					
-					else if (currButton > 3 && pauser.GetComponent<PuaseScript>().paused)
+					else if (currButton > 0 && loser.GetComponent<LoseScript>().lost)
 						buttons[currButton].GetComponent<ButtonScript>().LoadLevelOnClick();
 				}
 			}
