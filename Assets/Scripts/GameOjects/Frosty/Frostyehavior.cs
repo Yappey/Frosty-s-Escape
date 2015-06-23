@@ -100,7 +100,7 @@ public class Frostyehavior : MonoBehaviour {
 	// Lobs a jolly Snowball
 	void LaunchSnowall()
 	{
-		if (isActive)
+		if (isActive && headAttached && torsoAttached && baseAttached)
 		{
             snowball = Instantiate(presnowball);
             snowball.transform.position = transform.FindChild("SnowballThrower").transform.position;

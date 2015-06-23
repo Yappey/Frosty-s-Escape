@@ -53,12 +53,12 @@ public class HowToPlayMenuScript : MonoBehaviour
         _fWidth = _gbTestCanvas.GetComponentInParent<RectTransform>().rect.width * _gbTestCanvas.transform.localScale.x;
         dt = Time.deltaTime;
 
-        if (Input.GetButtonDown("Detach"))
+        if (Input.GetButtonDown("Left"))
         {
             ++ICurrentPos;
         }
 
-        if (Input.GetButtonDown("Attach"))
+        if (Input.GetButtonDown("Right"))
         {
             --ICurrentPos;
         }
