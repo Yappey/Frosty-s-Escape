@@ -23,7 +23,7 @@ public class OptionsMenuScript : MonoBehaviour {
         foreach (GameObject VolumeController in VolumeControllers)
         {
             XElement xRoot2 = new XElement("Volume");
-            XElement xRoot = XElement.Load("Volume");
+            XElement xRoot = XElement.Load("Assets/Volume");
             XElement xtype;
             if (i == 0)
             {
@@ -81,7 +81,7 @@ public class OptionsMenuScript : MonoBehaviour {
                     xMusic.Add(XVolume3);
                 }
 
-                xRoot2.Save("Volume");
+                xRoot2.Save("Assets/Volume");
             }
             float counter = 0.0f;
             for (int j = 0; j < VolumeController.transform.childCount; j++)

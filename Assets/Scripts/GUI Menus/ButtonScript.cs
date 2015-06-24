@@ -41,17 +41,17 @@ public class ButtonScript : MonoBehaviour {
     public void LoadAvailableLevelOnClick()
     {
         //read file and get active level
-        XElement xRoot = XElement.Load("RatingSystem");
+        XElement xRoot = XElement.Load("Assets/RatingSystem");
         IEnumerable levels = xRoot.Elements();
         int i = 1;
         foreach (XElement level in levels)
         {
-            if(i == levelnumber)
+            if (i == levelnumber)
             {
                 //testif1++;
                 Application.LoadLevel(levelname);
             }
-            if(i == levelnumber - 1)
+            if (i == levelnumber - 1)
             {
                 if (Convert.ToInt32(level.Attribute("Snowballs").Value) != 0)
                 {
@@ -67,7 +67,7 @@ public class ButtonScript : MonoBehaviour {
     {
         int nextlevel = 6;
         //read file and get active level
-        XElement xRoot = XElement.Load("RatingSystem");
+        XElement xRoot = XElement.Load("Assets/RatingSystem");
         IEnumerable levels = xRoot.Elements();
         foreach(XElement level in levels)
         {

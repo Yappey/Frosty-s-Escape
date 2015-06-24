@@ -10,7 +10,7 @@ public class SoundEffect : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		XElement xRoot = XElement.Load("Volume");
+		XElement xRoot = XElement.Load("Assets/Volume");
 		XElement xType = xRoot.Element ("Sound");
 		XAttribute xVolume = xType.Attribute("Volume");
 		vol = (float)Convert.ToDouble (xVolume.Value);
@@ -20,7 +20,7 @@ public class SoundEffect : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		XElement xRoot = XElement.Load("Volume");
+		XElement xRoot = XElement.Load("Assets/Volume");
 		XElement xType = xRoot.Element ("Sound");
 		XAttribute xVolume = xType.Attribute("Volume");
 		vol = (float)Convert.ToDouble (xVolume.Value);
