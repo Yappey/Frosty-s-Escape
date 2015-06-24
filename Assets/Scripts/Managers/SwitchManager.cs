@@ -89,6 +89,20 @@ public class SwitchManager : MonoBehaviour
                 BaseAttach();
             }
         }
+        if (HeadSelected)
+            Head.transform.FindChild("Head").GetComponent<MeshRenderer>().material.color = Color.yellow;
+        else
+            Head.transform.FindChild("Head").GetComponent<MeshRenderer>().material.color = Color.red;
+        if (TorsoSelected)
+            Torso.transform.FindChild("Torso").GetComponent<MeshRenderer>().material.color = Color.yellow;
+        else
+            Torso.transform.FindChild("Torso").GetComponent<MeshRenderer>().material.color = Color.green;
+        if (BaseSelected)
+            Torso.transform.FindChild("Base").GetComponent<MeshRenderer>().material.color = Color.yellow;
+        else
+            Torso.transform.FindChild("Base").GetComponent<MeshRenderer>().material.color = Color.blue;
+
+
 
     }
 
