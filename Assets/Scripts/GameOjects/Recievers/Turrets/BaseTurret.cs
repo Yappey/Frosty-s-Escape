@@ -42,10 +42,5 @@ public class BaseTurret : BaseReceiver {
 
 	}
 
-	public override void Process()
-	{
-
-	}
-
 
 }
