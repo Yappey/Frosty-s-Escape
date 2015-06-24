@@ -10,6 +10,8 @@ public class ButtonManager : MonoBehaviour {
 	public bool buttonsDuringGameplay;
 	public UnityEngine.UI.Button[] buttons;
 	public int currButton = 0;
+    float _bufferedInput = 0.3f;
+    float _maxBufferedInput = 0.3f;
 
 
 	// Use this for initialization
@@ -20,125 +22,154 @@ public class ButtonManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//FUNCTION
+
+        _bufferedInput -= Time.deltaTime; ;
 		if (state == WhereAmI.MainMenu || state == WhereAmI.Pause || state == WhereAmI.Win || state == WhereAmI.Lose) {
-			if (Input.GetButtonDown("Right") || Input.GetButtonDown("Down")) {
-				if (!changeSnd.isPlaying) {
-					changeSnd.Play();
-				}
+            if (_bufferedInput <= 0.0f)
+            {
+                if (Input.GetButtonDown("Right") || Input.GetButtonDown("Down") || Input.GetAxisRaw("Horizontal") > 0)
+                {
+                    if (!changeSnd.isPlaying)
+                    {
+                        changeSnd.Play();
+                    }
 
-				currButton++;
+                    currButton++;
 
-				if (currButton >= buttons.Length) {
-					currButton = 0;
-				}
-			}
+                    if (currButton >= buttons.Length)
+                    {
+                        currButton = 0;
+                    }
+                    _bufferedInput = _maxBufferedInput;
 
-			else if (Input.GetButtonDown("Left") || Input.GetButtonDown("Up")) {
-				if (!changeSnd.isPlaying) {
-					changeSnd.Play();
-				}
+                }
 
-				currButton--;
-				
-				if (currButton < 0) {
-					currButton = buttons.Length - 1;
-				}
-			}
+                else if (Input.GetButtonDown("Left") || Input.GetButtonDown("Up") || Input.GetAxisRaw("Horizontal") < 0)
+                {
+                    if (!changeSnd.isPlaying)
+                    {
+                        changeSnd.Play();
+                    }
 
-			else if (Input.GetKeyDown(KeyCode.Return)) {
-				selectSnd.Play();
+                    currButton--;
 
-				if (state == WhereAmI.MainMenu) {
-					if (buttons[currButton].tag == "Play") 
-						buttons[currButton].GetComponent<ButtonScript>().PlayOnClick();
-					else 
-						buttons[currButton].GetComponent<ButtonScript>().LoadLevelOnClick();
-				}
+                    if (currButton < 0)
+                    {
+                        currButton = buttons.Length - 1;
+                    }
+                    _bufferedInput = _maxBufferedInput;
 
-				else if (state == WhereAmI.Pause) {
-					GameObject pauser = GameObject.FindGameObjectWithTag("Pause");
+                }
+
+                else if (Input.GetKeyDown(KeyCode.Return) || Input.GetAxisRaw("Jump") > 0)
+                {
+                    selectSnd.Play();
+
+                    if (state == WhereAmI.MainMenu)
+                    {
+                        if (buttons[currButton].tag == "Play")
+                            buttons[currButton].GetComponent<ButtonScript>().PlayOnClick();
+                        else
+                            buttons[currButton].GetComponent<ButtonScript>().LoadLevelOnClick();
+                    }
+
+                    else if (state == WhereAmI.Pause)
+                    {
+                        GameObject pauser = GameObject.FindGameObjectWithTag("Pause");
 
 
-					if (currButton == 0 && pauser.GetComponent<PuaseScript>().paused) 
-						buttons[currButton].GetComponent<PauseMenuScript>().ResumOnClick();
+                        if (currButton == 0 && pauser.GetComponent<PuaseScript>().paused)
+                            buttons[currButton].GetComponent<PauseMenuScript>().ResumOnClick();
 
-					else if (currButton == 1 && pauser.GetComponent<PuaseScript>().paused)
-						buttons[currButton].GetComponent<PauseMenuScript>().RestartOnClick();
+                        else if (currButton == 1 && pauser.GetComponent<PuaseScript>().paused)
+                            buttons[currButton].GetComponent<PauseMenuScript>().RestartOnClick();
 
-					else if (currButton == 2 && pauser.GetComponent<PuaseScript>().paused)
-						buttons[currButton].GetComponent<PauseMenuScript>().OptionsOnClick();
+                        else if (currButton == 2 && pauser.GetComponent<PuaseScript>().paused)
+                            buttons[currButton].GetComponent<PauseMenuScript>().OptionsOnClick();
 
-					else if (currButton == 3 && pauser.GetComponent<PuaseScript>().paused)
-						buttons[currButton].GetComponent<PauseMenuScript>().HelpOnClick();
+                        else if (currButton == 3 && pauser.GetComponent<PuaseScript>().paused)
+                            buttons[currButton].GetComponent<PauseMenuScript>().HelpOnClick();
 
-					else if (currButton > 3 && pauser.GetComponent<PuaseScript>().paused)
-						buttons[currButton].GetComponent<ButtonScript>().LoadLevelOnClick();
-				}
+                        else if (currButton > 3 && pauser.GetComponent<PuaseScript>().paused)
+                            buttons[currButton].GetComponent<ButtonScript>().LoadLevelOnClick();
+                    }
 
-				else if (state == WhereAmI.Win) {
-					GameObject pauser = GameObject.FindGameObjectWithTag("Pause");
-					
-					
-					if (currButton == 0 && pauser.GetComponent<PuaseScript>().paused) 
-						buttons[currButton].GetComponent<PauseMenuScript>().ResumOnClick();
-					
-					else if (currButton == 1 && pauser.GetComponent<PuaseScript>().paused)
-						buttons[currButton].GetComponent<PauseMenuScript>().RestartOnClick();
-					
-					else if (currButton == 2 && pauser.GetComponent<PuaseScript>().paused)
-						buttons[currButton].GetComponent<PauseMenuScript>().OptionsOnClick();
-					
-					else if (currButton == 3 && pauser.GetComponent<PuaseScript>().paused)
-						buttons[currButton].GetComponent<PauseMenuScript>().HelpOnClick();
-					
-					else if (currButton > 3 && pauser.GetComponent<PuaseScript>().paused)
-						buttons[currButton].GetComponent<ButtonScript>().LoadLevelOnClick();
-				}
+                    else if (state == WhereAmI.Win)
+                    {
+                        GameObject pauser = GameObject.FindGameObjectWithTag("Pause");
 
-				else if (state == WhereAmI.Lose) {
-					GameObject pauser = GameObject.FindGameObjectWithTag("Pause");
 
-					if (currButton == 0 && pauser.GetComponent<PuaseScript>().paused) 
-						buttons[currButton].GetComponent<PauseMenuScript>().ResumOnClick();
-					
-					else if (currButton == 1 && pauser.GetComponent<PuaseScript>().paused)
-						buttons[currButton].GetComponent<PauseMenuScript>().RestartOnClick();
-					
-					else if (currButton == 2 && pauser.GetComponent<PuaseScript>().paused)
-						buttons[currButton].GetComponent<PauseMenuScript>().OptionsOnClick();
-					
-					else if (currButton == 3 && pauser.GetComponent<PuaseScript>().paused)
-						buttons[currButton].GetComponent<PauseMenuScript>().HelpOnClick();
-					
-					else if (currButton > 3 && pauser.GetComponent<PuaseScript>().paused)
-						buttons[currButton].GetComponent<ButtonScript>().LoadLevelOnClick();
-				}
-			}
+                        if (currButton == 0 && pauser.GetComponent<PuaseScript>().paused)
+                            buttons[currButton].GetComponent<PauseMenuScript>().ResumOnClick();
+
+                        else if (currButton == 1 && pauser.GetComponent<PuaseScript>().paused)
+                            buttons[currButton].GetComponent<PauseMenuScript>().RestartOnClick();
+
+                        else if (currButton == 2 && pauser.GetComponent<PuaseScript>().paused)
+                            buttons[currButton].GetComponent<PauseMenuScript>().OptionsOnClick();
+
+                        else if (currButton == 3 && pauser.GetComponent<PuaseScript>().paused)
+                            buttons[currButton].GetComponent<PauseMenuScript>().HelpOnClick();
+
+                        else if (currButton > 3 && pauser.GetComponent<PuaseScript>().paused)
+                            buttons[currButton].GetComponent<ButtonScript>().LoadLevelOnClick();
+                    }
+
+                    else if (state == WhereAmI.Lose)
+                    {
+                        GameObject pauser = GameObject.FindGameObjectWithTag("Pause");
+
+                        if (currButton == 0 && pauser.GetComponent<PuaseScript>().paused)
+                            buttons[currButton].GetComponent<PauseMenuScript>().ResumOnClick();
+
+                        else if (currButton == 1 && pauser.GetComponent<PuaseScript>().paused)
+                            buttons[currButton].GetComponent<PauseMenuScript>().RestartOnClick();
+
+                        else if (currButton == 2 && pauser.GetComponent<PuaseScript>().paused)
+                            buttons[currButton].GetComponent<PauseMenuScript>().OptionsOnClick();
+
+                        else if (currButton == 3 && pauser.GetComponent<PuaseScript>().paused)
+                            buttons[currButton].GetComponent<PauseMenuScript>().HelpOnClick();
+
+                        else if (currButton > 3 && pauser.GetComponent<PuaseScript>().paused)
+                            buttons[currButton].GetComponent<ButtonScript>().LoadLevelOnClick();
+                    }
+                } 
+            }
 		}
 
 		else if (state == WhereAmI.Options) {
-			if (Input.GetButtonDown("Up")) {
-				if (!changeSnd.isPlaying)
-					changeSnd.Play();
+            if (_bufferedInput <= 0.0f)
+            {
+                if (Input.GetButtonDown("Up") || Input.GetAxisRaw("Vertical") > 0)
+                {
+                    if (!changeSnd.isPlaying)
+                        changeSnd.Play();
 
-				currButton -= 2;
+                    currButton -= 2;
 
-				if (currButton < 0) {
-					currButton = buttons.Length - 1;
-				}
-			}
+                    if (currButton < 0)
+                    {
+                        currButton = buttons.Length - 1;
+                    }
+                    _bufferedInput = _maxBufferedInput;
+                }
 
-			else if (Input.GetButtonDown("Down")) {
-				if (!changeSnd.isPlaying)
-					changeSnd.Play();
+                else if (Input.GetButtonDown("Down") || Input.GetAxisRaw("Vertical") < 0)
+                {
+                    if (!changeSnd.isPlaying)
+                        changeSnd.Play();
 
-				currButton += 2;
+                    currButton += 2;
 
 
-				if (currButton >= buttons.Length) {
-					currButton = 0;
-				}
-			}
+                    if (currButton >= buttons.Length)
+                    {
+                        currButton = 0;
+                    }
+                    _bufferedInput = _maxBufferedInput;
+                } 
+            }
 
 			else if (Input.GetButtonDown("Left")) {
 				if (currButton < 6) {
@@ -211,31 +242,43 @@ public class ButtonManager : MonoBehaviour {
 		}
 
 		else if (state == WhereAmI.LevelSelect) {
-			if (Input.GetButtonDown("Right") || Input.GetButtonDown("Up")) {
-				if (!changeSnd.isPlaying) {
-					changeSnd.Play();
-				}
-				
-				currButton++;
-				
-				if (currButton >= buttons.Length) {
-					currButton = 0;
-				}
-			}
+            if (_bufferedInput <= 0.0f)
+            {
+                if (Input.GetButtonDown("Right") || Input.GetButtonDown("Up") || Input.GetAxisRaw("Horizontal") > 0)
+                {
+                    if (!changeSnd.isPlaying)
+                    {
+                        changeSnd.Play();
+                    }
+
+                    currButton++;
+
+                    if (currButton >= buttons.Length)
+                    {
+                        currButton = 0;
+                    }
+
+                    _bufferedInput = _maxBufferedInput;
+                }
+
+                else if (Input.GetButtonDown("Left") || Input.GetButtonDown("Down") || Input.GetAxisRaw("Horizontal") < 0)
+                {
+                    if (!changeSnd.isPlaying)
+                    {
+                        changeSnd.Play();
+                    }
+
+                    currButton--;
+
+                    if (currButton < 0)
+                    {
+                        currButton = buttons.Length - 1;
+                    }
+                    _bufferedInput = _maxBufferedInput;
+                } 
+            }
 			
-			else if (Input.GetButtonDown("Left") || Input.GetButtonDown("Down")) {
-				if (!changeSnd.isPlaying) {
-					changeSnd.Play();
-				}
-				
-				currButton--;
-				
-				if (currButton < 0) {
-					currButton = buttons.Length - 1;
-				}
-			}
-			
-			else if (Input.GetKeyDown(KeyCode.Return)) {
+			else if (Input.GetKeyDown(KeyCode.Return) || Input.GetAxisRaw("Jump") > 0) {
 				selectSnd.Play();
 
 				if (buttons[currButton].tag == "Play") 

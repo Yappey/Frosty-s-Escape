@@ -92,7 +92,7 @@ public class CameraManager : MonoBehaviour
         _fLeft = transform.position.x - _fWidth;
         _fRight = transform.position.x + _fWidth;
         _fTop = transform.position.y - _fHeight;
-        _fBottom = transform.position.y - _fHeight;
+        _fBottom = transform.position.y + _fHeight;
 
         _fMapLeft = _tMapSize.position.x - _tMapSize.localScale.x / 2;
         _fMapRight = _tMapSize.position.x + _tMapSize.localScale.x / 2;
