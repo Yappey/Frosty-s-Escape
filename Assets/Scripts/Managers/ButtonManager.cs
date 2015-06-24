@@ -45,7 +45,7 @@ public class ButtonManager : MonoBehaviour {
 				}
 			}
 
-			else if (Input.GetKeyDown(KeyCode.Return)) {
+			else if (Input.GetKeyDown(KeyCode.Return)) { //HEY MORGAN ADD THE A BUTTON HERE
 				selectSnd.Play();
 
 				if (state == WhereAmI.MainMenu) {
@@ -179,7 +179,7 @@ public class ButtonManager : MonoBehaviour {
 				}
 			}
 
-			else if (Input.GetKeyDown(KeyCode.Return) && currButton == 6) {
+			else if (Input.GetKeyDown(KeyCode.Return) && currButton == 6) { //HEY MORGAN ADD THE A BUTTON HERE
 				selectSnd.Play();
 
 				if (!buttonsDuringGameplay)
@@ -220,7 +220,7 @@ public class ButtonManager : MonoBehaviour {
 				}
 			}
 			
-			else if (Input.GetKeyDown(KeyCode.Return)) {
+			else if (Input.GetKeyDown(KeyCode.Return)) { //HEY MORGAN ADD THE A BUTTON HERE
 				selectSnd.Play();
 
 				if (buttons[currButton].tag == "Play") 
@@ -316,13 +316,13 @@ public class ButtonManager : MonoBehaviour {
 		if (state == WhereAmI.Default) {
 			buttons[currButton].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
 
-			if (Input.GetKeyDown(KeyCode.Return) && !buttonsDuringGameplay) {
+			if (Input.GetKeyDown(KeyCode.Return) && !buttonsDuringGameplay) { //HEY MORGAN ADD THE A BUTTON HERE
 				selectSnd.Play();
 
 				buttons[currButton].GetComponent<ButtonScript>().LoadLevelOnClick();
 			}
 
-			else if (Input.GetKeyDown(KeyCode.Return) && buttonsDuringGameplay) {
+			else if (Input.GetKeyDown(KeyCode.Return) && buttonsDuringGameplay) { //HEY MORGAN ADD THE A BUTTON HERE
 				selectSnd.Play();
 
 				GameObject pauser = GameObject.FindGameObjectWithTag("Pause");
