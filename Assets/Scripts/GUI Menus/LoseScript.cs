@@ -5,6 +5,7 @@ public class LoseScript : MonoBehaviour {
 
     public GameObject Lose;
     public GameObject hud;
+	public bool lost = false;
 
 	// Use this for initialization
 	void Start () 
@@ -23,5 +24,7 @@ public class LoseScript : MonoBehaviour {
         Time.timeScale = 0;
         hud.SetActive(false);
         Lose.SetActive(true);
+
+		lost = true;
     }
 }
