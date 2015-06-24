@@ -40,27 +40,28 @@ public class ButtonScript : MonoBehaviour {
 
     public void LoadAvailableLevelOnClick()
     {
-        //read file and get active level
-        XElement xRoot = XElement.Load("RatingSystem");
-        IEnumerable levels = xRoot.Elements();
-        int i = 1;
-        foreach (XElement level in levels)
-        {
-            if(i == levelnumber)
-            {
-                //testif1++;
-                Application.LoadLevel(levelname);
-            }
-            if(i == levelnumber - 1)
-            {
-                if (Convert.ToInt32(level.Attribute("Snowballs").Value) != 0)
-                {
-                    Application.LoadLevel(levelname);
-                }
-                break;
-            }
-            i++;
-        }
+        ////read file and get active level
+        //XElement xRoot = XElement.Load("RatingSystem");
+        //IEnumerable levels = xRoot.Elements();
+        //int i = 1;
+        //foreach (XElement level in levels)
+        //{
+        //    if(i == levelnumber)
+        //    {
+        //        //testif1++;
+        //        Application.LoadLevel(levelname);
+        //    }
+        //    if(i == levelnumber - 1)
+        //    {
+        //        if (Convert.ToInt32(level.Attribute("Snowballs").Value) != 0)
+        //        {
+        //            Application.LoadLevel(levelname);
+        //        }
+        //        break;
+        //    }
+        //    i++;
+        Application.LoadLevel(levelname);
+     
     }
 
     public void PlayOnClick()
