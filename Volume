@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Volume>
-  <Master Volume="1" />
+  <Master Volume="0.8" />
   <Sound Volume="0" />
-  <Music Volume="0.7" />
+  <Music Volume="0.1" />
 </Volume>

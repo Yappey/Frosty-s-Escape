@@ -41,33 +41,33 @@ public class CameraManager : MonoBehaviour
 
         if (_gbFollowing)
         {
-            float x = IncrementTowards(transform.position.x, _gbFollowing.transform.position.x, _fFollowSpeed);
-            float y = IncrementTowards(transform.position.y, _gbFollowing.transform.position.y + _fOffSet, _fFollowSpeed);
+			_fHeight = gameObject.GetComponent<Camera>().orthographicSize;
+			_fWidth = gameObject.GetComponent<Camera>().orthographicSize * gameObject.GetComponent<Camera>().aspect;
+			
+			
+            _fX = IncrementTowards(transform.position.x, _gbFollowing.transform.position.x, _fFollowSpeed);
+            _fY = IncrementTowards(transform.position.y, _gbFollowing.transform.position.y + _fOffSet, _fFollowSpeed);
 
+			SetMapSize();
 
-            _fHeight = gameObject.GetComponent<Camera>().orthographicSize;
-            _fWidth = gameObject.GetComponent<Camera>().orthographicSize * gameObject.GetComponent<Camera>().aspect;
-
-            SetMapSize();
-
-            if (_fLeft <= _fMapLeft)
+            if (_fLeft < _fMapLeft)
             {
-                x += _fMapLeft - _fLeft;
+				_fX += _fMapLeft - _fLeft;
             }
-            if (_fRight >= _fMapRight)
+            if (_fRight > _fMapRight)
             {
-                x += _fMapRight - _fRight;
+				_fX += _fMapRight - _fRight;
             }
-            if (_fTop <= _fMapTop)
+            if (_fTop < _fMapTop)
             {
-                y += _fMapTop - _fTop;
+				_fY += _fMapTop - _fTop;
             }
-            if (_fBottom >= _fMapBottom)
+            if (_fBottom > _fMapBottom)
             {
-                y += _fMapBottom - _fBottom;
+				_fY += _fMapBottom - _fBottom;
             }
 
-            transform.position = new Vector3(x, y, transform.position.z);
+			transform.position = new Vector3(_fX, _fY, transform.position.z);
 
         }
     }
@@ -90,14 +90,13 @@ public class CameraManager : MonoBehaviour
 
     void SetMapSize()
     {
+		_fLeft = _fX - _fWidth;
+		_fRight = _fX + _fWidth;
+		_fTop = _fY- _fHeight;
+		_fBottom = _fY + _fHeight;
 
-        _fLeft = transform.position.x - _fWidth;
-        _fRight = transform.position.x + _fWidth;
-        _fTop = transform.position.y - _fHeight;
-        _fBottom = transform.position.y + _fHeight;
-
-        _fMapLeft = _tMapSize.position.x - _tMapSize.localScale.x / 2;
-        _fMapRight = _tMapSize.position.x + _tMapSize.localScale.x / 2;
+		_fMapLeft = _tMapSize.position.x - _tMapSize.localScale.x / 2;
+		_fMapRight = _tMapSize.position.x + _tMapSize.localScale.x / 2;
         _fMapTop = _tMapSize.position.y - _tMapSize.localScale.y / 2;
         _fMapBottom = _tMapSize.position.y + _tMapSize.localScale.y / 2;
     }
