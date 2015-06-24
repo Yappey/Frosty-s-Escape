@@ -44,7 +44,7 @@ public class HowToPlayMenuScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Back"))
+		if(Input.GetButtonDown("Back") || Input.GetAxisRaw("Jump") > 0)
         {
             Application.LoadLevel("MainMenu");
         }
@@ -53,15 +53,16 @@ public class HowToPlayMenuScript : MonoBehaviour
         _fWidth = _gbTestCanvas.GetComponentInParent<RectTransform>().rect.width * _gbTestCanvas.transform.localScale.x;
         dt = Time.deltaTime;
 
-        if (Input.GetButtonDown("Left"))
-        {
-            ++ICurrentPos;
-        }
+		Vector3 targetPos = new Vector3(_vOriginalPos.x + _fWidth * _iCurrentPos, _vOriginalPos.y, _vOriginalPos.z);
+	if (targetPos == transform.position) {//(targetPos - transform.position).magnitude <= 0.01f)
+			if (Input.GetButtonDown ("Left") || (Input.GetAxisRaw("Horizontal") < 0)) {
+				++ICurrentPos;
+			}
 
-        if (Input.GetButtonDown("Right"))
-        {
-            --ICurrentPos;
-        }
+			if (Input.GetButtonDown ("Right") || (Input.GetAxisRaw("Horizontal") > 0)) {
+				--ICurrentPos;
+			}
+		}
         transform.position = Vector3.MoveTowards(transform.position,
                                       new Vector3(_vOriginalPos.x + _fWidth * _iCurrentPos, _vOriginalPos.y, _vOriginalPos.z),
                                       2500 * elapsedtime);
