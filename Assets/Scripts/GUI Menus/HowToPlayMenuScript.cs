@@ -39,32 +39,36 @@ public class HowToPlayMenuScript : MonoBehaviour
 
         _vOriginalPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         time = System.DateTime.Now;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-		if(Input.GetButtonDown("Back") || Input.GetAxisRaw("Jump") > 0)
+        if (Input.GetButtonDown("Back") || Input.GetAxisRaw("Jump") > 0)
         {
             Application.LoadLevel("MainMenu");
         }
+
         elapsedtime = /*Mathf.Min(Mathf.Abs(*/(-time.Ticks + System.DateTime.Now.Ticks) / 10000000.0f/*), 0.01f)*/;
         time = System.DateTime.Now;
         _fWidth = _gbTestCanvas.GetComponentInParent<RectTransform>().rect.width * _gbTestCanvas.transform.localScale.x;
         dt = Time.deltaTime;
 
-		Vector3 targetPos = new Vector3(_vOriginalPos.x + _fWidth * _iCurrentPos, _vOriginalPos.y, _vOriginalPos.z);
-	if (targetPos == transform.position) {//(targetPos - transform.position).magnitude <= 0.01f)
-			if (Input.GetButtonDown ("Left") || (Input.GetAxisRaw("Horizontal") < 0)) {
-				++ICurrentPos;
-			}
-
-			if (Input.GetButtonDown ("Right") || (Input.GetAxisRaw("Horizontal") > 0)) {
-				--ICurrentPos;
-			}
-		}
+        Vector3 targetPos = new Vector3(_vOriginalPos.x + _fWidth * _iCurrentPos, _vOriginalPos.y, _vOriginalPos.z);
+        if (targetPos == transform.position)//(targetPos - transform.position).magnitude <= 0.01f)
+        {
+            if (Input.GetButtonDown("Left") || (Input.GetAxisRaw("Horizontal") < 0))
+            {
+                ++ICurrentPos;
+            }
+            if (Input.GetButtonDown("Right") || (Input.GetAxisRaw("Horizontal") > 0))
+            {
+                --ICurrentPos;
+            }
+        }
         transform.position = Vector3.MoveTowards(transform.position,
-                                      new Vector3(_vOriginalPos.x + _fWidth * _iCurrentPos, _vOriginalPos.y, _vOriginalPos.z),
+                                      targetPos,
                                       2500 * elapsedtime);
 
     }

@@ -76,7 +76,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 146988}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.0999999, y: -9.13000011, z: 0}
+  m_LocalPosition: {x: -5.0999999, y: -8.96000004, z: 0}
   m_LocalScale: {x: .200000003, y: .200000003, z: 1}
   m_Children:
   - {fileID: 22495300}
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: a132ca8e3a122d94cb62e5c2388f24e2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0d7ad05e6c1cf754bac49f6a2634edba, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -204,7 +204,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a132ca8e3a122d94cb62e5c2388f24e2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0d7ad05e6c1cf754bac49f6a2634edba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!222 &22211218
 CanvasRenderer:
@@ -285,7 +285,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: .25, y: 15.8400002}
+  m_AnchoredPosition: {x: .25, y: 14.9399996}
   m_SizeDelta: {x: 55, y: 10}
   m_Pivot: {x: .5, y: .5}
 --- !u!1001 &100100000

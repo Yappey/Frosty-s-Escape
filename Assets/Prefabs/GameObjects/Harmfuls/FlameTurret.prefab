@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 485980}
   - 212: {fileID: 21278810}
-  - 114: {fileID: 11429534}
+  - 114: {fileID: 11418228}
   m_Layer: 0
   m_Name: FlameTurret
   m_TagString: Untagged
@@ -91,7 +91,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11429534
+--- !u!114 &11418228
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -109,6 +109,7 @@ MonoBehaviour:
   FOV: 30
   startAngle: 0
   endAngle: 0
+  timer: 0
   flame: {fileID: 147418}
 --- !u!114 &11441626
 MonoBehaviour:

@@ -24,7 +24,6 @@ public class Crank : BaseActivator {
 
 	// Use this for initialization
 	void Start () {
-        switchmanager = GameObject.FindGameObjectWithTag("SwitchManager");
 	frosty = torso = switchmanager.GetComponent<SwitchManager>().FindActive();
             torso = torso.transform.FindChild("Torso").gameObject; 
 	}
