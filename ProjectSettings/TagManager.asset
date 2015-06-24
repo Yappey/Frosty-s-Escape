@@ -25,6 +25,8 @@ TagManager:
   - Snowball
   - Loser
   - LeverRotator
+  - Play
+  - Inventory
   layers:
   - Default
   - TransparentFX
@@ -39,8 +41,8 @@ TagManager:
   - NonCollidingBlock
   - Laser
   - steam
-  - 
-  - 
+  - Gear
+  - Ground
   - 
   - 
   - 
