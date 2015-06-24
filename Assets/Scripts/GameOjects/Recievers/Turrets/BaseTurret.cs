@@ -10,7 +10,7 @@ public class BaseTurret : BaseReceiver {
 	public float startAngle = 0;
 	public float endAngle = 0;
 
-	float timer = 0.0f;
+	public float timer = 0.0f;
 
 
 	// Use this for initialization

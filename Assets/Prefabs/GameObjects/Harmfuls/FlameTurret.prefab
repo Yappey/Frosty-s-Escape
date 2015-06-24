@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 485980}
   - 212: {fileID: 21278810}
-  - 114: {fileID: 11419366}
+  - 114: {fileID: 11418228}
   m_Layer: 0
   m_Name: FlameTurret
   m_TagString: Untagged
@@ -91,26 +91,26 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11419366
+--- !u!114 &11418228
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 104360}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a895805e6cb05e84abb224bed8c02b1b, type: 3}
+  m_Script: {fileID: 11500000, guid: 871d6f067619dc24b9946e1af0dd1564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
   isScannig: 0
-  frequency: 3
-  projectileVelocity: 10
+  frequency: 1
+  projectileVelocity: 0
   FOV: 30
   startAngle: 0
   endAngle: 0
   timer: 0
-  Laser: {fileID: 179246, guid: 5ecb422f71ec7474eb183b6520facf00, type: 2}
+  flame: {fileID: 147418}
 --- !u!114 &11441626
 MonoBehaviour:
   m_ObjectHideFlags: 1

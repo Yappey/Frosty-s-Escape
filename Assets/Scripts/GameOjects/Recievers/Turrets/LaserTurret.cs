@@ -3,7 +3,7 @@ using System.Collections;
 
 public class LaserTurret : BaseTurret {
 
-    public float timer = 0.0f;
+    //public float timer = 0.0f;
     public GameObject Laser;
 
 	// Use this for initialization
