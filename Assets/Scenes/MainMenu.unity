@@ -250,6 +250,18 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11442568, guid: c97a895074087b34ca01365177b01f65, type: 2}
+      propertyPath: changeSnd
+      value: 
+      objectReference: {fileID: 1676521580}
+    - target: {fileID: 11442568, guid: c97a895074087b34ca01365177b01f65, type: 2}
+      propertyPath: selectSnd
+      value: 
+      objectReference: {fileID: 1676521578}
+    - target: {fileID: 11442568, guid: c97a895074087b34ca01365177b01f65, type: 2}
+      propertyPath: currButton
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c97a895074087b34ca01365177b01f65, type: 2}
   m_IsPrefabParent: 0
@@ -916,6 +928,16 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!82 &1676521578 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 8255544, guid: c97a895074087b34ca01365177b01f65,
+    type: 2}
+  m_PrefabInternal: {fileID: 122270585}
+--- !u!82 &1676521580 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 8281902, guid: c97a895074087b34ca01365177b01f65,
+    type: 2}
+  m_PrefabInternal: {fileID: 122270585}
 --- !u!1 &1746001820
 GameObject:
   m_ObjectHideFlags: 0
