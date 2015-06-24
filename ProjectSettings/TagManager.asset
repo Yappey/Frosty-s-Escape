@@ -25,6 +25,7 @@ TagManager:
   - Snowball
   - Loser
   - LeverRotator
+  - Play
   layers:
   - Default
   - TransparentFX

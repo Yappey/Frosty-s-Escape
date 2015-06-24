@@ -179,7 +179,7 @@ public class ButtonManager : MonoBehaviour
                 }
             }
 
-            else if (Input.GetButtonDown("Left"))
+            else if (Input.GetButtonDown("Left") || Input.GetAxisRaw("Horizontal") < 0)
             {
                 if (currButton < 6)
                 {
@@ -207,9 +207,10 @@ public class ButtonManager : MonoBehaviour
                         buttons[4].GetComponent<ButtonScript>().VolumeMinusOnClick();
                         break;
                 }
+                _bufferedInput = _maxBufferedInput;
             }
 
-            else if (Input.GetButtonDown("Right"))
+            else if (Input.GetButtonDown("Right") || Input.GetAxisRaw("Horizontal") > 0)
             {
                 if (currButton < 6)
                 {
@@ -237,10 +238,11 @@ public class ButtonManager : MonoBehaviour
                         buttons[5].GetComponent<ButtonScript>().VolumePlusOnClick();
                         break;
                 }
+                _bufferedInput = _maxBufferedInput;
             }
 
-            else if (Input.GetKeyDown(KeyCode.Return) && currButton == 6)
-            { //HEY MORGAN ADD THE A BUTTON HERE
+            else if ((Input.GetKeyDown(KeyCode.Return) || Input.GetAxisRaw("Jump") > 0) && currButton == 6)
+            { 
                 selectSnd.Play();
 
                 if (!buttonsDuringGameplay)
@@ -296,7 +298,7 @@ public class ButtonManager : MonoBehaviour
                 }
             }
 
-            else if (Input.GetButtonDown("Left") || Input.GetButtonDown("Down"))
+            else if (Input.GetButtonDown("Left") || Input.GetButtonDown("Down") || Input.GetAxisRaw("Horizontal") < 0)
             {
                 if (!changeSnd.isPlaying)
                 {
@@ -309,10 +311,11 @@ public class ButtonManager : MonoBehaviour
                 {
                     currButton = buttons.Length - 1;
                 }
+                _bufferedInput = _maxBufferedInput;
             }
 
-            else if (Input.GetKeyDown(KeyCode.Return))
-            { //HEY MORGAN ADD THE A BUTTON HERE
+            else if (Input.GetKeyDown(KeyCode.Return) || Input.GetAxisRaw("Jump") > 0)
+            { 
                 selectSnd.Play();
 
                 if (buttons[currButton].tag == "Play")
@@ -419,15 +422,15 @@ public class ButtonManager : MonoBehaviour
         {
             buttons[currButton].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
 
-            if (Input.GetKeyDown(KeyCode.Return) && !buttonsDuringGameplay)
-            { //HEY MORGAN ADD THE A BUTTON HERE
+            if ((Input.GetKeyDown(KeyCode.Return) || Input.GetAxisRaw("Jump") > 0) && !buttonsDuringGameplay)
+            { 
                 selectSnd.Play();
 
                 buttons[currButton].GetComponent<ButtonScript>().LoadLevelOnClick();
             }
 
-            else if (Input.GetKeyDown(KeyCode.Return) && buttonsDuringGameplay)
-            { //HEY MORGAN ADD THE A BUTTON HERE
+            else if ((Input.GetKeyDown(KeyCode.Return) || Input.GetAxisRaw("Jump") > 0) && buttonsDuringGameplay)
+            { 
                 selectSnd.Play();
 
                 GameObject pauser = GameObject.FindGameObjectWithTag("Pause");
