@@ -98,9 +98,9 @@ public class SwitchManager : MonoBehaviour
         else
             Torso.transform.FindChild("Torso").GetComponent<MeshRenderer>().material.color = Color.green;
         if (BaseSelected)
-            Torso.transform.FindChild("Base").GetComponent<MeshRenderer>().material.color = Color.yellow;
+            Base.transform.FindChild("Base").GetComponent<MeshRenderer>().material.color = Color.yellow;
         else
-            Torso.transform.FindChild("Base").GetComponent<MeshRenderer>().material.color = Color.blue;
+            Base.transform.FindChild("Base").GetComponent<MeshRenderer>().material.color = Color.blue;
 
 
 

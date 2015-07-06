@@ -32,11 +32,10 @@ public class Frostyehavior : MonoBehaviour {
 	void Update () 
 	{
 		Rigidbody2D rgbd = GetComponent<Rigidbody2D>();
-
 		if (isActive)
 		{
 			float hor = Input.GetAxis("Horizontal");
-			if (hor > 0.01f || hor < -0.01f)
+			if (hor > 0.01f || hor < -0.01f )
 			{
 				Vector2 vel = rgbd.velocity;
 				vel.x = hor * moveSpeed;
@@ -60,12 +59,12 @@ public class Frostyehavior : MonoBehaviour {
 				ActivateNearest();
 			}
 		}
-		else
-		{
-			Vector2 vel = rgbd.velocity;
-			vel.x = 0.0f;
-			rgbd.velocity = vel;
-		}
+        //else
+        //{
+        //    Vector2 vel = rgbd.velocity;
+        //    vel.x = 0.0f;
+        //    rgbd.velocity = vel;
+        //}
         if (Input.GetButtonDown("Throw") && Time.timeScale > 0)
         {
             LaunchSnowall();
