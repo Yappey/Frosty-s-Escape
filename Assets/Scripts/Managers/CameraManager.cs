@@ -50,22 +50,28 @@ public class CameraManager : MonoBehaviour
 			
 			SetMapSize();
 			
-			//if (_fLeft < _fMapLeft)
-			//{
-			//	_fX += _fMapLeft - _fLeft;
-			//}
-			//if (_fRight > _fMapRight)
-			//{
-			//	_fX += _fMapRight - _fRight;
-			//}
-			//if (_fTop < _fMapTop)
-			//{
-			//	_fY += _fMapTop - _fTop;
-			//}
-			//if (_fBottom > _fMapBottom)
-			//{
-			//	_fY += _fMapBottom - _fBottom;
-			//}
+			if (_fLeft < _fMapLeft)
+			{
+				_fX += _fMapLeft - _fLeft;
+				//_fX = _fMapLeft + _fWidth / 2;
+			}
+			else
+				if (_fRight > _fMapRight)
+			{
+				_fX += _fMapRight - _fRight;
+				//_fX = _fMapRight - _fWidth / 2;
+			}
+			if (_fTop < _fMapTop)
+			{
+				_fY += _fMapTop - _fTop;
+				//_fY = _fMapTop + _fHeight / 2;
+			}
+			else
+				if (_fBottom > _fMapBottom)
+			{
+				_fY += _fMapBottom - _fBottom;
+				//_fY = _fMapBottom - _fHeight / 2;
+			}
 			
 			transform.position = new Vector3(_fX, _fY, transform.position.z);
 			

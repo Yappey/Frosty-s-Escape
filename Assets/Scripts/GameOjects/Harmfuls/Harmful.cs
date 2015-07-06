@@ -22,7 +22,12 @@ public class Harmful : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		ParticleSystem particles = GetComponent<ParticleSystem>();
+		if (particles)
+		{
+			particles.enableEmission = false;
+			Invoke("StartParticles", 0.01f);
+		}
 	}
 	
 	// Update is called once per frame
@@ -103,6 +108,18 @@ public class Harmful : MonoBehaviour {
 		if (col.gameObject.tag == "Frosty" && isActive && isDamagePerSecond)
 		{
 			GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBarScript>().Hurt(damage * Time.deltaTime);
+		}
+
+	}
+
+	void StartParticles()
+	{
+		ParticleSystem particles = GetComponent<ParticleSystem>();
+		if (particles)
+		{
+			particles.enableEmission = true;
+			particles.Clear();
+			particles.loop = true;
 		}
 
 	}
