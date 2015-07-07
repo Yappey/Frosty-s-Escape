@@ -23,6 +23,9 @@ public class Lever : BaseActivator {
     {
         if (frosty.GetComponent<Frostyehavior>().torsoAttached)
         {
+			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+			sound.GetComponent<SoundEffectManager>().PlayButtonClick();
+
             foreach (BaseReceiver receiver in receivers)
             {
                 state++;
