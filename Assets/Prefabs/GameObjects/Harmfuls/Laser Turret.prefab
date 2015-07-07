@@ -71,7 +71,7 @@ MonoBehaviour:
   state: 0
   isScannig: 0
   frequency: 1
-  projectileVelocity: 2
+  projectileVelocity: 10
   FOV: 30
   startAngle: 0
   endAngle: 0

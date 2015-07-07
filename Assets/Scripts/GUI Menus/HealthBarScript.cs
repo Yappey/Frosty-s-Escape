@@ -25,7 +25,7 @@ public class HealthBarScript : MonoBehaviour {
 
 	private float levelTime;
 	private RectTransform bar;
-	private float barLength;
+	public float barLength;
 	private float meltSpeed = 1.0f;
 
 	public bool dontKillMe = false;
