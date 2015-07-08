@@ -10,20 +10,14 @@ public class Background : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		XElement xRoot = XElement.Load("Assets/Volume");
-		XElement xType = xRoot.Element ("Music");
-		XAttribute xVolume = xType.Attribute("Volume");
-		vol = (float)Convert.ToDouble (xVolume.Value);
+		vol = PlayerPrefs.GetFloat("Music");
 
 		music.volume = vol;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		XElement xRoot = XElement.Load("Assets/Volume");
-		XElement xType = xRoot.Element ("Music");
-		XAttribute xVolume = xType.Attribute("Volume");
-		vol = (float)Convert.ToDouble (xVolume.Value);
+		vol = PlayerPrefs.GetFloat("Music");
 
 		if (music.volume != vol) {
 			music.volume = vol;

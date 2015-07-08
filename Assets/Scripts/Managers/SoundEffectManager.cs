@@ -8,6 +8,7 @@ public class SoundEffectManager : MonoBehaviour {
 	public AudioSource attach;
 	public AudioSource detach;
 	public AudioSource changeSelection;
+	public AudioSource airDuct;
 
 	// Use this for initialization
 	void Start () {
@@ -54,6 +55,12 @@ public class SoundEffectManager : MonoBehaviour {
 	public void PlaySelectionChange() {
 		if (!changeSelection.isPlaying) {
 			changeSelection.Play();
+		}
+	}
+
+	public void PlayAirDuctSnd() {
+		if (!airDuct.isPlaying) {
+			airDuct.Play();
 		}
 	}
 }
