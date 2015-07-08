@@ -4,6 +4,7 @@ using System.Collections;
 public class BulletTurret : BaseTurret {
 
     public GameObject bullet;
+    Animator fireAnimation;
     public float time = 0.0f;
     public float barragetime = 0.0f;
     public float barragetimer;
@@ -12,7 +13,7 @@ public class BulletTurret : BaseTurret {
 
 	// Use this for initialization
 	void Start () {
-	
+        fireAnimation = transform.GetChild(0).GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -21,6 +22,7 @@ public class BulletTurret : BaseTurret {
         if(time >= frequency)
         {
             ShootProjectile();
+          
         }	
         if(bulletcount == bulletnumber)
         {
@@ -40,6 +42,11 @@ public class BulletTurret : BaseTurret {
             GameObject temp = Instantiate(bullet);
             temp.transform.position = transform.GetChild(0).position;
             temp.GetComponent<Bullet>().Velocity = -transform.right * projectileVelocity;
+           fireAnimation.Play("Base Layer.BulletFire");
+        }
+        else
+        {
+            fireAnimation.Play("Base Layer.PauseFire");
         }
     }
 }
