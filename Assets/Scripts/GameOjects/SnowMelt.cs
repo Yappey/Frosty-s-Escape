@@ -33,6 +33,9 @@ public class SnowMelt : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject.tag == "Laser") {
+			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+			sound.GetComponent<SoundEffectManager>().PlayMeltSnd();
+
 			lasered = true;
 		}
 	}

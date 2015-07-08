@@ -9,6 +9,11 @@ public class SoundEffectManager : MonoBehaviour {
 	public AudioSource detach;
 	public AudioSource changeSelection;
 	public AudioSource airDuct;
+	public AudioSource electricBox;
+	public AudioSource acVent;
+	public AudioSource icePatch;
+	public AudioSource sign;
+	public AudioSource melt;
 
 	// Use this for initialization
 	void Start () {
@@ -62,5 +67,29 @@ public class SoundEffectManager : MonoBehaviour {
 		if (!airDuct.isPlaying) {
 			airDuct.Play();
 		}
+	}
+
+	public void PlayElectricBoxSnd() {
+		if (!electricBox.isPlaying) {
+			electricBox.Play();
+		}
+	}
+
+	public void PlayACVentSnd() { 
+		if (!acVent.isPlaying) {
+			acVent.Play();
+		}
+	}
+
+	public void PlayIcePatchSnd() {
+		icePatch.Play ();
+	}
+
+	public void PlaySignSnd() {
+		sign.Play ();
+	}
+
+	public void PlayMeltSnd() {
+		melt.Play ();
 	}
 }

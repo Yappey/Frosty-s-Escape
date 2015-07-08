@@ -9,7 +9,8 @@ public class IcePatch : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+		sound.GetComponent<SoundEffectManager>().PlayIcePatchSnd();
 	}
 	
 	// Update is called once per frame

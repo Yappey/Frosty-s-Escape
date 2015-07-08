@@ -35,6 +35,9 @@ public class Sign : BaseActivator {
 	{
 		if (frosty.GetComponent<Frostyehavior>().headAttached)
 		{
+			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+			sound.GetComponent<SoundEffectManager>().PlaySignSnd();
+
 			if (info.activeSelf) {
 				info.SetActive(false);
 			}

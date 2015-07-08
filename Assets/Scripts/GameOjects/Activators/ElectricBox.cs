@@ -25,7 +25,11 @@ public class ElectricBox : BaseActivator {
 			   }
 			if (state == 1) {
 				state = 0;
+
+				GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+				sound.GetComponent<SoundEffectManager>().PlayElectricBoxSnd();
 			}
+
 			else {
 				state = 1;
 			}

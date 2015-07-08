@@ -24,8 +24,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 191562}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.68899989, y: -8.47299957, z: 0}
-  m_LocalScale: {x: .134793893, y: .134793893, z: .134793893}
+  m_LocalPosition: {x: 28.2963257, y: -.406576842, z: 0}
+  m_LocalScale: {x: .0870900974, y: .0870901197, z: .0870901197}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -40,21 +40,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0897e619c325ad34dbaa6362771a3721, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  receivers: []
+  receivers:
+  - {fileID: 0}
   state: 0
   torso: {fileID: 0}
   frosty: {fileID: 0}
   switchmanager: {fileID: 0}
-  rotationspersecond: 25
-  fullrotation: 360
+  rotationspersecond: 50
+  fullrotation: 180
+  numofincrements: 0
   rotationangle: 0
   heightmanagment: 1
   widthmanagment: 1
   hold: 1
+  reversed: 0
+  full: 0
   incremental: 0
   activated: 0
   switched: 0
-  test: 0
+  increment: 0
 --- !u!212 &21225086
 SpriteRenderer:
   m_ObjectHideFlags: 1
