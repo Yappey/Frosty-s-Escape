@@ -1,0 +1,220 @@
+fileFormatVersion: 2
+guid: f35c534c8f1181f4696baff29999ab50
+timeCreated: 1436295092
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Turret Heads_0
+    21300002: Turret Heads_1
+    21300004: Turret Heads_2
+    21300006: Turret Heads_3
+    21300008: Turret Heads_4
+    21300010: Turret Heads_5
+    21300012: Turret Heads_6
+    21300014: Turret Heads_7
+    21300016: Turret Heads_8
+    21300018: Turret Heads_9
+    21300020: Turret Heads_10
+    21300022: Turret Heads_11
+    21300024: Turret Heads_12
+    21300026: Turret Heads_13
+    21300028: Turret Heads_14
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Turret Heads_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 170
+        width: 26
+        height: 14
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Turret Heads_1
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 170
+        width: 54
+        height: 14
+      alignment: 9
+      pivot: {x: .75, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Turret Heads_2
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 170
+        width: 59
+        height: 14
+      alignment: 9
+      pivot: {x: .714999974, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Turret Heads_3
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 170
+        width: 51
+        height: 15
+      alignment: 9
+      pivot: {x: .680000007, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Turret Heads_4
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 170
+        width: 28
+        height: 15
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Turret Heads_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 107
+        width: 26
+        height: 14
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Turret Heads_6
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 107
+        width: 56
+        height: 14
+      alignment: 9
+      pivot: {x: .748214304, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Turret Heads_7
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 107
+        width: 63
+        height: 14
+      alignment: 9
+      pivot: {x: .73047626, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Turret Heads_8
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 107
+        width: 54
+        height: 15
+      alignment: 9
+      pivot: {x: .680000007, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Turret Heads_9
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 107
+        width: 28
+        height: 15
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Turret Heads_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 41
+        width: 26
+        height: 14
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Turret Heads_11
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 41
+        width: 60
+        height: 14
+      alignment: 9
+      pivot: {x: .786666751, y: .0666666701}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Turret Heads_12
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 41
+        width: 66
+        height: 14
+      alignment: 9
+      pivot: {x: .744928777, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Turret Heads_13
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 41
+        width: 57
+        height: 15
+      alignment: 9
+      pivot: {x: .680000007, y: .00666656485}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Turret Heads_14
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 41
+        width: 28
+        height: 15
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

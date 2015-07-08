@@ -3,8 +3,6 @@ using System.Collections;
 
 public class ButtonManager : MonoBehaviour
 {
-    public AudioSource changeSnd;
-    public AudioSource selectSnd;
     public enum WhereAmI { MainMenu, Options, LevelSelect, Pause, Win, Lose, Default };
     public WhereAmI state;
     public bool buttonsDuringGameplay;
@@ -35,35 +33,39 @@ public class ButtonManager : MonoBehaviour
 				
             if (Input.GetButtonDown("Right") || Input.GetButtonDown("Down") || Input.GetAxisRaw("Horizontal") > 0)
             {
-				if (!changeSnd.isPlaying && !buttonsDuringGameplay)
+				if (!buttonsDuringGameplay)
                 {
-                    changeSnd.Play();
+					GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+					sound.GetComponent<SoundEffectManager>().PlaySelectionChange();
                 }
 
 				else if (state == WhereAmI.Pause) {
 					GameObject pauser = GameObject.FindGameObjectWithTag("Pause");
 
-					if (!changeSnd.isPlaying && pauser.GetComponent<PuaseScript>().paused)
+					if (pauser.GetComponent<PuaseScript>().paused)
 					{
-						changeSnd.Play();
+						GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+						sound.GetComponent<SoundEffectManager>().PlaySelectionChange();
 					}
 				}
 
 				else if (state == WhereAmI.Win) {
 					GameObject win = GameObject.FindGameObjectWithTag("Respawn");
 
-					if (!changeSnd.isPlaying && win.GetComponent<WinBox>().levelIsWon)
+					if (win.GetComponent<WinBox>().levelIsWon)
 					{
-						changeSnd.Play();
+						GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+						sound.GetComponent<SoundEffectManager>().PlaySelectionChange();
 					}
 				}
 
 				else if (state == WhereAmI.Lose) {
 					GameObject loser = GameObject.FindGameObjectWithTag("Loser");
 
-					if (!changeSnd.isPlaying && loser.GetComponent<LoseScript>().lost)
+					if (loser.GetComponent<LoseScript>().lost)
 					{
-						changeSnd.Play();
+						GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+						sound.GetComponent<SoundEffectManager>().PlaySelectionChange();
 					}
 				}
 
@@ -78,35 +80,39 @@ public class ButtonManager : MonoBehaviour
 
             else if (Input.GetButtonDown("Left") || Input.GetButtonDown("Up") || Input.GetAxisRaw("Horizontal") < 0)
             {
-				if (!changeSnd.isPlaying && !buttonsDuringGameplay)
+				if (!buttonsDuringGameplay)
 				{
-					changeSnd.Play();
+					GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+					sound.GetComponent<SoundEffectManager>().PlaySelectionChange();
 				}
 
 				else if (state == WhereAmI.Pause) {
 					GameObject pauser = GameObject.FindGameObjectWithTag("Pause");
 					
-					if (!changeSnd.isPlaying && pauser.GetComponent<PuaseScript>().paused)
+					if (pauser.GetComponent<PuaseScript>().paused)
 					{
-						changeSnd.Play();
+						GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+						sound.GetComponent<SoundEffectManager>().PlaySelectionChange();
 					}
 				}
 				
 				else if (state == WhereAmI.Win) {
 					GameObject win = GameObject.FindGameObjectWithTag("Respawn");
 					
-					if (!changeSnd.isPlaying && win.GetComponent<WinBox>().levelIsWon)
+					if (win.GetComponent<WinBox>().levelIsWon)
 					{
-						changeSnd.Play();
+						GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+						sound.GetComponent<SoundEffectManager>().PlaySelectionChange();
 					}
 				}
 				
 				else if (state == WhereAmI.Lose) {
 					GameObject loser = GameObject.FindGameObjectWithTag("Loser");
 					
-					if (!changeSnd.isPlaying && loser.GetComponent<LoseScript>().lost)
+					if (loser.GetComponent<LoseScript>().lost)
 					{
-						changeSnd.Play();
+						GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+						sound.GetComponent<SoundEffectManager>().PlaySelectionChange();
 					}
 				}
 
@@ -121,35 +127,39 @@ public class ButtonManager : MonoBehaviour
 
 			else if (Input.GetKeyDown(KeyCode.Return) || Input.GetAxisRaw("Jump") > 0)
             {
-				if (!selectSnd.isPlaying && !buttonsDuringGameplay)
+				if (!buttonsDuringGameplay)
 				{
-					selectSnd.Play();
+					GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+					sound.GetComponent<SoundEffectManager>().PlayButtonClick();
 				}
 
 				else if (state == WhereAmI.Pause) {
 					GameObject pauser = GameObject.FindGameObjectWithTag("Pause");
 					
-					if (!selectSnd.isPlaying && pauser.GetComponent<PuaseScript>().paused)
+					if (pauser.GetComponent<PuaseScript>().paused)
 					{
-						selectSnd.Play();
+						GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+						sound.GetComponent<SoundEffectManager>().PlayButtonClick();
 					}
 				}
 				
 				else if (state == WhereAmI.Win) {
 					GameObject win = GameObject.FindGameObjectWithTag("Respawn");
 					
-					if (!selectSnd.isPlaying && win.GetComponent<WinBox>().levelIsWon)
+					if (win.GetComponent<WinBox>().levelIsWon)
 					{
-						selectSnd.Play();
+						GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+						sound.GetComponent<SoundEffectManager>().PlayButtonClick();
 					}
 				}
 				
 				else if (state == WhereAmI.Lose) {
 					GameObject loser = GameObject.FindGameObjectWithTag("Loser");
 					
-					if (!selectSnd.isPlaying && loser.GetComponent<LoseScript>().lost)
+					if (loser.GetComponent<LoseScript>().lost)
 					{
-						selectSnd.Play();
+						GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+						sound.GetComponent<SoundEffectManager>().PlayButtonClick();
 					}
 				}
 
@@ -218,14 +228,18 @@ public class ButtonManager : MonoBehaviour
             {
                 if (Input.GetButtonDown("Up") || Input.GetAxisRaw("Vertical") > 0)
                 {
-					if (!changeSnd.isPlaying  && !buttonsDuringGameplay)
-                        changeSnd.Play();
+					if (!buttonsDuringGameplay)
+					{
+						GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+						sound.GetComponent<SoundEffectManager>().PlaySelectionChange();
+					}
 
 					else if (buttonsDuringGameplay) {
 						GameObject pauser = GameObject.FindGameObjectWithTag("Pause");
 
-						if (!changeSnd.isPlaying && pauser.GetComponent<PuaseScript>().paused) {
-							changeSnd.Play ();
+						if (pauser.GetComponent<PuaseScript>().paused) {
+							GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+							sound.GetComponent<SoundEffectManager>().PlaySelectionChange();
 						}
 					}
 
@@ -240,14 +254,18 @@ public class ButtonManager : MonoBehaviour
 
                 else if (Input.GetButtonDown("Down") || Input.GetAxisRaw("Vertical") < 0)
                 {
-					if (!changeSnd.isPlaying  && !buttonsDuringGameplay)
-                        changeSnd.Play();
+					if (!buttonsDuringGameplay)
+					{
+						GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+						sound.GetComponent<SoundEffectManager>().PlaySelectionChange();
+					}
 
 					else if (buttonsDuringGameplay) {
 						GameObject pauser = GameObject.FindGameObjectWithTag("Pause");
 						
-						if (!changeSnd.isPlaying && pauser.GetComponent<PuaseScript>().paused) {
-							changeSnd.Play ();
+						if (pauser.GetComponent<PuaseScript>().paused) {
+							GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+							sound.GetComponent<SoundEffectManager>().PlaySelectionChange();
 						}
 					}
 
@@ -263,16 +281,18 @@ public class ButtonManager : MonoBehaviour
 
                 else if (Input.GetButtonDown("Left") || Input.GetAxisRaw("Horizontal") < 0)
                 {
-					if (currButton < 6  && !buttonsDuringGameplay && !selectSnd.isPlaying)
+					if (currButton < 6  && !buttonsDuringGameplay)
                     {
-                        selectSnd.Play();
+						GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+						sound.GetComponent<SoundEffectManager>().PlayButtonClick();
                     }
 
 					else if (buttonsDuringGameplay && currButton < 6) {
 						GameObject pauser = GameObject.FindGameObjectWithTag("Pause");
 						
-						if (!selectSnd.isPlaying && pauser.GetComponent<PuaseScript>().paused) {
-							selectSnd.Play ();
+						if (pauser.GetComponent<PuaseScript>().paused) {
+							GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+							sound.GetComponent<SoundEffectManager>().PlayButtonClick();
 						}
 					}
 
@@ -302,16 +322,18 @@ public class ButtonManager : MonoBehaviour
 
                 else if (Input.GetButtonDown("Right") || Input.GetAxisRaw("Horizontal") > 0)
                 {
-					if (currButton < 6 && !buttonsDuringGameplay  && !selectSnd.isPlaying)
+					if (currButton < 6 && !buttonsDuringGameplay)
                     {
-                        selectSnd.Play();
+						GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+						sound.GetComponent<SoundEffectManager>().PlayButtonClick();
                     }
 
 					else if (buttonsDuringGameplay && currButton < 6) {
 						GameObject pauser = GameObject.FindGameObjectWithTag("Pause");
 						
-						if (!selectSnd.isPlaying && pauser.GetComponent<PuaseScript>().paused) {
-							selectSnd.Play ();
+						if (pauser.GetComponent<PuaseScript>().paused) {
+							GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+							sound.GetComponent<SoundEffectManager>().PlayButtonClick();
 						}
 					}
 
@@ -343,14 +365,16 @@ public class ButtonManager : MonoBehaviour
             {
 				if (currButton == 6  && !buttonsDuringGameplay)
 				{
-					selectSnd.Play();
+					GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+					sound.GetComponent<SoundEffectManager>().PlayButtonClick();
 				}
 
 				else if (buttonsDuringGameplay && currButton == 6) {
 					GameObject pauser = GameObject.FindGameObjectWithTag("Pause");
 						
-					if (!selectSnd.isPlaying && pauser.GetComponent<PuaseScript>().paused) {
-						selectSnd.Play ();
+					if (pauser.GetComponent<PuaseScript>().paused) {
+						GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+						sound.GetComponent<SoundEffectManager>().PlayButtonClick();
 					}
 				}
 
@@ -378,9 +402,10 @@ public class ButtonManager : MonoBehaviour
 
                 if (Input.GetButtonDown("Right") || Input.GetButtonDown("Up") || Input.GetAxisRaw("Horizontal") > 0)
                 {
-					if (!changeSnd.isPlaying && !buttonsDuringGameplay)
+					if (!buttonsDuringGameplay)
                     {
-                        changeSnd.Play();
+						GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+						sound.GetComponent<SoundEffectManager>().PlaySelectionChange();
                     }
 
                     currButton++;
@@ -394,9 +419,10 @@ public class ButtonManager : MonoBehaviour
 
                 else if (Input.GetButtonDown("Left") || Input.GetButtonDown("Down") || Input.GetAxisRaw("Horizontal") < 0)
                 {
-					if (!changeSnd.isPlaying && !buttonsDuringGameplay)
+					if (!buttonsDuringGameplay)
                     {
-                        changeSnd.Play();
+						GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+						sound.GetComponent<SoundEffectManager>().PlaySelectionChange();
                     }
 
                     currButton--;
@@ -410,9 +436,10 @@ public class ButtonManager : MonoBehaviour
 
 			else if (Input.GetKeyDown(KeyCode.Return) || Input.GetAxisRaw("Jump") > 0)
             {
-				if (!selectSnd.isPlaying && !buttonsDuringGameplay)
+				if (!buttonsDuringGameplay)
 				{
-					selectSnd.Play();
+					GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+					sound.GetComponent<SoundEffectManager>().PlayButtonClick();
 				}
 
                 if (buttons[currButton].tag == "Play")
@@ -522,9 +549,8 @@ public class ButtonManager : MonoBehaviour
 
 			if ((Input.GetKeyDown(KeyCode.Return) || Input.GetAxisRaw("Jump") > 0) && !buttonsDuringGameplay)
             {
-				if (selectSnd.isPlaying) {
-					selectSnd.Play();
-				}
+				GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+				sound.GetComponent<SoundEffectManager>().PlayButtonClick();
 
                 buttons[currButton].GetComponent<ButtonScript>().LoadLevelOnClick();
             }
@@ -535,9 +561,8 @@ public class ButtonManager : MonoBehaviour
 
                 if (pauser.GetComponent<PuaseScript>().paused && pauser.GetComponent<PuaseScript>().Help.activeSelf)
                 {
-					if (selectSnd.isPlaying) {
-						selectSnd.Play();
-					}
+					GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+					sound.GetComponent<SoundEffectManager>().PlayButtonClick();
 
                     buttons[currButton].GetComponent<PauseMenuScript>().HelpToOptionsOnClick();
                 }

@@ -15,6 +15,7 @@ GameObject:
   - 114: {fileID: 11422944}
   - 198: {fileID: 19835892}
   - 199: {fileID: 19992634}
+  - 114: {fileID: 11455276}
   m_Layer: 0
   m_Name: Bullet Sprite
   m_TagString: 
@@ -77,9 +78,21 @@ MonoBehaviour:
   instaKill: 0
   isCrushing: 0
   destroyOnCollision: 1
+  isDamagePerSecond: 0
   damage: 2
   lifetime: 2
   lifeType: 0
+--- !u!114 &11455276
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f02f8628a23c5314db4c8d8bb185bf16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11485402
 MonoBehaviour:
   m_ObjectHideFlags: 1
