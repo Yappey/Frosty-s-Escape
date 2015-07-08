@@ -5,6 +5,7 @@ using System;
 
 public class ButtonScript : MonoBehaviour {
 
+    public int numlevels;
     public string levelname;
     public string filename;
     public string volumetype;
@@ -88,5 +89,15 @@ public class ButtonScript : MonoBehaviour {
 
         if (PlayerPrefs.GetFloat("Music") < 0)
             PlayerPrefs.SetFloat("Music", 0);
+    }
+
+    public void ResetLevelsOnClick()
+    {
+        for (int i = 0; i < numlevels; i++)
+        {
+            PlayerPrefs.SetInt("Level" + i + "Snowballs", 0);
+            PlayerPrefs.SetFloat("Level" + i + "HighScore", 300);
+        }
+        PlayerPrefs.SetInt("ActiveLevel", 1);
     }
 }

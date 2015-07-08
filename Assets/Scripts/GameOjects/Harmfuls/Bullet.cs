@@ -7,7 +7,7 @@ public class Bullet : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		transform.right = Velocity.normalized;
 	}
 	
 	// Update is called once per frame

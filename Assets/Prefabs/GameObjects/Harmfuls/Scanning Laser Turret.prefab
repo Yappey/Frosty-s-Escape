@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &129186
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 407020}
+  m_Layer: 0
+  m_Name: FireTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &156782
 GameObject:
   m_ObjectHideFlags: 0
@@ -35,6 +50,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &407020
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129186}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: -1.62920685e-07}
+  m_LocalPosition: {x: -.418000013, y: .063000001, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 417328}
+  m_RootOrder: 0
 --- !u!4 &410046
 Transform:
   m_ObjectHideFlags: 1
@@ -57,7 +84,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .00843811035, y: .200574875, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 407020}
   m_Father: {fileID: 410046}
   m_RootOrder: 0
 --- !u!95 &9546722
@@ -107,16 +135,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   isScannig: 1
+  requiresTarget: 0
   frequency: 1
-  projectileVelocity: 0
+  projectileVelocity: 10
   FOV: 30
   startAngle: 0
   endAngle: -179
   rotationSpeed: 30
   scanTime: 2
   timer: 0
-  fromRot: {x: 0, y: 0, z: 0, w: 0}
-  toRot: {x: 0, y: 0, z: 0, w: 0}
+  Laser: {fileID: 179246, guid: 5ecb422f71ec7474eb183b6520facf00, type: 2}
 --- !u!212 &21248270
 SpriteRenderer:
   m_ObjectHideFlags: 1

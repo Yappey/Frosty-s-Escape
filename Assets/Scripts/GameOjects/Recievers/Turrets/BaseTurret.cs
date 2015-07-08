@@ -4,6 +4,7 @@ using System.Collections;
 public class BaseTurret : BaseReceiver {
 
 	public bool isScannig = false;
+	public bool requiresTarget = false;
 	public float frequency = 1.0f;
 	public float projectileVelocity;
 	public float FOV = 30.0f;
@@ -14,10 +15,11 @@ public class BaseTurret : BaseReceiver {
 
 	public float timer = 0.0f;
 
-	public Quaternion fromRot;
-	public Quaternion toRot;
+	private Quaternion fromRot;
+	private Quaternion toRot;
 
 	private bool fromTo = true;
+	private bool hasTarget = false;
 
 	
 	protected void BaseTurretStart () {
@@ -33,15 +35,17 @@ public class BaseTurret : BaseReceiver {
 	protected void BaseTurretUpdate () {
 		if (state == 0)
 		{
-			if (!isScannig)
+			if (!isScannig || !requiresTarget || hasTarget)
 			{
 				timer += Time.deltaTime;
 				if (timer * frequency >= 1)
 				{
+					timer = 0.0f;
 					ShootProjectile();
 				}
 			}
-			else
+
+			if(isScannig)
 			{
 				// TODO: Scanning Functionality - Sprint two
 

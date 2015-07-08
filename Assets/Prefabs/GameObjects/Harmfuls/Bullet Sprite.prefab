@@ -13,9 +13,10 @@ GameObject:
   - 50: {fileID: 5095958}
   - 61: {fileID: 6116310}
   - 114: {fileID: 11422944}
-  - 198: {fileID: 19835892}
-  - 199: {fileID: 19992634}
   - 114: {fileID: 11455276}
+  - 199: {fileID: 19939956}
+  - 198: {fileID: 19825662}
+  - 114: {fileID: 11403572}
   m_Layer: 0
   m_Name: Bullet Sprite
   m_TagString: 
@@ -63,6 +64,17 @@ BoxCollider2D:
   m_Offset: {x: .273838133, y: -.114106819}
   serializedVersion: 2
   m_Size: {x: 6.98767948, y: 2.34255028}
+--- !u!114 &11403572
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cca4a36e410d76c4e9898b466db59050, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11422944
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -80,8 +92,8 @@ MonoBehaviour:
   destroyOnCollision: 1
   isDamagePerSecond: 0
   damage: 2
-  lifetime: 2
-  lifeType: 1
+  lifetime: 25
+  lifeType: 2
 --- !u!114 &11455276
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -105,13 +117,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Velocity: {x: 0, y: 0, z: 0}
---- !u!198 &19835892
+--- !u!198 &19825662
 ParticleSystem:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143986}
-  lengthInSec: .100000001
+  lengthInSec: 5
   startDelay: 0
   speed: 1
   randomSeed: 0
@@ -122,7 +134,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 1
+      scalar: .800000012
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -155,7 +167,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     startSpeed:
-      scalar: 1
+      scalar: .200000003
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -279,10 +291,10 @@ ParticleSystem:
         rgba: 4294967295
       maxColor:
         serializedVersion: 2
-        rgba: 4278190080
+        rgba: 3070230528
       minMaxState: 0
     startSize:
-      scalar: .0500000007
+      scalar: .100000001
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -348,13 +360,13 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     gravityModifier: 0
-    inheritVelocity: .75
+    inheritVelocity: 0
     maxNumParticles: 100
   ShapeModule:
     serializedVersion: 2
     enabled: 1
-    type: 4
-    radius: 1
+    type: 10
+    radius: .100000001
     angle: 25
     length: 5
     boxX: 1
@@ -366,9 +378,9 @@ ParticleSystem:
     randomDirection: 0
   EmissionModule:
     enabled: 1
-    m_Type: 0
+    m_Type: 1
     rate:
-      scalar: 10
+      scalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1158,7 +1170,7 @@ ParticleSystem:
     subEmitterCollision1: {fileID: 0}
     subEmitterDeath: {fileID: 0}
     subEmitterDeath1: {fileID: 0}
---- !u!199 &19992634
+--- !u!199 &19939956
 ParticleSystemRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

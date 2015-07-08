@@ -92,8 +92,8 @@ MonoBehaviour:
   destroyOnCollision: 1
   isDamagePerSecond: 0
   damage: 1
-  lifetime: 2
-  lifeType: 0
+  lifetime: 20
+  lifeType: 2
 --- !u!114 &11469190
 MonoBehaviour:
   m_ObjectHideFlags: 1
