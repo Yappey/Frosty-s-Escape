@@ -22,67 +22,25 @@ public class OptionsMenuScript : MonoBehaviour {
         int i = 0;
         foreach (GameObject VolumeController in VolumeControllers)
         {
-            XElement xRoot2 = new XElement("Volume");
-            XElement xRoot = XElement.Load("Assets/Volume");
-            XElement xtype;
+            float volumelevel;
+            if (PlayerPrefs.GetFloat("Master") < PlayerPrefs.GetFloat("SoundEffects"))
+                PlayerPrefs.SetFloat("SoundEffects", PlayerPrefs.GetFloat("Master"));
+            if (PlayerPrefs.GetFloat("Master") < PlayerPrefs.GetFloat("Music"))
+                PlayerPrefs.SetFloat("Music", PlayerPrefs.GetFloat("Master"));
             if (i == 0)
             {
-                 xtype = xRoot.Element("Master");
+                 volumelevel = PlayerPrefs.GetFloat("Master");
             } 
             else if (i == 1)
             {
-                 xtype = xRoot.Element("Sound");
+                volumelevel = PlayerPrefs.GetFloat("SoundEffects");
             }
             else
             {
-                 xtype = xRoot.Element("Music");
+                volumelevel = PlayerPrefs.GetFloat("Music");
             }
             i++;
-            XAttribute xvolume = xtype.Attribute("Volume");
-            float volumelevel = (float)Convert.ToDouble(xvolume.Value);
-
-            if (Convert.ToDouble(xRoot.Element("Master").Attribute("Volume").Value) < Convert.ToDouble(xRoot.Element("Sound").Attribute("Volume").Value) ||
-                 Convert.ToDouble(xRoot.Element("Master").Attribute("Volume").Value) < Convert.ToDouble(xRoot.Element("Music").Attribute("Volume").Value))
-            {
-                XElement xmaster = new XElement("Master");
-                xRoot2.Add(xmaster);
-                XAttribute XVolume = new XAttribute("Volume", xRoot.Element("Master").Attribute("Volume").Value);
-                xmaster.Add(XVolume);
-
-
-                if (Convert.ToDouble(xRoot.Element("Master").Attribute("Volume").Value) < Convert.ToDouble(xRoot.Element("Sound").Attribute("Volume").Value))
-                {
-                    XElement xSound = new XElement("Sound");
-                    xRoot2.Add(xSound);
-                    XAttribute XVolume2 = new XAttribute("Volume", xRoot.Element("Master").Attribute("Volume").Value);
-                    xSound.Add(XVolume2);
-                }
-                else
-                {
-                    XElement xSound = new XElement("Sound");
-                    xRoot2.Add(xSound);
-                    XAttribute XVolume2 = new XAttribute("Volume", xRoot.Element("Sound").Attribute("Volume").Value);
-                    xSound.Add(XVolume2);
-                }
-
-
-                if (Convert.ToDouble(xRoot.Element("Master").Attribute("Volume").Value) < Convert.ToDouble(xRoot.Element("Music").Attribute("Volume").Value))
-                {
-                    XElement xMusic = new XElement("Music");
-                    xRoot2.Add(xMusic);
-                    XAttribute XVolume3 = new XAttribute("Volume", xRoot.Element("Master").Attribute("Volume").Value);
-                    xMusic.Add(XVolume3);
-                }
-                else
-                {
-                    XElement xMusic = new XElement("Music");
-                    xRoot2.Add(xMusic);
-                    XAttribute XVolume3 = new XAttribute("Volume", xRoot.Element("Music").Attribute("Volume").Value);
-                    xMusic.Add(XVolume3);
-                }
-
-                xRoot2.Save("Assets/Volume");
-            }
+            
             float counter = 0.0f;
             for (int j = 0; j < VolumeController.transform.childCount; j++)
             {

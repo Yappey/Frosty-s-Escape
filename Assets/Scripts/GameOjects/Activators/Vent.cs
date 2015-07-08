@@ -26,6 +26,9 @@ public class Vent : BaseActivator {
 			    !frosty.GetComponent<Frostyehavior>().baseAttached &&
 			    frosty.GetComponent<Frostyehavior>().isActive)
 			{
+				GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+				sound.GetComponent<SoundEffectManager>().PlayAirDuctSnd();
+
 				frosty.transform.position = exit.transform.position;
 			}
 		}

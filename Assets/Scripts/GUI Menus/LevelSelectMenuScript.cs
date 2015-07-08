@@ -5,17 +5,16 @@ using System;
 
 public class LevelSelectMenuScript : MonoBehaviour {
 
+    public int numlevels = 15;
+
 	// Use this for initialization
 	void Start () {
-        XElement xRoot = XElement.Load("RatingSystem");
-        IEnumerable levels = xRoot.Elements();
-        int i = 0;
-        foreach(XElement level in levels)
+        for (int i = 0; i < numlevels; i++)
         {
-            int snowbal = Convert.ToInt32(level.Attribute("Snowballs").Value);
-            for(int j = 0; j < 3; j++)
+            int snowball = PlayerPrefs.GetInt("Level" + (i + 1) + "Snowballs");
+            for (int j = 0; j < 3; j++)
             {
-                if(snowbal > j)
+                if (snowball > j)
                 {
                     transform.GetChild(i).GetChild(j).GetComponent<UnityEngine.UI.Image>().color = Color.blue;
                 }
@@ -37,15 +36,5 @@ public class LevelSelectMenuScript : MonoBehaviour {
 	}
 
 
-    void Reset()
-    {
-        XElement xRoot = new XElement("RatingSystem");
-        XElement xLevel = new XElement("Level1");
-        xRoot.Add(xLevel);
-        XAttribute xtime = new XAttribute("Time", 300);
-        xLevel.Add(xtime);
-        XAttribute xsnowball = new XAttribute("Snowballs", 0);
-        xLevel.Add(xsnowball);
-        xRoot.Save("RatingSystem");
-    }
+
 }

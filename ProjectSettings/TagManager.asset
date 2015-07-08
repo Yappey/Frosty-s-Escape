@@ -27,6 +27,7 @@ TagManager:
   - LeverRotator
   - Play
   - Inventory
+  - SoundEffectManager
   layers:
   - Default
   - TransparentFX

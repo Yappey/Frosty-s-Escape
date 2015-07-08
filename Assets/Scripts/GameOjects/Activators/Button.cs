@@ -20,6 +20,9 @@ public class Button : BaseActivator {
     {
         if (frosty.GetComponent<Frostyehavior>().headAttached)
         {
+			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+			sound.GetComponent<SoundEffectManager>().PlayButtonClick();
+
             foreach (BaseReceiver receiver in receivers)
             {
                 state++;
