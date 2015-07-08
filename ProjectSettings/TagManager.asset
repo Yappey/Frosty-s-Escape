@@ -27,8 +27,7 @@ TagManager:
   - LeverRotator
   - Play
   - Inventory
-  - Cooldown
-  layers:
+  - SoundEffectManager  - Cooldown  layers:
   - Default
   - TransparentFX
   - Ignore Raycast

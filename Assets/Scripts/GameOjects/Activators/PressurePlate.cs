@@ -61,7 +61,10 @@ public class PressurePlate : BaseActivator {
     void MoveIn()
     {
         isIn = true;
-        transform.position += new Vector3(0, -moveDistance);
+        transform.GetChild(0).position += new Vector3(0, -moveDistance);
+
+		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+		sound.GetComponent<SoundEffectManager>().PlayButtonClick();
 
         foreach (BaseReceiver receiver in receivers)
         {
@@ -72,7 +75,7 @@ public class PressurePlate : BaseActivator {
     void MoveOut()
     {
         isIn = false;
-        transform.position += new Vector3(0, moveDistance);
+		transform.GetChild(0).position += new Vector3(0, moveDistance);
         if (!isToggle)
         {
 
