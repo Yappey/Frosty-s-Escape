@@ -8,7 +8,7 @@ public class Laser : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		transform.right = velocity.normalized;
 	}
 	
 	// Update is called once per frame
