@@ -10,6 +10,10 @@ public class WinBox : MonoBehaviour {
     public float OneStar;
     public float TwoStars;
     public float ThreeStars;
+    public GameObject ThreeStarAnim;
+    public GameObject TwoStarAnim;
+    public GameObject OneStarAnim;
+    public float time;
 
 	// Use this for initialization
 	void Start () {
@@ -32,14 +36,27 @@ public class WinBox : MonoBehaviour {
 
 				pause.GetComponent<PuaseScript> ().HUD.SetActive (false);
 
-                float time = healthbar.GetComponent<HealthBarScript>().barLength - healthbar.GetComponent<HealthBarScript>().health;
-                if (time < ThreeStars)
-                    PlayerPrefs.SetInt("Level" + levelnumber + "Snowballs", 3);
-                else if (time < TwoStars)
-                    PlayerPrefs.SetInt("Level" + levelnumber + "Snowballs", 2);
-                else
-                    PlayerPrefs.SetInt("Level" + levelnumber + "Snowballs", 1);
+                time = healthbar.GetComponent<HealthBarScript>().levelTime - healthbar.GetComponent<HealthBarScript>().health;
 				win.SetActive(true);
+                if (time < ThreeStars)
+                {
+                    PlayerPrefs.SetInt("Level" + levelnumber + "Snowballs", 3);
+                    ThreeStarAnim.GetComponent<Animator>().enabled = true;
+                    ThreeStarAnim.GetComponent<Animator>().Play("Base Layer.RatingSystem3Stars");
+                }
+                else if (time < TwoStars)
+                {
+                    PlayerPrefs.SetInt("Level" + levelnumber + "Snowballs", 2);
+                    TwoStarAnim.GetComponent<Animator>().enabled = true;
+                    TwoStarAnim.GetComponent<Animator>().Play("Base Layer.RatingSystem2Stars");
+                }
+                else
+                {
+                    PlayerPrefs.SetInt("Level" + levelnumber + "Snowballs", 1);
+                    OneStarAnim.GetComponent<Animator>().enabled = true;
+                    OneStarAnim.GetComponent<Animator>().Play("Base Layer.RatingSystem1Star");
+                }
+                PlayerPrefs.SetFloat("Level" + levelnumber + "HighScore", time);
 			}
 		}
 	}

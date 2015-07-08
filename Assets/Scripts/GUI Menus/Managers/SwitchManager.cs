@@ -47,62 +47,65 @@ public class SwitchManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Head"))        
+        if (Time.timeScale > 0.0f)
         {
-            SwitchHead();
-        }
-        if (Input.GetButtonDown("Torso"))
-        {
-            SwitchTorso();
-        }
-        if (Input.GetButtonDown("Base"))
-        {
-            SwitchBase();
-        }
-        if (Input.GetButtonDown("Detach"))
-        {
+            if (Input.GetButtonDown("Head"))
+            {
+                SwitchHead();
+            }
+            if (Input.GetButtonDown("Torso"))
+            {
+                SwitchTorso();
+            }
+            if (Input.GetButtonDown("Base"))
+            {
+                SwitchBase();
+            }
+            if (Input.GetButtonDown("Detach"))
+            {
+                if (HeadSelected)
+                {
+                    HeadDetach();
+                }
+                else if (TorsoSelected)
+                {
+                    TorsoDetach();
+                }
+                else if (BaseSelected)
+                {
+                    BaseDetach();
+                }
+            }
+            if (Input.GetButtonDown("Attach"))
+            {
+                if (HeadSelected)
+                {
+                    HeadAttach();
+                }
+                else if (TorsoSelected)
+                {
+                    TorsoAttach();
+                }
+                else if (BaseSelected)
+                {
+                    BaseAttach();
+                }
+            }
             if (HeadSelected)
-            {
-                HeadDetach();
-            }
-            else if (TorsoSelected)
-            {
-                TorsoDetach();
-            }
-            else if (BaseSelected)
-            {
-                BaseDetach();
-            }
-        }
-        if (Input.GetButtonDown("Attach"))
-        {
-            if (HeadSelected)
-            {
-                HeadAttach();
-            }
-            else if (TorsoSelected)
-            {
-                TorsoAttach();
-            }
-            else if (BaseSelected)
-            {
-                BaseAttach();
-            }
-        }
-        if (HeadSelected)
-            Head.transform.FindChild("Head").GetComponent<MeshRenderer>().material.color = Color.yellow;
-        else
-            Head.transform.FindChild("Head").GetComponent<MeshRenderer>().material.color = Color.red;
-        if (TorsoSelected)
-            Torso.transform.FindChild("Torso").GetComponent<MeshRenderer>().material.color = Color.yellow;
-        else
-            Torso.transform.FindChild("Torso").GetComponent<MeshRenderer>().material.color = Color.green;
-        if (BaseSelected)
-            Base.transform.FindChild("Base").GetComponent<MeshRenderer>().material.color = Color.yellow;
-        else
-            Base.transform.FindChild("Base").GetComponent<MeshRenderer>().material.color = Color.blue;
+                Head.transform.FindChild("Head").GetComponent<MeshRenderer>().material.color = Color.yellow;
+            else
+                Head.transform.FindChild("Head").GetComponent<MeshRenderer>().material.color = Color.red;
+            if (TorsoSelected)
+                Torso.transform.FindChild("Torso").GetComponent<MeshRenderer>().material.color = Color.yellow;
+            else
+                Torso.transform.FindChild("Torso").GetComponent<MeshRenderer>().material.color = Color.green;
+            if (BaseSelected)
+                Base.transform.FindChild("Base").GetComponent<MeshRenderer>().material.color = Color.yellow;
+            else
+                Base.transform.FindChild("Base").GetComponent<MeshRenderer>().material.color = Color.blue;
 
-
+            
+        }
 
     }
 
