@@ -1,24 +1,24 @@
 fileFormatVersion: 2
-guid: d0b88216c0a9c854d82fd32c807a5a83
-timeCreated: 1436295976
+guid: 4e73a44a45236de45888a9ae878bba82
+timeCreated: 1436307048
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Turret_0
-    21300002: Turret_1
-    21300004: Turret_2
-    21300006: Turret_3
-    21300008: Turret_4
-    21300010: Turret_5
-    21300012: Turret_6
-    21300014: Turret_7
-    21300016: Turret_8
-    21300018: Turret_9
-    21300020: Turret_10
-    21300022: Turret_11
-    21300024: Turret_12
-    21300026: Turret_13
-    21300028: Turret_14
+    21300000: NewTurret_0
+    21300002: NewTurret_1
+    21300004: NewTurret_2
+    21300006: NewTurret_3
+    21300008: NewTurret_4
+    21300010: NewTurret_5
+    21300012: NewTurret_6
+    21300014: NewTurret_7
+    21300016: NewTurret_8
+    21300018: NewTurret_9
+    21300020: NewTurret_10
+    21300022: NewTurret_11
+    21300024: NewTurret_12
+    21300026: NewTurret_13
+    21300028: NewTurret_14
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -64,57 +64,57 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Turret_0
+    - name: NewTurret_0
       rect:
         serializedVersion: 2
         x: 0
         y: 129
         width: 26
         height: 55
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Turret_1
+    - name: NewTurret_1
       rect:
         serializedVersion: 2
         x: 39
         y: 129
         width: 54
         height: 55
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Turret_2
+    - name: NewTurret_2
       rect:
         serializedVersion: 2
-        x: 109
+        x: 102
         y: 129
-        width: 59
+        width: 66
         height: 55
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Turret_3
+    - name: NewTurret_3
       rect:
         serializedVersion: 2
         x: 181
         y: 129
         width: 51
         height: 56
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Turret_4
+    - name: NewTurret_4
       rect:
         serializedVersion: 2
         x: 270
         y: 129
         width: 28
         height: 56
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Turret_5
+    - name: NewTurret_5
       rect:
         serializedVersion: 2
         x: 0
@@ -122,9 +122,9 @@ TextureImporter:
         width: 26
         height: 55
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Turret_6
+    - name: NewTurret_6
       rect:
         serializedVersion: 2
         x: 38
@@ -132,9 +132,9 @@ TextureImporter:
         width: 56
         height: 55
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Turret_7
+    - name: NewTurret_7
       rect:
         serializedVersion: 2
         x: 105
@@ -142,9 +142,9 @@ TextureImporter:
         width: 63
         height: 55
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Turret_8
+    - name: NewTurret_8
       rect:
         serializedVersion: 2
         x: 178
@@ -152,9 +152,9 @@ TextureImporter:
         width: 54
         height: 56
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Turret_9
+    - name: NewTurret_9
       rect:
         serializedVersion: 2
         x: 270
@@ -162,9 +162,9 @@ TextureImporter:
         width: 28
         height: 56
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Turret_10
+    - name: NewTurret_10
       rect:
         serializedVersion: 2
         x: 0
@@ -172,9 +172,9 @@ TextureImporter:
         width: 26
         height: 55
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Turret_11
+    - name: NewTurret_11
       rect:
         serializedVersion: 2
         x: 33
@@ -182,9 +182,9 @@ TextureImporter:
         width: 60
         height: 55
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Turret_12
+    - name: NewTurret_12
       rect:
         serializedVersion: 2
         x: 102
@@ -192,9 +192,9 @@ TextureImporter:
         width: 66
         height: 55
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Turret_13
+    - name: NewTurret_13
       rect:
         serializedVersion: 2
         x: 175
@@ -202,9 +202,9 @@ TextureImporter:
         width: 57
         height: 56
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Turret_14
+    - name: NewTurret_14
       rect:
         serializedVersion: 2
         x: 270
@@ -212,7 +212,7 @@ TextureImporter:
         width: 28
         height: 56
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
