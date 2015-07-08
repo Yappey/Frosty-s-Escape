@@ -1,0 +1,1683 @@
+fileFormatVersion: 2
+guid: aef1a5bd1e3aded469c6ae6ffebacec7
+timeCreated: 1436371455
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: BulletSpriteSheet_0
+    21300002: BulletSpriteSheet_1
+    21300004: BulletSpriteSheet_2
+    21300006: BulletSpriteSheet_3
+    21300008: BulletSpriteSheet_4
+    21300010: BulletSpriteSheet_5
+    21300012: BulletSpriteSheet_6
+    21300014: BulletSpriteSheet_7
+    21300016: BulletSpriteSheet_8
+    21300018: BulletSpriteSheet_9
+    21300020: BulletSpriteSheet_10
+    21300022: BulletSpriteSheet_11
+    21300024: BulletSpriteSheet_12
+    21300026: BulletSpriteSheet_13
+    21300028: BulletSpriteSheet_14
+    21300030: BulletSpriteSheet_15
+    21300032: BulletSpriteSheet_16
+    21300034: BulletSpriteSheet_17
+    21300036: BulletSpriteSheet_18
+    21300038: BulletSpriteSheet_19
+    21300040: BulletSpriteSheet_20
+    21300042: BulletSpriteSheet_21
+    21300044: BulletSpriteSheet_22
+    21300046: BulletSpriteSheet_23
+    21300048: BulletSpriteSheet_24
+    21300050: BulletSpriteSheet_25
+    21300052: BulletSpriteSheet_26
+    21300054: BulletSpriteSheet_27
+    21300056: BulletSpriteSheet_28
+    21300058: BulletSpriteSheet_29
+    21300060: BulletSpriteSheet_30
+    21300062: BulletSpriteSheet_31
+    21300064: BulletSpriteSheet_32
+    21300066: BulletSpriteSheet_33
+    21300068: BulletSpriteSheet_34
+    21300070: BulletSpriteSheet_35
+    21300072: BulletSpriteSheet_36
+    21300074: BulletSpriteSheet_37
+    21300076: BulletSpriteSheet_38
+    21300078: BulletSpriteSheet_39
+    21300080: BulletSpriteSheet_40
+    21300082: BulletSpriteSheet_41
+    21300084: BulletSpriteSheet_42
+    21300086: BulletSpriteSheet_43
+    21300088: BulletSpriteSheet_44
+    21300090: BulletSpriteSheet_45
+    21300092: BulletSpriteSheet_46
+    21300094: BulletSpriteSheet_47
+    21300096: BulletSpriteSheet_48
+    21300098: BulletSpriteSheet_49
+    21300100: BulletSpriteSheet_50
+    21300102: BulletSpriteSheet_51
+    21300104: BulletSpriteSheet_52
+    21300106: BulletSpriteSheet_53
+    21300108: BulletSpriteSheet_54
+    21300110: BulletSpriteSheet_55
+    21300112: BulletSpriteSheet_56
+    21300114: BulletSpriteSheet_57
+    21300116: BulletSpriteSheet_58
+    21300118: BulletSpriteSheet_59
+    21300120: BulletSpriteSheet_60
+    21300122: BulletSpriteSheet_61
+    21300124: BulletSpriteSheet_62
+    21300126: BulletSpriteSheet_63
+    21300128: BulletSpriteSheet_64
+    21300130: BulletSpriteSheet_65
+    21300132: BulletSpriteSheet_66
+    21300134: BulletSpriteSheet_67
+    21300136: BulletSpriteSheet_68
+    21300138: BulletSpriteSheet_69
+    21300140: BulletSpriteSheet_70
+    21300142: BulletSpriteSheet_71
+    21300144: BulletSpriteSheet_72
+    21300146: BulletSpriteSheet_73
+    21300148: BulletSpriteSheet_74
+    21300150: BulletSpriteSheet_75
+    21300152: BulletSpriteSheet_76
+    21300154: BulletSpriteSheet_77
+    21300156: BulletSpriteSheet_78
+    21300158: BulletSpriteSheet_79
+    21300160: BulletSpriteSheet_80
+    21300162: BulletSpriteSheet_81
+    21300164: BulletSpriteSheet_82
+    21300166: BulletSpriteSheet_83
+    21300168: BulletSpriteSheet_84
+    21300170: BulletSpriteSheet_85
+    21300172: BulletSpriteSheet_86
+    21300174: BulletSpriteSheet_87
+    21300176: BulletSpriteSheet_88
+    21300178: BulletSpriteSheet_89
+    21300180: BulletSpriteSheet_90
+    21300182: BulletSpriteSheet_91
+    21300184: BulletSpriteSheet_92
+    21300186: BulletSpriteSheet_93
+    21300188: BulletSpriteSheet_94
+    21300190: BulletSpriteSheet_95
+    21300192: BulletSpriteSheet_96
+    21300194: BulletSpriteSheet_97
+    21300196: BulletSpriteSheet_98
+    21300198: BulletSpriteSheet_99
+    21300200: BulletSpriteSheet_100
+    21300202: BulletSpriteSheet_101
+    21300204: BulletSpriteSheet_102
+    21300206: BulletSpriteSheet_103
+    21300208: BulletSpriteSheet_104
+    21300210: BulletSpriteSheet_105
+    21300212: BulletSpriteSheet_106
+    21300214: BulletSpriteSheet_107
+    21300216: BulletSpriteSheet_108
+    21300218: BulletSpriteSheet_109
+    21300220: BulletSpriteSheet_110
+    21300222: BulletSpriteSheet_111
+    21300224: BulletSpriteSheet_112
+    21300226: BulletSpriteSheet_113
+    21300228: BulletSpriteSheet_114
+    21300230: BulletSpriteSheet_115
+    21300232: BulletSpriteSheet_116
+    21300234: BulletSpriteSheet_117
+    21300236: BulletSpriteSheet_118
+    21300238: BulletSpriteSheet_119
+    21300240: BulletSpriteSheet_120
+    21300242: BulletSpriteSheet_121
+    21300244: BulletSpriteSheet_122
+    21300246: BulletSpriteSheet_123
+    21300248: BulletSpriteSheet_124
+    21300250: BulletSpriteSheet_125
+    21300252: BulletSpriteSheet_126
+    21300254: BulletSpriteSheet_127
+    21300256: BulletSpriteSheet_128
+    21300258: BulletSpriteSheet_129
+    21300260: BulletSpriteSheet_130
+    21300262: BulletSpriteSheet_131
+    21300264: BulletSpriteSheet_132
+    21300266: BulletSpriteSheet_133
+    21300268: BulletSpriteSheet_134
+    21300270: BulletSpriteSheet_135
+    21300272: BulletSpriteSheet_136
+    21300274: BulletSpriteSheet_137
+    21300276: BulletSpriteSheet_138
+    21300278: BulletSpriteSheet_139
+    21300280: BulletSpriteSheet_140
+    21300282: BulletSpriteSheet_141
+    21300284: BulletSpriteSheet_142
+    21300286: BulletSpriteSheet_143
+    21300288: BulletSpriteSheet_144
+    21300290: BulletSpriteSheet_145
+    21300292: BulletSpriteSheet_146
+    21300294: BulletSpriteSheet_147
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: BulletSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 413
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 413
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 413
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 413
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 411
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 413
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 413
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 413
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 413
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 412
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 369
+        width: 37
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 369
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 369
+        width: 39
+        height: 37
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 369
+        width: 39
+        height: 36
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 369
+        width: 40
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 369
+        width: 39
+        height: 34
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 369
+        width: 38
+        height: 34
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 369
+        width: 37
+        height: 34
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 369
+        width: 37
+        height: 34
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 369
+        width: 37
+        height: 34
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 329
+        width: 37
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 329
+        width: 37
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 337
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 336
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 335
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 336
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 300
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 292
+        width: 42
+        height: 33
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_28
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 296
+        width: 44
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_29
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 299
+        width: 49
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_30
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 302
+        width: 51
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_31
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 304
+        width: 52
+        height: 9
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_32
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 306
+        width: 54
+        height: 9
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_33
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 268
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_34
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 266
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_35
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 264
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_36
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 264
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_37
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 262
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_38
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 263
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_39
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 264
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_40
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 264
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_41
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 279
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_42
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 278
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_43
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 276
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_44
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 277
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_45
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 277
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_46
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 277
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_47
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 268
+        width: 117
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_48
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 260
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_49
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 259
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_50
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 257
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_51
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 258
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_52
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 258
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_53
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 258
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_54
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 230
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_55
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 230
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_56
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 230
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_57
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 230
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_58
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 230
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_59
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 230
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_60
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 230
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_61
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 230
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_62
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 230
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_63
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 230
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_64
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 230
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_65
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 230
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_66
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 230
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_67
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 229
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_68
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 228
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_69
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 228
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_70
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 193
+        width: 54
+        height: 33
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_71
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 436
+        height: 60
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_72
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 134
+        width: 94
+        height: 54
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_73
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 151
+        width: 44
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_74
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 151
+        width: 44
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_75
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 151
+        width: 44
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_76
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 151
+        width: 44
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_77
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 95
+        width: 37
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_78
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 94
+        width: 37
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_79
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 93
+        width: 39
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_80
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 94
+        width: 39
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_81
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 92
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_82
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 92
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_83
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 105
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_84
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 105
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_85
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 105
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_86
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 103
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_87
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 105
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_88
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 105
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_89
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 103
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_90
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 105
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_91
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 105
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_92
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 105
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_93
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 103
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_94
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 105
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_95
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 105
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_96
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 105
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_97
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 103
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_98
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 105
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_99
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 93
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_100
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 93
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_101
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 93
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_102
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 93
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_103
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 93
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_104
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 93
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_105
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 93
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_106
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 93
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_107
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 93
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_108
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 93
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_109
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 93
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_110
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 93
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_111
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 93
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_112
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 93
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_113
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 93
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_114
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 93
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_115
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 93
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_116
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 93
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_117
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 93
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_118
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 93
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_119
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 93
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_120
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 70
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_121
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 70
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_122
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 70
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_123
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 70
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_124
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 70
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_125
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 70
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_126
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 73
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_127
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 71
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_128
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 42
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_129
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 40
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_130
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 40
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_131
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 29
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_132
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 40
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_133
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 42
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_134
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 40
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_135
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 40
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_136
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 40
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_137
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 40
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_138
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 29
+        width: 4
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_139
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 40
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_140
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 40
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_141
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 26
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_142
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 29
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_143
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 26
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_144
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 29
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_145
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 10
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_146
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 10
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BulletSpriteSheet_147
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 212
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

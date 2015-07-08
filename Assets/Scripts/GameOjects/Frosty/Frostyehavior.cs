@@ -11,6 +11,8 @@ public class Frostyehavior : MonoBehaviour {
 	public float climbSpeed = 10;
 	public float jumpVelocity = 10;
 	public float snowballVelocity = 50;
+    public float SnowballCooldown = 1.25f;
+    public float timer = 0.0f;
 
 	public float activateRange = 1.0f;
 
@@ -31,6 +33,7 @@ public class Frostyehavior : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+        timer += Time.deltaTime;
 		Rigidbody2D rgbd = GetComponent<Rigidbody2D>();
 		if (isActive)
 		{
@@ -99,8 +102,11 @@ public class Frostyehavior : MonoBehaviour {
 	// Lobs a jolly Snowball
 	void LaunchSnowall()
 	{
-		if (isActive && headAttached && torsoAttached && baseAttached)
+		if (isActive && headAttached && torsoAttached && baseAttached && timer > SnowballCooldown)
 		{
+            timer = 0.0f;
+            GameObject radial = GameObject.FindGameObjectWithTag("Cooldown");
+            
             snowball = Instantiate(presnowball);
             snowball.transform.position = transform.FindChild("SnowballThrower").transform.position;
             Vector3 curosr = GameObject.FindGameObjectWithTag("MainCamera")
@@ -110,6 +116,7 @@ public class Frostyehavior : MonoBehaviour {
 
             snowball.GetComponent<Rigidbody2D>().AddForce((curosr - transform.position).normalized * throwStrength,
                                                           ForceMode2D.Impulse);
+            radial.GetComponent<RadialCooldown>().Cooldown();
 		}
 	}
 }
