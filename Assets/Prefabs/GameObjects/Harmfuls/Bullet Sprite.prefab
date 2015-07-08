@@ -81,7 +81,7 @@ MonoBehaviour:
   isDamagePerSecond: 0
   damage: 2
   lifetime: 2
-  lifeType: 0
+  lifeType: 1
 --- !u!114 &11455276
 MonoBehaviour:
   m_ObjectHideFlags: 1
