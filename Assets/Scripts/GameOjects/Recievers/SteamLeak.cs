@@ -26,6 +26,7 @@ public class SteamLeak : BaseReceiver {
             if (timer >= interval)
             {
                 steam.SetActive(true);
+                steam.GetComponent<Animator>().Play("Base Layer.Steam");
                 if (!constant)
                 {
                     activetimer += Time.deltaTime;
