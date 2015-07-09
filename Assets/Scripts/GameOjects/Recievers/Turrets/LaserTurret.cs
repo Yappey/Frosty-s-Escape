@@ -22,4 +22,6 @@ public class LaserTurret : BaseTurret {
             temp.GetComponent<Laser>().velocity = -transform.right * projectileVelocity;
         }
 	}
+
+
 }

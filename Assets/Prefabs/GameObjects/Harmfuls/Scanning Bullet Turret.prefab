@@ -138,7 +138,8 @@ MonoBehaviour:
   requiresTarget: 0
   frequency: 1
   projectileVelocity: 5
-  FOV: 30
+  FOV: 60
+  viewRange: 30
   startAngle: 0
   endAngle: -179
   rotationSpeed: 30

@@ -111,7 +111,7 @@ public class SwitchManager : MonoBehaviour
         if (Head.GetComponent<Frostyehavior>().torsoAttached)
         {
 			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-			sound.GetComponent<SoundEffectManager>().PlayDetachSnd();
+			//sound.GetComponent<SoundEffectManager>().PlayDetachSnd();
 
             Active.GetComponent<Frostyehavior>().isActive = false;
             Head = Instantiate(prehead);
@@ -176,7 +176,7 @@ public class SwitchManager : MonoBehaviour
         if (Base.GetComponent<Frostyehavior>().torsoAttached)
         {
 			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-			sound.GetComponent<SoundEffectManager>().PlayDetachSnd();
+			//sound.GetComponent<SoundEffectManager>().PlayDetachSnd();
             
             Base = Instantiate(prebase);
             Base.GetComponent<Frostyehavior>().isActive = true;
