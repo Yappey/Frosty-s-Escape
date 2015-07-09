@@ -474,6 +474,11 @@ public class SwitchManager : MonoBehaviour
 
     public void SwitchHead()
     {
+		if (Active != Head) {
+			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+			sound.GetComponent<SoundEffectManager>().PlaySwitchBodyPartSnd();
+		}
+
         HeadSelected = true;
         TorsoSelected = false;
         BaseSelected = false;
@@ -484,6 +489,12 @@ public class SwitchManager : MonoBehaviour
 
     public void SwitchTorso()
     {
+		if (Active != Torso) {
+			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+			sound.GetComponent<SoundEffectManager>().PlaySwitchBodyPartSnd();
+		}
+
+
         HeadSelected = false;
         TorsoSelected = true;
         BaseSelected = false;
@@ -494,6 +505,11 @@ public class SwitchManager : MonoBehaviour
 
     public void SwitchBase()
     {
+		if (Active != Base) {
+			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+			sound.GetComponent<SoundEffectManager>().PlaySwitchBodyPartSnd();
+		}
+
         HeadSelected = false;
         TorsoSelected = false;
         BaseSelected = true;

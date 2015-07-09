@@ -14,6 +14,9 @@ public class SoundEffectManager : MonoBehaviour {
 	public AudioSource icePatch;
 	public AudioSource sign;
 	public AudioSource melt;
+	public AudioSource pit;
+	public AudioSource switchBodyPart;
+	public AudioSource snowball;
 
 	// Use this for initialization
 	void Start () {
@@ -91,5 +94,21 @@ public class SoundEffectManager : MonoBehaviour {
 
 	public void PlayMeltSnd() {
 		melt.Play ();
+	}
+
+	public void PlayPitSnd() {
+		if (!pit.isPlaying) {
+			pit.Play ();
+		}
+	}
+
+	public void PlaySwitchBodyPartSnd() {
+		if (!switchBodyPart.isPlaying) {
+			switchBodyPart.Play ();
+		}
+	}
+
+	public void PlaySnowballThrowSnd() {
+		snowball.Play ();
 	}
 }
