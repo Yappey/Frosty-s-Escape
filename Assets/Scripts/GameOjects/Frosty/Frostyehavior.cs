@@ -117,6 +117,9 @@ public class Frostyehavior : MonoBehaviour {
             snowball.GetComponent<Rigidbody2D>().AddForce((curosr - transform.position).normalized * throwStrength,
                                                           ForceMode2D.Impulse);
             radial.GetComponent<RadialCooldown>().Cooldown();
+
+			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+			sound.GetComponent<SoundEffectManager>().PlaySnowballThrowSnd();
 		}
 	}
 }
