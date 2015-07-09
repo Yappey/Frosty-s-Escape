@@ -27,7 +27,17 @@ TagManager:
   - LeverRotator
   - Play
   - Inventory
-  - SoundEffectManager  - Cooldown  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Water
+  - UI
+  - NonCollidingBlock
+  - steam
+  - Gear
+  - SoundEffectManager
+  - Cooldown
+  layers:
   - Default
   - TransparentFX
   - Ignore Raycast
@@ -36,13 +46,13 @@ TagManager:
   - UI
   - 
   - 
-  - Frosty
-  - Snowball
-  - NonCollidingBlock
-  - Laser
-  - steam
-  - Gear
-  - Ground
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
