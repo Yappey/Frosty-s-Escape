@@ -12,7 +12,7 @@ public class FlameTurret : BaseTurret {
 	
 	// Update is called once per frame
 	void Update () {
-       
+        
 	}
 	
 	public override void Process()

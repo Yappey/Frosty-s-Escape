@@ -7,7 +7,8 @@ public class BaseTurret : BaseReceiver {
 	public bool requiresTarget = false;
 	public float frequency = 1.0f;
 	public float projectileVelocity;
-	public float FOV = 30.0f;
+	public float FOV = 60.0f;
+	public float viewRange = 30.0f;
 	public float startAngle = 0;
 	public float endAngle = 0;
 	public float rotationSpeed = 30.0f;
@@ -19,7 +20,7 @@ public class BaseTurret : BaseReceiver {
 	private Quaternion toRot;
 
 	private bool fromTo = true;
-	private bool hasTarget = false;
+	protected bool hasTarget = false;
 
 	
 	protected void BaseTurretStart () {
@@ -48,25 +49,44 @@ public class BaseTurret : BaseReceiver {
 			if(isScannig)
 			{
 				// TODO: Scanning Functionality - Sprint two
-
-				// ROTATION:  Lerp from startAngle degrees to endAngle degrees from the world's x axis.
-				transform.rotation = Quaternion.RotateTowards(transform.rotation, (fromTo) ? fromRot : toRot, 
-				                                              rotationSpeed * Time.deltaTime);
-
-				if (transform.up.y * transform.localScale.y < 0)
+				if (!hasTarget)
 				{
-					Vector3 scale = transform.localScale;
-					scale.y = -scale.y;
-					transform.localScale = scale;
+					// ROTATION:  Lerp from startAngle degrees to endAngle degrees from the world's x axis.
+					transform.rotation = Quaternion.RotateTowards(transform.rotation, (fromTo) ? fromRot : toRot, 
+					                                              rotationSpeed * Time.deltaTime);
+
+					if (transform.up.y * transform.localScale.y < 0)
+					{
+						Vector3 scale = transform.localScale;
+						scale.y = -scale.y;
+						transform.localScale = scale;
+					}
+
+					if (transform.rotation == ((fromTo) ? fromRot: toRot))
+					{
+						fromTo = !fromTo;
+					}
+				}
+				else
+				{
+
+				}
+				
+				SwitchManager sw = GameObject.FindGameObjectWithTag("SwitchManager").GetComponent<SwitchManager>();
+				
+				if (Search(sw.FindHead().transform.FindChild("Head").gameObject) 
+				    || Search(sw.FindTorso().transform.FindChild("Torso").gameObject) 
+				    || Search(sw.FindBase().transform.FindChild("Base").gameObject))
+				{
+					if (!hasTarget)
+						hasTarget = true;
+				}
+				else
+				{
+					if (hasTarget)
+						hasTarget = false;
 				}
 
-				if (transform.rotation == ((fromTo) ? fromRot: toRot))
-				{
-					fromTo = !fromTo;
-				}
-
-				//Quaternion rot = transform.rotation;
-				//Quaternion.RotateTowards(transform.parent.rotation
 			}
 		}
 	}
@@ -76,5 +96,22 @@ public class BaseTurret : BaseReceiver {
 
 	}
 
-
+	
+	
+	bool Search(GameObject target)
+	{
+		Vector3 disp = (target.transform.position - transform.position);
+		if (disp.magnitude < viewRange)
+		{
+			if (Vector3.Angle(transform.right, disp) > 180 - FOV / 2.0f)
+			{
+				string[] layers = {"Default", "Frosty", "NonCollidingBlock", "Ground"};
+				RaycastHit2D hit = Physics2D.Raycast(transform.position, disp.normalized, Mathf.Infinity, LayerMask.GetMask(layers));
+				if (hit.collider != null)
+					if (hit.collider.CompareTag("Frosty"))
+						return true;
+			}
+		}
+		return false;
+	}
 }
