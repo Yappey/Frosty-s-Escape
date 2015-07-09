@@ -59,7 +59,7 @@ GameObject:
   - 114: {fileID: 11420010}
   - 95: {fileID: 9571054}
   m_Layer: 0
-  m_Name: PC_HMM_catapult_17
+  m_Name: catapult
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
