@@ -17,7 +17,15 @@ public class LaserGrid : BaseReceiver
     // Update is called once per frame
     void Update()
     {
-     
+		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+
+		if (_BActive) {
+			sound.GetComponent<SoundEffectManager>().PlayLaserGridSnd(gameObject.transform.position);
+		}
+
+		else {
+			sound.GetComponent<SoundEffectManager>().StopLaserGridSnd();
+		}
     }
 
     public override void Process()

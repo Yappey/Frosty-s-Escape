@@ -2,8 +2,11 @@
 using System.Collections;
 
 public class SoundEffectManager : MonoBehaviour {
-	
+
+	private GameObject switchmanager;
+	private GameObject frosty;
 	private AudioSource[] effects;
+
 	public AudioSource buttonClick;
 	public AudioSource attach;
 	public AudioSource detach;
@@ -17,9 +20,13 @@ public class SoundEffectManager : MonoBehaviour {
 	public AudioSource pit;
 	public AudioSource switchBodyPart;
 	public AudioSource snowball;
+	public AudioSource laserGrid;
+	public AudioSource alert;
 
 	// Use this for initialization
 	void Start () {
+		switchmanager = GameObject.FindGameObjectWithTag("SwitchManager");
+
 		effects = gameObject.GetComponents<UnityEngine.AudioSource> ();
 
 		float vol = PlayerPrefs.GetFloat ("SoundEffects");
@@ -31,6 +38,8 @@ public class SoundEffectManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		frosty = switchmanager.GetComponent<SwitchManager>().FindActive();
+
 		effects = gameObject.GetComponents<UnityEngine.AudioSource> ();
 
 		float vol = PlayerPrefs.GetFloat ("SoundEffects");
@@ -40,6 +49,23 @@ public class SoundEffectManager : MonoBehaviour {
 				effects[i].volume = vol;
 			}
 		}
+	}
+
+	bool CloseEnoughToPlay(Vector3 pos) {
+		Vector3 frostyPos = new Vector3(frosty.transform.position.x, frosty.transform.position.y);
+		
+		float distance = (frostyPos - pos).magnitude;
+		
+		GameObject camera = GameObject.FindGameObjectWithTag ("MainCamera");
+		
+		float height = camera.gameObject.GetComponent<Camera>().orthographicSize;
+		float width = camera.gameObject.GetComponent<Camera>().orthographicSize * camera.gameObject.GetComponent<Camera>().aspect;
+
+		if (distance < 9.5f) {
+			return true;
+		}
+
+		return false;
 	}
 
 	public void PlayButtonClick(){
@@ -110,5 +136,29 @@ public class SoundEffectManager : MonoBehaviour {
 
 	public void PlaySnowballThrowSnd() {
 		snowball.Play ();
+	}
+
+	public void PlayLaserGridSnd(Vector3 pos)
+	{
+		if (CloseEnoughToPlay(pos)) {
+			if (!laserGrid.isPlaying) {
+				laserGrid.Play();
+			}
+		}
+
+		else {
+			StopLaserGridSnd();
+		}
+	}
+
+	public void StopLaserGridSnd()
+	{
+		if (laserGrid.isPlaying) {
+			laserGrid.Stop ();
+		}
+	}
+
+	public void PlayCameraSnd() {
+		alert.Play ();
 	}
 }
