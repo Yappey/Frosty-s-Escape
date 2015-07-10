@@ -43,7 +43,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 147418}
   m_LocalRotation: {x: 0, y: 0, z: .100140899, w: .994973302}
-  m_LocalPosition: {x: -.323000014, y: .164000005, z: 3.58999991}
+  m_LocalPosition: {x: -.486999989, y: .0540000014, z: 3.58999991}
   m_LocalScale: {x: .234356761, y: .183656856, z: .359098017}
   m_Children: []
   m_Father: {fileID: 485980}
@@ -55,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 104360}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.7700005, y: -2.3599999, z: 0}
+  m_LocalPosition: {x: -134.199997, y: -5.21999979, z: 0}
   m_LocalScale: {x: 2.58306289, y: 2.5830617, z: 2.5830617}
   m_Children:
   - {fileID: 456482}
@@ -104,14 +104,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   isScannig: 0
+  requiresTarget: 0
   frequency: 1
   projectileVelocity: 0
   FOV: 30
+  viewRange: 30
   startAngle: 0
   endAngle: 0
+  rotationSpeed: 30
+  scanTime: 2
   timer: 0
   flame: {fileID: 147418}
-  frosty: {fileID: 0}
 --- !u!114 &11441626
 MonoBehaviour:
   m_ObjectHideFlags: 1

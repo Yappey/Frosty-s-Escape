@@ -1,24 +1,26 @@
 fileFormatVersion: 2
-guid: d0b88216c0a9c854d82fd32c807a5a83
-timeCreated: 1436482005
+guid: 805d64688da65b443869732c38a2ab3d
+timeCreated: 1436472126
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Turret_0
-    21300002: Turret_1
-    21300004: Turret_2
-    21300006: Turret_3
-    21300008: Turret_4
-    21300010: Turret_5
-    21300012: Turret_6
-    21300014: Turret_7
-    21300016: Turret_8
-    21300018: Turret_9
-    21300020: Turret_10
-    21300022: Turret_11
-    21300024: Turret_12
-    21300026: Turret_13
-    21300028: Turret_14
+    21300000: Rotating_Fire_turret_head_0
+    21300002: Rotating_Fire_turret_head_1
+    21300004: Rotating_Fire_turret_head_2
+    21300006: Rotating_Fire_turret_head_3
+    21300008: Rotating_Fire_turret_head_4
+    21300010: Rotating_Fire_turret_head_5
+    21300012: Rotating_Fire_turret_head_6
+    21300014: Rotating_Fire_turret_head_7
+    21300016: Rotating_Fire_turret_head_8
+    21300018: Rotating_Fire_turret_head_9
+    21300020: Rotating_Fire_turret_head_10
+    21300022: Rotating_Fire_turret_head_11
+    21300024: Rotating_Fire_turret_head_12
+    21300026: Rotating_Fire_turret_head_13
+    21300028: Rotating_Fire_turret_head_14
+    21300030: Rotating_Fire_turret_head_15
+    21300032: Rotating_Fire_turret_head_16
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -64,57 +66,77 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Turret_0
+    - name: Rotating_Fire_turret_head_0
       rect:
         serializedVersion: 2
         x: 0
         y: 129
         width: 26
         height: 55
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Turret_1
+    - name: Rotating_Fire_turret_head_1
       rect:
         serializedVersion: 2
         x: 39
         y: 129
         width: 54
         height: 55
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Turret_2
+    - name: Rotating_Fire_turret_head_2
       rect:
         serializedVersion: 2
-        x: 109
-        y: 129
-        width: 59
-        height: 55
+        x: 102
+        y: 164
+        width: 66
+        height: 20
       alignment: 9
-      pivot: {x: .704525948, y: .76033628}
+      pivot: {x: .739575446, y: .31275329}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Turret_3
+    - name: Rotating_Fire_turret_head_3
       rect:
         serializedVersion: 2
         x: 181
         y: 129
         width: 51
         height: 56
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Turret_4
+    - name: Rotating_Fire_turret_head_4
       rect:
         serializedVersion: 2
         x: 270
         y: 129
         width: 28
         height: 56
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Turret_5
+    - name: Rotating_Fire_turret_head_5
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 129
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rotating_Fire_turret_head_6
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 130
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rotating_Fire_turret_head_7
       rect:
         serializedVersion: 2
         x: 0
@@ -124,7 +146,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Turret_6
+    - name: Rotating_Fire_turret_head_8
       rect:
         serializedVersion: 2
         x: 38
@@ -134,7 +156,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Turret_7
+    - name: Rotating_Fire_turret_head_9
       rect:
         serializedVersion: 2
         x: 105
@@ -144,7 +166,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Turret_8
+    - name: Rotating_Fire_turret_head_10
       rect:
         serializedVersion: 2
         x: 178
@@ -154,7 +176,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Turret_9
+    - name: Rotating_Fire_turret_head_11
       rect:
         serializedVersion: 2
         x: 270
@@ -164,7 +186,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Turret_10
+    - name: Rotating_Fire_turret_head_12
       rect:
         serializedVersion: 2
         x: 0
@@ -174,7 +196,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Turret_11
+    - name: Rotating_Fire_turret_head_13
       rect:
         serializedVersion: 2
         x: 33
@@ -184,7 +206,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Turret_12
+    - name: Rotating_Fire_turret_head_14
       rect:
         serializedVersion: 2
         x: 102
@@ -194,7 +216,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Turret_13
+    - name: Rotating_Fire_turret_head_15
       rect:
         serializedVersion: 2
         x: 175
@@ -204,7 +226,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Turret_14
+    - name: Rotating_Fire_turret_head_16
       rect:
         serializedVersion: 2
         x: 270
