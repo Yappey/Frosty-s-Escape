@@ -38,25 +38,28 @@ public class WinBox : MonoBehaviour {
 
                 time = healthbar.GetComponent<HealthBarScript>().levelTime - healthbar.GetComponent<HealthBarScript>().health;
 				win.SetActive(true);
-                if (time < ThreeStars)
+                if (!PlayerPrefs.HasKey("Level" + levelnumber + "Snowalls") || time < PlayerPrefs.GetFloat("Level" + levelnumber + "HighScore"))
                 {
-                    PlayerPrefs.SetInt("Level" + levelnumber + "Snowballs", 3);
-                    ThreeStarAnim.GetComponent<Animator>().enabled = true;
-                    ThreeStarAnim.GetComponent<Animator>().Play("Base Layer.RatingSystem3Stars");
+                    if (time < ThreeStars)
+                    {
+                        PlayerPrefs.SetInt("Level" + levelnumber + "Snowballs", 3);
+                        ThreeStarAnim.GetComponent<Animator>().enabled = true;
+                        ThreeStarAnim.GetComponent<Animator>().Play("Base Layer.RatingSystem3Stars");
+                    }
+                    else if (time < TwoStars)
+                    {
+                        PlayerPrefs.SetInt("Level" + levelnumber + "Snowballs", 2);
+                        TwoStarAnim.GetComponent<Animator>().enabled = true;
+                        TwoStarAnim.GetComponent<Animator>().Play("Base Layer.RatingSystem2Stars");
+                    }
+                    else
+                    {
+                        PlayerPrefs.SetInt("Level" + levelnumber + "Snowballs", 1);
+                        OneStarAnim.GetComponent<Animator>().enabled = true;
+                        OneStarAnim.GetComponent<Animator>().Play("Base Layer.RatingSystem1Star");
+                    }
+                    PlayerPrefs.SetFloat("Level" + levelnumber + "HighScore", time); 
                 }
-                else if (time < TwoStars)
-                {
-                    PlayerPrefs.SetInt("Level" + levelnumber + "Snowballs", 2);
-                    TwoStarAnim.GetComponent<Animator>().enabled = true;
-                    TwoStarAnim.GetComponent<Animator>().Play("Base Layer.RatingSystem2Stars");
-                }
-                else
-                {
-                    PlayerPrefs.SetInt("Level" + levelnumber + "Snowballs", 1);
-                    OneStarAnim.GetComponent<Animator>().enabled = true;
-                    OneStarAnim.GetComponent<Animator>().Play("Base Layer.RatingSystem1Star");
-                }
-                PlayerPrefs.SetFloat("Level" + levelnumber + "HighScore", time);
 			}
 		}
 	}
