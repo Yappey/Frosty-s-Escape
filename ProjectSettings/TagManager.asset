@@ -27,8 +27,8 @@ TagManager:
   - LeverRotator
   - Play
   - Inventory
-  - SoundEffectManager  
-  - Cooldown  
+  - SoundEffectManager
+  - Cooldown
   layers:
   - Default
   - TransparentFX
@@ -65,4 +65,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: HUD Switches
+    uniqueID: 3963405595
+    locked: 0
+  - name: HUD
+    uniqueID: 2645906575
     locked: 0
