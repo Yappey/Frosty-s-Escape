@@ -19,8 +19,6 @@ public class LaserTurret : BaseTurret {
 	void Update () {
         BaseTurretUpdate();
 
-
-
         //timer += Time.deltaTime;
         //if (timer >= frequency)
         //{

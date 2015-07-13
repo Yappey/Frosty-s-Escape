@@ -13,6 +13,16 @@ public class ConveyorBelt : BaseReceiver {
 	// Update is called once per frame
 	void Update () {
 		GetComponent<SurfaceEffector2D>().speed = speeds[(state >= 0 && state < speeds.Length) ? state : 0];
+
+		if (speeds[state] != 0.0f) {
+			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+			sound.GetComponent<SoundEffectManager>().PlayConveyorBeltSnd(gameObject.transform.position);
+		}
+
+		else {
+			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+			sound.GetComponent<SoundEffectManager>().StopConveyorBeltSnd();
+		}
 	}
 
 	override public void Process()

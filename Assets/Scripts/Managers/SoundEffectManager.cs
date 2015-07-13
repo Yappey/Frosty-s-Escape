@@ -28,6 +28,9 @@ public class SoundEffectManager : MonoBehaviour {
 	public AudioSource laser;
 	public AudioSource waterDrop;
 	public AudioSource saw;
+	public AudioSource flame;
+	public AudioSource conveyor;
+	public AudioSource grind;
 
 	// Use this for initialization
 	void Start () {
@@ -235,6 +238,63 @@ public class SoundEffectManager : MonoBehaviour {
 	{
 		if (saw.isPlaying) {
 			saw.Stop ();
+		}
+	}
+
+	public void PlayFlameSnd(Vector3 pos)
+	{
+		if (CloseEnoughToPlay (pos)) {
+			if (!flame.isPlaying) {
+				flame.Play ();
+			}
+		} 
+		
+		else
+			StopFlameSnd ();
+	}
+	
+	public void StopFlameSnd()
+	{
+		if (flame.isPlaying) {
+			flame.Stop ();
+		}
+	}
+
+	public void PlayConveyorBeltSnd(Vector3 pos)
+	{
+		if (CloseEnoughToPlay (pos)) {
+			if (!conveyor.isPlaying) {
+				conveyor.Play ();
+			}
+		} 
+		
+		else
+			StopConveyorBeltSnd ();
+	}
+	
+	public void StopConveyorBeltSnd()
+	{
+		if (conveyor.isPlaying) {
+			conveyor.Stop ();
+		}
+	}
+
+	public void PlayGrinderSnd(Vector3 pos)
+	{
+		if (CloseEnoughToPlay (pos)) {
+			if (!grind.isPlaying) {
+				grind.Play ();
+			}
+		} 
+		
+		else
+			StopGrinderSnd ();
+	}
+	
+	public void StopGrinderSnd()
+	{
+		if (grind.isPlaying) {
+			grind.Stop ();
 		}
 	}
 }
