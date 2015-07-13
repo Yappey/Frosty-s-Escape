@@ -20,6 +20,9 @@ public class LaserTurret : BaseTurret {
             GameObject temp = Instantiate(Laser);
             temp.transform.position = transform.GetChild(0).position;
             temp.GetComponent<Laser>().velocity = -transform.right * projectileVelocity;
+
+			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+			sound.GetComponent<SoundEffectManager>().PlayLaserTurretSnd(gameObject.transform.position);
         }
 	}
 

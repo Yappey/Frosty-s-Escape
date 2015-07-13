@@ -25,6 +25,9 @@ public class SteamLeak : BaseReceiver {
             timer += Time.deltaTime;
             if (timer >= interval)
             {
+				GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+				sound.GetComponent<SoundEffectManager>().PlaySteamSnd(gameObject.transform.position);
+
                 steam.SetActive(true);
                 steam.GetComponent<Animator>().Play("Base Layer.Steam");
                 if (!constant)

@@ -9,6 +9,9 @@ public class Laser : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		transform.right = velocity.normalized;
+
+		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+		sound.GetComponent<SoundEffectManager>().PlayLaserSnd(gameObject.transform.position);
 	}
 	
 	// Update is called once per frame

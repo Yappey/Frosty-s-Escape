@@ -74,7 +74,15 @@ public class BuzzSaw : BaseReceiver
             transform.position = Vector3.MoveTowards(transform.position,
                                                      _vWayPointArray[_iCurrWayPoint],
                                                      _fMovementSpeed * Time.deltaTime); 
+
+			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+			sound.GetComponent<SoundEffectManager>().PlaySawSnd(gameObject.transform.position);
         }
+
+		else {
+			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+			sound.GetComponent<SoundEffectManager>().StopSawSnd();
+		}
     }
 
     public override void Process()

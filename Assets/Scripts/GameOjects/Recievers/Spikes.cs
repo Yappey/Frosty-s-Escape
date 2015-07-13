@@ -45,8 +45,14 @@ public class Spikes : BaseReceiver {
 	}
 
 	public override void Process() {
-		if (state == 0) 
+		if (state == 0) {
 			state = 1;
+
+			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+			sound.GetComponent<SoundEffectManager>().PlaySpikeSnd();
+		}
+
+
 		
 		else 
 			state = 0;
