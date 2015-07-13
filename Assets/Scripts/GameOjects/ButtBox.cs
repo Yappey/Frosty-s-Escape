@@ -7,8 +7,8 @@ public class ButtBox : MonoBehaviour {
 	public LayerMask groundMask;
 
 	Rigidbody2D rgbd;
-	bool touchingButt = false;
-	bool touchingGround = false;
+	public bool touchingButt = false;
+	public bool touchingGround = false;
 
 	// Use this for initialization
 	void Start () {

@@ -9,11 +9,17 @@ public class SecurityCamera : BaseReceiver {
 	public float range = 10;
 	public float startAngle = 0.0f;
 	public float endAngle = 90.0f;
+	public float currentAngle = 0.0f;
+	public float angleTo = 0.0f;
+
+	public float degPerSecond = 15.0f;
 
 	public Material normalMat;
 	public Material alertedMat;
 
 	public GameObject lens;
+
+	private GameObject theTarget;
 
 	Mesh mesh;
 	public Vector3[] verts;
@@ -55,19 +61,82 @@ public class SecurityCamera : BaseReceiver {
 			tris[i * 3 + 2] = i + 2;
 		}
 		mesh.triangles = tris;
+
+		currentAngle = Mathf.Atan2(transform.right.y, transform.right.x) * 180 / Mathf.PI;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		SwitchManager sw = GameObject.FindGameObjectWithTag("SwitchManager").GetComponent<SwitchManager>();
 
 		if (state == 0)
 		{
+
+			if (isScanning)
+			{
+				currentAngle += degPerSecond * Time.deltaTime;
+				while (currentAngle < 0.0f)
+				{
+					currentAngle += 360.0f;
+				}
+				while (currentAngle >= 360.0f)
+				{
+					currentAngle -= 360.0f;
+				}
+
+				if (!targetFound)
+				{
+					// if the current angle is not between the two angles.
+					if (!isAngleBetween(currentAngle, endAngle, startAngle))
+					{
+						if (degPerSecond < 0.0f)
+						{
+							currentAngle = startAngle;
+							degPerSecond = -degPerSecond;
+						}
+						else if (degPerSecond > 0.0f)
+						{
+							currentAngle = endAngle;
+							degPerSecond = -degPerSecond;
+						}
+					}
+				}
+				else
+				{
+					// if the current angle is not between the two angles.
+					if (isAngleBetween(currentAngle, endAngle, startAngle) && theTarget != null)
+					{
+						Vector3 disp = theTarget.transform.position - transform.position;
+						disp.z = 0.0f;
+						disp.Normalize();
+						/*float*/ angleTo = Mathf.Atan2(disp.y, disp.x) * 180 / Mathf.PI;
+						while (angleTo < 0.0f)
+							angleTo += 360.0f;
+						while (angleTo >= 360.0f)
+							angleTo -= 360.0f;
+
+						if (isAngleBetween(angleTo, currentAngle + FOV / 2.0f, currentAngle) && degPerSecond < 0.0f
+						    || isAngleBetween(angleTo, currentAngle, currentAngle - FOV / 2.0f) && degPerSecond > 0.0f)
+						{
+							degPerSecond = -degPerSecond;
+						}
+					}
+					else
+					{
+						degPerSecond = -degPerSecond;
+					}
+				}
+				
+				float radAngle = currentAngle * Mathf.PI / 180;
+				Vector3 lookTo = new Vector3(Mathf.Cos(radAngle), Mathf.Sin(radAngle));
+				transform.right = lookTo;
+			}
+
 			UpdateViewMesh();
 			Quaternion qu = new Quaternion();
 			qu.eulerAngles = (-transform.rotation.eulerAngles);
 			lens.transform.FindChild("View").localRotation = qu;
 
-			SwitchManager sw = GameObject.FindGameObjectWithTag("SwitchManager").GetComponent<SwitchManager>();
 
 			if (Search(sw.FindHead().transform.FindChild("Head").gameObject) 
 			    || Search(sw.FindTorso().transform.FindChild("Torso").gameObject) 
@@ -103,6 +172,8 @@ public class SecurityCamera : BaseReceiver {
 	{
 		targetFound = false;
 		GetComponent<MeshRenderer>().material = normalMat;
+
+		theTarget = null;
 	}
 
 	bool Search(GameObject target)
@@ -114,7 +185,10 @@ public class SecurityCamera : BaseReceiver {
 			{
 				RaycastHit2D hit = Physics2D.Raycast(lens.transform.position, disp.normalized);
 				if (hit.collider.CompareTag("Frosty"))
+				{
+					theTarget = hit.collider.gameObject;
 					return true;
+				}
 			}
 		}
 		return false;
@@ -184,5 +258,11 @@ public class SecurityCamera : BaseReceiver {
 		{
 			lens.transform.FindChild("View").gameObject.GetComponent<MeshRenderer>().enabled = false;
 		}
+	}
+
+	private bool isAngleBetween(float angleToCheck, float end, float start)
+	{
+		return !(start <= end && !(angleToCheck < end && angleToCheck > start) 
+		         || start > end && (angleToCheck < start && angleToCheck > end));
 	}
 }

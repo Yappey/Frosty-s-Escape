@@ -42,7 +42,7 @@ public class Frostyehavior : MonoBehaviour {
 			// Check if speed is less than max or input is opposite velocity
 			if (rgbd.velocity.x * Mathf.Sign(hor) < moveSpeed)
 			{
-				rgbd.AddForce(new Vector2(moveSpeed * hor * 15.0f, 0.0f));
+				rgbd.AddForce(new Vector2(moveSpeed * hor * 30.0f, 0.0f));
 
 				if (Mathf.Abs(rgbd.velocity.x) > moveSpeed)
 				{
