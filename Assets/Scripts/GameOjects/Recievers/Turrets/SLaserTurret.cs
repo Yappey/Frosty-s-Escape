@@ -1,22 +1,37 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SLaserTurret : LaserTurret {
-	
-	// Use this for initialization
-	void Start () {
-		BaseTurretStart();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		BaseTurretUpdate();
-	}
+public class SLaserTurret : LaserTurret
+{
+    //Animator laserBlast;
+    // Use this for initialization
+    void Start()
+    {
+        BaseTurretStart();
+        laserBlast = transform.GetChild(0).GetComponent<Animator>();
+    }
 
-	public override void ShootProjectile()
-	{
-		GameObject temp = Instantiate(Laser);
-		temp.transform.position = transform.GetChild(0).position;
-		temp.GetComponent<Laser>().velocity = -transform.right * projectileVelocity;
-	}
+    // Update is called once per frame
+    void Update()
+    {
+        BaseTurretUpdate();
+
+       //if (charging)
+       //{
+       //    charging = false;
+       //   
+       //    FireLaser();
+       //}
+    }
+
+    public override void ShootProjectile()
+    {
+        laserBlast.SetTrigger("Charge");
+        Invoke("InstantiateProjectile", 0.16f);
+    }
+
+    void InstantiateProjectile()
+    {
+        FireLaser();
+    }
 }

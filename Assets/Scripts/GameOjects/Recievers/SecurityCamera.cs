@@ -91,6 +91,9 @@ public class SecurityCamera : BaseReceiver {
 
 	void Spot()
 	{
+		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+		sound.GetComponent<SoundEffectManager>().PlayCameraSnd();
+
 		targetFound = true;
 
 		GetComponent<MeshRenderer>().material = alertedMat;

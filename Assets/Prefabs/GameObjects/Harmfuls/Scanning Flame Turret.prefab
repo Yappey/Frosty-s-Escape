@@ -45,8 +45,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 417328}
   - 212: {fileID: 21296172}
-  - 95: {fileID: 9546722}
   - 114: {fileID: 11473412}
+  - 95: {fileID: 9528754}
   m_Layer: 0
   m_Name: Turret Heads_0
   m_TagString: Untagged
@@ -61,7 +61,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 156782}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 100.420998, y: -4.74700022, z: 0}
+  m_LocalPosition: {x: -121.943146, y: -2.39573073, z: 0}
   m_LocalScale: {x: 2.58306289, y: 2.58306289, z: 2.58306289}
   m_Children:
   - {fileID: 417328}
@@ -73,9 +73,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 106288}
-  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106709}
-  m_LocalPosition: {x: -.883513927, y: .0527869165, z: 3.58999825}
-  m_LocalScale: {x: 1, y: 2, z: .387137294}
+  m_LocalRotation: {x: 0, y: 0, z: .0613111481, w: .998118758}
+  m_LocalPosition: {x: -.485000014, y: .0410000011, z: 3.58999991}
+  m_LocalScale: {x: .206794903, y: .202655524, z: .0800580308}
   m_Children: []
   m_Father: {fileID: 417328}
   m_RootOrder: 0
@@ -86,7 +86,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 176398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .00843811035, y: .200574875, z: 0}
+  m_LocalPosition: {x: -.00300000003, y: .201000005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 413474}
@@ -105,7 +105,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: .330000013, y: .620000005}
---- !u!95 &9546722
+--- !u!95 &9528754
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -114,7 +114,7 @@ Animator:
   m_GameObject: {fileID: 176398}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4ca66eb9b35663849b99169e4b80d730, type: 2}
+  m_Controller: {fileID: 9100000, guid: 208f409476ceba444b689efb83054b12, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -186,7 +186,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 106288}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66ef93f75fc64594099dde80e073492a, type: 3}
   m_Name: 
@@ -275,7 +275,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300004, guid: f35c534c8f1181f4696baff29999ab50, type: 3}
+  m_Sprite: {fileID: 21300004, guid: 805d64688da65b443869732c38a2ab3d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

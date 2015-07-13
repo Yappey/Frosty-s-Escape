@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d0b88216c0a9c854d82fd32c807a5a83
-timeCreated: 1436295976
+timeCreated: 1436482005
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -91,8 +91,8 @@ TextureImporter:
         y: 129
         width: 59
         height: 55
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 9
+      pivot: {x: .704525948, y: .76033628}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Turret_3
       rect:
