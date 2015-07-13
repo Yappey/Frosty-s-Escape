@@ -9,7 +9,7 @@ public class ProjectileParticleScript : MonoBehaviour {
 		if (particles)
 		{
 			particles.enableEmission = false;
-			Invoke("StartParticles", 0.01f);
+			Invoke("StartParticles", 0.02f);
 		}
 	}
 	

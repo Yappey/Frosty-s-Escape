@@ -4,28 +4,60 @@ using System.Collections;
 public class FlameTurret : BaseTurret {
 	
 	public GameObject flame;
+    protected bool isFlaming = false;
 	
 	// Use this for initialization
 	void Start () {
-       
+        BaseTurretStart();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        
-	}
+        BaseTurretUpdate();
+    }
+
+    public override void ShootProjectile()
+    {
+        if ((hasTarget || !requiresTarget))
+        {
+            if (isFlaming)
+                FlameOff();
+            else
+                FlameOn();
+        }
+        else
+        {
+            FlameOff();
+        }
+    }
+
+    void FlameOn()
+    {
+        Animator anim = flame.GetComponent<Animator>();
+        anim.SetBool("Flaming", true);
+        flame.GetComponent<Harmful>().isActive = true;
+        isFlaming = true;
+    }
+
+    void FlameOff()
+    {
+        Animator anim = flame.GetComponent<Animator>();
+        anim.SetBool("Flaming", false);
+        flame.GetComponent<Harmful>().isActive = false;
+        isFlaming = false;
+    }
 	
 	public override void Process()
 	{
 		if (state == 0)
 		{
 			state = 1;
-			flame.SetActive(false);
+			FlameOff();
 		}
 		else
 		{
 			state = 0;
-			flame.SetActive(true);
+			FlameOn();
 		}
 	}
 

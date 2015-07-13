@@ -1,0 +1,396 @@
+fileFormatVersion: 2
+guid: 0a951dbd55f4038468436b0fdfb933c3
+timeCreated: 1436483396
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: dbz_blast_sprites_by_zero400539-d4smdm1_0
+    21300002: dbz_blast_sprites_by_zero400539-d4smdm1_1
+    21300004: dbz_blast_sprites_by_zero400539-d4smdm1_2
+    21300006: dbz_blast_sprites_by_zero400539-d4smdm1_3
+    21300008: dbz_blast_sprites_by_zero400539-d4smdm1_4
+    21300010: dbz_blast_sprites_by_zero400539-d4smdm1_5
+    21300012: dbz_blast_sprites_by_zero400539-d4smdm1_6
+    21300014: dbz_blast_sprites_by_zero400539-d4smdm1_7
+    21300016: dbz_blast_sprites_by_zero400539-d4smdm1_8
+    21300018: dbz_blast_sprites_by_zero400539-d4smdm1_9
+    21300020: dbz_blast_sprites_by_zero400539-d4smdm1_10
+    21300022: dbz_blast_sprites_by_zero400539-d4smdm1_11
+    21300024: dbz_blast_sprites_by_zero400539-d4smdm1_12
+    21300026: dbz_blast_sprites_by_zero400539-d4smdm1_13
+    21300028: dbz_blast_sprites_by_zero400539-d4smdm1_14
+    21300030: dbz_blast_sprites_by_zero400539-d4smdm1_15
+    21300032: dbz_blast_sprites_by_zero400539-d4smdm1_16
+    21300034: dbz_blast_sprites_by_zero400539-d4smdm1_17
+    21300036: dbz_blast_sprites_by_zero400539-d4smdm1_18
+    21300038: dbz_blast_sprites_by_zero400539-d4smdm1_19
+    21300040: dbz_blast_sprites_by_zero400539-d4smdm1_20
+    21300042: dbz_blast_sprites_by_zero400539-d4smdm1_21
+    21300044: dbz_blast_sprites_by_zero400539-d4smdm1_22
+    21300046: dbz_blast_sprites_by_zero400539-d4smdm1_23
+    21300048: dbz_blast_sprites_by_zero400539-d4smdm1_24
+    21300050: dbz_blast_sprites_by_zero400539-d4smdm1_25
+    21300052: dbz_blast_sprites_by_zero400539-d4smdm1_26
+    21300054: dbz_blast_sprites_by_zero400539-d4smdm1_27
+    21300056: dbz_blast_sprites_by_zero400539-d4smdm1_28
+    21300058: dbz_blast_sprites_by_zero400539-d4smdm1_29
+    21300060: dbz_blast_sprites_by_zero400539-d4smdm1_30
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: dbz_blast_sprites_by_zero400539-d4smdm1_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 383
+        width: 47
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dbz_blast_sprites_by_zero400539-d4smdm1_1
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 367
+        width: 23
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dbz_blast_sprites_by_zero400539-d4smdm1_2
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 392
+        width: 79
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dbz_blast_sprites_by_zero400539-d4smdm1_3
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 380
+        width: 34
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dbz_blast_sprites_by_zero400539-d4smdm1_4
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 319
+        width: 37
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dbz_blast_sprites_by_zero400539-d4smdm1_5
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 354
+        width: 41
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dbz_blast_sprites_by_zero400539-d4smdm1_6
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 346
+        width: 48
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dbz_blast_sprites_by_zero400539-d4smdm1_7
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 344
+        width: 112
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dbz_blast_sprites_by_zero400539-d4smdm1_8
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 330
+        width: 45
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dbz_blast_sprites_by_zero400539-d4smdm1_9
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 328
+        width: 46
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dbz_blast_sprites_by_zero400539-d4smdm1_10
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 289
+        width: 95
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dbz_blast_sprites_by_zero400539-d4smdm1_11
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 306
+        width: 85
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dbz_blast_sprites_by_zero400539-d4smdm1_12
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 305
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dbz_blast_sprites_by_zero400539-d4smdm1_13
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 305
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dbz_blast_sprites_by_zero400539-d4smdm1_14
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 304
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dbz_blast_sprites_by_zero400539-d4smdm1_15
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 291
+        width: 84
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dbz_blast_sprites_by_zero400539-d4smdm1_16
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 273
+        width: 46
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dbz_blast_sprites_by_zero400539-d4smdm1_17
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 257
+        width: 45
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dbz_blast_sprites_by_zero400539-d4smdm1_18
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 227
+        width: 96
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dbz_blast_sprites_by_zero400539-d4smdm1_19
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 219
+        width: 76
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dbz_blast_sprites_by_zero400539-d4smdm1_20
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 157
+        width: 125
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dbz_blast_sprites_by_zero400539-d4smdm1_21
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 174
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dbz_blast_sprites_by_zero400539-d4smdm1_22
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 172
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dbz_blast_sprites_by_zero400539-d4smdm1_23
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 153
+        width: 70
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dbz_blast_sprites_by_zero400539-d4smdm1_24
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 174
+        width: 23
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dbz_blast_sprites_by_zero400539-d4smdm1_25
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 119
+        width: 16
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dbz_blast_sprites_by_zero400539-d4smdm1_26
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 155
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dbz_blast_sprites_by_zero400539-d4smdm1_27
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 153
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dbz_blast_sprites_by_zero400539-d4smdm1_28
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 104
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dbz_blast_sprites_by_zero400539-d4smdm1_29
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 108
+        width: 60
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dbz_blast_sprites_by_zero400539-d4smdm1_30
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 106
+        width: 165
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
