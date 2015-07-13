@@ -19,6 +19,8 @@ public class LaserTurret : BaseTurret {
 	void Update () {
         BaseTurretUpdate();
 
+
+
         //timer += Time.deltaTime;
         //if (timer >= frequency)
         //{
@@ -46,5 +48,7 @@ public class LaserTurret : BaseTurret {
     {
         laserBlast.SetTrigger("Charge");
         Invoke("FireLaser", 0.16f);
+		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+		sound.GetComponent<SoundEffectManager>().PlayLaserTurretSnd(gameObject.transform.position);
     }
 }
