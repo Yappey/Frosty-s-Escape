@@ -22,6 +22,15 @@ public class SoundEffectManager : MonoBehaviour {
 	public AudioSource snowball;
 	public AudioSource laserGrid;
 	public AudioSource alert;
+	public AudioSource spike;
+	public AudioSource steam;
+	public AudioSource laserTurret;
+	public AudioSource laser;
+	public AudioSource waterDrop;
+	public AudioSource saw;
+	public AudioSource flame;
+	public AudioSource conveyor;
+	public AudioSource grind;
 
 	// Use this for initialization
 	void Start () {
@@ -56,10 +65,10 @@ public class SoundEffectManager : MonoBehaviour {
 		
 		float distance = (frostyPos - pos).magnitude;
 		
-		GameObject camera = GameObject.FindGameObjectWithTag ("MainCamera");
+		//GameObject camera = GameObject.FindGameObjectWithTag ("MainCamera");
 		
-		float height = camera.gameObject.GetComponent<Camera>().orthographicSize;
-		float width = camera.gameObject.GetComponent<Camera>().orthographicSize * camera.gameObject.GetComponent<Camera>().aspect;
+		//float height = camera.gameObject.GetComponent<Camera>().orthographicSize;
+		//float width = camera.gameObject.GetComponent<Camera>().orthographicSize * camera.gameObject.GetComponent<Camera>().aspect;
 
 		if (distance < 9.5f) {
 			return true;
@@ -160,5 +169,132 @@ public class SoundEffectManager : MonoBehaviour {
 
 	public void PlayCameraSnd() {
 		alert.Play ();
+	}
+
+	public void PlaySpikeSnd() {
+		spike.Play ();
+	}
+
+	public void PlaySteamSnd(Vector3 pos)
+	{
+		if (CloseEnoughToPlay(pos)) {
+			if (!steam.isPlaying) {
+				steam.Play();
+			}
+		}
+	}
+
+	public void PlayLaserTurretSnd(Vector3 pos) 
+	{
+		if (CloseEnoughToPlay(pos)) {
+			if (!laserTurret.isPlaying) {
+				laserTurret.Play();
+			}
+		}
+
+		else {
+			StopLaserTurretSnd();
+		}
+	}
+
+	public void StopLaserTurretSnd()
+	{
+		if (laserTurret.isPlaying) {
+			laserTurret.Stop ();
+		}
+	}
+
+	public void PlayLaserSnd(Vector3 pos) 
+	{
+		if (CloseEnoughToPlay(pos)) {
+			if (!laser.isPlaying) {
+				laser.Play();
+			}
+		}
+	}
+
+	public void PlayWaterDropSnd(Vector3 pos)
+	{
+		if (CloseEnoughToPlay(pos)) {
+			//if (!waterDrop.isPlaying) {
+				waterDrop.Play();
+			//}
+		}
+	}
+
+	public void PlaySawSnd(Vector3 pos)
+	{
+		if (CloseEnoughToPlay (pos)) {
+			if (!saw.isPlaying) {
+				saw.Play ();
+			}
+		} 
+
+		else
+			StopSawSnd ();
+	}
+
+	public void StopSawSnd()
+	{
+		if (saw.isPlaying) {
+			saw.Stop ();
+		}
+	}
+
+	public void PlayFlameSnd(Vector3 pos)
+	{
+		if (CloseEnoughToPlay (pos)) {
+			if (!flame.isPlaying) {
+				flame.Play ();
+			}
+		} 
+		
+		else
+			StopFlameSnd ();
+	}
+	
+	public void StopFlameSnd()
+	{
+		if (flame.isPlaying) {
+			flame.Stop ();
+		}
+	}
+
+	public void PlayConveyorBeltSnd(Vector3 pos)
+	{
+		if (CloseEnoughToPlay (pos)) {
+			if (!conveyor.isPlaying) {
+				conveyor.Play ();
+			}
+		} 
+		
+		else
+			StopConveyorBeltSnd ();
+	}
+	
+	public void StopConveyorBeltSnd()
+	{
+		if (conveyor.isPlaying) {
+			conveyor.Stop ();
+		}
+	}
+
+	public void PlayGrinderSnd(Vector3 pos)
+	{
+		if (CloseEnoughToPlay (pos)) {
+			if (!grind.isPlaying) {
+				grind.Play ();
+			}
+		} 
+		
+		else
+			StopGrinderSnd ();
+	}
+	
+	public void StopGrinderSnd()
+	{
+		if (grind.isPlaying) {
+			grind.Stop ();
+		}
 	}
 }

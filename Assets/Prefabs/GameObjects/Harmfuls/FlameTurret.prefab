@@ -105,7 +105,7 @@ MonoBehaviour:
   state: 0
   isScannig: 0
   requiresTarget: 0
-  frequency: 1
+  frequency: .356999993
   projectileVelocity: 0
   FOV: 30
   viewRange: 30

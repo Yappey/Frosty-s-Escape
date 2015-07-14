@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SLaserTurret : LaserTurret
 {
-    Animator laserBlast;
+    //Animator laserBlast;
     // Use this for initialization
     void Start()
     {

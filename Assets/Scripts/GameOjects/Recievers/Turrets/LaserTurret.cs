@@ -5,7 +5,7 @@ public class LaserTurret : BaseTurret {
 
     //public float timer = 0.0f;
     public GameObject Laser;
-    Animator laserBlast;
+    protected Animator laserBlast;
 
     protected bool charging = false;
 
@@ -46,5 +46,7 @@ public class LaserTurret : BaseTurret {
     {
         laserBlast.SetTrigger("Charge");
         Invoke("FireLaser", 0.16f);
+		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+		sound.GetComponent<SoundEffectManager>().PlayLaserTurretSnd(gameObject.transform.position);
     }
 }

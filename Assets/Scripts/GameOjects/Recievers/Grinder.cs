@@ -15,7 +15,10 @@ public class Grinder : BaseReceiver {
 	
 	// Update is called once per frame
 	void Update () {
-
+		if (state == 0) {
+			GameObject sound = GameObject.FindGameObjectWithTag ("SoundEffectManager");
+			sound.GetComponent<SoundEffectManager> ().PlayGrinderSnd (gameObject.transform.position);
+		}
 	}
 
 	public override void Process()
@@ -40,6 +43,9 @@ public class Grinder : BaseReceiver {
 
 	void TurnOff()
 	{
+		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+		sound.GetComponent<SoundEffectManager>().StopGrinderSnd();
+
 		cover.SetActive(true);
 		transform.FindChild("GrindCollider").GetComponent<Harmful>().isActive = false;
 	}

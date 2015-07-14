@@ -56,6 +56,7 @@ public class Harmful : MonoBehaviour {
 	{
 		if (col.gameObject.tag == "Frosty" && isActive)
 		{
+			GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBarScript>().Hurt(damage);
 			if (instaKill)
 			{
 				if ((isCrushing && col.gameObject.GetComponent<Frostyehavior>().isGrounded) || !isCrushing)
@@ -66,7 +67,6 @@ public class Harmful : MonoBehaviour {
 			}
 			// TODO: Hurt Frosty.  Dependent on Health Bar.
 
-			GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBarScript>().Hurt(damage);
 
 			if (destroyOnCollision)
 			{
