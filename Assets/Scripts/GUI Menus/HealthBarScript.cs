@@ -90,7 +90,11 @@ public class HealthBarScript : MonoBehaviour {
 	{
 		if (!dontKillMe)
 		{
-			OutOfHealth();
+			CheckpointManager chck = CheckpointManager.Instance;
+			if (chck.CheckPointSaved)
+				chck.Reset();
+			else
+				OutOfHealth();
 		}
 	}
 
