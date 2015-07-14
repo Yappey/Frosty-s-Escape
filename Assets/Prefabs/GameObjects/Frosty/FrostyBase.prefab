@@ -128,7 +128,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125192}
-  m_Mass: 1
+  m_Mass: 1.25
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 2
@@ -205,6 +205,8 @@ MonoBehaviour:
   climbSpeed: 10
   jumpVelocity: 7
   snowballVelocity: 10
+  SnowballCooldown: 1.25
+  timer: 0
   activateRange: .699999988
   isActive: 0
   isGrounded: 0
