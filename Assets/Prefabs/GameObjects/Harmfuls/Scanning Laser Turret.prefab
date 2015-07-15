@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &112752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 472360}
+  m_Layer: 0
+  m_Name: Reticle
+  m_TagString: Untagged
+  m_Icon: {fileID: -3545028842045912814, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &129186
 GameObject:
   m_ObjectHideFlags: 1
@@ -71,10 +86,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 156782}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -130.330002, y: -5.75, z: 0}
+  m_LocalPosition: {x: -184.342026, y: 18.8727875, z: 0}
   m_LocalScale: {x: 2.58306289, y: 2.58306289, z: 2.58306289}
   m_Children:
   - {fileID: 417328}
+  - {fileID: 472360}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &417328
@@ -90,6 +106,18 @@ Transform:
   - {fileID: 407020}
   m_Father: {fileID: 410046}
   m_RootOrder: 0
+--- !u!4 &472360
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112752}
+  m_LocalRotation: {x: .0165396295, y: 0, z: 0, w: .999863207}
+  m_LocalPosition: {x: -.75, y: .289999992, z: .00999999978}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 410046}
+  m_RootOrder: 1
 --- !u!95 &9538134
 Animator:
   serializedVersion: 3
@@ -154,17 +182,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   isScannig: 1
-  requiresTarget: 0
+  requiresTarget: 1
   frequency: 1
-  projectileVelocity: 10
-  FOV: 60
+  projectileVelocity: 12
+  FOV: 120
   viewRange: 30
-  startAngle: 0
-  endAngle: -179
-  rotationSpeed: 30
-  scanTime: 2
+  startAngle: 180
+  endAngle: 0
+  rotationSpeed: 45
+  currentAngle: 0
+  angleTo: 0
   timer: 0
   Laser: {fileID: 179246, guid: 5ecb422f71ec7474eb183b6520facf00, type: 2}
+  reticle: {fileID: 112752}
 --- !u!212 &21235148
 SpriteRenderer:
   m_ObjectHideFlags: 1

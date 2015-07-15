@@ -46,6 +46,8 @@ GameObject:
   - 50: {fileID: 5024686}
   - 58: {fileID: 5887262}
   - 114: {fileID: 11448118}
+  - 95: {fileID: 9595342}
+  - 212: {fileID: 21294830}
   m_Layer: 8
   m_Name: FrostyTorso
   m_TagString: Frosty
@@ -163,6 +165,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: .379999995
+--- !u!95 &9595342
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179718}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d0cecaa3253aaa04c93557509d693b22, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11408260
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -200,6 +219,7 @@ MonoBehaviour:
   headAttached: 0
   torsoAttached: 1
   baseAttached: 0
+  animTimer: 1
   snowballLauncher: {fileID: 0}
 --- !u!114 &11448118
 MonoBehaviour:
@@ -214,6 +234,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bLadder: 0
   _bMonkeyBar: 0
+--- !u!212 &21294830
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179718}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: c643bc93236b0754eb755b7db6c8a68d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -175,9 +175,10 @@ MonoBehaviour:
   FOV: 60
   viewRange: 30
   startAngle: 0
-  endAngle: -179
+  endAngle: 180
   rotationSpeed: 30
-  scanTime: 2
+  currentAngle: 0
+  angleTo: 0
   timer: 0
   flame: {fileID: 106288}
 --- !u!114 &11478984

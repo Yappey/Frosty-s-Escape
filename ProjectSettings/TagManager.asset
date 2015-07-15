@@ -30,6 +30,7 @@ TagManager:
   - SoundEffectManager
   - Cooldown
   - UIButton
+  - DirectionalLight
   layers:
   - Default
   - TransparentFX
@@ -47,6 +48,7 @@ TagManager:
   - Gear
   - Ground
   - Pipe
+  - Bullet
   - 
   - 
   - 
