@@ -1,0 +1,1782 @@
+fileFormatVersion: 2
+guid: c5ab0e51bc5dfbc4c951dbd8df6b023c
+timeCreated: 1436559791
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: PC Computer - Maple Story - Snowman1_0
+    21300002: PC Computer - Maple Story - Snowman1_1
+    21300004: PC Computer - Maple Story - Snowman1_2
+    21300006: PC Computer - Maple Story - Snowman1_3
+    21300008: PC Computer - Maple Story - Snowman1_4
+    21300010: PC Computer - Maple Story - Snowman1_5
+    21300012: PC Computer - Maple Story - Snowman1_6
+    21300014: PC Computer - Maple Story - Snowman1_7
+    21300016: PC Computer - Maple Story - Snowman1_8
+    21300018: PC Computer - Maple Story - Snowman1_9
+    21300020: PC Computer - Maple Story - Snowman1_10
+    21300022: PC Computer - Maple Story - Snowman1_11
+    21300024: PC Computer - Maple Story - Snowman1_12
+    21300026: PC Computer - Maple Story - Snowman1_13
+    21300028: PC Computer - Maple Story - Snowman1_14
+    21300030: PC Computer - Maple Story - Snowman1_15
+    21300032: PC Computer - Maple Story - Snowman1_16
+    21300034: PC Computer - Maple Story - Snowman1_17
+    21300036: PC Computer - Maple Story - Snowman1_18
+    21300038: PC Computer - Maple Story - Snowman1_19
+    21300040: PC Computer - Maple Story - Snowman1_20
+    21300042: PC Computer - Maple Story - Snowman1_21
+    21300044: PC Computer - Maple Story - Snowman1_22
+    21300046: PC Computer - Maple Story - Snowman1_23
+    21300048: PC Computer - Maple Story - Snowman1_24
+    21300050: PC Computer - Maple Story - Snowman1_25
+    21300052: PC Computer - Maple Story - Snowman1_26
+    21300054: PC Computer - Maple Story - Snowman1_27
+    21300056: PC Computer - Maple Story - Snowman1_28
+    21300058: PC Computer - Maple Story - Snowman1_29
+    21300060: PC Computer - Maple Story - Snowman1_30
+    21300062: PC Computer - Maple Story - Snowman1_31
+    21300064: PC Computer - Maple Story - Snowman1_32
+    21300066: PC Computer - Maple Story - Snowman1_33
+    21300068: PC Computer - Maple Story - Snowman1_34
+    21300070: PC Computer - Maple Story - Snowman1_35
+    21300072: PC Computer - Maple Story - Snowman1_36
+    21300074: PC Computer - Maple Story - Snowman1_37
+    21300076: PC Computer - Maple Story - Snowman1_38
+    21300078: PC Computer - Maple Story - Snowman1_39
+    21300080: PC Computer - Maple Story - Snowman1_40
+    21300082: PC Computer - Maple Story - Snowman1_41
+    21300084: PC Computer - Maple Story - Snowman1_42
+    21300086: PC Computer - Maple Story - Snowman1_43
+    21300088: PC Computer - Maple Story - Snowman1_44
+    21300090: PC Computer - Maple Story - Snowman1_45
+    21300092: PC Computer - Maple Story - Snowman1_46
+    21300094: PC Computer - Maple Story - Snowman1_47
+    21300096: PC Computer - Maple Story - Snowman1_48
+    21300098: PC Computer - Maple Story - Snowman1_49
+    21300100: PC Computer - Maple Story - Snowman1_50
+    21300102: PC Computer - Maple Story - Snowman1_51
+    21300104: PC Computer - Maple Story - Snowman1_52
+    21300106: PC Computer - Maple Story - Snowman1_53
+    21300108: PC Computer - Maple Story - Snowman1_54
+    21300110: PC Computer - Maple Story - Snowman1_55
+    21300112: PC Computer - Maple Story - Snowman1_56
+    21300114: PC Computer - Maple Story - Snowman1_57
+    21300116: PC Computer - Maple Story - Snowman1_58
+    21300118: PC Computer - Maple Story - Snowman1_59
+    21300120: PC Computer - Maple Story - Snowman1_60
+    21300122: PC Computer - Maple Story - Snowman1_61
+    21300124: PC Computer - Maple Story - Snowman1_62
+    21300126: PC Computer - Maple Story - Snowman1_63
+    21300128: PC Computer - Maple Story - Snowman1_64
+    21300130: PC Computer - Maple Story - Snowman1_65
+    21300132: PC Computer - Maple Story - Snowman1_66
+    21300134: PC Computer - Maple Story - Snowman1_67
+    21300136: PC Computer - Maple Story - Snowman1_68
+    21300138: PC Computer - Maple Story - Snowman1_69
+    21300140: PC Computer - Maple Story - Snowman1_70
+    21300142: PC Computer - Maple Story - Snowman1_71
+    21300144: PC Computer - Maple Story - Snowman1_72
+    21300146: PC Computer - Maple Story - Snowman1_73
+    21300148: PC Computer - Maple Story - Snowman1_74
+    21300150: PC Computer - Maple Story - Snowman1_75
+    21300152: PC Computer - Maple Story - Snowman1_76
+    21300154: PC Computer - Maple Story - Snowman1_77
+    21300156: PC Computer - Maple Story - Snowman1_78
+    21300158: PC Computer - Maple Story - Snowman1_79
+    21300160: PC Computer - Maple Story - Snowman1_80
+    21300162: PC Computer - Maple Story - Snowman1_81
+    21300164: PC Computer - Maple Story - Snowman1_82
+    21300166: PC Computer - Maple Story - Snowman1_83
+    21300168: PC Computer - Maple Story - Snowman1_84
+    21300170: PC Computer - Maple Story - Snowman1_85
+    21300172: PC Computer - Maple Story - Snowman1_86
+    21300174: PC Computer - Maple Story - Snowman1_87
+    21300176: PC Computer - Maple Story - Snowman1_88
+    21300178: PC Computer - Maple Story - Snowman1_89
+    21300180: PC Computer - Maple Story - Snowman1_90
+    21300182: PC Computer - Maple Story - Snowman1_91
+    21300184: PC Computer - Maple Story - Snowman1_92
+    21300186: PC Computer - Maple Story - Snowman1_93
+    21300188: PC Computer - Maple Story - Snowman1_94
+    21300190: PC Computer - Maple Story - Snowman1_95
+    21300192: PC Computer - Maple Story - Snowman1_96
+    21300194: PC Computer - Maple Story - Snowman1_97
+    21300196: PC Computer - Maple Story - Snowman1_98
+    21300198: PC Computer - Maple Story - Snowman1_99
+    21300200: PC Computer - Maple Story - Snowman1_100
+    21300202: PC Computer - Maple Story - Snowman1_101
+    21300204: PC Computer - Maple Story - Snowman1_102
+    21300206: PC Computer - Maple Story - Snowman1_103
+    21300208: PC Computer - Maple Story - Snowman1_104
+    21300210: PC Computer - Maple Story - Snowman1_105
+    21300212: PC Computer - Maple Story - Snowman1_106
+    21300214: PC Computer - Maple Story - Snowman1_107
+    21300216: PC Computer - Maple Story - Snowman1_108
+    21300218: PC Computer - Maple Story - Snowman1_109
+    21300220: PC Computer - Maple Story - Snowman1_110
+    21300222: PC Computer - Maple Story - Snowman1_111
+    21300224: PC Computer - Maple Story - Snowman1_112
+    21300226: PC Computer - Maple Story - Snowman1_113
+    21300228: PC Computer - Maple Story - Snowman1_114
+    21300230: PC Computer - Maple Story - Snowman1_115
+    21300232: PC Computer - Maple Story - Snowman1_116
+    21300234: PC Computer - Maple Story - Snowman1_117
+    21300236: PC Computer - Maple Story - Snowman1_118
+    21300238: PC Computer - Maple Story - Snowman1_119
+    21300240: PC Computer - Maple Story - Snowman1_120
+    21300242: PC Computer - Maple Story - Snowman1_121
+    21300244: PC Computer - Maple Story - Snowman1_122
+    21300246: PC Computer - Maple Story - Snowman1_123
+    21300248: PC Computer - Maple Story - Snowman1_124
+    21300250: PC Computer - Maple Story - Snowman1_125
+    21300252: PC Computer - Maple Story - Snowman1_126
+    21300254: PC Computer - Maple Story - Snowman1_127
+    21300256: PC Computer - Maple Story - Snowman1_128
+    21300258: PC Computer - Maple Story - Snowman1_129
+    21300260: PC Computer - Maple Story - Snowman1_130
+    21300262: PC Computer - Maple Story - Snowman1_131
+    21300264: PC Computer - Maple Story - Snowman1_132
+    21300266: PC Computer - Maple Story - Snowman1_133
+    21300268: PC Computer - Maple Story - Snowman1_134
+    21300270: PC Computer - Maple Story - Snowman1_135
+    21300272: PC Computer - Maple Story - Snowman1_136
+    21300274: PC Computer - Maple Story - Snowman1_137
+    21300276: PC Computer - Maple Story - Snowman1_138
+    21300278: PC Computer - Maple Story - Snowman1_139
+    21300280: PC Computer - Maple Story - Snowman1_140
+    21300282: PC Computer - Maple Story - Snowman1_141
+    21300284: PC Computer - Maple Story - Snowman1_142
+    21300286: PC Computer - Maple Story - Snowman1_143
+    21300288: PC Computer - Maple Story - Snowman1_144
+    21300290: PC Computer - Maple Story - Snowman1_145
+    21300292: PC Computer - Maple Story - Snowman1_146
+    21300294: PC Computer - Maple Story - Snowman1_147
+    21300296: PC Computer - Maple Story - Snowman1_148
+    21300298: PC Computer - Maple Story - Snowman1_149
+    21300300: PC Computer - Maple Story - Snowman1_150
+    21300302: PC Computer - Maple Story - Snowman1_151
+    21300304: PC Computer - Maple Story - Snowman1_152
+    21300306: PC Computer - Maple Story - Snowman1_153
+    21300308: PC Computer - Maple Story - Snowman1_154
+    21300310: PC Computer - Maple Story - Snowman1_155
+    21300312: PC Computer - Maple Story - Snowman1_156
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: PC Computer - Maple Story - Snowman1_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1131
+        width: 105
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_1
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 1131
+        width: 107
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_2
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 1131
+        width: 109
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_3
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 1131
+        width: 107
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_4
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 986
+        width: 108
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_5
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 986
+        width: 106
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_6
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 986
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_7
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 993
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_8
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 994
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_9
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 829
+        width: 117
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_10
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 894
+        width: 35
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_11
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 875
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_12
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 875
+        width: 43
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_13
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 883
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_14
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 854
+        width: 40
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_15
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 650
+        width: 105
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_16
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 650
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_17
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 650
+        width: 119
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_18
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 650
+        width: 121
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_19
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 650
+        width: 119
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_20
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 984
+        width: 119
+        height: 135
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_21
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 650
+        width: 122
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_22
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 682
+        width: 29
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_23
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 650
+        width: 119
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_24
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 650
+        width: 119
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_25
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 650
+        width: 119
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_26
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 675
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_27
+      rect:
+        serializedVersion: 2
+        x: 1718
+        y: 650
+        width: 107
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_28
+      rect:
+        serializedVersion: 2
+        x: 1848
+        y: 650
+        width: 105
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_29
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 572
+        width: 37
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_30
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 570
+        width: 42
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_31
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 571
+        width: 45
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_32
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 570
+        width: 48
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_33
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 510
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_34
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 512
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_35
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 510
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_36
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 505
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_37
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 507
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_38
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 505
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_39
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 504
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_40
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 490
+        width: 41
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_41
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 505
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_42
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 494
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_43
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 505
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_44
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 504
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_45
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 507
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_46
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 490
+        width: 8
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_47
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 493
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_48
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 485
+        width: 41
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_49
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 499
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_50
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 488
+        width: 8
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_51
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 483
+        width: 42
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_52
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 499
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_53
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 491
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_54
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 478
+        width: 41
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_55
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 491
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_56
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 488
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_57
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 488
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_58
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 493
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_59
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 493
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_60
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 491
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_61
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 483
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_62
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 486
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_63
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 488
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_64
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 475
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_65
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 471
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_66
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 469
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_67
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 478
+        width: 5
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_68
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 482
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_69
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 467
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_70
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 477
+        width: 5
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_71
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 464
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_72
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 478
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_73
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 470
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_74
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 474
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_75
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 464
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_76
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 470
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_77
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 464
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_78
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 466
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_79
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 458
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_80
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 464
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_81
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 459
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_82
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 458
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_83
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 459
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_84
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 450
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_85
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 445
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_86
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 453
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_87
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 445
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_88
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 445
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_89
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 188
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_90
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 187
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_91
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 172
+        width: 39
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_92
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 194
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_93
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 177
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_94
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 26
+        width: 148
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_95
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 26
+        width: 169
+        height: 200
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_96
+      rect:
+        serializedVersion: 2
+        x: 1547
+        y: 26
+        width: 191
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_97
+      rect:
+        serializedVersion: 2
+        x: 3008
+        y: 26
+        width: 181
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_98
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 174
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_99
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 26
+        width: 118
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_100
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 166
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_101
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 160
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_102
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 160
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_103
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 159
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_104
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 155
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_105
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 26
+        width: 106
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_106
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 126
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_107
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 147
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_108
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 118
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_109
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 131
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_110
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 114
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_111
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 128
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_112
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 121
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_113
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 118
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_114
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 113
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_115
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 96
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_116
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 98
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_117
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 95
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_118
+      rect:
+        serializedVersion: 2
+        x: 2743
+        y: 77
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_119
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 106
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_120
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 86
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_121
+      rect:
+        serializedVersion: 2
+        x: 2102
+        y: 89
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_122
+      rect:
+        serializedVersion: 2
+        x: 2438
+        y: 72
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_123
+      rect:
+        serializedVersion: 2
+        x: 1777
+        y: 71
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_124
+      rect:
+        serializedVersion: 2
+        x: 2083
+        y: 77
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_125
+      rect:
+        serializedVersion: 2
+        x: 2094
+        y: 71
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_126
+      rect:
+        serializedVersion: 2
+        x: 2427
+        y: 79
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_127
+      rect:
+        serializedVersion: 2
+        x: 2645
+        y: 57
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_128
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 69
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_129
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 77
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_130
+      rect:
+        serializedVersion: 2
+        x: 2280
+        y: 71
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_131
+      rect:
+        serializedVersion: 2
+        x: 2424
+        y: 60
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_132
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 49
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_133
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 63
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_134
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 56
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_135
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 62
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_136
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 56
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_137
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 56
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_138
+      rect:
+        serializedVersion: 2
+        x: 2738
+        y: 48
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_139
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 48
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_140
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 41
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_141
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 50
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_142
+      rect:
+        serializedVersion: 2
+        x: 2914
+        y: 28
+        width: 42
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_143
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 36
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_144
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 37
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_145
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 45
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_146
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 44
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_147
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 36
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_148
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 40
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_149
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 33
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_150
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 33
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_151
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 32
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_152
+      rect:
+        serializedVersion: 2
+        x: 2757
+        y: 32
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_153
+      rect:
+        serializedVersion: 2
+        x: 2765
+        y: 31
+        width: 13
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_154
+      rect:
+        serializedVersion: 2
+        x: 2784
+        y: 31
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_155
+      rect:
+        serializedVersion: 2
+        x: 2940
+        y: 31
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PC Computer - Maple Story - Snowman1_156
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 26
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

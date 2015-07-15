@@ -12,6 +12,8 @@ GameObject:
   - 50: {fileID: 5031040}
   - 58: {fileID: 5806468}
   - 114: {fileID: 11421474}
+  - 95: {fileID: 9553566}
+  - 212: {fileID: 21254374}
   m_Layer: 8
   m_Name: FrostyHead
   m_TagString: Frosty
@@ -129,9 +131,9 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 108586}
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 3
   m_AngularDrag: .0500000007
-  m_GravityScale: 2
+  m_GravityScale: 4
   m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -163,6 +165,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -.0500000007}
   serializedVersion: 2
   m_Radius: .219999999
+--- !u!95 &9553566
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108586}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8863228ff5d19a04dbc69cc13ed16e69, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11421474
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -192,8 +211,10 @@ MonoBehaviour:
   throwStrength: 10
   moveSpeed: 10
   climbSpeed: 10
-  jumpVelocity: 7
+  jumpVelocity: 20
   snowballVelocity: 10
+  SnowballCooldown: 1.25
+  timer: 0
   activateRange: .699999988
   isActive: 0
   isGrounded: 0
@@ -212,6 +233,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45a3579ff50a5144ba0efce213ea024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!212 &21254374
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108586}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: adb4d0d15fafcdd4895add327f6cdaa3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
