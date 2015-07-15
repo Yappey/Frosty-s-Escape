@@ -971,7 +971,7 @@ Transform:
   m_LocalScale: {x: 1.22000003, y: .400000006, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 31
 --- !u!1001 &486562344
 Prefab:
   m_ObjectHideFlags: 0
@@ -1979,6 +1979,42 @@ Prefab:
     - target: {fileID: 472346, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
       propertyPath: m_LocalPosition.y
       value: -47.7299995
+      objectReference: {fileID: 0}
+    - target: {fileID: 126764, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431058, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReturnOnClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406806, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReturnOnClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 109762, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11466266, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReturnOnClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 11481978, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReturnOnClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 150388, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11468926, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReturnOnClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458050, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReturnOnClick
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11175888, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
