@@ -131,7 +131,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 129608}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.52199996, y: .903999984, z: 0}
+  m_LocalPosition: {x: 0, y: 1.23000002, z: 0}
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children:
   - {fileID: 488340}
@@ -462,7 +462,10 @@ MonoBehaviour:
   headAttached: 1
   torsoAttached: 1
   baseAttached: 1
+  animTimer: 1
+  isNotWalking: 1
   snowballLauncher: {fileID: 183850}
+  frostyAnim: {fileID: 0}
 --- !u!114 &11467278
 MonoBehaviour:
   m_ObjectHideFlags: 1
