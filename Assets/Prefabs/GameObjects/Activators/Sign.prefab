@@ -76,7 +76,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 146988}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.0999999, y: -8.96000004, z: 0}
+  m_LocalPosition: {x: -92.5, y: -47.9199982, z: 0}
   m_LocalScale: {x: .200000003, y: .200000003, z: 1}
   m_Children:
   - {fileID: 22495300}
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 0d7ad05e6c1cf754bac49f6a2634edba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a132ca8e3a122d94cb62e5c2388f24e2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -178,8 +178,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Here are words lets hope you can read them. Morgan it is your job to change
-    these words
+  m_Text: 'That''s a box
+
+    Below is a pressure plate
+
+    Your base or a box can weigh it down
+
+
+'
 --- !u!212 &21204040
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -204,7 +210,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0d7ad05e6c1cf754bac49f6a2634edba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a132ca8e3a122d94cb62e5c2388f24e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!222 &22211218
 CanvasRenderer:
@@ -242,15 +248,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155530}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -2.36999989}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 22495300}
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 55, y: 10}
+  m_AnchoredPosition: {x: 2.20000005, y: -1.89999998}
+  m_SizeDelta: {x: 42.0999985, y: 15.5}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22468334
 RectTransform:
@@ -259,15 +265,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 139942}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -3.47000003}
   m_LocalScale: {x: .26057142, y: .26057142, z: .26057142}
   m_Children: []
   m_Father: {fileID: 22495300}
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: -.0299999993}
-  m_SizeDelta: {x: 179.490005, y: 33.7799988}
+  m_AnchoredPosition: {x: 2.79999995, y: -2.29999995}
+  m_SizeDelta: {x: 145.5, y: 47.9000015}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22495300
 RectTransform:
