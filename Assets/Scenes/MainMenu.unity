@@ -126,6 +126,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11483912, guid: 0535a0c96ff452846b798866a11f37d5, type: 2}
+      propertyPath: menu
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0535a0c96ff452846b798866a11f37d5, type: 2}
   m_IsPrefabParent: 0
@@ -636,6 +640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa58c595ac5d9248a87c157f1d81c70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numlevels: 0
   levelname: 
   filename: 
   volumetype: 
@@ -770,6 +775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa58c595ac5d9248a87c157f1d81c70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numlevels: 0
   levelname: LevelSelect
   filename: 
   volumetype: 
@@ -1160,6 +1166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa58c595ac5d9248a87c157f1d81c70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numlevels: 0
   levelname: HowToPlay
   filename: 
   volumetype: 
@@ -1293,6 +1300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa58c595ac5d9248a87c157f1d81c70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numlevels: 0
   levelname: Options
   filename: 
   volumetype: 
@@ -1347,6 +1355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa58c595ac5d9248a87c157f1d81c70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numlevels: 0
   levelname: Credits
   filename: 
   volumetype: 
@@ -1560,6 +1569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa58c595ac5d9248a87c157f1d81c70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numlevels: 0
   levelname: 
   filename: 
   volumetype: 

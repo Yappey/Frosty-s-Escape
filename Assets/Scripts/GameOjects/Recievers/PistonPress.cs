@@ -63,6 +63,9 @@ public class PistonPress : BaseReceiver {
 
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.transform.tag == "Ground") {
+			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+			sound.GetComponent<SoundEffectManager>().PlaySlamSnd(gameObject.transform.position);
+
 			grounded = true;
 			gameObject.GetComponent<Rigidbody2D>().gravityScale = 0; 
 			raiseTimer = waitToRaise;

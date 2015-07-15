@@ -7,6 +7,7 @@ public class SoundEffectManager : MonoBehaviour {
 	private GameObject frosty;
 	private AudioSource[] effects;
 
+	public bool menu;
 	public AudioSource buttonClick;
 	public AudioSource attach;
 	public AudioSource detach;
@@ -31,10 +32,20 @@ public class SoundEffectManager : MonoBehaviour {
 	public AudioSource flame;
 	public AudioSource conveyor;
 	public AudioSource grind;
+	public AudioSource flamethrower;
+	public AudioSource bullet;
+	public AudioSource bulletTurret;
+	public AudioSource hose;
+	public AudioSource ding;
+	public AudioSource slam;
+	public AudioSource thanks;
+	public AudioSource help;
 
 	// Use this for initialization
 	void Start () {
-		switchmanager = GameObject.FindGameObjectWithTag("SwitchManager");
+		if (!menu) {
+			switchmanager = GameObject.FindGameObjectWithTag("SwitchManager");
+		}
 
 		effects = gameObject.GetComponents<UnityEngine.AudioSource> ();
 
@@ -47,7 +58,9 @@ public class SoundEffectManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		frosty = switchmanager.GetComponent<SwitchManager>().FindActive();
+		if (!menu) {
+			frosty = switchmanager.GetComponent<SwitchManager>().FindActive();
+		}
 
 		effects = gameObject.GetComponents<UnityEngine.AudioSource> ();
 
@@ -61,17 +74,19 @@ public class SoundEffectManager : MonoBehaviour {
 	}
 
 	bool CloseEnoughToPlay(Vector3 pos) {
-		Vector3 frostyPos = new Vector3(frosty.transform.position.x, frosty.transform.position.y);
-		
-		float distance = (frostyPos - pos).magnitude;
-		
-		//GameObject camera = GameObject.FindGameObjectWithTag ("MainCamera");
-		
-		//float height = camera.gameObject.GetComponent<Camera>().orthographicSize;
-		//float width = camera.gameObject.GetComponent<Camera>().orthographicSize * camera.gameObject.GetComponent<Camera>().aspect;
-
-		if (distance < 9.5f) {
-			return true;
+		if (!menu) {
+			Vector3 frostyPos = new Vector3(frosty.transform.position.x, frosty.transform.position.y);
+			
+			float distance = (frostyPos - pos).magnitude;
+			
+			//GameObject camera = GameObject.FindGameObjectWithTag ("MainCamera");
+			
+			//float height = camera.gameObject.GetComponent<Camera>().orthographicSize;
+			//float width = camera.gameObject.GetComponent<Camera>().orthographicSize * camera.gameObject.GetComponent<Camera>().aspect;
+			
+			if (distance < 9.5f) {
+				return true;
+			}
 		}
 
 		return false;
@@ -295,6 +310,94 @@ public class SoundEffectManager : MonoBehaviour {
 	{
 		if (grind.isPlaying) {
 			grind.Stop ();
+		}
+	}
+
+	public void PlayFlamethrowerSnd(Vector3 pos)
+	{
+		if (CloseEnoughToPlay (pos)) {
+			if (!flamethrower.isPlaying) {
+				flamethrower.Play ();
+			}
+		} 
+		
+		else
+			StopFlamethrowerSnd ();
+	}
+	
+	public void StopFlamethrowerSnd()
+	{
+		if (flamethrower.isPlaying) {
+			flamethrower.Stop ();
+		}
+	}
+
+	public void PlayBulletSnd(Vector3 pos) 
+	{
+		if (CloseEnoughToPlay(pos)) {
+				bullet.Play();
+		}
+	}
+
+	public void PlayBulletTurretSnd(Vector3 pos) 
+	{
+		if (CloseEnoughToPlay(pos)) {
+			bulletTurret.Play();
+		}
+	}
+
+	public void PlayHoseSnd(Vector3 pos)
+	{
+		if (CloseEnoughToPlay (pos)) {
+			if (!hose.isPlaying) {
+				hose.Play ();
+			}
+		} 
+		
+		else
+			StopHoseSnd ();
+	}
+	
+	public void StopHoseSnd()
+	{
+		if (hose.isPlaying) {
+			hose.Stop ();
+		}
+	}
+
+	public void PlayDingSnd(){
+		ding.Play ();
+	}
+
+	public void PlaySlamSnd(Vector3 pos)
+	{
+		if (CloseEnoughToPlay (pos)) {
+			if (!slam.isPlaying) {
+				slam.Play ();
+			}
+		} 
+	}
+
+	public void PlayThanksSnd(){
+		thanks.Play ();
+	}
+
+	public void PlayHelpSnd(Vector3 pos)
+	{
+		if (CloseEnoughToPlay (pos)) {
+			if (!help.isPlaying) {
+				help.Play ();
+			}
+		} 
+		
+		else
+			StopHelpSnd ();
+	}
+	
+	public void StopHelpSnd()
+	{
+		if (help.isPlaying) {
+			help.Stop ();
 		}
 	}
 }

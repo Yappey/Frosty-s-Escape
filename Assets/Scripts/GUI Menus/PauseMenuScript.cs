@@ -61,6 +61,7 @@ public class PauseMenuScript : MonoBehaviour {
 
     public void ContinueOnClick()
     {
+		Time.timeScale = 1.0f;
         Application.LoadLevel(Application.loadedLevel + 1);
     }
 

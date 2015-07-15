@@ -17,7 +17,7 @@ GameObject:
   - 199: {fileID: 19939956}
   - 198: {fileID: 19825662}
   - 114: {fileID: 11403572}
-  m_Layer: 15
+  m_Layer: 16
   m_Name: Bullet Sprite
   m_TagString: 
   m_Icon: {fileID: 0}
