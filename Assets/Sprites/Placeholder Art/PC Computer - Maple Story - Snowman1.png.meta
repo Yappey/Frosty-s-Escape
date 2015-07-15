@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: c5ab0e51bc5dfbc4c951dbd8df6b023c
-timeCreated: 1436559791
+guid: b1c14530567baa24fa1e5d8d548c8c0f
+timeCreated: 1436971131
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -409,12 +409,12 @@ TextureImporter:
     - name: PC Computer - Maple Story - Snowman1_20
       rect:
         serializedVersion: 2
-        x: 386
-        y: 984
+        x: 703
+        y: 650
         width: 119
         height: 135
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: PC Computer - Maple Story - Snowman1_21
       rect:
@@ -1164,7 +1164,7 @@ TextureImporter:
         width: 169
         height: 200
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: PC Computer - Maple Story - Snowman1_96
       rect:

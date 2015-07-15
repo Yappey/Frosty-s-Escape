@@ -267,5 +267,8 @@ public sealed class CheckpointManager {
 	void Sparkle(Vector3 position)
 	{
 		GameObject.Instantiate(Resources.Load<GameObject>("CheckpointParticles"), position, new Quaternion());
+
+		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+		sound.GetComponent<SoundEffectManager>().PlayDingSnd();
 	}
 }

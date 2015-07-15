@@ -4,7 +4,7 @@ using System.Collections;
 public class SBulletTurret : BaseTurret {
 
 	public GameObject bullet;
-    Animator fireAnimation;
+	Animator fireAnimation;
 
 	// Use this for initialization
 	void Start () {
@@ -19,10 +19,33 @@ public class SBulletTurret : BaseTurret {
 
 	public override void ShootProjectile()
 	{
-		
-		GameObject temp = Instantiate(bullet);
-		temp.transform.position = transform.GetChild(0).position;
-		temp.GetComponent<Bullet>().Velocity = -transform.right * projectileVelocity;
-        fireAnimation.Play("Base Layer.BulletFire");
+		if (!isScannig || !hasTarget)
+			FireBullet(-transform.right);
+		else
+		{
+			float timeToTarget = (theTarget.transform.position - transform.position).magnitude / projectileVelocity;
+
+			Vector2 spd = theTarget.GetComponent<Rigidbody2D>().velocity;
+			Vector3 disp = new Vector3(spd.x, spd.y, 0.0f) * timeToTarget;
+
+			Vector3 tgt = theTarget.transform.position;
+			FireBullet((tgt - transform.position).normalized);
+			FireBullet((tgt + disp - transform.position).normalized);
+			FireBullet((tgt - disp - transform.position).normalized);
+
+		}
 	}
+
+	void FireBullet(Vector3 direction)
+	{
+		GameObject temp = (GameObject)Instantiate(bullet, transform.GetChild(0).position, transform.GetChild(0).rotation);
+		
+		temp.GetComponent<Bullet>().Velocity = direction * projectileVelocity;
+		fireAnimation.Play("Base Layer.BulletFire");
+	}
+
+	//public override void AI()
+	//{
+	//
+	//}
 }

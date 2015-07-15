@@ -9,6 +9,7 @@ public class LevelSelectMenuScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
         for (int i = 0; i < numlevels; i++)
         {
             int snowball = PlayerPrefs.GetInt("Level" + (i + 1) + "Snowballs");
@@ -23,7 +24,6 @@ public class LevelSelectMenuScript : MonoBehaviour {
                     transform.GetChild(i).GetChild(j).GetComponent<UnityEngine.UI.Image>().color = Color.white;
                 }
             }
-            i++;
         }        
 	}
 	

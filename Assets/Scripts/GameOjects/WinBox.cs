@@ -38,7 +38,7 @@ public class WinBox : MonoBehaviour {
 
                 time = healthbar.GetComponent<HealthBarScript>().levelTime - healthbar.GetComponent<HealthBarScript>().health;
 				win.SetActive(true);
-                if (!PlayerPrefs.HasKey("Level" + levelnumber + "Snowalls") || time < PlayerPrefs.GetFloat("Level" + levelnumber + "HighScore"))
+                if (!PlayerPrefs.HasKey("Level" + levelnumber + "Snowballs") || time < PlayerPrefs.GetFloat("Level" + levelnumber + "HighScore"))
                 {
                     if (time < ThreeStars)
                     {
@@ -59,6 +59,8 @@ public class WinBox : MonoBehaviour {
                         OneStarAnim.GetComponent<Animator>().Play("Base Layer.RatingSystem1Star");
                     }
                     PlayerPrefs.SetFloat("Level" + levelnumber + "HighScore", time); 
+					if(PlayerPrefs.GetInt("ActiveLevel") == levelnumber)
+						PlayerPrefs.SetInt("ActiveLevel", levelnumber + 1);
                 }
 			}
 		}

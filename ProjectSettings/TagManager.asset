@@ -29,6 +29,7 @@ TagManager:
   - Inventory
   - SoundEffectManager
   - Cooldown
+  - UIButton
   - DirectionalLight
   layers:
   - Default
@@ -46,7 +47,8 @@ TagManager:
   - steam
   - Gear
   - Ground
-  - 
+  - Pipe
+  - Bullet
   - 
   - 
   - 

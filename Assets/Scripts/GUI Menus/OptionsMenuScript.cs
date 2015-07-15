@@ -10,7 +10,12 @@ public class OptionsMenuScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		if (!PlayerPrefs.HasKey ("Master")) {
+			PlayerPrefs.SetFloat("Master", 1);
+			PlayerPrefs.SetFloat("SoundEffects", 1);
+			PlayerPrefs.SetFloat("Music", 1);
+		}
+
 	}
 	
 	// Update is called once per frame
