@@ -14,7 +14,7 @@ PlayerSettings:
   companyName: void Studios();
   productName: Frosty's Escape
   cloudProjectId: 
-  defaultCursor: {fileID: 0}
+  defaultCursor: {fileID: 2800000, guid: 09f7371741eba90468f7644d26539aad, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_ShowUnitySplashScreen: 1
   defaultScreenWidth: 800

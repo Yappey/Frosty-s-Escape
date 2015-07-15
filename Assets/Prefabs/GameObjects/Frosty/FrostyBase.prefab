@@ -130,6 +130,8 @@ Rigidbody2D:
   m_GameObject: {fileID: 125192}
   m_Mass: 1
   m_LinearDrag: 3
+  m_Mass: 1.25
+  m_LinearDrag: 3
   m_AngularDrag: .0500000007
   m_GravityScale: 4
   m_FixedAngle: 1

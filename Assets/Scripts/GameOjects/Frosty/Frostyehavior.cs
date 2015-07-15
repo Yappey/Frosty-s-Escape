@@ -40,15 +40,21 @@ public class Frostyehavior : MonoBehaviour
 
 
         timer += Time.deltaTime;
-        Rigidbody2D rgbd = GetComponent<Rigidbody2D>();
-        if (isActive)
-        {
-            float hor = Input.GetAxis("Horizontal");
-            if (hor > 0.01f || hor < -0.01f)
-            {
-                Vector2 vel = rgbd.velocity;
-                vel.x = hor * moveSpeed;
-                rgbd.velocity = vel;
+		Rigidbody2D rgbd = GetComponent<Rigidbody2D>();
+		if (isActive)
+		{
+			float hor = Input.GetAxis("Horizontal");
+
+			// Check if speed is less than max or input is opposite velocity
+			if (rgbd.velocity.x * Mathf.Sign(hor) < moveSpeed)
+			{
+				rgbd.AddForce(new Vector2(moveSpeed * hor * 30.0f, 0.0f));
+
+				if (Mathf.Abs(rgbd.velocity.x) > moveSpeed)
+				{
+					rgbd.velocity = new Vector2(moveSpeed * Mathf.Sign(rgbd.velocity.x), 0.0f);
+				}
+			}
 
                 FrostyWalkAnimations();
             }

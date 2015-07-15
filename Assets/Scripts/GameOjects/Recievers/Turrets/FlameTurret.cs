@@ -37,6 +37,9 @@ public class FlameTurret : BaseTurret {
         anim.SetBool("Flaming", true);
         flame.GetComponent<Harmful>().isActive = true;
         isFlaming = true;
+
+		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+		sound.GetComponent<SoundEffectManager>().PlayFlameSnd(gameObject.transform.position);
     }
 
     void FlameOff()
@@ -45,6 +48,9 @@ public class FlameTurret : BaseTurret {
         anim.SetBool("Flaming", false);
         flame.GetComponent<Harmful>().isActive = false;
         isFlaming = false;
+
+		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+		sound.GetComponent<SoundEffectManager>().StopFlameSnd();
     }
 	
 	public override void Process()
@@ -52,10 +58,12 @@ public class FlameTurret : BaseTurret {
 		if (state == 0)
 		{
 			state = 1;
+			FlameOff();
 		}
 		else
 		{
 			state = 0;
+			FlameOn();
 		}
 	}
 
