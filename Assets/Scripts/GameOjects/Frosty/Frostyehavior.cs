@@ -24,9 +24,10 @@ public class Frostyehavior : MonoBehaviour
     public bool torsoAttached;
     public bool baseAttached;
     public float animTimer = 1.0f;
+    public bool isNotWalking = true;
 
     public GameObject snowballLauncher;
-    Animator frostyAnim;
+    public Animator frostyAnim;
 
     // Use this for initialization
     void Start()
@@ -38,33 +39,35 @@ public class Frostyehavior : MonoBehaviour
     void Update()
     {
 
-
         timer += Time.deltaTime;
-		Rigidbody2D rgbd = GetComponent<Rigidbody2D>();
-		if (isActive)
-		{
-			float hor = Input.GetAxis("Horizontal");
+        Rigidbody2D rgbd = GetComponent<Rigidbody2D>();
+        if (isActive)
+        {
+            float hor = Input.GetAxis("Horizontal");
+            //frostyAnim.SetTrigger("Idle");
 
-			// Check if speed is less than max or input is opposite velocity
-			if (rgbd.velocity.x * Mathf.Sign(hor) < moveSpeed)
-			{
-				rgbd.AddForce(new Vector2(moveSpeed * hor * 30.0f, 0.0f));
 
-				if (Mathf.Abs(rgbd.velocity.x) > moveSpeed)
-				{
-					rgbd.velocity = new Vector2(moveSpeed * Mathf.Sign(rgbd.velocity.x), 0.0f);
-				}
-			}
+            // Check if speed is less than max or input is opposite velocity
+            if (rgbd.velocity.x * Mathf.Sign(hor) < moveSpeed)
+            {
+                isNotWalking = true;
+                rgbd.AddForce(new Vector2(moveSpeed * hor * 30.0f, 0.0f));
 
-                FrostyWalkAnimations();
+                if (Mathf.Abs(rgbd.velocity.x) > moveSpeed)
+                {
+                    rgbd.velocity = new Vector2(moveSpeed * Mathf.Sign(rgbd.velocity.x), 0.0f);
+                    isNotWalking = false;
+                }
+                    FrostyWalkAnimations();
             }
             else
             {
-                Vector2 vel = rgbd.velocity;
-                vel.x = 0.0f;
-                rgbd.velocity = vel;
+               
+            }
 
-                FrostyIdleAnimations();
+            if (isNotWalking)
+            {
+                FrostyIdleAnimations(); 
             }
 
             if (Input.GetButtonDown("Jump") && isGrounded)
@@ -84,7 +87,7 @@ public class Frostyehavior : MonoBehaviour
                 ActivateNearest();
             }
         }
-    
+
         if (Input.GetButtonDown("Throw") && Time.timeScale > 0)
         {
             LaunchSnowall();
@@ -144,51 +147,52 @@ public class Frostyehavior : MonoBehaviour
     void FrostyWalkAnimations()
     {
         float hor = Input.GetAxis("Horizontal");
+        Rigidbody2D rgbd = GetComponent<Rigidbody2D>();
 
         //Head only walking animation
-        if (GetComponent<Frostyehavior>().headAttached && !GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && hor > 0.01f)
+        if (GetComponent<Frostyehavior>().headAttached && !GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && rgbd.velocity.x > 0.01f)
         {
             frostyAnim.Play("Base Layer.FrostyHead_RollingRight");
 
         }
-        else if (GetComponent<Frostyehavior>().headAttached && !GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && hor < 0.01f)
+        else if (GetComponent<Frostyehavior>().headAttached && !GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && rgbd.velocity.x < -0.01f)
         {
             frostyAnim.Play("Base Layer.FrostyHead_RollingLeft");
 
         }
 
         //Torso only Walking animation
-        if (GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && !GetComponent<Frostyehavior>().headAttached && hor > 0.01f)
+        if (GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && !GetComponent<Frostyehavior>().headAttached && rgbd.velocity.x > 0.01f)
         {
             frostyAnim.Play("Base Layer.FrostyTorso_Walking");
             transform.localScale = new Vector2(1, transform.localScale.y);
         }
-        else if (GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && !GetComponent<Frostyehavior>().headAttached && hor < 0.01f)
+        else if (GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && !GetComponent<Frostyehavior>().headAttached && rgbd.velocity.x < -0.01f)
         {
             frostyAnim.Play("Base Layer.FrostyTorso_Walking");
             transform.localScale = new Vector2(-1, transform.localScale.y);
         }
 
         //Head and Torso Walking
-        if (GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && GetComponent<Frostyehavior>().headAttached && hor > 0.01f)
+        if (GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && GetComponent<Frostyehavior>().headAttached && rgbd.velocity.x > 0.01f)
         {
             frostyAnim.Play("Base Layer.FrostyHeadTorso_Walking");
             transform.localScale = new Vector2(1, transform.localScale.y);
         }
-        else if (GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && GetComponent<Frostyehavior>().headAttached && hor < 0.01f)
+        else if (GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && GetComponent<Frostyehavior>().headAttached && rgbd.velocity.x < -0.01f)
         {
             frostyAnim.Play("Base Layer.FrostyHeadTorso_Walking");
             transform.localScale = new Vector2(-1, transform.localScale.y);
         }
 
         //FullBody walking animation
-        if (GetComponent<Frostyehavior>().baseAttached && GetComponent<Frostyehavior>().headAttached && GetComponent<Frostyehavior>().torsoAttached && hor > 0.01f)
+        if (GetComponent<Frostyehavior>().baseAttached && GetComponent<Frostyehavior>().headAttached && GetComponent<Frostyehavior>().torsoAttached && rgbd.velocity.x > 0.01f)
         {
             frostyAnim.Play("Base Layer.Frosty_FullBody");
             transform.localScale = new Vector2(1, transform.localScale.y);
 
         }
-        else if (GetComponent<Frostyehavior>().baseAttached && GetComponent<Frostyehavior>().headAttached && GetComponent<Frostyehavior>().torsoAttached && hor < 0.01f)
+        else if (GetComponent<Frostyehavior>().baseAttached && GetComponent<Frostyehavior>().headAttached && GetComponent<Frostyehavior>().torsoAttached && rgbd.velocity.x < -0.01f)
         {
             frostyAnim.Play("Base Layer.Frosty_FullBody");
             transform.localScale = new Vector2(-1, transform.localScale.y);
@@ -220,13 +224,13 @@ public class Frostyehavior : MonoBehaviour
         if (GetComponent<Frostyehavior>().headAttached && !GetComponent<Frostyehavior>().baseAttached && !GetComponent<Frostyehavior>().torsoAttached && isGrounded)
         {
             //frostyAnim.Play("Base Layer.FrostyHead_Idle");
-           frostyAnim.SetTrigger("Idle");
+            frostyAnim.SetTrigger("Idle");
         }
 
-       // Torso only Idle animation
+        // Torso only Idle animation
         if (GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && !GetComponent<Frostyehavior>().headAttached && isGrounded)
         {
-           frostyAnim.Play("Base Layer.FrostyTorso_Idle");
+            //frostyAnim.Play("Base Layer.FrostyTorso_Idle");
             frostyAnim.SetTrigger("Idle");
 
         }
@@ -236,8 +240,13 @@ public class Frostyehavior : MonoBehaviour
     {
         if (GetComponent<Frostyehavior>().headAttached && !GetComponent<Frostyehavior>().baseAttached && !GetComponent<Frostyehavior>().torsoAttached)
         {
-           frostyAnim.Play("Base Layer.FrostyHead_PushButton");
+            frostyAnim.Play("Base Layer.FrostyHead_PushButton");
         }
+    }
+
+    public void Melt()
+    {
+        frostyAnim.SetTrigger("Melt");
     }
 }
 

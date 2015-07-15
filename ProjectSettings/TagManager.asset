@@ -29,6 +29,7 @@ TagManager:
   - Inventory
   - SoundEffectManager
   - Cooldown
+  - DirectionalLight
   layers:
   - Default
   - TransparentFX
