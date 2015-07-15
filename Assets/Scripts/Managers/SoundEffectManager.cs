@@ -31,6 +31,11 @@ public class SoundEffectManager : MonoBehaviour {
 	public AudioSource flame;
 	public AudioSource conveyor;
 	public AudioSource grind;
+	public AudioSource flamethrower;
+	public AudioSource bullet;
+	public AudioSource bulletTurret;
+	public AudioSource hose;
+	public AudioSource ding;
 
 	// Use this for initialization
 	void Start () {
@@ -296,5 +301,61 @@ public class SoundEffectManager : MonoBehaviour {
 		if (grind.isPlaying) {
 			grind.Stop ();
 		}
+	}
+
+	public void PlayFlamethrowerSnd(Vector3 pos)
+	{
+		if (CloseEnoughToPlay (pos)) {
+			if (!flamethrower.isPlaying) {
+				flamethrower.Play ();
+			}
+		} 
+		
+		else
+			StopFlamethrowerSnd ();
+	}
+	
+	public void StopFlamethrowerSnd()
+	{
+		if (flamethrower.isPlaying) {
+			flamethrower.Stop ();
+		}
+	}
+
+	public void PlayBulletSnd(Vector3 pos) 
+	{
+		if (CloseEnoughToPlay(pos)) {
+				bullet.Play();
+		}
+	}
+
+	public void PlayBulletTurretSnd(Vector3 pos) 
+	{
+		if (CloseEnoughToPlay(pos)) {
+			bulletTurret.Play();
+		}
+	}
+
+	public void PlayHoseSnd(Vector3 pos)
+	{
+		if (CloseEnoughToPlay (pos)) {
+			if (!hose.isPlaying) {
+				hose.Play ();
+			}
+		} 
+		
+		else
+			StopHoseSnd ();
+	}
+	
+	public void StopHoseSnd()
+	{
+		if (hose.isPlaying) {
+			hose.Stop ();
+		}
+	}
+
+	public void PlayDingSnd(){
+		ding.Play ();
 	}
 }
