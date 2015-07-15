@@ -384,14 +384,9 @@ public class SoundEffectManager : MonoBehaviour {
 
 	public void PlayHelpSnd(Vector3 pos)
 	{
-		if (CloseEnoughToPlay (pos)) {
-			if (!help.isPlaying) {
-				help.Play ();
-			}
-		} 
-		
-		else
-			StopHelpSnd ();
+		if (!help.isPlaying) {
+			help.Play ();
+		}
 	}
 	
 	public void StopHelpSnd()
