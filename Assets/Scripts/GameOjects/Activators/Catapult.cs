@@ -6,6 +6,7 @@ public class Catapult : MonoBehaviour {
     bool loaded;
     public Vector2 force;
     public GameObject Loaded;
+	public GameObject Launched;
     public float distance;
     GameObject switchmanager;
     GameObject frosty;
@@ -28,9 +29,12 @@ public class Catapult : MonoBehaviour {
                 {
                     transform.GetChild(0).GetChild(0).GetComponent<BoxCollider2D>().enabled = false;
                     transform.GetChild(0).GetChild(1).GetComponent<BoxCollider2D>().enabled = false;
+					Loaded.GetComponent<Rigidbody2D>().drag = 0;
                     Loaded.GetComponent<Rigidbody2D>().AddForce(force, ForceMode2D.Impulse);
                     loaded = false;
-                    Loaded = null;
+					Launched = Loaded;
+					Loaded = null;
+					Invoke("Back", 5);
                 }
             }
             if (frosty.GetComponent<Frostyehavior>().headAttached && !frosty.GetComponent<Frostyehavior>().torsoAttached && (frosty.transform.position - transform.position).magnitude < distance)
@@ -74,4 +78,9 @@ public class Catapult : MonoBehaviour {
             
         }
 	}
+	void Back()
+	{
+		Launched.GetComponent<Rigidbody2D> ().drag = 4;
+	}
+
 }

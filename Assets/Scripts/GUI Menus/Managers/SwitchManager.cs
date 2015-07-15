@@ -39,6 +39,8 @@ public class SwitchManager : MonoBehaviour
         Base = FindBase();
 
         Active = FindActive();
+
+		CheckpointManager.Instance.Clear();
     }
 
     // Update is called once per frame
