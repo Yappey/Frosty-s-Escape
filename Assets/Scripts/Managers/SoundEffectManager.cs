@@ -7,6 +7,7 @@ public class SoundEffectManager : MonoBehaviour {
 	private GameObject frosty;
 	private AudioSource[] effects;
 
+	public bool menu;
 	public AudioSource buttonClick;
 	public AudioSource attach;
 	public AudioSource detach;
@@ -36,10 +37,13 @@ public class SoundEffectManager : MonoBehaviour {
 	public AudioSource bulletTurret;
 	public AudioSource hose;
 	public AudioSource ding;
+	public AudioSource slam;
 
 	// Use this for initialization
 	void Start () {
-		switchmanager = GameObject.FindGameObjectWithTag("SwitchManager");
+		if (!menu) {
+			switchmanager = GameObject.FindGameObjectWithTag("SwitchManager");
+		}
 
 		effects = gameObject.GetComponents<UnityEngine.AudioSource> ();
 
@@ -52,7 +56,9 @@ public class SoundEffectManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		frosty = switchmanager.GetComponent<SwitchManager>().FindActive();
+		if (!menu) {
+			frosty = switchmanager.GetComponent<SwitchManager>().FindActive();
+		}
 
 		effects = gameObject.GetComponents<UnityEngine.AudioSource> ();
 
@@ -66,17 +72,19 @@ public class SoundEffectManager : MonoBehaviour {
 	}
 
 	bool CloseEnoughToPlay(Vector3 pos) {
-		Vector3 frostyPos = new Vector3(frosty.transform.position.x, frosty.transform.position.y);
-		
-		float distance = (frostyPos - pos).magnitude;
-		
-		//GameObject camera = GameObject.FindGameObjectWithTag ("MainCamera");
-		
-		//float height = camera.gameObject.GetComponent<Camera>().orthographicSize;
-		//float width = camera.gameObject.GetComponent<Camera>().orthographicSize * camera.gameObject.GetComponent<Camera>().aspect;
-
-		if (distance < 9.5f) {
-			return true;
+		if (!menu) {
+			Vector3 frostyPos = new Vector3(frosty.transform.position.x, frosty.transform.position.y);
+			
+			float distance = (frostyPos - pos).magnitude;
+			
+			//GameObject camera = GameObject.FindGameObjectWithTag ("MainCamera");
+			
+			//float height = camera.gameObject.GetComponent<Camera>().orthographicSize;
+			//float width = camera.gameObject.GetComponent<Camera>().orthographicSize * camera.gameObject.GetComponent<Camera>().aspect;
+			
+			if (distance < 9.5f) {
+				return true;
+			}
 		}
 
 		return false;
@@ -357,5 +365,14 @@ public class SoundEffectManager : MonoBehaviour {
 
 	public void PlayDingSnd(){
 		ding.Play ();
+	}
+
+	public void PlaySlamSnd(Vector3 pos)
+	{
+		if (CloseEnoughToPlay (pos)) {
+			if (!slam.isPlaying) {
+				slam.Play ();
+			}
+		} 
 	}
 }
