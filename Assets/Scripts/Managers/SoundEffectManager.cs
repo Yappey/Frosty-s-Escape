@@ -38,6 +38,8 @@ public class SoundEffectManager : MonoBehaviour {
 	public AudioSource hose;
 	public AudioSource ding;
 	public AudioSource slam;
+	public AudioSource thanks;
+	public AudioSource help;
 
 	// Use this for initialization
 	void Start () {
@@ -374,5 +376,28 @@ public class SoundEffectManager : MonoBehaviour {
 				slam.Play ();
 			}
 		} 
+	}
+
+	public void PlayThanksSnd(){
+		thanks.Play ();
+	}
+
+	public void PlayHelpSnd(Vector3 pos)
+	{
+		if (CloseEnoughToPlay (pos)) {
+			if (!help.isPlaying) {
+				help.Play ();
+			}
+		} 
+		
+		else
+			StopHelpSnd ();
+	}
+	
+	public void StopHelpSnd()
+	{
+		if (help.isPlaying) {
+			help.Stop ();
+		}
 	}
 }
