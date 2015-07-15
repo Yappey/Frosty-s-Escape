@@ -8,6 +8,9 @@ public class Bullet : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		transform.right = Velocity.normalized;
+
+		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+		sound.GetComponent<SoundEffectManager>().PlayBulletSnd(gameObject.transform.position);
 	}
 	
 	// Update is called once per frame

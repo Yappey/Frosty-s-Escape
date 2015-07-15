@@ -18,6 +18,8 @@ public class Hose : BaseReceiver {
 	
 	// Update is called once per frame
 	void Update () {
+		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+
 		if (state == 0)
 		{
 			if (frequency != 0.0f)
@@ -29,7 +31,12 @@ public class Hose : BaseReceiver {
 					timer -= 1.0f / frequency;
 				}
 			}
+
+			sound.GetComponent<SoundEffectManager>().PlayHoseSnd(gameObject.transform.position);
 		}
+
+		else
+			sound.GetComponent<SoundEffectManager>().StopHoseSnd();
 	}
 
 	public override void Process()

@@ -9,11 +9,17 @@ public class FlameTurret : BaseTurret {
 	// Use this for initialization
 	void Start () {
         BaseTurretStart();
+		FlameOff ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
         BaseTurretUpdate();
+
+		//if (!isFlaming) {
+			//GameObject sound = GameObject.FindGameObjectWithTag ("SoundEffectManager");		
+			//sound.GetComponent<SoundEffectManager>().PlayFlamethrowerSnd(gameObject.transform.position);
+		//}
     }
 
     public override void ShootProjectile()
@@ -40,6 +46,8 @@ public class FlameTurret : BaseTurret {
 
 		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
 		sound.GetComponent<SoundEffectManager>().PlayFlameSnd(gameObject.transform.position);
+
+		sound.GetComponent<SoundEffectManager>().StopFlamethrowerSnd();
     }
 
     void FlameOff()
@@ -51,6 +59,8 @@ public class FlameTurret : BaseTurret {
 
 		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
 		sound.GetComponent<SoundEffectManager>().StopFlameSnd();
+
+		sound.GetComponent<SoundEffectManager>().PlayFlamethrowerSnd(gameObject.transform.position);
     }
 	
 	public override void Process()
