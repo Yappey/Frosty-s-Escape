@@ -9,6 +9,7 @@ public class ButtonScript : MonoBehaviour {
     public string levelname;
     public string filename;
     public string volumetype;
+	public int BonusLevelNum;
     public int levelnumber;
     public int testif1;
     public int testif2;
@@ -26,6 +27,7 @@ public class ButtonScript : MonoBehaviour {
 
     public void ExitOnClick()
     {
+	
         Application.Quit();
     }
 
@@ -34,10 +36,11 @@ public class ButtonScript : MonoBehaviour {
         Application.LoadLevel(levelname);
     }
 
-    //public void ResumeOnClick()
-    //{
-
-    //}
+ 	public void ReturnOnClick()
+	{
+		Time.timeScale = 1.0f;
+		Application.LoadLevel (levelname);
+	}
 
     public void LoadAvailableLevelOnClick()
     {
@@ -48,9 +51,45 @@ public class ButtonScript : MonoBehaviour {
         }
     }
 
+	public void LoadBonusLevelOnClick()
+	{
+		if(BonusLevelNum == 1)
+		{
+			int numsnowballs = 0;
+			for( int i = 0; i < 4; i++)
+			{
+				numsnowballs += PlayerPrefs.GetInt("Level" + (i + 1) + "Snowballs");
+			}
+			if(numsnowballs > 9)
+				Application.LoadLevel(levelname);
+		}
+		if(BonusLevelNum == 1)
+		{
+			int numsnowballs = 0;
+			for( int i = 0; i < 4; i++)
+			{
+				numsnowballs += PlayerPrefs.GetInt("Level" + (i + 1) + "Snowballs");
+			}
+			if(numsnowballs > 9)
+				Application.LoadLevel(levelname);
+		}
+		if(BonusLevelNum == 2)
+		{
+			int numsnowballs = 0;
+			for( int i = 0; i < 4; i++)
+			{
+				numsnowballs += PlayerPrefs.GetInt("Level" + (i + 1) + "Snowballs");
+			}
+			if(numsnowballs > 9)
+				Application.LoadLevel(levelname);
+		}
+
+	}
+
+
     public void PlayOnClick()
     {
-        Application.LoadLevel(PlayerPrefs.GetInt("ActiveLevel") + 6);
+        Application.LoadLevel(PlayerPrefs.GetInt("ActiveLevel") + 4);
     }
 
     public void VolumePlusOnClick()
