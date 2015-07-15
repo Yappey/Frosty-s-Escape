@@ -3324,7 +3324,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 442588, guid: 8b8db5fa4f331974b9fea9d848d450be, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 38.1399994
+      value: 38.6899986
       objectReference: {fileID: 0}
     - target: {fileID: 442588, guid: 8b8db5fa4f331974b9fea9d848d450be, type: 2}
       propertyPath: m_LocalPosition.y
@@ -3360,7 +3360,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 442588, guid: 8b8db5fa4f331974b9fea9d848d450be, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 2.10851288
       objectReference: {fileID: 0}
     - target: {fileID: 442588, guid: 8b8db5fa4f331974b9fea9d848d450be, type: 2}
       propertyPath: m_LocalScale.y
@@ -4630,6 +4630,14 @@ Prefab:
     - target: {fileID: 11420010, guid: 3e65e75a5026e6a479dae1ae99b726a4, type: 2}
       propertyPath: force.y
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 11420010, guid: 3e65e75a5026e6a479dae1ae99b726a4, type: 2}
+      propertyPath: timer
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11420010, guid: 3e65e75a5026e6a479dae1ae99b726a4, type: 2}
+      propertyPath: time
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3e65e75a5026e6a479dae1ae99b726a4, type: 2}
