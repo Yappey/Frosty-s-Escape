@@ -12,6 +12,11 @@ public class HealthBarScript : MonoBehaviour
 
     GameObject sirenLight;
     public GameObject fog;
+    public GameObject fog2;
+    public GameObject fog3;
+    public GameObject fog4;
+    public GameObject fog6;
+ 
 
     public float Health
     {
@@ -129,6 +134,7 @@ public class HealthBarScript : MonoBehaviour
                 frost.GetComponent<Frostyehavior>().Melt();
             }
 
+          
             if (chck.CheckPointSaved)
                 Invoke("CheckPointReset", 1.0f);
             else
@@ -168,12 +174,21 @@ public class HealthBarScript : MonoBehaviour
         if (clr.g >= 1.0f)
             red = false;
 
-        fog.GetComponent<Animator>().Play("Base Layer.Fog");
+        FogAnimations();
     }
 
     void LightSirenOff()
     {
         var sirensLight = sirenLight.GetComponent<Light>();
         sirensLight.color = Color.white;
+    }
+
+    void FogAnimations()
+    {
+        fog.GetComponent<Animator>().Play("Base Layer.Fog1");
+        fog2.GetComponent<Animator>().Play("Base Layer.Fog2");
+        fog3.GetComponent<Animator>().Play("Base Layer.Fog3");
+        fog4.GetComponent<Animator>().Play("Base Layer.Fog4");
+        fog6.GetComponent<Animator>().Play("Base Layer.Fog6");
     }
 }
