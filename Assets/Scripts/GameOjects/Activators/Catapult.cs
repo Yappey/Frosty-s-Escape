@@ -10,6 +10,8 @@ public class Catapult : MonoBehaviour {
     public float distance;
     GameObject switchmanager;
     GameObject frosty;
+	public float time = -1;
+	public float timer;
 
 
 	// Use this for initialization
@@ -34,7 +36,7 @@ public class Catapult : MonoBehaviour {
                     loaded = false;
 					Launched = Loaded;
 					Loaded = null;
-					Invoke("Back", 5);
+					time = 0;
                 }
             }
             if (frosty.GetComponent<Frostyehavior>().headAttached && !frosty.GetComponent<Frostyehavior>().torsoAttached && (frosty.transform.position - transform.position).magnitude < distance)
@@ -77,10 +79,18 @@ public class Catapult : MonoBehaviour {
             }
             
         }
+		if (time != -1) {
+			time += Time.deltaTime;
+			}
+		if (time >= timer) {
+			Back();
+			time = -1;
+		}
+
 	}
 	void Back()
 	{
-		Launched.GetComponent<Rigidbody2D> ().drag = 4;
+		Launched.GetComponent<Rigidbody2D> ().drag = 3;
 	}
 
 }
