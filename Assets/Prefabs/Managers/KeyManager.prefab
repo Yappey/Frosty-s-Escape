@@ -1,0 +1,211 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &166278
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 472864}
+  - 114: {fileID: 11419640}
+  m_Layer: 0
+  m_Name: KeyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &472864
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 166278}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 398.457855, y: 142.733749, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11419640
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 166278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 125ebb290d7f417468da4bc7b5076a43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theInstance: {fileID: 0}
+  triggerSave: 0
+  triggerLoad: 0
+  triggerDefault: 0
+  inputButtons:
+  - name: Horizontal
+    pos: 0
+    neg: 0
+    altPos: 0
+    altNeg: 0
+    defPos: 275
+    defNeg: 276
+    defAltPos: 97
+    defAltNeg: 100
+  - name: Vertical
+    pos: 0
+    neg: 0
+    altPos: 0
+    altNeg: 0
+    defPos: 273
+    defNeg: 274
+    defAltPos: 119
+    defAltNeg: 115
+  - name: Jump
+    pos: 0
+    neg: 0
+    altPos: 0
+    altNeg: 0
+    defPos: 32
+    defNeg: 0
+    defAltPos: 330
+    defAltNeg: 0
+  - name: Throw
+    pos: 0
+    neg: 0
+    altPos: 0
+    altNeg: 0
+    defPos: 323
+    defNeg: 0
+    defAltPos: 0
+    defAltNeg: 0
+  - name: Activate
+    pos: 0
+    neg: 0
+    altPos: 0
+    altNeg: 0
+    defPos: 9
+    defNeg: 0
+    defAltPos: 0
+    defAltNeg: 0
+  - name: Attach
+    pos: 0
+    neg: 0
+    altPos: 0
+    altNeg: 0
+    defPos: 101
+    defNeg: 0
+    defAltPos: 0
+    defAltNeg: 0
+  - name: Detach
+    pos: 0
+    neg: 0
+    altPos: 0
+    altNeg: 0
+    defPos: 113
+    defNeg: 0
+    defAltPos: 0
+    defAltNeg: 0
+  - name: Head
+    pos: 0
+    neg: 0
+    altPos: 0
+    altNeg: 0
+    defPos: 49
+    defNeg: 0
+    defAltPos: 257
+    defAltNeg: 0
+  - name: Torso
+    pos: 0
+    neg: 0
+    altPos: 0
+    altNeg: 0
+    defPos: 50
+    defNeg: 0
+    defAltPos: 258
+    defAltNeg: 0
+  - name: Base
+    pos: 0
+    neg: 0
+    altPos: 0
+    altNeg: 0
+    defPos: 51
+    defNeg: 0
+    defAltPos: 259
+    defAltNeg: 0
+  - name: Cheat
+    pos: 0
+    neg: 0
+    altPos: 0
+    altNeg: 0
+    defPos: 304
+    defNeg: 0
+    defAltPos: 303
+    defAltNeg: 0
+  - name: Up
+    pos: 0
+    neg: 0
+    altPos: 0
+    altNeg: 0
+    defPos: 273
+    defNeg: 0
+    defAltPos: 119
+    defAltNeg: 0
+  - name: Down
+    pos: 0
+    neg: 0
+    altPos: 0
+    altNeg: 0
+    defPos: 274
+    defNeg: 0
+    defAltPos: 115
+    defAltNeg: 0
+  - name: Left
+    pos: 0
+    neg: 0
+    altPos: 0
+    altNeg: 0
+    defPos: 276
+    defNeg: 0
+    defAltPos: 97
+    defAltNeg: 0
+  - name: Right
+    pos: 0
+    neg: 0
+    altPos: 0
+    altNeg: 0
+    defPos: 275
+    defNeg: 0
+    defAltPos: 100
+    defAltNeg: 0
+  - name: Submit
+    pos: 0
+    neg: 0
+    altPos: 0
+    altNeg: 0
+    defPos: 13
+    defNeg: 0
+    defAltPos: 336
+    defAltNeg: 0
+  - name: Cancel
+    pos: 0
+    neg: 0
+    altPos: 0
+    altNeg: 0
+    defPos: 27
+    defNeg: 0
+    defAltPos: 0
+    defAltNeg: 0
+  len: 0
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 166278}
+  m_IsPrefabParent: 1

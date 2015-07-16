@@ -28,6 +28,7 @@ public class Sign : BaseActivator {
 		if (distance > minDistance)
 		{
 			info.SetActive(false);
+			gameObject.GetComponent<Animator>().Play("Base Layer.New State");
 		}
 	}
 
@@ -40,10 +41,12 @@ public class Sign : BaseActivator {
 
 			if (info.activeSelf) {
 				info.SetActive(false);
+				gameObject.GetComponent<Animator>().Play("Base Layer.New State");
 			}
 
 			else {
 				info.SetActive(true);
+				gameObject.GetComponent<Animator>().Play("Base Layer.Sign");
 			}
 		}
 	}

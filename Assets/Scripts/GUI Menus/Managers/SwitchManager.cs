@@ -8,7 +8,9 @@ public class SwitchManager : MonoBehaviour
     public bool TorsoSelected;
     public bool BaseSelected;
     public float attachdistance;
-
+    float buttonTimer = 0.0f;
+    float buttonTimerMax = 0.5f;
+   
     // Prefab GameObjects
     public GameObject Frosty;
     public GameObject prehead;
@@ -48,47 +50,63 @@ public class SwitchManager : MonoBehaviour
     {
         if (Time.timeScale > 0.0f)
         {
-            if (Input.GetButtonDown("Head"))
+            if (buttonTimer <= 0.0f)
             {
-                SwitchHead();
+                if ((Input.GetButtonDown("Head") || Input.GetAxisRaw("ControllerHead") == 1))
+                {
+                    SwitchHead();
+                    buttonTimer = buttonTimerMax;
+                }
+                else if ((Input.GetButtonDown("Torso") || Input.GetAxisRaw("ControllerTorso") == 1 || Input.GetAxisRaw("ControllerTorso") == -1))
+                {
+                    SwitchTorso();
+                    buttonTimer = buttonTimerMax;
+                }
+                else if ((Input.GetButtonDown("Base") || Input.GetAxisRaw("ControllerBase") == -1))
+                {
+                    SwitchBase();
+                    buttonTimer = buttonTimerMax;
+                }
+                if (Input.GetButtonDown("Detach") || Input.GetAxisRaw("ControllerDetach") > 0.1f)
+                {
+                    if (HeadSelected)
+                    {
+                        HeadDetach();
+                        buttonTimer = buttonTimerMax;
+                    }
+                    else if (TorsoSelected)
+                    {
+                        TorsoDetach();
+                        buttonTimer = buttonTimerMax;
+                    }
+                    else if (BaseSelected)
+                    {
+                        BaseDetach();
+                        buttonTimer = buttonTimerMax;
+                    }
+                }
+                if (Input.GetButtonDown("Attach") || Input.GetAxisRaw("ControllerAttach") > 0.1f)
+                {
+                    if (HeadSelected)
+                    {
+                        HeadAttach();
+                        buttonTimer = buttonTimerMax;
+                    }
+                    else if (TorsoSelected)
+                    {
+                        TorsoAttach();
+                        buttonTimer = buttonTimerMax;
+                    }
+                    else if (BaseSelected)
+                    {
+                        BaseAttach();
+                        buttonTimer = buttonTimerMax;
+                    }
+                } 
             }
-            if (Input.GetButtonDown("Torso"))
+            else
             {
-                SwitchTorso();
-            }
-            if (Input.GetButtonDown("Base"))
-            {
-                SwitchBase();
-            }
-            if (Input.GetButtonDown("Detach"))
-            {
-                if (HeadSelected)
-                {
-                    HeadDetach();
-                }
-                else if (TorsoSelected)
-                {
-                    TorsoDetach();
-                }
-                else if (BaseSelected)
-                {
-                    BaseDetach();
-                }
-            }
-            if (Input.GetButtonDown("Attach"))
-            {
-                if (HeadSelected)
-                {
-                    HeadAttach();
-                }
-                else if (TorsoSelected)
-                {
-                    TorsoAttach();
-                }
-                else if (BaseSelected)
-                {
-                    BaseAttach();
-                }
+                buttonTimer -= Time.deltaTime;
             }
             if (HeadSelected)
                 Head.transform.FindChild("Head").GetComponent<MeshRenderer>().material.color = Color.yellow;
