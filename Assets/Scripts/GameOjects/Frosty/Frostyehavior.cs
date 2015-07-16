@@ -167,12 +167,16 @@ public class Frostyehavior : MonoBehaviour
         //Head only walking animation
         if (GetComponent<Frostyehavior>().headAttached && !GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && rgbd.velocity.x > 0.01f)
         {
-            frostyAnim.Play("Base Layer.FrostyHead_RollingRight");
+            frostyAnim.Play("Base Layer.FrostyHead_WalkingLeft");
+            transform.localScale = new Vector2(1, transform.localScale.y);
+
 
         }
         else if (GetComponent<Frostyehavior>().headAttached && !GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && rgbd.velocity.x < -0.01f)
         {
-            frostyAnim.Play("Base Layer.FrostyHead_RollingLeft");
+            frostyAnim.Play("Base Layer.FrostyHead_WalkingLeft");
+            transform.localScale = new Vector2(-1, transform.localScale.y);
+
 
         }
 

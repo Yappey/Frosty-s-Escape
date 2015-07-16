@@ -39,7 +39,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f108905a5683f34d806d59ccc4c1a52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoadingPicture: {fileID: 104124, guid: 06ad583975b43cc4b9b20af0cc9925a3, type: 2}
   delayTimer: 5
   count: 0
 --- !u!1001 &100100000
