@@ -37,6 +37,7 @@ public class Frostyehavior : MonoBehaviour {
 		Rigidbody2D rgbd = GetComponent<Rigidbody2D>();
 		if (isActive)
 		{
+			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
 			float hor = Input.GetAxis("Horizontal");
 
 			// Check if speed is less than max or input is opposite velocity
@@ -48,12 +49,19 @@ public class Frostyehavior : MonoBehaviour {
 				{
 					rgbd.velocity = new Vector2(moveSpeed * Mathf.Sign(rgbd.velocity.x), 0.0f);
 				}
+
+				if (isGrounded && hor != 0.0f) //or use hor != 0.0f
+					sound.GetComponent<SoundEffectManager>().PlayWalkSnd();
+
+				else
+					sound.GetComponent<SoundEffectManager>().StopWalkSnd();
 			}
 
 			if (Input.GetButtonDown("Jump") && isGrounded)
 			{
 				rgbd.AddForce(new Vector2(0.0f, jumpVelocity), ForceMode2D.Impulse);
 				isGrounded = false;
+				sound.GetComponent<SoundEffectManager>().PlayJumpSnd();
 			}
 
 			if (Input.GetButtonDown("Activate") && Time.timeScale > 0)

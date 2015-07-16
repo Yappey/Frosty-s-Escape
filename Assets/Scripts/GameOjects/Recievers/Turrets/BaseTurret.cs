@@ -19,20 +19,19 @@ public class BaseTurret : BaseReceiver {
 
 	public float timer = 0.0f;
 
-	private Quaternion fromRot;
-	private Quaternion toRot;
+	//private Quaternion fromRot;
+	//private Quaternion toRot;
 
-	private bool fromTo = true;
 	protected bool hasTarget = false;
 	
 	protected GameObject theTarget;
 
 	
 	protected void BaseTurretStart () {
-		float startRad = startAngle * Mathf.PI * 0.5f / 180.0f;
-		float endRad = endAngle * Mathf.PI * 0.5f / 180.0f;
-		fromRot = new Quaternion(0.0f, 0.0f, Mathf.Sin(startRad), Mathf.Cos(startRad));
-		toRot = new Quaternion(0.0f, 0.0f, Mathf.Sin(endRad), Mathf.Cos(endRad));
+		//float startRad = startAngle * Mathf.PI * 0.5f / 180.0f;
+		//float endRad = endAngle * Mathf.PI * 0.5f / 180.0f;
+		//fromRot = new Quaternion(0.0f, 0.0f, Mathf.Sin(startRad), Mathf.Cos(startRad));
+		//toRot = new Quaternion(0.0f, 0.0f, Mathf.Sin(endRad), Mathf.Cos(endRad));
 
 		//fromRot.(Vector3.forward, startAngle);
 		//  toRot.Rotate(Vector3.forward, endAngle);

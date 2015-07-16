@@ -85,7 +85,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 164726}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -124.309998, y: -2.48000002, z: 0}
+  m_LocalPosition: {x: -1.88169384, y: 2.39712477, z: 0}
   m_LocalScale: {x: 2.58306289, y: 2.58306289, z: 2.58306289}
   m_Children:
   - {fileID: 406216}
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   isScannig: 1
-  requiresTarget: 0
+  requiresTarget: 1
   frequency: 1
   projectileVelocity: 5
   FOV: 60
