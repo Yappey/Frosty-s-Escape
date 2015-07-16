@@ -6,6 +6,8 @@ public class Frostyehavior : MonoBehaviour
 
     public GameObject presnowball;
     public GameObject snowball;
+    float buttonPressed = 0.0f;
+    float buttonTimerMax = 0.5f;
     public float throwStrength;
 
     public float moveSpeed = 10;
@@ -23,8 +25,8 @@ public class Frostyehavior : MonoBehaviour
     public bool headAttached;
     public bool torsoAttached;
     public bool baseAttached;
-    public float animTimer = 1.0f;
     public bool isNotWalking = true;
+    public float animTimer = 1.0f;
 
     public GameObject snowballLauncher;
     public Animator frostyAnim;
@@ -80,15 +82,22 @@ public class Frostyehavior : MonoBehaviour
 
 
 
-
-            if (Input.GetButtonDown("Activate") && Time.timeScale > 0)
+            if (buttonPressed <= 0.0f)
             {
-                FrostyActivateAnimations();
-                ActivateNearest();
+                if ((Input.GetButtonDown("Activate") || Input.GetAxis("ControllerActivate") > 0.1f) && Time.timeScale > 0)
+                {
+                    FrostyActivateAnimations();
+                    ActivateNearest();
+                    buttonPressed = buttonTimerMax;
+                } 
+            }
+            else
+            {
+                buttonPressed -= Time.deltaTime;
             }
         }
 
-        if (Input.GetButtonDown("Throw") && Time.timeScale > 0)
+        if (Input.GetButtonDown("Throw") || Input.GetAxisRaw("Throw2") == 1 && Time.timeScale > 0)
         {
             LaunchSnowall();
         }
@@ -232,7 +241,20 @@ public class Frostyehavior : MonoBehaviour
         {
             //frostyAnim.Play("Base Layer.FrostyTorso_Idle");
             frostyAnim.SetTrigger("Idle");
+        }
 
+        //Base only
+        if (!GetComponent<Frostyehavior>().torsoAttached && GetComponent<Frostyehavior>().baseAttached && !GetComponent<Frostyehavior>().headAttached && isGrounded)
+        {
+            //frostyAnim.Play("Base Layer.FrostyTorso_Idle");
+            frostyAnim.SetTrigger("Idle");
+        }
+
+        //Torso and Base
+        if (GetComponent<Frostyehavior>().torsoAttached && GetComponent<Frostyehavior>().baseAttached && !GetComponent<Frostyehavior>().headAttached && isGrounded)
+        {
+            //frostyAnim.Play("Base Layer.FrostyTorso_Idle");
+            frostyAnim.SetTrigger("Idle");
         }
     }
 
