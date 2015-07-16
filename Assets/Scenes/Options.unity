@@ -400,10 +400,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa58c595ac5d9248a87c157f1d81c70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numlevels: 2
+  numlevels: 4
   levelname: MainMenu
   filename: 
   volumetype: 
+  BonusLevelNum: 0
   levelnumber: 0
   testif1: 0
   testif2: 0
