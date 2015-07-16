@@ -22,7 +22,6 @@ public class BaseTurret : BaseReceiver {
 	private Quaternion fromRot;
 	private Quaternion toRot;
 
-	private bool fromTo = true;
 	protected bool hasTarget = false;
 	
 	protected GameObject theTarget;
