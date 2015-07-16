@@ -20,10 +20,13 @@ public class Roller : BaseReceiver {
 	
 	// Update is called once per frame
 	void Update () {
+		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+
 		if (isMoving) {
 			if (gameObject.transform.position == waypoints [state].transform.position) {
 				gameObject.GetComponent<Harmful>().isActive = false;
 				timer += Time.deltaTime;
+
 
 				if ((waits.Length == waypoints.Length && timer >= waits [state]) || timer >= waits [0]) {
 					timer = 0.0f;
@@ -37,6 +40,7 @@ public class Roller : BaseReceiver {
 
 			else {
 				gameObject.GetComponent<Harmful>().isActive = true;
+				sound.GetComponent<SoundEffectManager>().PlayRollerSnd(gameObject.transform.position);
 
 				if (speeds.Length == waypoints.Length )
 					gameObject.transform.position = Vector3.MoveTowards (gameObject.transform.position, waypoints [state].transform.position, speeds [state] * Time.deltaTime);
@@ -46,6 +50,8 @@ public class Roller : BaseReceiver {
 		}
 	 	
 		else {
+			sound.GetComponent<SoundEffectManager>().StopRollerSnd();
+
 			if (gameObject.transform.position != waypoints[state].transform.position)
 				gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, waypoints[state].transform.position, speeds[state] * Time.deltaTime);
 

@@ -50,6 +50,9 @@ public class SLaserTurret : LaserTurret
     {
         laserBlast.SetTrigger("Charge");
         Invoke("InstantiateProjectile", 0.16f);
+
+		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+		sound.GetComponent<SoundEffectManager>().PlayNonLoopLaserTurretSnd(gameObject.transform.position);
     }
 
     void InstantiateProjectile()

@@ -6,8 +6,7 @@ public class SoundEffectManager : MonoBehaviour {
 	private GameObject switchmanager;
 	private GameObject frosty;
 	private AudioSource[] effects;
-
-	public bool menu;
+	
 	public AudioSource buttonClick;
 	public AudioSource attach;
 	public AudioSource detach;
@@ -40,12 +39,14 @@ public class SoundEffectManager : MonoBehaviour {
 	public AudioSource slam;
 	public AudioSource thanks;
 	public AudioSource help;
+	public AudioSource nonLoopLaserTurret;
+	public AudioSource walk;
+	public AudioSource jump;
+	public AudioSource roller;
 
 	// Use this for initialization
 	void Start () {
-		if (!menu) {
-			switchmanager = GameObject.FindGameObjectWithTag("SwitchManager");
-		}
+		switchmanager = GameObject.FindGameObjectWithTag("SwitchManager");
 
 		effects = gameObject.GetComponents<UnityEngine.AudioSource> ();
 
@@ -58,7 +59,7 @@ public class SoundEffectManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (!menu) {
+		if (switchmanager != null) {
 			frosty = switchmanager.GetComponent<SwitchManager>().FindActive();
 		}
 
@@ -74,7 +75,7 @@ public class SoundEffectManager : MonoBehaviour {
 	}
 
 	bool CloseEnoughToPlay(Vector3 pos) {
-		if (!menu) {
+		if (frosty != null) {
 			Vector3 frostyPos = new Vector3(frosty.transform.position.x, frosty.transform.position.y);
 			
 			float distance = (frostyPos - pos).magnitude;
@@ -393,6 +394,56 @@ public class SoundEffectManager : MonoBehaviour {
 	{
 		if (help.isPlaying) {
 			help.Stop ();
+		}
+	}
+
+	public void PlayNonLoopLaserTurretSnd(Vector3 pos) 
+	{
+		if (CloseEnoughToPlay(pos)) {
+			if (!nonLoopLaserTurret.isPlaying) {
+				nonLoopLaserTurret.Play();
+			}
+
+			else {
+				nonLoopLaserTurret.Stop();
+				nonLoopLaserTurret.Play();
+			}
+		}
+	}
+
+	public void PlayWalkSnd()
+	{
+		if (!walk.isPlaying)
+			walk.Play();
+	}
+
+	public void StopWalkSnd() {
+		if (walk.isPlaying)
+			walk.Stop();
+	}
+
+	public void PlayJumpSnd(){
+		//if (!jump.isPlaying) {
+			jump.Play();
+		//}
+	}
+
+	public void PlayRollerSnd(Vector3 pos)
+	{
+		if (CloseEnoughToPlay (pos)) {
+			if (!roller.isPlaying) {
+				roller.Play ();
+			}
+		} 
+		
+		else
+			StopRollerSnd ();
+	}
+	
+	public void StopRollerSnd()
+	{
+		if (roller.isPlaying) {
+			roller.Stop ();
 		}
 	}
 }
