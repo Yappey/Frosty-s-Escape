@@ -46,6 +46,7 @@ public class Frostyehavior : MonoBehaviour
         if (isActive)
         {
             float hor = Input.GetAxis("Horizontal");
+			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
             //frostyAnim.SetTrigger("Idle");
 
 
@@ -60,23 +61,26 @@ public class Frostyehavior : MonoBehaviour
                     rgbd.velocity = new Vector2(moveSpeed * Mathf.Sign(rgbd.velocity.x), 0.0f);
                     isNotWalking = false;
                 }
-                    FrostyWalkAnimations();
+
+                FrostyWalkAnimations();
             }
+
+			if (isGrounded && rgbd.velocity.x != 0.0f)
+				sound.GetComponent<SoundEffectManager>().PlayWalkSnd();
+
             else
-            {
-               
-            }
+				sound.GetComponent<SoundEffectManager>().StopWalkSnd();
 
             if (isNotWalking)
             {
-                FrostyIdleAnimations(); 
+                FrostyIdleAnimations();
             }
 
             if (Input.GetButtonDown("Jump") && isGrounded)
             {
                 rgbd.AddForce(new Vector2(0.0f, jumpVelocity), ForceMode2D.Impulse);
                 isGrounded = false;
-
+				sound.GetComponent<SoundEffectManager>().PlayJumpSnd();
                 FrostyJumpAnimations();
             }
 

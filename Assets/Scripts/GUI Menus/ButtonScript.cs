@@ -142,8 +142,8 @@ public class ButtonScript : MonoBehaviour {
     {
         for (int i = 0; i < numlevels; i++)
         {
-            PlayerPrefs.SetInt("Level" + i + "Snowballs", 0);
-            PlayerPrefs.SetFloat("Level" + i + "HighScore", 300);
+            PlayerPrefs.SetInt("Level" + (i +1) + "Snowballs", 0);
+            PlayerPrefs.SetFloat("Level" + (i + 1) + "HighScore", 300);
         }
         PlayerPrefs.SetInt("ActiveLevel", 1);
     }

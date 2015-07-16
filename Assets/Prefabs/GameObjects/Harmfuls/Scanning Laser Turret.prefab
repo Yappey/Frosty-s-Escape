@@ -86,7 +86,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 156782}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -184.342026, y: 18.8727875, z: 0}
+  m_LocalPosition: {x: .239999995, y: 2.76999998, z: 0}
   m_LocalScale: {x: 2.58306289, y: 2.58306289, z: 2.58306289}
   m_Children:
   - {fileID: 417328}
@@ -183,7 +183,7 @@ MonoBehaviour:
   state: 0
   isScannig: 1
   requiresTarget: 1
-  frequency: 1
+  frequency: .310000002
   projectileVelocity: 12
   FOV: 120
   viewRange: 30
