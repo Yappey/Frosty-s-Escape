@@ -42,6 +42,7 @@ public class SoundEffectManager : MonoBehaviour {
 	public AudioSource nonLoopLaserTurret;
 	public AudioSource walk;
 	public AudioSource jump;
+	public AudioSource roller;
 
 	// Use this for initialization
 	void Start () {
@@ -425,5 +426,24 @@ public class SoundEffectManager : MonoBehaviour {
 		//if (!jump.isPlaying) {
 			jump.Play();
 		//}
+	}
+
+	public void PlayRollerSnd(Vector3 pos)
+	{
+		if (CloseEnoughToPlay (pos)) {
+			if (!roller.isPlaying) {
+				roller.Play ();
+			}
+		} 
+		
+		else
+			StopRollerSnd ();
+	}
+	
+	public void StopRollerSnd()
+	{
+		if (roller.isPlaying) {
+			roller.Stop ();
+		}
 	}
 }
