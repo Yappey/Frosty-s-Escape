@@ -131,7 +131,8 @@ public class HealthBarScript : MonoBehaviour
             GameObject[] frosties = GameObject.FindGameObjectsWithTag("Frosty");
             foreach (GameObject frost in frosties)
             {
-                frost.GetComponent<Frostyehavior>().Melt();
+				if (frost != null)
+					frost.GetComponent<Frostyehavior>().Melt();
             }
 
           

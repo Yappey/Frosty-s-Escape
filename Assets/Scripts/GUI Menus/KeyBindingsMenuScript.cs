@@ -15,7 +15,7 @@ public class KeyBindingsMenuScript : MonoBehaviour {
 		}
 	}
 
-	bool boundTrigger = false;
+//	bool boundTrigger = false;
 
 	//UnityEngine.UI.Button btn;
 	//string inputName;

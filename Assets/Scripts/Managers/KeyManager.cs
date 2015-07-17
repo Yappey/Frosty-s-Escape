@@ -12,7 +12,7 @@ public class KeyManager : MonoBehaviour {
 	private static volatile KeyManager instance;
 	private static object syncRoot = new Object();
 
-	public KeyManager theInstance;
+	//public KeyManager theInstance;
 
 	//public bool loadOnStart = true;
 	public bool triggerSave = false;
@@ -34,6 +34,8 @@ public class KeyManager : MonoBehaviour {
 		public KeyCode defNeg;
 		public KeyCode defAltPos;
 		public KeyCode defAltNeg;
+
+		public float axisValue;
 
 		public void savePref()
 		{
@@ -82,14 +84,13 @@ public class KeyManager : MonoBehaviour {
 		{
 			if (instance == null)
 			{
-				//lock (syncRoot)
-				//{
-				//	if (instance == null)
-				//	{
-				//		GameObject temp = GameObject.Instantiate<GameObject>();
-				//		instance = temp.AddComponent<KeyManager>();
-				//	}
-				//}
+				lock (syncRoot)
+				{
+					if (instance == null)
+					{
+						instance = ((GameObject)Instantiate(Resources.Load("KeyManager"))).GetComponent<KeyManager>();
+					}
+				}
 			}
 			
 			return instance;
@@ -123,7 +124,7 @@ public class KeyManager : MonoBehaviour {
 	{
 		//if (loadOnStart)
 			//LoadKeys();
-		theInstance = instance;
+		//theInstance = instance;
 	}
 
 	void Update()
@@ -240,14 +241,26 @@ public class KeyManager : MonoBehaviour {
 	public static float GetAxis(string inputName)
 	{
 		KeyManager inst = Instance;
-		foreach (inputButton btn in inst.inputButtons)
+		for (int i = 0; i < inst.inputButtons.Length; i++)
 		{
-			if (btn.name == inputName)
+			if (inst.inputButtons[i].name == inputName)
 			{
-				if (Input.GetKey(btn.pos) || Input.GetKey(btn.altPos))
-					return 1.0f;
-				else if (Input.GetKey(btn.neg) || Input.GetKey(btn.altNeg))
-					return -1.0f;
+				if (Input.GetKey(inst.inputButtons[i].pos) || Input.GetKey(inst.inputButtons[i].altPos))
+				{
+					if (inst.inputButtons[i].axisValue > 0.0f)
+						inst.inputButtons[i].axisValue = 0.0f;
+					return (inst.inputButtons[i].axisValue = Mathf.Max(-1.0f, inst.inputButtons[i].axisValue - Time.unscaledDeltaTime * 0.5f));
+				}
+				else if (Input.GetKey(inst.inputButtons[i].neg) || Input.GetKey(inst.inputButtons[i].altNeg))
+				{
+					if (inst.inputButtons[i].axisValue < 0.0f)
+						inst.inputButtons[i].axisValue = 0.0f;
+					return (inst.inputButtons[i].axisValue = Mathf.Min(1.0f, inst.inputButtons[i].axisValue + Time.unscaledDeltaTime * 0.5f));
+				}
+				else
+				{
+					return inst.inputButtons[i].axisValue = 0.0f;
+				}
 			}
 		}
 		return 0.0f;
@@ -255,7 +268,18 @@ public class KeyManager : MonoBehaviour {
 
 	public static float GetAxisRaw(string inputName)
 	{
-		return GetAxis(inputName);
+		KeyManager inst = Instance;
+		foreach (inputButton btn in inst.inputButtons)
+		{
+			if (btn.name == inputName)
+			{
+				if (Input.GetKey(btn.pos) || Input.GetKey(btn.altPos))
+					return -1.0f;
+				else if (Input.GetKey(btn.neg) || Input.GetKey(btn.altNeg))
+					return 1.0f;
+			}
+		}
+		return 0.0f;
 	}
 
 	public static bool GetButtonDown(string inputName)
