@@ -91,18 +91,18 @@ MonoBehaviour:
     neg: 0
     altPos: 0
     altNeg: 0
-    defPos: 273
-    defNeg: 274
-    defAltPos: 119
-    defAltNeg: 115
+    defPos: 274
+    defNeg: 273
+    defAltPos: 115
+    defAltNeg: 119
     sPos: 
     sNeg: 
     sAltPos: 
     sAltNeg: 
-    sDefPos: Axis2
-    sDefNeg: Axis2
-    sDefAltPos: 
-    sDefAltNeg: 
+    sDefPos: 
+    sDefNeg: 
+    sDefAltPos: Axis2
+    sDefAltNeg: Axis2
     axisValue: 0
     isDown: 0
     pressed: 0

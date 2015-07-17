@@ -2297,6 +2297,7 @@ MonoBehaviour:
   state: 0
   _red: {fileID: 2100000, guid: 7af9dd4a822ad8d4d890375de22ee441, type: 2}
   _green: {fileID: 2100000, guid: 06bfb5ab64bbdb641bf9e4c8ed6554de, type: 2}
+  isCheckPoint: 1
 --- !u!114 &11446994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2311,6 +2312,7 @@ MonoBehaviour:
   state: 0
   _red: {fileID: 2100000, guid: 7af9dd4a822ad8d4d890375de22ee441, type: 2}
   _green: {fileID: 2100000, guid: 06bfb5ab64bbdb641bf9e4c8ed6554de, type: 2}
+  isCheckPoint: 0
 --- !u!114 &11471474
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2346,6 +2348,7 @@ MonoBehaviour:
   state: 0
   _red: {fileID: 2100000, guid: 7af9dd4a822ad8d4d890375de22ee441, type: 2}
   _green: {fileID: 2100000, guid: 06bfb5ab64bbdb641bf9e4c8ed6554de, type: 2}
+  isCheckPoint: 0
 --- !u!124 &12453434
 Behaviour:
   m_ObjectHideFlags: 1
