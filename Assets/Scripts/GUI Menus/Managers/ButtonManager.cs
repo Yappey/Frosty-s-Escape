@@ -31,7 +31,7 @@ public class ButtonManager : MonoBehaviour
         {
 		 if (_bufferedInput <= 0.0f) {
 				
-            if (Input.GetButtonDown("Right") || Input.GetButtonDown("Down") || Input.GetAxisRaw("Horizontal") > 0)
+            if (Input.GetButtonDown("Right") || Input.GetButtonDown("Down") || Input.GetAxisRaw("Horizontal") > 0 || Input.GetAxisRaw("Vertical") < 0)
             {
 				if (!buttonsDuringGameplay)
                 {
@@ -78,7 +78,7 @@ public class ButtonManager : MonoBehaviour
                 _bufferedInput = _maxBufferedInput;
             }
 
-            else if (Input.GetButtonDown("Left") || Input.GetButtonDown("Up") || Input.GetAxisRaw("Horizontal") < 0)
+            else if (Input.GetButtonDown("Left") || Input.GetButtonDown("Up") || Input.GetAxisRaw("Horizontal") < 0 || Input.GetAxisRaw("Vertical") > 0)
             {
 				if (!buttonsDuringGameplay)
 				{
@@ -417,7 +417,7 @@ public class ButtonManager : MonoBehaviour
                     _bufferedInput = _maxBufferedInput;
                 }
 
-                else if (Input.GetButtonDown("Left") || Input.GetButtonDown("Down") || Input.GetAxisRaw("Horizontal") < 0)
+                else if (Input.GetButtonDown("Left") || Input.GetButtonDown("Down") || Input.GetAxisRaw("Horizontal") < 0 || Input.GetAxisRaw("Vertical") < 0)
                 {
 					if (!buttonsDuringGameplay)
                     {

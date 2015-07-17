@@ -142,8 +142,20 @@ public class Frostyehavior : MonoBehaviour
 
             snowball = Instantiate(presnowball);
             snowball.transform.position = transform.FindChild("SnowballThrower").transform.position;
-            Vector3 curosr = GameObject.FindGameObjectWithTag("MainCamera")
-                .GetComponent<Camera>().ScreenToWorldPoint(Input.mousePosition);
+            float xAx = Input.GetAxisRaw("AimHorizontal");
+            float yAx = Input.GetAxisRaw("AimVertical");
+            Vector3 curosr;
+            if (xAx != 0 || yAx != 0)
+            {
+                curosr = transform.position;
+                curosr.x += xAx;
+                curosr.y -= yAx;
+            }
+            else
+            {
+                curosr = GameObject.FindGameObjectWithTag("MainCamera")
+                    .GetComponent<Camera>().ScreenToWorldPoint(Input.mousePosition);
+            }
             curosr.z = transform.position.z;
 
 
