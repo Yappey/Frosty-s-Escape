@@ -16,7 +16,9 @@ public class HealthBarScript : MonoBehaviour
     public GameObject fog3;
     public GameObject fog4;
     public GameObject fog6;
- 
+
+    Animator frostyHead;
+
 
     public float Health
     {
@@ -41,6 +43,7 @@ public class HealthBarScript : MonoBehaviour
     private float meltSpeed = 1.0f;
 
     public bool dontKillMe = false;
+    public bool isDead = true;
 
     // Use this for initialization
     void Start()
@@ -54,7 +57,9 @@ public class HealthBarScript : MonoBehaviour
         security = GameObject.FindGameObjectsWithTag("Security");
 
         sirenLight = GameObject.FindGameObjectWithTag("DirectionalLight");
-        
+        frostyHead = GetComponent<Animator>();
+
+
     }
 
     // Update is called once per frame
@@ -83,7 +88,11 @@ public class HealthBarScript : MonoBehaviour
                 health -= meltSpeed * Time.deltaTime;
                 if (health <= 0.0f)
                 {
+                    
+                        
+                   
                     health = 0.0f;
+                    frostyHead.Play("Base Layer.FrostyHead_Melting");
                     OutOfHealth();
                 }
             }
@@ -109,9 +118,13 @@ public class HealthBarScript : MonoBehaviour
             else
             {
                 health = 0.0f;
+                GameObject.FindGameObjectWithTag("SwitchManager").GetComponent<SwitchManager>().Active.GetComponent<Frostyehavior>().isActive = false;
             }
             if (health <= 0.0f)
+            {
                 OutOfHealth();
+                frostyHead.SetTrigger("Melt");
+            }
         }
 
         else
@@ -131,11 +144,11 @@ public class HealthBarScript : MonoBehaviour
             GameObject[] frosties = GameObject.FindGameObjectsWithTag("Frosty");
             foreach (GameObject frost in frosties)
             {
-				if (frost != null)
-					frost.GetComponent<Frostyehavior>().Melt();
+                if (frost != null)
+                    frost.GetComponent<Frostyehavior>().Melt();
             }
 
-          
+
             if (chck.CheckPointSaved)
                 Invoke("CheckPointReset", 1.0f);
             else
@@ -148,6 +161,7 @@ public class HealthBarScript : MonoBehaviour
         if (!dontKillMe)
         {
             loser.GetComponent<LoseScript>().Die();
+
             //Application.LoadLevelAsync(Application.loadedLevel);
         }
     }
@@ -182,6 +196,12 @@ public class HealthBarScript : MonoBehaviour
     {
         var sirensLight = sirenLight.GetComponent<Light>();
         sirensLight.color = Color.white;
+        fog.GetComponent<Animator>().SetBool("HasEnded", true);
+        fog2.GetComponent<Animator>().SetBool("HasEnded", true);
+        fog3.GetComponent<Animator>().SetBool("HasEnded", true);
+        fog4.GetComponent<Animator>().SetBool("HasEnded", true);
+        fog6.GetComponent<Animator>().SetBool("HasEnded", true);
+
     }
 
     void FogAnimations()

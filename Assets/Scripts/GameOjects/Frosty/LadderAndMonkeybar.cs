@@ -28,7 +28,7 @@ public class LadderAndMonkeybar : MonoBehaviour
             {
                 if (Input.GetAxis("Vertical") > 0 || KeyManager.GetAxis("Vertical") > 0)
                     GetComponent<Rigidbody2D>().velocity = new Vector3(GetComponent<Rigidbody2D>().velocity.x, 2.0f);
-				else if (Input.GetAxisRaw("Vertical") < 0 || KeyManager.GetAxis("Vertical") < 0)
+                else if (Input.GetAxisRaw("Vertical") < 0 || KeyManager.GetAxis("Vertical") < 0)
                     GetComponent<Rigidbody2D>().velocity = new Vector3(GetComponent<Rigidbody2D>().velocity.x, -2.0f);
                 else
                     GetComponent<Rigidbody2D>().velocity = new Vector3(GetComponent<Rigidbody2D>().velocity.x, 0);
@@ -41,17 +41,19 @@ public class LadderAndMonkeybar : MonoBehaviour
 
         if (_bMonkeyBar)
         {
+            gameObject.GetComponent<Animator>().SetBool("Active", true);
             if (GetComponent<Frostyehavior>().isActive)
             {
-				if (Input.GetAxisRaw("Horizontal") > 0 || KeyManager.GetAxis("Horizontal") > 0)
+                if (Input.GetAxisRaw("Horizontal") > 0 || KeyManager.GetAxis("Horizontal") > 0)
                     GetComponent<Rigidbody2D>().velocity = new Vector3(2.0f, 0);
-				else if (Input.GetAxisRaw("Horizontal") < 0 || KeyManager.GetAxis("Horizontal") < 0)
+                else if (Input.GetAxisRaw("Horizontal") < 0 || KeyManager.GetAxis("Horizontal") < 0)
                     GetComponent<Rigidbody2D>().velocity = new Vector3(-2.0f, 0);
                 else
                     GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0);
+                
 
 
-				if (Input.GetAxisRaw("Vertical") < 0 || KeyManager.GetAxis("Vertical") < 0)
+                if (Input.GetAxisRaw("Vertical") < 0 || KeyManager.GetAxis("Vertical") < 0)
                 {
                     GetComponent<Rigidbody2D>().velocity = new Vector3(GetComponent<Rigidbody2D>().velocity.x, -1.0f);
                 }

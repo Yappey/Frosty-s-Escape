@@ -21,6 +21,7 @@ public class Frostyehavior : MonoBehaviour
 
     public bool isActive;
     public bool isGrounded;
+    public bool isDead;
 
     public bool headAttached;
     public bool torsoAttached;
@@ -35,6 +36,7 @@ public class Frostyehavior : MonoBehaviour
     void Start()
     {
         frostyAnim = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -45,46 +47,45 @@ public class Frostyehavior : MonoBehaviour
         Rigidbody2D rgbd = GetComponent<Rigidbody2D>();
         if (isActive)
         {
-			float hor;
-			if (KeyManager.GetAxis("Horizontal") != 0)
-				hor = KeyManager.GetAxis("Horizontal");
+            float hor;
+            if (KeyManager.GetAxis("Horizontal") != 0)
+                hor = KeyManager.GetAxis("Horizontal");
             else
-				hor = Input.GetAxis("Horizontal");
-			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+                hor = Input.GetAxis("Horizontal");
+            GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
             //frostyAnim.SetTrigger("Idle");
-			Debug.Log("Horizontal Axis Update: " + hor);
+            Debug.Log("Horizontal Axis Update: " + hor);
 
             // Check if speed is less than max or input is opposite velocity
             if (rgbd.velocity.x * Mathf.Sign(hor) < moveSpeed)
             {
-                isNotWalking = true;
+                FrostyWalkAnimations();
+
                 rgbd.AddForce(new Vector2(moveSpeed * hor * 30.0f, 0.0f));
 
                 if (Mathf.Abs(rgbd.velocity.x) > moveSpeed)
                 {
                     rgbd.velocity = new Vector2(moveSpeed * Mathf.Sign(rgbd.velocity.x), 0.0f);
-                    isNotWalking = false;
                 }
 
-                FrostyWalkAnimations();
             }
 
-			if (isGrounded && rgbd.velocity.x != 0.0f)
-				sound.GetComponent<SoundEffectManager>().PlayWalkSnd();
+
+            if (isGrounded && rgbd.velocity.x != 0.0f)
+                sound.GetComponent<SoundEffectManager>().PlayWalkSnd();
 
             else
-				sound.GetComponent<SoundEffectManager>().StopWalkSnd();
-
-            if (isNotWalking)
             {
+                sound.GetComponent<SoundEffectManager>().StopWalkSnd();
                 FrostyIdleAnimations();
             }
+
 
             if (/*Input*/KeyManager.GetButtonDown("Jump") && isGrounded)
             {
                 rgbd.AddForce(new Vector2(0.0f, jumpVelocity), ForceMode2D.Impulse);
                 isGrounded = false;
-				sound.GetComponent<SoundEffectManager>().PlayJumpSnd();
+                sound.GetComponent<SoundEffectManager>().PlayJumpSnd();
                 FrostyJumpAnimations();
             }
 
@@ -92,12 +93,12 @@ public class Frostyehavior : MonoBehaviour
 
             if (buttonPressed <= 0.0f)
             {
-				if ((/*Input*/KeyManager.GetButtonDown("Activate") || Input.GetAxis("ControllerActivate") > 0.1f) && Time.timeScale > 0)
+                if ((/*Input*/KeyManager.GetButtonDown("Activate") || Input.GetAxis("ControllerActivate") > 0.1f) && Time.timeScale > 0)
                 {
                     FrostyActivateAnimations();
                     ActivateNearest();
                     buttonPressed = buttonTimerMax;
-                } 
+                }
             }
             else
             {
@@ -105,7 +106,7 @@ public class Frostyehavior : MonoBehaviour
             }
         }
 
-		if (/*Input*/KeyManager.GetButtonDown("Throw") || Input.GetAxisRaw("Throw2") == 1 && Time.timeScale > 0)
+        if (/*Input*/KeyManager.GetButtonDown("Throw") || Input.GetAxisRaw("Throw2") == 1 && Time.timeScale > 0)
         {
             LaunchSnowall();
         }
@@ -176,12 +177,12 @@ public class Frostyehavior : MonoBehaviour
 
     //I'm sorry I know this is ugly
     void FrostyWalkAnimations()
-	{
-		float hor;
-		if (KeyManager.GetAxis("Horizontal") != 0)
-			hor = KeyManager.GetAxis("Horizontal");
-		else
-			hor = Input.GetAxis("Horizontal");
+    {
+        float hor;
+        if (KeyManager.GetAxis("Horizontal") != 0)
+            hor = KeyManager.GetAxis("Horizontal");
+        else
+            hor = Input.GetAxis("Horizontal");
         Rigidbody2D rgbd = GetComponent<Rigidbody2D>();
 
         //Head only walking animation
@@ -201,16 +202,51 @@ public class Frostyehavior : MonoBehaviour
         }
 
         //Torso only Walking animation
+
+
+      
         if (GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && !GetComponent<Frostyehavior>().headAttached && rgbd.velocity.x > 0.01f)
         {
-            frostyAnim.Play("Base Layer.FrostyTorso_Walking");
-            transform.localScale = new Vector2(1, transform.localScale.y);
+            if (gameObject.GetComponent<LadderAndMonkeybar>()._bMonkeyBar == true)
+            {
+                frostyAnim.SetBool("Active", true);
+                transform.localScale = new Vector2(1, transform.localScale.y);
+            }
+            else if (gameObject.GetComponent<LadderAndMonkeybar>()._bLadder == true)
+            {
+                frostyAnim.SetBool("Climbing", true);
+            }
+            else if (gameObject.GetComponent<LadderAndMonkeybar>()._bMonkeyBar == false && gameObject.GetComponent<LadderAndMonkeybar>()._bLadder == false)
+            {
+                frostyAnim.Play("Base Layer.FrostyTorso_Walking");
+                transform.localScale = new Vector2(1, transform.localScale.y);
+                frostyAnim.SetBool("Climbing", false);
+
+                frostyAnim.SetBool("Active", false);
+            }
         }
         else if (GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && !GetComponent<Frostyehavior>().headAttached && rgbd.velocity.x < -0.01f)
         {
-            frostyAnim.Play("Base Layer.FrostyTorso_Walking");
-            transform.localScale = new Vector2(-1, transform.localScale.y);
+            if (gameObject.GetComponent<LadderAndMonkeybar>()._bMonkeyBar == true)
+            {
+                frostyAnim.SetBool("Active", true);
+                transform.localScale = new Vector2(-1, transform.localScale.y);
+            }
+            else if (gameObject.GetComponent<LadderAndMonkeybar>()._bLadder == true)
+            {
+                frostyAnim.SetBool("Climbing", true);
+            }
+            else if (gameObject.GetComponent<LadderAndMonkeybar>()._bMonkeyBar == false && gameObject.GetComponent<LadderAndMonkeybar>()._bLadder == false)
+            {
+                frostyAnim.Play("Base Layer.FrostyTorso_Walking");
+                transform.localScale = new Vector2(-1, transform.localScale.y);
+                frostyAnim.SetBool("Climbing", false);
+
+                frostyAnim.SetBool("Active", false);
+            }
         }
+
+
 
         //Head and Torso Walking
         if (GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && GetComponent<Frostyehavior>().headAttached && rgbd.velocity.x > 0.01f)
@@ -298,7 +334,7 @@ public class Frostyehavior : MonoBehaviour
 
     public void Melt()
     {
-        frostyAnim.SetTrigger("Melt");
+
     }
 }
 
