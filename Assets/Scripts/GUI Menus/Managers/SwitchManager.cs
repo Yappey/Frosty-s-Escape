@@ -464,7 +464,7 @@ public class SwitchManager : MonoBehaviour
         GameObject[] frostys = GameObject.FindGameObjectsWithTag("Frosty");
         foreach (GameObject frosty in frostys)
         {
-            if (frosty.GetComponent<Frostyehavior>().headAttached)
+            if (frosty != null && frosty.GetComponent<Frostyehavior>().headAttached)
                 return frosty;
         }
         return null;
