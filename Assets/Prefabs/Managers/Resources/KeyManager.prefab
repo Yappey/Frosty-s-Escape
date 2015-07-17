@@ -43,6 +43,27 @@ MonoBehaviour:
   triggerLoad: 0
   triggerDefault: 0
   triggerDelete: 0
+  Axes:
+  - Axis1
+  - Axis2
+  - Axis3
+  - Axis4
+  - Axis5
+  - Axis6
+  - Axis7
+  - Axis8
+  - Axis9
+  - Axis10
+  - Axis11
+  - Axis12
+  - Axis13
+  - Axis14
+  - Axis15
+  - Axis16
+  - Axis17
+  - Axis18
+  - Axis19
+  - Axis20
   inputButtons:
   - name: Horizontal
     pos: 0
@@ -53,15 +74,39 @@ MonoBehaviour:
     defNeg: 276
     defAltPos: 97
     defAltNeg: 100
+    sPos: 
+    sNeg: 
+    sAltPos: 
+    sAltNeg: 
+    sDefPos: Axis1
+    sDefNeg: Axis1
+    sDefAltPos: 
+    sDefAltNeg: 
+    axisValue: 0
+    isDown: 0
+    pressed: 0
+    released: 0
   - name: Vertical
     pos: 0
     neg: 0
     altPos: 0
     altNeg: 0
-    defPos: 273
-    defNeg: 274
-    defAltPos: 119
-    defAltNeg: 115
+    defPos: 274
+    defNeg: 273
+    defAltPos: 115
+    defAltNeg: 119
+    sPos: 
+    sNeg: 
+    sAltPos: 
+    sAltNeg: 
+    sDefPos: 
+    sDefNeg: 
+    sDefAltPos: Axis2
+    sDefAltNeg: Axis2
+    axisValue: 0
+    isDown: 0
+    pressed: 0
+    released: 0
   - name: Jump
     pos: 0
     neg: 0
@@ -71,6 +116,18 @@ MonoBehaviour:
     defNeg: 0
     defAltPos: 330
     defAltNeg: 0
+    sPos: 
+    sNeg: 
+    sAltPos: 
+    sAltNeg: 
+    sDefPos: 
+    sDefNeg: 
+    sDefAltPos: 
+    sDefAltNeg: 
+    axisValue: 0
+    isDown: 0
+    pressed: 0
+    released: 0
   - name: Throw
     pos: 0
     neg: 0
@@ -80,6 +137,18 @@ MonoBehaviour:
     defNeg: 0
     defAltPos: 0
     defAltNeg: 0
+    sPos: 
+    sNeg: 
+    sAltPos: 
+    sAltNeg: 
+    sDefPos: Axis10
+    sDefNeg: 
+    sDefAltPos: 
+    sDefAltNeg: 
+    axisValue: 0
+    isDown: 0
+    pressed: 0
+    released: 0
   - name: Activate
     pos: 0
     neg: 0
@@ -87,8 +156,20 @@ MonoBehaviour:
     altNeg: 0
     defPos: 9
     defNeg: 0
-    defAltPos: 0
+    defAltPos: 332
     defAltNeg: 0
+    sPos: 
+    sNeg: 
+    sAltPos: 
+    sAltNeg: 
+    sDefPos: 
+    sDefNeg: 
+    sDefAltPos: 
+    sDefAltNeg: 
+    axisValue: 0
+    isDown: 0
+    pressed: 0
+    released: 0
   - name: Attach
     pos: 0
     neg: 0
@@ -96,8 +177,20 @@ MonoBehaviour:
     altNeg: 0
     defPos: 101
     defNeg: 0
-    defAltPos: 0
+    defAltPos: 335
     defAltNeg: 0
+    sPos: 
+    sNeg: 
+    sAltPos: 
+    sAltNeg: 
+    sDefPos: 
+    sDefNeg: 
+    sDefAltPos: 
+    sDefAltNeg: 
+    axisValue: 0
+    isDown: 0
+    pressed: 0
+    released: 0
   - name: Detach
     pos: 0
     neg: 0
@@ -105,8 +198,20 @@ MonoBehaviour:
     altNeg: 0
     defPos: 113
     defNeg: 0
-    defAltPos: 0
+    defAltPos: 334
     defAltNeg: 0
+    sPos: 
+    sNeg: 
+    sAltPos: 
+    sAltNeg: 
+    sDefPos: 
+    sDefNeg: 
+    sDefAltPos: 
+    sDefAltNeg: 
+    axisValue: 0
+    isDown: 0
+    pressed: 0
+    released: 0
   - name: Head
     pos: 0
     neg: 0
@@ -116,6 +221,18 @@ MonoBehaviour:
     defNeg: 0
     defAltPos: 257
     defAltNeg: 0
+    sPos: 
+    sNeg: 
+    sAltPos: 
+    sAltNeg: 
+    sDefPos: Axis7
+    sDefNeg: 
+    sDefAltPos: 
+    sDefAltNeg: 
+    axisValue: 0
+    isDown: 0
+    pressed: 0
+    released: 0
   - name: Torso
     pos: 0
     neg: 0
@@ -125,6 +242,18 @@ MonoBehaviour:
     defNeg: 0
     defAltPos: 258
     defAltNeg: 0
+    sPos: 
+    sNeg: 
+    sAltPos: 
+    sAltNeg: 
+    sDefPos: Axis6
+    sDefNeg: 
+    sDefAltPos: Axis6
+    sDefAltNeg: 
+    axisValue: 0
+    isDown: 0
+    pressed: 0
+    released: 0
   - name: Base
     pos: 0
     neg: 0
@@ -134,6 +263,18 @@ MonoBehaviour:
     defNeg: 0
     defAltPos: 259
     defAltNeg: 0
+    sPos: 
+    sNeg: 
+    sAltPos: 
+    sAltNeg: 
+    sDefPos: 
+    sDefNeg: 
+    sDefAltPos: Axis7
+    sDefAltNeg: 
+    axisValue: 0
+    isDown: 0
+    pressed: 0
+    released: 0
   - name: Cheat
     pos: 0
     neg: 0
@@ -143,6 +284,18 @@ MonoBehaviour:
     defNeg: 0
     defAltPos: 303
     defAltNeg: 0
+    sPos: 
+    sNeg: 
+    sAltPos: 
+    sAltNeg: 
+    sDefPos: Axis3
+    sDefNeg: 
+    sDefAltPos: 
+    sDefAltNeg: 
+    axisValue: 0
+    isDown: 0
+    pressed: 0
+    released: 0
   - name: Up
     pos: 0
     neg: 0
@@ -152,6 +305,18 @@ MonoBehaviour:
     defNeg: 0
     defAltPos: 119
     defAltNeg: 0
+    sPos: 
+    sNeg: 
+    sAltPos: 
+    sAltNeg: 
+    sDefPos: 
+    sDefNeg: 
+    sDefAltPos: 
+    sDefAltNeg: 
+    axisValue: 0
+    isDown: 0
+    pressed: 0
+    released: 0
   - name: Down
     pos: 0
     neg: 0
@@ -161,6 +326,18 @@ MonoBehaviour:
     defNeg: 0
     defAltPos: 115
     defAltNeg: 0
+    sPos: 
+    sNeg: 
+    sAltPos: 
+    sAltNeg: 
+    sDefPos: 
+    sDefNeg: 
+    sDefAltPos: 
+    sDefAltNeg: 
+    axisValue: 0
+    isDown: 0
+    pressed: 0
+    released: 0
   - name: Left
     pos: 0
     neg: 0
@@ -170,6 +347,18 @@ MonoBehaviour:
     defNeg: 0
     defAltPos: 97
     defAltNeg: 0
+    sPos: 
+    sNeg: 
+    sAltPos: 
+    sAltNeg: 
+    sDefPos: 
+    sDefNeg: 
+    sDefAltPos: 
+    sDefAltNeg: 
+    axisValue: 0
+    isDown: 0
+    pressed: 0
+    released: 0
   - name: Right
     pos: 0
     neg: 0
@@ -179,6 +368,18 @@ MonoBehaviour:
     defNeg: 0
     defAltPos: 100
     defAltNeg: 0
+    sPos: 
+    sNeg: 
+    sAltPos: 
+    sAltNeg: 
+    sDefPos: 
+    sDefNeg: 
+    sDefAltPos: 
+    sDefAltNeg: 
+    axisValue: 0
+    isDown: 0
+    pressed: 0
+    released: 0
   - name: Submit
     pos: 0
     neg: 0
@@ -188,6 +389,18 @@ MonoBehaviour:
     defNeg: 0
     defAltPos: 336
     defAltNeg: 0
+    sPos: 
+    sNeg: 
+    sAltPos: 
+    sAltNeg: 
+    sDefPos: 
+    sDefNeg: 
+    sDefAltPos: 
+    sDefAltNeg: 
+    axisValue: 0
+    isDown: 0
+    pressed: 0
+    released: 0
   - name: Cancel
     pos: 0
     neg: 0
@@ -195,8 +408,62 @@ MonoBehaviour:
     altNeg: 0
     defPos: 27
     defNeg: 0
+    defAltPos: 331
+    defAltNeg: 0
+    sPos: 
+    sNeg: 
+    sAltPos: 
+    sAltNeg: 
+    sDefPos: 
+    sDefNeg: 
+    sDefAltPos: 
+    sDefAltNeg: 
+    axisValue: 0
+    isDown: 0
+    pressed: 0
+    released: 0
+  - name: AimHorizontal
+    pos: 0
+    neg: 0
+    altPos: 0
+    altNeg: 0
+    defPos: 0
+    defNeg: 0
     defAltPos: 0
     defAltNeg: 0
+    sPos: 
+    sNeg: 
+    sAltPos: 
+    sAltNeg: 
+    sDefPos: Axis4
+    sDefNeg: Axis4
+    sDefAltPos: 
+    sDefAltNeg: 
+    axisValue: 0
+    isDown: 0
+    pressed: 0
+    released: 0
+  - name: AimVertical
+    pos: 0
+    neg: 0
+    altPos: 0
+    altNeg: 0
+    defPos: 0
+    defNeg: 0
+    defAltPos: 0
+    defAltNeg: 0
+    sPos: 
+    sNeg: 
+    sAltPos: 
+    sAltNeg: 
+    sDefPos: Axis5
+    sDefNeg: Axis5
+    sDefAltPos: 
+    sDefAltNeg: 
+    axisValue: 0
+    isDown: 0
+    pressed: 0
+    released: 0
   len: 0
 --- !u!1001 &100100000
 Prefab:
