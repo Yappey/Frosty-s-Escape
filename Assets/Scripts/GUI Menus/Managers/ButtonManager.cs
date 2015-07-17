@@ -127,19 +127,12 @@ public class ButtonManager : MonoBehaviour
 
 			else if (Input.GetKeyDown(KeyCode.Return) || Input.GetAxisRaw("Jump") > 0)
             {
-				if (!buttonsDuringGameplay)
-				{
-					GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-					sound.GetComponent<SoundEffectManager>().PlayButtonClick();
-				}
-
-				else if (state == WhereAmI.Pause) {
+				if (state == WhereAmI.Pause) {
 					GameObject pauser = GameObject.FindGameObjectWithTag("Pause");
 					
 					if (pauser.GetComponent<PuaseScript>().paused)
 					{
-						GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-						sound.GetComponent<SoundEffectManager>().PlayButtonClick();
+						
 					}
 				}
 				
@@ -148,8 +141,7 @@ public class ButtonManager : MonoBehaviour
 					
 					if (win.GetComponent<WinBox>().levelIsWon)
 					{
-						GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-						sound.GetComponent<SoundEffectManager>().PlayButtonClick();
+						
 					}
 				}
 				
@@ -158,8 +150,7 @@ public class ButtonManager : MonoBehaviour
 					
 					if (loser.GetComponent<LoseScript>().lost)
 					{
-						GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-						sound.GetComponent<SoundEffectManager>().PlayButtonClick();
+						
 					}
 				}
 
@@ -283,16 +274,14 @@ public class ButtonManager : MonoBehaviour
                 {
 					if (currButton < 6  && !buttonsDuringGameplay)
                     {
-						GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-						sound.GetComponent<SoundEffectManager>().PlayButtonClick();
+
                     }
 
 					else if (buttonsDuringGameplay && currButton < 6) {
 						GameObject pauser = GameObject.FindGameObjectWithTag("Pause");
 						
 						if (pauser.GetComponent<PuaseScript>().paused) {
-							GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-							sound.GetComponent<SoundEffectManager>().PlayButtonClick();
+
 						}
 					}
 
@@ -324,16 +313,14 @@ public class ButtonManager : MonoBehaviour
                 {
 					if (currButton < 6 && !buttonsDuringGameplay)
                     {
-						GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-						sound.GetComponent<SoundEffectManager>().PlayButtonClick();
+
                     }
 
 					else if (buttonsDuringGameplay && currButton < 6) {
 						GameObject pauser = GameObject.FindGameObjectWithTag("Pause");
 						
 						if (pauser.GetComponent<PuaseScript>().paused) {
-							GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-							sound.GetComponent<SoundEffectManager>().PlayButtonClick();
+
 						}
 					}
 
@@ -365,16 +352,14 @@ public class ButtonManager : MonoBehaviour
             {
 				if (currButton == 6  && !buttonsDuringGameplay)
 				{
-					GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-					sound.GetComponent<SoundEffectManager>().PlayButtonClick();
+					
 				}
 
 				else if (buttonsDuringGameplay && currButton == 6) {
 					GameObject pauser = GameObject.FindGameObjectWithTag("Pause");
 						
 					if (pauser.GetComponent<PuaseScript>().paused) {
-						GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-						sound.GetComponent<SoundEffectManager>().PlayButtonClick();
+						
 					}
 				}
 
@@ -438,8 +423,7 @@ public class ButtonManager : MonoBehaviour
             {
 				if (!buttonsDuringGameplay)
 				{
-					GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-					sound.GetComponent<SoundEffectManager>().PlayButtonClick();
+					
 				}
 
                 if (buttons[currButton].tag == "Play")
@@ -549,8 +533,7 @@ public class ButtonManager : MonoBehaviour
 
 			if ((Input.GetKeyDown(KeyCode.Return) || Input.GetAxisRaw("Jump") > 0) && !buttonsDuringGameplay)
             {
-				GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-				sound.GetComponent<SoundEffectManager>().PlayButtonClick();
+
 
                 buttons[currButton].GetComponent<ButtonScript>().LoadLevelOnClick();
             }
@@ -561,8 +544,6 @@ public class ButtonManager : MonoBehaviour
 
                 if (pauser.GetComponent<PuaseScript>().paused && pauser.GetComponent<PuaseScript>().Help.activeSelf)
                 {
-					GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-					sound.GetComponent<SoundEffectManager>().PlayButtonClick();
 
                     buttons[currButton].GetComponent<PauseMenuScript>().HelpToOptionsOnClick();
                 }

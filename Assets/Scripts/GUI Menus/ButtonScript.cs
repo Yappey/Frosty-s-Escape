@@ -32,6 +32,9 @@ public class ButtonScript : MonoBehaviour {
 
     public void LoadLevelOnClick()
     {
+		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+		sound.GetComponent<SoundEffectManager>().PlayButtonClick();
+
         LoadingScreenDelayed.Instance.LoadingLevels(levelname);
         //gameObject.GetComponent<LoadingScreenDelayed>().LoadingLevels(levelname);
        // Application.LoadLevel(levelname);
@@ -39,6 +42,9 @@ public class ButtonScript : MonoBehaviour {
 
  	public void ReturnOnClick()
 	{
+		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+		sound.GetComponent<SoundEffectManager>().PlayButtonClick();
+
 		Time.timeScale = 1.0f;
         LoadingScreenDelayed.Instance.LoadingLevels(levelname);
         //Application.LoadLevel (levelname);
@@ -46,6 +52,9 @@ public class ButtonScript : MonoBehaviour {
 
     public void LoadAvailableLevelOnClick()
     {
+		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+		sound.GetComponent<SoundEffectManager>().PlayButtonClick();
+
         int level = PlayerPrefs.GetInt("ActiveLevel");
         if(levelnumber <= level)
         {
@@ -56,6 +65,9 @@ public class ButtonScript : MonoBehaviour {
 
 	public void LoadBonusLevelOnClick()
 	{
+		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+		sound.GetComponent<SoundEffectManager>().PlayButtonClick();
+
 		if(BonusLevelNum == 1)
 		{
 			int numsnowballs = 0;
@@ -95,12 +107,18 @@ public class ButtonScript : MonoBehaviour {
 
     public void PlayOnClick()
     {
+		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+		sound.GetComponent<SoundEffectManager>().PlayButtonClick();
+
         LoadingScreenDelayed.Instance.LoadingLevels(PlayerPrefs.GetInt("ActiveLevel") + 4);
         //Application.LoadLevel(PlayerPrefs.GetInt("ActiveLevel") + 4);
     }
 
     public void VolumePlusOnClick()
     {
+		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+		sound.GetComponent<SoundEffectManager>().PlayButtonClick();
+
         if(volumetype == "Master")
             PlayerPrefs.SetFloat("Master", PlayerPrefs.GetFloat("Master") + .1f);
         if (volumetype == "Sound")
@@ -120,6 +138,9 @@ public class ButtonScript : MonoBehaviour {
 
     public void VolumeMinusOnClick()
     {
+		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+		sound.GetComponent<SoundEffectManager>().PlayButtonClick();
+
         if (volumetype == "Master")
             PlayerPrefs.SetFloat("Master", PlayerPrefs.GetFloat("Master") - .1f);
         if (volumetype == "Sound")
@@ -139,6 +160,9 @@ public class ButtonScript : MonoBehaviour {
 
     public void ResetLevelsOnClick()
     {
+		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+		sound.GetComponent<SoundEffectManager>().PlayButtonClick();
+
         for (int i = 0; i < numlevels; i++)
         {
             PlayerPrefs.SetInt("Level" + (i +1) + "Snowballs", 0);
