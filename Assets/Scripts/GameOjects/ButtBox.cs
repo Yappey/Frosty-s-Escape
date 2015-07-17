@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ButtBox : MonoBehaviour {
+public class ButtBox : BaseReceiver {
 
 	public Transform groundChecker;
 	public LayerMask groundMask;

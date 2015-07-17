@@ -39,10 +39,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 125ebb290d7f417468da4bc7b5076a43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theInstance: {fileID: 0}
   triggerSave: 0
   triggerLoad: 0
   triggerDefault: 0
+  triggerDelete: 0
   inputButtons:
   - name: Horizontal
     pos: 0

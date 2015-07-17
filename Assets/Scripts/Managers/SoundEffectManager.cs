@@ -75,6 +75,8 @@ public class SoundEffectManager : MonoBehaviour {
 
 	bool CloseEnoughToPlay(Vector3 pos) {
 		if (!menu) {
+			if (frosty == null)
+				return false;
 			Vector3 frostyPos = new Vector3(frosty.transform.position.x, frosty.transform.position.y);
 			
 			float distance = (frostyPos - pos).magnitude;
