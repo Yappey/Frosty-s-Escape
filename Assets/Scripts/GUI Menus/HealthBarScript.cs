@@ -196,11 +196,11 @@ public class HealthBarScript : MonoBehaviour
     {
         var sirensLight = sirenLight.GetComponent<Light>();
         sirensLight.color = Color.white;
-        fog.GetComponent<Animator>().SetBool("HasEnded", true);
-        fog2.GetComponent<Animator>().SetBool("HasEnded", true);
-        fog3.GetComponent<Animator>().SetBool("HasEnded", true);
-        fog4.GetComponent<Animator>().SetBool("HasEnded", true);
-        fog6.GetComponent<Animator>().SetBool("HasEnded", true);
+        //fog.GetComponent<Animator>().SetBool("HasEnded", true);
+        //fog2.GetComponent<Animator>().SetBool("HasEnded", true);
+        //fog3.GetComponent<Animator>().SetBool("HasEnded", true);
+        //fog4.GetComponent<Animator>().SetBool("HasEnded", true);
+        //fog6.GetComponent<Animator>().SetBool("HasEnded", true);
 
     }
 

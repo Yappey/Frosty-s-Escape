@@ -232,11 +232,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 435364, guid: a91e00f1b60b03d4c9667d45e7dc65ce, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -101.014114
+      value: -119.129997
       objectReference: {fileID: 0}
     - target: {fileID: 435364, guid: a91e00f1b60b03d4c9667d45e7dc65ce, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -46.1300888
+      value: -52.0800018
       objectReference: {fileID: 0}
     - target: {fileID: 435364, guid: a91e00f1b60b03d4c9667d45e7dc65ce, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2668,11 +2668,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 472346, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -48.2400017
+      value: -48.3400002
       objectReference: {fileID: 0}
     - target: {fileID: 472346, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -59.5
+      value: -59.4000015
       objectReference: {fileID: 0}
     - target: {fileID: 472346, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
       propertyPath: m_LocalPosition.x
@@ -2905,7 +2905,7 @@ GameObject:
   - 108: {fileID: 1383170542}
   m_Layer: 0
   m_Name: Directional light
-  m_TagString: Untagged
+  m_TagString: DirectionalLight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
