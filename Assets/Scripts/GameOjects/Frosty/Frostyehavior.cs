@@ -50,6 +50,7 @@ public class Frostyehavior : MonoBehaviour
 				hor = KeyManager.GetAxis("Horizontal");
             else
 				hor = Input.GetAxis("Horizontal");
+			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
             //frostyAnim.SetTrigger("Idle");
 			Debug.Log("Horizontal Axis Update: " + hor);
 
@@ -64,23 +65,26 @@ public class Frostyehavior : MonoBehaviour
                     rgbd.velocity = new Vector2(moveSpeed * Mathf.Sign(rgbd.velocity.x), 0.0f);
                     isNotWalking = false;
                 }
-                    FrostyWalkAnimations();
+
+                FrostyWalkAnimations();
             }
+
+			if (isGrounded && rgbd.velocity.x != 0.0f)
+				sound.GetComponent<SoundEffectManager>().PlayWalkSnd();
+
             else
-            {
-               
-            }
+				sound.GetComponent<SoundEffectManager>().StopWalkSnd();
 
             if (isNotWalking)
             {
-                FrostyIdleAnimations(); 
+                FrostyIdleAnimations();
             }
 
             if (/*Input*/KeyManager.GetButtonDown("Jump") && isGrounded)
             {
                 rgbd.AddForce(new Vector2(0.0f, jumpVelocity), ForceMode2D.Impulse);
                 isGrounded = false;
-
+				sound.GetComponent<SoundEffectManager>().PlayJumpSnd();
                 FrostyJumpAnimations();
             }
 
@@ -149,7 +153,9 @@ public class Frostyehavior : MonoBehaviour
 
             snowball.GetComponent<Rigidbody2D>().AddForce((curosr - transform.position).normalized * throwStrength,
                                                           ForceMode2D.Impulse);
-            radial.GetComponent<RadialCooldown>().Cooldown();
+            // So we can have frosty in loading screen.
+            if (radial != null)
+                radial.GetComponent<RadialCooldown>().Cooldown();
 
             GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
             sound.GetComponent<SoundEffectManager>().PlaySnowballThrowSnd();
@@ -169,12 +175,16 @@ public class Frostyehavior : MonoBehaviour
         //Head only walking animation
         if (GetComponent<Frostyehavior>().headAttached && !GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && rgbd.velocity.x > 0.01f)
         {
-            frostyAnim.Play("Base Layer.FrostyHead_RollingRight");
+            frostyAnim.Play("Base Layer.FrostyHead_WalkingLeft");
+            transform.localScale = new Vector2(1, transform.localScale.y);
+
 
         }
         else if (GetComponent<Frostyehavior>().headAttached && !GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && rgbd.velocity.x < -0.01f)
         {
-            frostyAnim.Play("Base Layer.FrostyHead_RollingLeft");
+            frostyAnim.Play("Base Layer.FrostyHead_WalkingLeft");
+            transform.localScale = new Vector2(-1, transform.localScale.y);
+
 
         }
 

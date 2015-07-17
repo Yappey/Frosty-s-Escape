@@ -33,6 +33,8 @@ public class SBulletTurret : BaseTurret {
 			FireBullet((tgt + disp - transform.position).normalized);
 			FireBullet((tgt - disp - transform.position).normalized);
 
+			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+			sound.GetComponent<SoundEffectManager>().PlayBulletTurretSnd(gameObject.transform.position);
 		}
 	}
 
