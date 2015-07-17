@@ -2,11 +2,9 @@
 using System.Collections;
 
 public class SoundEffectManager : MonoBehaviour {
-
-	private GameObject switchmanager;
-	private GameObject frosty;
-	private AudioSource[] effects;
 	
+	private AudioSource[] effects;
+
 	public AudioSource buttonClick;
 	public AudioSource attach;
 	public AudioSource detach;
@@ -46,8 +44,6 @@ public class SoundEffectManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		switchmanager = GameObject.FindGameObjectWithTag("SwitchManager");
-
 		effects = gameObject.GetComponents<UnityEngine.AudioSource> ();
 
 		float vol = PlayerPrefs.GetFloat ("SoundEffects");
@@ -59,10 +55,6 @@ public class SoundEffectManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (switchmanager != null) {
-			frosty = switchmanager.GetComponent<SwitchManager>().FindActive();
-		}
-
 		effects = gameObject.GetComponents<UnityEngine.AudioSource> ();
 
 		float vol = PlayerPrefs.GetFloat ("SoundEffects");
@@ -75,20 +67,17 @@ public class SoundEffectManager : MonoBehaviour {
 	}
 
 	bool CloseEnoughToPlay(Vector3 pos) {
-		if (frosty != null) {
-			Vector3 frostyPos = new Vector3(frosty.transform.position.x, frosty.transform.position.y);
-			
-			float distance = (frostyPos - pos).magnitude;
-			
-			//GameObject camera = GameObject.FindGameObjectWithTag ("MainCamera");
-			
-			//float height = camera.gameObject.GetComponent<Camera>().orthographicSize;
-			//float width = camera.gameObject.GetComponent<Camera>().orthographicSize * camera.gameObject.GetComponent<Camera>().aspect;
-			
-			if (distance < 9.5f) {
-				return true;
-			}
-		}
+		GameObject camera = GameObject.FindGameObjectWithTag ("MainCamera");
+		
+		float height = camera.gameObject.GetComponent<Camera>().orthographicSize;
+		float width = camera.gameObject.GetComponent<Camera>().orthographicSize * camera.gameObject.GetComponent<Camera>().aspect;
+		float camLeft = camera.gameObject.transform.position.x - width - 3;
+		float camRight = camera.gameObject.transform.position.x + width + 3;
+		float camUp = camera.gameObject.transform.position.y - height - 3;
+		float camDown = camera.gameObject.transform.position.y + height + 3;
+		
+		if (pos.x > camLeft && pos.x < camRight && pos.y > camUp && pos.y < camDown)
+			return true;
 
 		return false;
 	}
