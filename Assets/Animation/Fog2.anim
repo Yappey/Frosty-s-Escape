@@ -17,29 +17,29 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: {x: -579, y: -414, z: 0}
+        value: {x: -505, y: -414, z: 0}
         inSlope: {x: 0, y: 19, z: 0}
         outSlope: {x: 0, y: 19, z: 0}
         tangentMode: 0
       - time: 1
-        value: {x: -579, y: -395, z: 0}
-        inSlope: {x: 0, y: 34, z: 0}
-        outSlope: {x: 0, y: 34, z: 0}
+        value: {x: -505, y: -395, z: 0}
+        inSlope: {x: 0, y: 41.5, z: 0}
+        outSlope: {x: 0, y: 41.5, z: 0}
         tangentMode: 0
       - time: 2
-        value: {x: -579, y: -346, z: 0}
+        value: {x: -505, y: -331, z: 0}
         inSlope: {x: 0, y: 55, z: 0}
         outSlope: {x: 0, y: 55, z: 0}
         tangentMode: 0
       - time: 3
-        value: {x: -579, y: -285, z: 0}
-        inSlope: {x: 0, y: 49, z: 0}
-        outSlope: {x: 0, y: 49, z: 0}
+        value: {x: -505, y: -285, z: 0}
+        inSlope: {x: 0, y: 32, z: 0}
+        outSlope: {x: 0, y: 32, z: 0}
         tangentMode: 0
       - time: 4
-        value: {x: -579, y: -248, z: 0}
-        inSlope: {x: 0, y: 37, z: 0}
-        outSlope: {x: 0, y: 37, z: 0}
+        value: {x: -505, y: -267, z: 0}
+        inSlope: {x: 0, y: 18, z: 0}
+        outSlope: {x: 0, y: 18, z: 0}
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -208,27 +208,27 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: -579
+        value: -505
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       - time: 1
-        value: -579
+        value: -505
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       - time: 2
-        value: -579
+        value: -505
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       - time: 3
-        value: -579
+        value: -505
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       - time: 4
-        value: -579
+        value: -505
         inSlope: 0
         outSlope: 0
         tangentMode: 10
@@ -248,23 +248,23 @@ AnimationClip:
         tangentMode: 10
       - time: 1
         value: -395
-        inSlope: 34
-        outSlope: 34
+        inSlope: 41.5
+        outSlope: 41.5
         tangentMode: 10
       - time: 2
-        value: -346
+        value: -331
         inSlope: 55
         outSlope: 55
         tangentMode: 10
       - time: 3
         value: -285
-        inSlope: 49
-        outSlope: 49
+        inSlope: 32
+        outSlope: 32
         tangentMode: 10
       - time: 4
-        value: -248
-        inSlope: 37
-        outSlope: 37
+        value: -267
+        inSlope: 18
+        outSlope: 18
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
