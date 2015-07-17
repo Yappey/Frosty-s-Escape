@@ -45,10 +45,14 @@ public class Frostyehavior : MonoBehaviour
         Rigidbody2D rgbd = GetComponent<Rigidbody2D>();
         if (isActive)
         {
-            float hor = Input.GetAxis("Horizontal");
+			float hor;
+			if (KeyManager.GetAxis("Horizontal") != 0)
+				hor = KeyManager.GetAxis("Horizontal");
+            else
+				hor = Input.GetAxis("Horizontal");
 			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
             //frostyAnim.SetTrigger("Idle");
-
+			Debug.Log("Horizontal Axis Update: " + hor);
 
             // Check if speed is less than max or input is opposite velocity
             if (rgbd.velocity.x * Mathf.Sign(hor) < moveSpeed)
@@ -76,7 +80,7 @@ public class Frostyehavior : MonoBehaviour
                 FrostyIdleAnimations();
             }
 
-            if (Input.GetButtonDown("Jump") && isGrounded)
+            if (/*Input*/KeyManager.GetButtonDown("Jump") && isGrounded)
             {
                 rgbd.AddForce(new Vector2(0.0f, jumpVelocity), ForceMode2D.Impulse);
                 isGrounded = false;
@@ -88,7 +92,7 @@ public class Frostyehavior : MonoBehaviour
 
             if (buttonPressed <= 0.0f)
             {
-                if ((Input.GetButtonDown("Activate") || Input.GetAxis("ControllerActivate") > 0.1f) && Time.timeScale > 0)
+				if ((/*Input*/KeyManager.GetButtonDown("Activate") || Input.GetAxis("ControllerActivate") > 0.1f) && Time.timeScale > 0)
                 {
                     FrostyActivateAnimations();
                     ActivateNearest();
@@ -101,7 +105,7 @@ public class Frostyehavior : MonoBehaviour
             }
         }
 
-        if (Input.GetButtonDown("Throw") || Input.GetAxisRaw("Throw2") == 1 && Time.timeScale > 0)
+		if (/*Input*/KeyManager.GetButtonDown("Throw") || Input.GetAxisRaw("Throw2") == 1 && Time.timeScale > 0)
         {
             LaunchSnowall();
         }
@@ -172,8 +176,12 @@ public class Frostyehavior : MonoBehaviour
 
     //I'm sorry I know this is ugly
     void FrostyWalkAnimations()
-    {
-        float hor = Input.GetAxis("Horizontal");
+	{
+		float hor;
+		if (KeyManager.GetAxis("Horizontal") != 0)
+			hor = KeyManager.GetAxis("Horizontal");
+		else
+			hor = Input.GetAxis("Horizontal");
         Rigidbody2D rgbd = GetComponent<Rigidbody2D>();
 
         //Head only walking animation
