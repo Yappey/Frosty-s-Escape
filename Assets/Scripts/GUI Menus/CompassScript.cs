@@ -67,7 +67,7 @@ public class CompassScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetButtonDown("Cheat"))
+		if (KeyManager.GetButtonDown("Cheat"))
 		{
 			cheating = !cheating;
 		}

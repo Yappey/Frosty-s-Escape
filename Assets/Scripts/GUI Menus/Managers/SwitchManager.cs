@@ -52,22 +52,22 @@ public class SwitchManager : MonoBehaviour
         {
             if (buttonTimer <= 0.0f)
             {
-                if ((Input.GetButtonDown("Head") || Input.GetAxisRaw("ControllerHead") == 1))
+                if ((/*Input*/KeyManager.GetButtonDown("Head")))// || Input.GetAxisRaw("ControllerHead") == 1))
                 {
                     SwitchHead();
                     buttonTimer = buttonTimerMax;
                 }
-                else if ((Input.GetButtonDown("Torso") || Input.GetAxisRaw("ControllerTorso") == 1 || Input.GetAxisRaw("ControllerTorso") == -1))
+				else if ((/*Input*/KeyManager.GetButtonDown("Torso")))// || Input.GetAxisRaw("ControllerTorso") == 1 || Input.GetAxisRaw("ControllerTorso") == -1))
                 {
                     SwitchTorso();
                     buttonTimer = buttonTimerMax;
                 }
-                else if ((Input.GetButtonDown("Base") || Input.GetAxisRaw("ControllerBase") == -1))
+				else if ((/*Input*/KeyManager.GetButtonDown("Base")))// || Input.GetAxisRaw("ControllerBase") == -1))
                 {
                     SwitchBase();
                     buttonTimer = buttonTimerMax;
                 }
-                if (Input.GetButtonDown("Detach") || Input.GetAxisRaw("ControllerDetach") > 0.1f)
+				if (/*Input*/KeyManager.GetButtonDown("Detach"))// || Input.GetAxisRaw("ControllerDetach") > 0.1f)
                 {
                     if (HeadSelected)
                     {
@@ -85,7 +85,7 @@ public class SwitchManager : MonoBehaviour
                         buttonTimer = buttonTimerMax;
                     }
                 }
-                if (Input.GetButtonDown("Attach") || Input.GetAxisRaw("ControllerAttach") > 0.1f)
+				if (/*Input*/KeyManager.GetButtonDown("Attach"))// || Input.GetAxisRaw("ControllerAttach") > 0.1f)
                 {
                     if (HeadSelected)
                     {

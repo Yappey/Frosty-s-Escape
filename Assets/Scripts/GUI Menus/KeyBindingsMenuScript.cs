@@ -10,8 +10,17 @@ public class KeyBindingsMenuScript : MonoBehaviour {
 	{
 		get{return butn;}
 		set{
-			butn = value;
-			isBinding = true;
+			if (!isBinding)
+			{
+				if (butn != null)
+					butn.GetComponent<UnityEngine.UI.Button>().interactable = true;
+				butn = value;
+				if (butn != null)
+				{
+					isBinding = true;
+					butn.GetComponent<UnityEngine.UI.Button>().interactable = false;
+				}
+			}
 		}
 	}
 
@@ -49,17 +58,52 @@ public class KeyBindingsMenuScript : MonoBehaviour {
 	void Start () {
 	
 	}
-	
+	private KeyCode ky;
+	private string ax;
+	private bool lck = true;
 	// Update is called once per frame
 	void OnGUI () {
 		if (isBinding)
 		{
-			KeyCode ky = KeyManager.KeyPressed();
-			if (ky != KeyCode.None)
+			if (lck)
 			{
-				butn.UpdateTextName(ky);
+				if (!Input.anyKey)
+					lck = false;
+			}
+			else
+			{
+				if (Butn.isKey)
+				{
+					ky = KeyManager.IterateAllKeyCodes();
+					if (ky != KeyCode.None)
+					{
+						Butn.UpdateTextName(ky);
+						isBinding = false;
+						//Invoke("ButnNull", 0.2f);
+						ButnNull();
+						lck = true;
+					}
+				}
+				else
+				{
+					ax = KeyManager.IterateAllAxes();
+					if (ax != "")
+					{
+						Debug.Log("Enter Axis Assignment.");
+						Butn.UpdateTextName(ax);
+						isBinding = false;
+						//Invoke("ButnNull", 0.2f);
+						ButnNull();
+						lck = true;
+					}
+				}
 			}
 		}
+	}
+
+	void ButnNull()
+	{
+		Butn = null;
 	}
 
 	public void SaveKeys()

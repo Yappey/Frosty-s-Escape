@@ -46,13 +46,13 @@ public class Frostyehavior : MonoBehaviour
         if (isActive)
         {
 			float hor;
-			if (KeyManager.GetAxis("Horizontal") != 0)
+			//if (KeyManager.GetAxis("Horizontal") != 0)
 				hor = KeyManager.GetAxis("Horizontal");
-            else
-				hor = Input.GetAxis("Horizontal");
+            //else
+			//	hor = Input.GetAxis("Horizontal");
 			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
             //frostyAnim.SetTrigger("Idle");
-			Debug.Log("Horizontal Axis Update: " + hor);
+			//Debug.Log("Horizontal Axis Update: " + hor);
 
             // Check if speed is less than max or input is opposite velocity
             if (rgbd.velocity.x * Mathf.Sign(hor) < moveSpeed)
@@ -92,7 +92,7 @@ public class Frostyehavior : MonoBehaviour
 
             if (buttonPressed <= 0.0f)
             {
-				if ((/*Input*/KeyManager.GetButtonDown("Activate") || Input.GetAxis("ControllerActivate") > 0.1f) && Time.timeScale > 0)
+				if ((/*Input*/KeyManager.GetButtonDown("Activate") /*|| Input.GetAxis("ControllerActivate") > 0.1f*/) && Time.timeScale > 0)
                 {
                     FrostyActivateAnimations();
                     ActivateNearest();
@@ -105,7 +105,7 @@ public class Frostyehavior : MonoBehaviour
             }
         }
 
-		if (/*Input*/KeyManager.GetButtonDown("Throw") || Input.GetAxisRaw("Throw2") == 1 && Time.timeScale > 0)
+		if (/*Input*/KeyManager.GetButtonDown("Throw") /*|| Input.GetAxisRaw("Throw2") == 1*/ && Time.timeScale > 0)
         {
             LaunchSnowall();
         }
@@ -146,8 +146,8 @@ public class Frostyehavior : MonoBehaviour
 
             snowball = Instantiate(presnowball);
             snowball.transform.position = transform.FindChild("SnowballThrower").transform.position;
-            float xAx = Input.GetAxisRaw("AimHorizontal");
-            float yAx = Input.GetAxisRaw("AimVertical");
+			float xAx = KeyManager.GetAxisRaw("AimHorizontal");//Input.GetAxisRaw("AimHorizontal");
+			float yAx = KeyManager.GetAxisRaw("AimVertical");//Input.GetAxisRaw("AimVertical");
             Vector3 curosr;
             if (xAx != 0 || yAx != 0)
             {
@@ -178,10 +178,10 @@ public class Frostyehavior : MonoBehaviour
     void FrostyWalkAnimations()
 	{
 		float hor;
-		if (KeyManager.GetAxis("Horizontal") != 0)
+		//if (KeyManager.GetAxis("Horizontal") != 0)
 			hor = KeyManager.GetAxis("Horizontal");
-		else
-			hor = Input.GetAxis("Horizontal");
+		//else
+		//	hor = Input.GetAxis("Horizontal");
         Rigidbody2D rgbd = GetComponent<Rigidbody2D>();
 
         //Head only walking animation
