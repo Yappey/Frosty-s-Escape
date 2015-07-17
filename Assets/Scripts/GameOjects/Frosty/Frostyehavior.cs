@@ -45,10 +45,14 @@ public class Frostyehavior : MonoBehaviour
         Rigidbody2D rgbd = GetComponent<Rigidbody2D>();
         if (isActive)
         {
-            float hor = Input.GetAxis("Horizontal");
+			float hor;
+			if (KeyManager.GetAxis("Horizontal") != 0)
+				hor = KeyManager.GetAxis("Horizontal");
+            else
+				hor = Input.GetAxis("Horizontal");
 			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
             //frostyAnim.SetTrigger("Idle");
-
+			Debug.Log("Horizontal Axis Update: " + hor);
 
             // Check if speed is less than max or input is opposite velocity
             if (rgbd.velocity.x * Mathf.Sign(hor) < moveSpeed)
@@ -76,7 +80,7 @@ public class Frostyehavior : MonoBehaviour
                 FrostyIdleAnimations();
             }
 
-            if (Input.GetButtonDown("Jump") && isGrounded)
+            if (/*Input*/KeyManager.GetButtonDown("Jump") && isGrounded)
             {
                 rgbd.AddForce(new Vector2(0.0f, jumpVelocity), ForceMode2D.Impulse);
                 isGrounded = false;
@@ -88,7 +92,7 @@ public class Frostyehavior : MonoBehaviour
 
             if (buttonPressed <= 0.0f)
             {
-                if ((Input.GetButtonDown("Activate") || Input.GetAxis("ControllerActivate") > 0.1f) && Time.timeScale > 0)
+				if ((/*Input*/KeyManager.GetButtonDown("Activate") || Input.GetAxis("ControllerActivate") > 0.1f) && Time.timeScale > 0)
                 {
                     FrostyActivateAnimations();
                     ActivateNearest();
@@ -101,7 +105,7 @@ public class Frostyehavior : MonoBehaviour
             }
         }
 
-        if (Input.GetButtonDown("Throw") || Input.GetAxisRaw("Throw2") == 1 && Time.timeScale > 0)
+		if (/*Input*/KeyManager.GetButtonDown("Throw") || Input.GetAxisRaw("Throw2") == 1 && Time.timeScale > 0)
         {
             LaunchSnowall();
         }
@@ -142,14 +146,28 @@ public class Frostyehavior : MonoBehaviour
 
             snowball = Instantiate(presnowball);
             snowball.transform.position = transform.FindChild("SnowballThrower").transform.position;
-            Vector3 curosr = GameObject.FindGameObjectWithTag("MainCamera")
-                .GetComponent<Camera>().ScreenToWorldPoint(Input.mousePosition);
+            float xAx = Input.GetAxisRaw("AimHorizontal");
+            float yAx = Input.GetAxisRaw("AimVertical");
+            Vector3 curosr;
+            if (xAx != 0 || yAx != 0)
+            {
+                curosr = transform.position;
+                curosr.x += xAx;
+                curosr.y -= yAx;
+            }
+            else
+            {
+                curosr = GameObject.FindGameObjectWithTag("MainCamera")
+                    .GetComponent<Camera>().ScreenToWorldPoint(Input.mousePosition);
+            }
             curosr.z = transform.position.z;
 
 
             snowball.GetComponent<Rigidbody2D>().AddForce((curosr - transform.position).normalized * throwStrength,
                                                           ForceMode2D.Impulse);
-            radial.GetComponent<RadialCooldown>().Cooldown();
+            // So we can have frosty in loading screen.
+            if (radial != null)
+                radial.GetComponent<RadialCooldown>().Cooldown();
 
             GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
             sound.GetComponent<SoundEffectManager>().PlaySnowballThrowSnd();
@@ -158,19 +176,27 @@ public class Frostyehavior : MonoBehaviour
 
     //I'm sorry I know this is ugly
     void FrostyWalkAnimations()
-    {
-        float hor = Input.GetAxis("Horizontal");
+	{
+		float hor;
+		if (KeyManager.GetAxis("Horizontal") != 0)
+			hor = KeyManager.GetAxis("Horizontal");
+		else
+			hor = Input.GetAxis("Horizontal");
         Rigidbody2D rgbd = GetComponent<Rigidbody2D>();
 
         //Head only walking animation
         if (GetComponent<Frostyehavior>().headAttached && !GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && rgbd.velocity.x > 0.01f)
         {
-            frostyAnim.Play("Base Layer.FrostyHead_RollingRight");
+            frostyAnim.Play("Base Layer.FrostyHead_WalkingLeft");
+            transform.localScale = new Vector2(1, transform.localScale.y);
+
 
         }
         else if (GetComponent<Frostyehavior>().headAttached && !GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && rgbd.velocity.x < -0.01f)
         {
-            frostyAnim.Play("Base Layer.FrostyHead_RollingLeft");
+            frostyAnim.Play("Base Layer.FrostyHead_WalkingLeft");
+            transform.localScale = new Vector2(-1, transform.localScale.y);
+
 
         }
 

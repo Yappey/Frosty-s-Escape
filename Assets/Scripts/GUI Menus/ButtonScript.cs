@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Xml.Linq;
 using System;
 
 public class ButtonScript : MonoBehaviour {
@@ -33,13 +32,16 @@ public class ButtonScript : MonoBehaviour {
 
     public void LoadLevelOnClick()
     {
-        Application.LoadLevel(levelname);
+        LoadingScreenDelayed.Instance.LoadingLevels(levelname);
+        //gameObject.GetComponent<LoadingScreenDelayed>().LoadingLevels(levelname);
+       // Application.LoadLevel(levelname);
     }
 
  	public void ReturnOnClick()
 	{
 		Time.timeScale = 1.0f;
-		Application.LoadLevel (levelname);
+        LoadingScreenDelayed.Instance.LoadingLevels(levelname);
+        //Application.LoadLevel (levelname);
 	}
 
     public void LoadAvailableLevelOnClick()
@@ -47,7 +49,8 @@ public class ButtonScript : MonoBehaviour {
         int level = PlayerPrefs.GetInt("ActiveLevel");
         if(levelnumber <= level)
         {
-            Application.LoadLevel(levelname);
+            LoadingScreenDelayed.Instance.LoadingLevels(levelname);
+            //Application.LoadLevel(levelname);
         }
     }
 
@@ -61,7 +64,8 @@ public class ButtonScript : MonoBehaviour {
 				numsnowballs += PlayerPrefs.GetInt("Level" + (i + 1) + "Snowballs");
 			}
 			if(numsnowballs > 9)
-				Application.LoadLevel(levelname);
+                LoadingScreenDelayed.Instance.LoadingLevels(levelname);
+                //Application.LoadLevel(levelname);
 		}
 		if(BonusLevelNum == 1)
 		{
@@ -71,7 +75,8 @@ public class ButtonScript : MonoBehaviour {
 				numsnowballs += PlayerPrefs.GetInt("Level" + (i + 1) + "Snowballs");
 			}
 			if(numsnowballs > 9)
-				Application.LoadLevel(levelname);
+                LoadingScreenDelayed.Instance.LoadingLevels(levelname);
+                //Application.LoadLevel(levelname);
 		}
 		if(BonusLevelNum == 2)
 		{
@@ -81,7 +86,8 @@ public class ButtonScript : MonoBehaviour {
 				numsnowballs += PlayerPrefs.GetInt("Level" + (i + 1) + "Snowballs");
 			}
 			if(numsnowballs > 9)
-				Application.LoadLevel(levelname);
+                LoadingScreenDelayed.Instance.LoadingLevels(levelname);
+                //Application.LoadLevel(levelname);
 		}
 
 	}
@@ -89,7 +95,8 @@ public class ButtonScript : MonoBehaviour {
 
     public void PlayOnClick()
     {
-        Application.LoadLevel(PlayerPrefs.GetInt("ActiveLevel") + 4);
+        LoadingScreenDelayed.Instance.LoadingLevels(PlayerPrefs.GetInt("ActiveLevel") + 4);
+        //Application.LoadLevel(PlayerPrefs.GetInt("ActiveLevel") + 4);
     }
 
     public void VolumePlusOnClick()
