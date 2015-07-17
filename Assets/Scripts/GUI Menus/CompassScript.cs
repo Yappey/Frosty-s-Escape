@@ -46,6 +46,8 @@ public class CompassScript : MonoBehaviour {
 
 		public bool Evaluate()
 		{
+			if (receiver == null)
+				return false;
 			if (stateMin > stateMax)
 				return (receiver.state >= stateMin || receiver.state <= stateMax);
 			else
