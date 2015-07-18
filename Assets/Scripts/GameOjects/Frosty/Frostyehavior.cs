@@ -197,14 +197,9 @@ public class Frostyehavior : MonoBehaviour
         {
             frostyAnim.Play("Base Layer.FrostyHead_WalkingLeft");
             transform.localScale = new Vector2(-1, transform.localScale.y);
-
-
         }
 
         //Torso only Walking animation
-
-
-      
         if (GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && !GetComponent<Frostyehavior>().headAttached && rgbd.velocity.x > 0.01f)
         {
             if (gameObject.GetComponent<LadderAndMonkeybar>()._bMonkeyBar == true)
@@ -246,7 +241,17 @@ public class Frostyehavior : MonoBehaviour
             }
         }
 
-
+        //Base only Walking
+        if (!GetComponent<Frostyehavior>().headAttached && !GetComponent<Frostyehavior>().torsoAttached && GetComponent<Frostyehavior>().baseAttached && rgbd.velocity.x > 0.01f)
+        {
+            frostyAnim.Play("Base Layer.FrostyBase_Walk");
+            transform.localScale = new Vector2(1, transform.localScale.y);
+        }
+        else if (!GetComponent<Frostyehavior>().headAttached && !GetComponent<Frostyehavior>().torsoAttached && GetComponent<Frostyehavior>().baseAttached && rgbd.velocity.x < -0.01f)
+        {
+            frostyAnim.Play("Base Layer.FrostyBase_Walk");
+            transform.localScale = new Vector2(-1, transform.localScale.y);
+        }
 
         //Head and Torso Walking
         if (GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && GetComponent<Frostyehavior>().headAttached && rgbd.velocity.x > 0.01f)
@@ -291,6 +296,11 @@ public class Frostyehavior : MonoBehaviour
         }
         //frostyAnim.SetTrigger("Jump");
 
+        if (!GetComponent<Frostyehavior>().torsoAttached && GetComponent<Frostyehavior>().baseAttached && !GetComponent<Frostyehavior>().headAttached)
+        {
+            frostyAnim.Play("Base Layer.FrostyBase_Jump");
+        }
+
     }
 
     void FrostyIdleAnimations()
@@ -334,7 +344,15 @@ public class Frostyehavior : MonoBehaviour
 
     public void Melt()
     {
+        if (GetComponent<Frostyehavior>().headAttached && !GetComponent<Frostyehavior>().baseAttached && !GetComponent<Frostyehavior>().torsoAttached)
+        {
+            frostyAnim.SetTrigger("Melt"); 
+        }
 
+        if (!GetComponent<Frostyehavior>().headAttached && GetComponent<Frostyehavior>().baseAttached && !GetComponent<Frostyehavior>().torsoAttached)
+        {
+            frostyAnim.SetTrigger("Melt");
+        }
     }
 }
 

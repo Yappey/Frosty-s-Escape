@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: FrostyBase_Idle
+  m_Name: FrostyBase_Walk
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -18,14 +18,20 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 189d9a6c0fd0fe44198cb2a3c3f01f58, type: 3}
-    - time: .400000006
-      value: {fileID: 21300002, guid: 189d9a6c0fd0fe44198cb2a3c3f01f58, type: 3}
+      value: {fileID: 21300000, guid: 93317462d2f89cf408f787fdbabe166b, type: 3}
+    - time: .0909090936
+      value: {fileID: 21300002, guid: 93317462d2f89cf408f787fdbabe166b, type: 3}
+    - time: .181818187
+      value: {fileID: 21300004, guid: 93317462d2f89cf408f787fdbabe166b, type: 3}
+    - time: .272727281
+      value: {fileID: 21300006, guid: 93317462d2f89cf408f787fdbabe166b, type: 3}
+    - time: .363636374
+      value: {fileID: 21300008, guid: 93317462d2f89cf408f787fdbabe166b, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 10
+  m_SampleRate: 11
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -39,12 +45,15 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 189d9a6c0fd0fe44198cb2a3c3f01f58, type: 3}
-    - {fileID: 21300002, guid: 189d9a6c0fd0fe44198cb2a3c3f01f58, type: 3}
+    - {fileID: 21300000, guid: 93317462d2f89cf408f787fdbabe166b, type: 3}
+    - {fileID: 21300002, guid: 93317462d2f89cf408f787fdbabe166b, type: 3}
+    - {fileID: 21300004, guid: 93317462d2f89cf408f787fdbabe166b, type: 3}
+    - {fileID: 21300006, guid: 93317462d2f89cf408f787fdbabe166b, type: 3}
+    - {fileID: 21300008, guid: 93317462d2f89cf408f787fdbabe166b, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: .5
+    m_StopTime: .454545468
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
