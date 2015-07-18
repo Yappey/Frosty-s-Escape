@@ -69,6 +69,8 @@ public class PistonPress : BaseReceiver {
 			grounded = true;
 			gameObject.GetComponent<Rigidbody2D>().gravityScale = 0; 
 			raiseTimer = waitToRaise;
+
+			transform.FindChild("SlamDeathCollider").GetComponent<ParticleSystem>().Play();
 		}
 	}
 
