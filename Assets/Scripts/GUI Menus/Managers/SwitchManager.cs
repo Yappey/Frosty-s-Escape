@@ -453,7 +453,7 @@ public class SwitchManager : MonoBehaviour
         foreach (GameObject frosty in frostys)
         {
             test++;
-            if (frosty.GetComponent<Frostyehavior>().isActive)
+            if (frosty != null && frosty.GetComponent<Frostyehavior>().isActive)
                 return frosty;
         }
         return null;
@@ -464,7 +464,7 @@ public class SwitchManager : MonoBehaviour
         GameObject[] frostys = GameObject.FindGameObjectsWithTag("Frosty");
         foreach (GameObject frosty in frostys)
         {
-            if (frosty.GetComponent<Frostyehavior>().headAttached)
+            if (frosty != null && frosty.GetComponent<Frostyehavior>().headAttached)
                 return frosty;
         }
         return null;
@@ -475,7 +475,7 @@ public class SwitchManager : MonoBehaviour
         GameObject[] frostys = GameObject.FindGameObjectsWithTag("Frosty");
         foreach (GameObject frosty in frostys)
         {
-            if (frosty.GetComponent<Frostyehavior>().torsoAttached)
+            if (frosty != null && frosty.GetComponent<Frostyehavior>().torsoAttached)
                 return frosty;
         }
         return null;
@@ -486,7 +486,7 @@ public class SwitchManager : MonoBehaviour
         GameObject[] frostys = GameObject.FindGameObjectsWithTag("Frosty");
         foreach (GameObject frosty in frostys)
         {
-            if (frosty.GetComponent<Frostyehavior>().baseAttached)
+            if (frosty != null && frosty.GetComponent<Frostyehavior>().baseAttached)
                 return frosty;
         }
         return null;

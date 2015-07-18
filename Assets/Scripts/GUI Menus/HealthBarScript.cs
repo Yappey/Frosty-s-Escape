@@ -124,6 +124,7 @@ public class HealthBarScript : MonoBehaviour
             {
                 OutOfHealth();
                 frostyHead.SetTrigger("Melt");
+                frostyHead.Play("Base Layer.FrostyHead_Melting");
             }
         }
 
@@ -145,7 +146,10 @@ public class HealthBarScript : MonoBehaviour
             foreach (GameObject frost in frosties)
             {
                 if (frost != null)
+                {
                     frost.GetComponent<Frostyehavior>().Melt();
+                    frost.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+                }
             }
 
 
@@ -161,6 +165,7 @@ public class HealthBarScript : MonoBehaviour
         if (!dontKillMe)
         {
             loser.GetComponent<LoseScript>().Die();
+
 
             //Application.LoadLevelAsync(Application.loadedLevel);
         }
