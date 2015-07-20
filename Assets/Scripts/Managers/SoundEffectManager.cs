@@ -41,6 +41,10 @@ public class SoundEffectManager : MonoBehaviour {
 	public AudioSource walk;
 	public AudioSource jump;
 	public AudioSource roller;
+	public AudioSource brokenGear;
+	public AudioSource workingGear;
+	public AudioSource catapult;
+	public AudioSource crank;
 
 	// Use this for initialization
 	void Start () {
@@ -433,6 +437,58 @@ public class SoundEffectManager : MonoBehaviour {
 	{
 		if (roller.isPlaying) {
 			roller.Stop ();
+		}
+	}
+
+	public void PlayCatapultSnd()
+	{
+		if (!catapult.isPlaying) {
+			catapult.Play();
+		}
+	}
+
+	public void PlayCrankSnsd()
+	{
+		if (!crank.isPlaying) {
+			crank.Play();
+		}
+	}
+
+	public void PlayBrokenGearsSnd(Vector3 pos)
+	{
+		if (CloseEnoughToPlay (pos)) {
+			if (!brokenGear.isPlaying) {
+				brokenGear.Play ();
+			}
+		} 
+		
+		else
+			StopBrokenGearsSnd ();
+	}
+
+	public void StopBrokenGearsSnd()
+	{
+		if (brokenGear.isPlaying) {
+			brokenGear.Stop ();
+		}
+	}
+
+	public void PlayWorkingGearsSnd(Vector3 pos)
+	{
+		if (CloseEnoughToPlay (pos)) {
+			if (!workingGear.isPlaying) {
+				workingGear.Play ();
+			}
+		} 
+		
+		else
+			StopWorkingGearsSnd ();
+	}
+	
+	public void StopWorkingGearsSnd()
+	{
+		if (workingGear.isPlaying) {
+			workingGear.Stop ();
 		}
 	}
 }
