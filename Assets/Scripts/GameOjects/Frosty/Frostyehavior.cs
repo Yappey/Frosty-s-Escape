@@ -36,6 +36,7 @@ public class Frostyehavior : MonoBehaviour
     void Start()
     {
         frostyAnim = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -52,6 +53,7 @@ public class Frostyehavior : MonoBehaviour
             //else
 			//	hor = Input.GetAxis("Horizontal");
 			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+            //frostyAnim.SetTrigger("Idle");
 			//Debug.Log("Horizontal Axis Update: " + hor);
 
             // Check if speed is less than max or input is opposite velocity
@@ -174,9 +176,8 @@ public class Frostyehavior : MonoBehaviour
     }
 
     //I'm sorry I know this is ugly
-    #region All The Animations For Frosty
     void FrostyWalkAnimations()
-    {
+	{
         Rigidbody2D rgbd = GetComponent<Rigidbody2D>();
 
         if (Mathf.Abs(rgbd.velocity.x) > 0.01f)
@@ -288,30 +289,28 @@ public class Frostyehavior : MonoBehaviour
         //Head only idle animation
         if (GetComponent<Frostyehavior>().headAttached && !GetComponent<Frostyehavior>().baseAttached && !GetComponent<Frostyehavior>().torsoAttached && isGrounded)
         {
+            //frostyAnim.Play("Base Layer.FrostyHead_Idle");
             frostyAnim.SetTrigger("Idle");
         }
 
         // Torso only Idle animation
         if (GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && !GetComponent<Frostyehavior>().headAttached && isGrounded)
         {
+            //frostyAnim.Play("Base Layer.FrostyTorso_Idle");
             frostyAnim.SetTrigger("Idle");
         }
 
         //Base only
         if (!GetComponent<Frostyehavior>().torsoAttached && GetComponent<Frostyehavior>().baseAttached && !GetComponent<Frostyehavior>().headAttached && isGrounded)
         {
-            frostyAnim.SetTrigger("Idle");
-        }
-
-        //Head and Torso
-        if (GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && GetComponent<Frostyehavior>().headAttached && isGrounded)
-        {
+            //frostyAnim.Play("Base Layer.FrostyTorso_Idle");
             frostyAnim.SetTrigger("Idle");
         }
 
         //Torso and Base
         if (GetComponent<Frostyehavior>().torsoAttached && GetComponent<Frostyehavior>().baseAttached && !GetComponent<Frostyehavior>().headAttached && isGrounded)
         {
+            //frostyAnim.Play("Base Layer.FrostyTorso_Idle");
             frostyAnim.SetTrigger("Idle");
         }
 
@@ -334,14 +333,13 @@ public class Frostyehavior : MonoBehaviour
     {
         if (GetComponent<Frostyehavior>().headAttached && !GetComponent<Frostyehavior>().baseAttached && !GetComponent<Frostyehavior>().torsoAttached)
         {
-            frostyAnim.SetTrigger("Melt");
+            frostyAnim.SetTrigger("Melt"); 
         }
 
         if (!GetComponent<Frostyehavior>().headAttached && GetComponent<Frostyehavior>().baseAttached && !GetComponent<Frostyehavior>().torsoAttached)
         {
             frostyAnim.SetTrigger("Melt");
         }
-    } 
-    #endregion
+    }
 }
 

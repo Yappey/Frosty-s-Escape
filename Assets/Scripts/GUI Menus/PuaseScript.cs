@@ -27,7 +27,8 @@ public class PuaseScript : MonoBehaviour {
 		_bufferedInput -= elapsedtime;
 
 		if (_bufferedInput <= 0.0f) {
-			if (Input.GetButtonDown ("Cancel") || Input.GetAxisRaw ("Submit") > 0) {
+			if (KeyManager.GetButtonDown ("Cancel"))// || Input.GetAxisRaw ("Submit") > 0) 
+			{
 				if (!paused) {
 					Time.timeScale = 0.0f;
 					HUD.SetActive (false);

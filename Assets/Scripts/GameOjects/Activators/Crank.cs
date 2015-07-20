@@ -31,6 +31,8 @@ public class Crank : BaseActivator {
 	
 	// Update is called once per frame
 	void Update () {
+		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+
         if (!switched)
         {
             frosty = torso = switchmanager.GetComponent<SwitchManager>().FindActive();
@@ -50,10 +52,12 @@ public class Crank : BaseActivator {
                     transform.Rotate(new Vector3(0,0,1), rotationspersecond * Time.deltaTime);
                     rotationangle += rotationspersecond * Time.deltaTime;
                     reversed = false;
+					sound.GetComponent<SoundEffectManager>().PlayCrankSnd();
                 }
                 else
                 {
                     full = true;
+					sound.GetComponent<SoundEffectManager>().StopCrankSnd();
                 }
             }
             else
@@ -68,11 +72,13 @@ public class Crank : BaseActivator {
                             rotationangle -= rotationspersecond * Time.deltaTime;
                             reversed = true;
                             full = false;
+							sound.GetComponent<SoundEffectManager>().PlayCrankSnd();
                         }
                         else
                         {
                             transform.rotation = new Quaternion(0, 0, 0, 0);
                             rotationangle = 0;
+							sound.GetComponent<SoundEffectManager>().StopCrankSnd();
                         }
                     } 
                 }
@@ -87,12 +93,14 @@ public class Crank : BaseActivator {
                    transform.Rotate(new Vector3(0, 0, 1), -rotationspersecond * Time.deltaTime);
                    rotationangle -= rotationspersecond * Time.deltaTime;
                    reversed = true;
-                   full = false;    
+                   full = false;   
+					sound.GetComponent<SoundEffectManager>().PlayCrankSnd();
                }
                else
                {
                    transform.rotation = new Quaternion(0, 0, 0, 0);
                    rotationangle = 0;
+					sound.GetComponent<SoundEffectManager>().StopCrankSnd();
                }
            } 
         }

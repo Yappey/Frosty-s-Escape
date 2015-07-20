@@ -29,6 +29,9 @@ public class Catapult : MonoBehaviour {
             {
                 if(loaded)
                 {
+					GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+					sound.GetComponent<SoundEffectManager>().PlayCatapultSnd();
+
                     transform.GetChild(0).GetChild(0).GetComponent<BoxCollider2D>().enabled = false;
                     transform.GetChild(0).GetChild(1).GetComponent<BoxCollider2D>().enabled = false;
 					Loaded.GetComponent<Rigidbody2D>().drag = 0;
@@ -37,6 +40,7 @@ public class Catapult : MonoBehaviour {
 					Launched = Loaded;
 					Loaded = null;
 					time = 0;
+                    GetComponent<Animator>().Play("Base Layer.Catapult");
                 }
             }
             if (frosty.GetComponent<Frostyehavior>().headAttached && !frosty.GetComponent<Frostyehavior>().torsoAttached && (frosty.transform.position - transform.position).magnitude < distance)

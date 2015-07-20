@@ -13,19 +13,19 @@ public class MainMenuScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    if(Input.GetButtonDown("Right"))
+	    if(KeyManager.GetButtonDown("Right"))
         {
             selected++;
             if (selected >= Buttons.Length)
                 selected = 0;
         }
-        if (Input.GetButtonDown("Left"))
+        if (KeyManager.GetButtonDown("Left"))
         {
             selected--;
             if (selected < 0)
                 selected = Buttons.Length - 1;
         }
-        if(Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Return))
+        if(KeyManager.GetButtonDown("Submit"))// || Input.GetKeyDown(KeyCode.Return))
         {
             if (selected != 0)
             {

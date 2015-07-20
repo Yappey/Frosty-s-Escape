@@ -12,7 +12,17 @@ public class GearSpot : BaseActivator {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		GameObject sound = GameObject.FindGameObjectWithTag ("SoundEffectManager");
+
+		if (state == 0) {
+			sound.GetComponent<SoundEffectManager>().StopWorkingGearsSnd();
+			sound.GetComponent<SoundEffectManager>().PlayBrokenGearsSnd(gameObject.transform.position);
+		}
+
+		else {
+			sound.GetComponent<SoundEffectManager>().StopBrokenGearsSnd();
+			sound.GetComponent<SoundEffectManager>().PlayWorkingGearsSnd(gameObject.transform.position);
+		}
 	}
 
 	public override void Activate()

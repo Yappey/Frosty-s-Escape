@@ -1425,6 +1425,18 @@ Prefab:
       propertyPath: levelnumber
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 447322, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -149.009995
+      objectReference: {fileID: 0}
+    - target: {fileID: 447322, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -100.599998
+      objectReference: {fileID: 0}
+    - target: {fileID: 447322, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
+      propertyPath: m_LocalScale.y
+      value: .677785516
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11175888, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
     - {fileID: 11191436, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
@@ -1936,7 +1948,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 46
+  m_RootOrder: 45
 --- !u!1001 &1544906004
 Prefab:
   m_ObjectHideFlags: 0
