@@ -1,12 +1,14 @@
 fileFormatVersion: 2
-guid: a898bbdc36164b645b31d0d08396f662
-timeCreated: 1437367557
+guid: c02d23d86634b24468ba2779040fff27
+timeCreated: 1437369239
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Head&Torso_0
-    21300002: Head&Torso_1
-    21300004: Head&Torso_2
+    21300000: FrostyHeadandTorso_Reattatch_0
+    21300002: FrostyHeadandTorso_Reattatch_1
+    21300004: FrostyHeadandTorso_Reattatch_2
+    21300006: FrostyHeadandTorso_Reattatch_3
+    21300008: FrostyHeadandTorso_Reattatch_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -46,39 +48,59 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 57
+  spritePixelsToUnits: 60
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Head&Torso_0
+    - name: FrostyHeadandTorso_Reattatch_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 45
-        height: 74
-      alignment: 9
-      pivot: {x: .5, y: .330000013}
+        width: 81
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Head&Torso_1
+    - name: FrostyHeadandTorso_Reattatch_1
       rect:
         serializedVersion: 2
-        x: 125
+        x: 156
         y: 0
-        width: 50
-        height: 74
+        width: 82
+        height: 39
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FrostyHeadandTorso_Reattatch_2
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 0
+        width: 75
+        height: 61
+      alignment: 9
+      pivot: {x: .255720228, y: .385165364}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FrostyHeadandTorso_Reattatch_3
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 0
+        width: 41
+        height: 70
       alignment: 9
       pivot: {x: .5, y: .330000013}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Head&Torso_2
+    - name: FrostyHeadandTorso_Reattatch_4
       rect:
         serializedVersion: 2
-        x: 255
+        x: 590
         y: 0
         width: 46
-        height: 74
+        height: 72
       alignment: 9
       pivot: {x: .5, y: .330000013}
       border: {x: 0, y: 0, z: 0, w: 0}
