@@ -24,7 +24,7 @@ public class SwitchManager : MonoBehaviour
     public GameObject Torso;
     public GameObject Base;
     public GameObject Active;
-
+    
     public int test1 = 0;
     public int test2 = 0;
 
@@ -32,6 +32,8 @@ public class SwitchManager : MonoBehaviour
     //test ints
     public int test = 0;
 
+    //Animation
+    Animator frostyAnim;
 
 	// Use this for initialization
     void Start()
@@ -43,6 +45,8 @@ public class SwitchManager : MonoBehaviour
         Active = FindActive();
 
 		CheckpointManager.Instance.Clear();
+
+        frostyAnim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -349,6 +353,7 @@ public class SwitchManager : MonoBehaviour
 			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
 			sound.GetComponent<SoundEffectManager>().PlayAttachSnd();
 
+           
             Destroy(Head);
             Active = Instantiate(preheadtorso);
             Active.transform.position = Torso.transform.position;
