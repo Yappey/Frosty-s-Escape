@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MovingPlatformDisabler : BaseReceiver {
-
-	public BaseReceiver rec;
+public class LiftToggler : BaseReceiver {
 
 	// Use this for initialization
 	void Start () {
@@ -17,15 +15,9 @@ public class MovingPlatformDisabler : BaseReceiver {
 
 	public override void Process()
 	{
-		if (rec.state != -1)
-		{
-			state = rec.state;
-			rec.state = -1;
-		}
+		if (state == 0)
+			state = 1;
 		else
-		{
-			rec.state = state;
-			state = -1;
-		}
+			state = 0;
 	}
 }
