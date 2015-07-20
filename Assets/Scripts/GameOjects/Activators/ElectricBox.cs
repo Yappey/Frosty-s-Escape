@@ -12,7 +12,11 @@ public class ElectricBox : BaseActivator {
 	
 	// Update is called once per frame
 	void Update () {
-
+		ParticleSystem particles = GetComponent<ParticleSystem>();
+		if (state == 0 && !particles.enableEmission)
+			particles.enableEmission = true;
+		else if (state != 0 && particles.enableEmission)
+			particles.enableEmission = false;
 	}
 
     void OnCollisionEnter2D(Collision2D collide)

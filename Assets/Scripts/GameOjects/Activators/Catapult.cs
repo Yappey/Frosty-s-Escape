@@ -40,6 +40,7 @@ public class Catapult : MonoBehaviour {
 					Launched = Loaded;
 					Loaded = null;
 					time = 0;
+                    GetComponent<Animator>().Play("Base Layer.Catapult");
                 }
             }
             if (frosty.GetComponent<Frostyehavior>().headAttached && !frosty.GetComponent<Frostyehavior>().torsoAttached && (frosty.transform.position - transform.position).magnitude < distance)

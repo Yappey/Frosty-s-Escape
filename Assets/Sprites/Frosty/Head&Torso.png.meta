@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: a898bbdc36164b645b31d0d08396f662
-timeCreated: 1436936633
+timeCreated: 1437367557
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -46,7 +46,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 57
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
@@ -60,7 +60,7 @@ TextureImporter:
         width: 45
         height: 74
       alignment: 9
-      pivot: {x: .5, y: .280000001}
+      pivot: {x: .5, y: .330000013}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Head&Torso_1
       rect:
@@ -70,7 +70,7 @@ TextureImporter:
         width: 50
         height: 74
       alignment: 9
-      pivot: {x: .5, y: .280000001}
+      pivot: {x: .5, y: .330000013}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Head&Torso_2
       rect:
@@ -80,7 +80,7 @@ TextureImporter:
         width: 46
         height: 74
       alignment: 9
-      pivot: {x: .5, y: .280000001}
+      pivot: {x: .5, y: .330000013}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

@@ -41,6 +41,14 @@ public class KeyBindButton : MonoBehaviour {
 	
 	public void UpdateTextName(KeyCode ky)
 	{
+		foreach(KeyManager.inputButton btn in KeyManager.Instance.inputButtons)
+		{
+			if (KeyManager.GetButton(btn.name) && btn.name != inputName)
+			{
+				return;
+			}
+		}
+
 		key = ky;
 		transform.GetChild(0).GetComponent<Text>().text = ky.ToString();
 		KeyManager.ChangeKey(inputName, key, positive, alt);
@@ -48,6 +56,14 @@ public class KeyBindButton : MonoBehaviour {
 	
 	public void UpdateTextName(string ax)
 	{
+		foreach(KeyManager.inputButton btn in KeyManager.Instance.inputButtons)
+		{
+			if (KeyManager.GetButton(btn.name) && btn.name != inputName)
+			{
+				return;
+			}
+		}
+
 		axis = ax;
 		transform.GetChild(0).GetComponent<Text>().text = ax;
 		KeyManager.ChangeAxis(inputName, axis, positive, alt);

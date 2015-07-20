@@ -19,7 +19,7 @@ public class OptionsMenuScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(Input.GetButtonDown("Back"))
+        if(KeyManager.GetButtonDown("Cancel"))
         {
             Application.LoadLevel("MainMenu");
         }

@@ -24,7 +24,7 @@ public class SwitchManager : MonoBehaviour
     public GameObject Torso;
     public GameObject Base;
     public GameObject Active;
-
+    
     public int test1 = 0;
     public int test2 = 0;
 
@@ -32,6 +32,8 @@ public class SwitchManager : MonoBehaviour
     //test ints
     public int test = 0;
 
+    //Animation
+    Animator frostyAnim;
 
 	// Use this for initialization
     void Start()
@@ -43,6 +45,8 @@ public class SwitchManager : MonoBehaviour
         Active = FindActive();
 
 		CheckpointManager.Instance.Clear();
+
+        frostyAnim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -349,6 +353,7 @@ public class SwitchManager : MonoBehaviour
 			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
 			sound.GetComponent<SoundEffectManager>().PlayAttachSnd();
 
+           
             Destroy(Head);
             Active = Instantiate(preheadtorso);
             Active.transform.position = Torso.transform.position;
@@ -453,7 +458,7 @@ public class SwitchManager : MonoBehaviour
         foreach (GameObject frosty in frostys)
         {
             test++;
-            if (frosty.GetComponent<Frostyehavior>().isActive)
+            if (frosty != null && frosty.GetComponent<Frostyehavior>().isActive)
                 return frosty;
         }
         return null;
@@ -464,7 +469,7 @@ public class SwitchManager : MonoBehaviour
         GameObject[] frostys = GameObject.FindGameObjectsWithTag("Frosty");
         foreach (GameObject frosty in frostys)
         {
-            if (frosty.GetComponent<Frostyehavior>().headAttached)
+            if (frosty != null && frosty.GetComponent<Frostyehavior>().headAttached)
                 return frosty;
         }
         return null;
@@ -475,7 +480,7 @@ public class SwitchManager : MonoBehaviour
         GameObject[] frostys = GameObject.FindGameObjectsWithTag("Frosty");
         foreach (GameObject frosty in frostys)
         {
-            if (frosty.GetComponent<Frostyehavior>().torsoAttached)
+            if (frosty != null && frosty.GetComponent<Frostyehavior>().torsoAttached)
                 return frosty;
         }
         return null;
@@ -486,7 +491,7 @@ public class SwitchManager : MonoBehaviour
         GameObject[] frostys = GameObject.FindGameObjectsWithTag("Frosty");
         foreach (GameObject frosty in frostys)
         {
-            if (frosty.GetComponent<Frostyehavior>().baseAttached)
+            if (frosty != null && frosty.GetComponent<Frostyehavior>().baseAttached)
                 return frosty;
         }
         return null;

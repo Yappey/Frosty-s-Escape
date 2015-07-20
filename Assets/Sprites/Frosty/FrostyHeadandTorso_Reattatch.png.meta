@@ -1,0 +1,110 @@
+fileFormatVersion: 2
+guid: c02d23d86634b24468ba2779040fff27
+timeCreated: 1437369239
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: FrostyHeadandTorso_Reattatch_0
+    21300002: FrostyHeadandTorso_Reattatch_1
+    21300004: FrostyHeadandTorso_Reattatch_2
+    21300006: FrostyHeadandTorso_Reattatch_3
+    21300008: FrostyHeadandTorso_Reattatch_4
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 60
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: FrostyHeadandTorso_Reattatch_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 81
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FrostyHeadandTorso_Reattatch_1
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 0
+        width: 82
+        height: 39
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FrostyHeadandTorso_Reattatch_2
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 0
+        width: 75
+        height: 61
+      alignment: 9
+      pivot: {x: .255720228, y: .385165364}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FrostyHeadandTorso_Reattatch_3
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 0
+        width: 41
+        height: 70
+      alignment: 9
+      pivot: {x: .5, y: .330000013}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FrostyHeadandTorso_Reattatch_4
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 0
+        width: 46
+        height: 72
+      alignment: 9
+      pivot: {x: .5, y: .330000013}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

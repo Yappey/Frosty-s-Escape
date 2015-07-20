@@ -27,9 +27,9 @@ public class LadderAndMonkeybar : MonoBehaviour
             if (GetComponent<Frostyehavior>().isActive)
             {
 				if (/*Input*/KeyManager.GetAxis("Vertical") > 0 || /*Input*/KeyManager.GetAxis("Vertical") > 0)
-                    GetComponent<Rigidbody2D>().velocity = new Vector3(GetComponent<Rigidbody2D>().velocity.x, 2.0f);
+                    GetComponent<Rigidbody2D>().velocity = new Vector3(GetComponent<Rigidbody2D>().velocity.x, 4.0f);
 				else if (/*Input*/KeyManager.GetAxisRaw("Vertical") < 0 || /*Input*/KeyManager.GetAxis("Vertical") < 0)
-                    GetComponent<Rigidbody2D>().velocity = new Vector3(GetComponent<Rigidbody2D>().velocity.x, -2.0f);
+                    GetComponent<Rigidbody2D>().velocity = new Vector3(GetComponent<Rigidbody2D>().velocity.x, -4.0f);
                 else
                     GetComponent<Rigidbody2D>().velocity = new Vector3(GetComponent<Rigidbody2D>().velocity.x, 0);
             }
