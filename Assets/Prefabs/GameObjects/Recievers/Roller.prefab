@@ -142,10 +142,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 129426}
+  - {fileID: 129426}
+  - {fileID: 129426}
+  - {fileID: 129426}
   speeds:
   - 5
   waits:
