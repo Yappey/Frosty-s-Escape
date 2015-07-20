@@ -353,7 +353,7 @@ public class SwitchManager : MonoBehaviour
 			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
 			sound.GetComponent<SoundEffectManager>().PlayAttachSnd();
 
-           // frostyAnim.Play("Base Layer.FrostyHeadandTorso_Reattatch");
+           
             Destroy(Head);
             Active = Instantiate(preheadtorso);
             Active.transform.position = Torso.transform.position;
