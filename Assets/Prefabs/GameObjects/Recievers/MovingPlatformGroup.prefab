@@ -17,6 +17,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &102250
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 494880}
+  - 114: {fileID: 11418400}
+  m_Layer: 0
+  m_Name: disabler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &105506
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,14 +152,27 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 192514}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -176.959976, y: -4.54996872, z: 0}
+  m_LocalPosition: {x: -186.584778, y: -.0777726173, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 465938}
   - {fileID: 442442}
   - {fileID: 463490}
+  - {fileID: 494880}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &494880
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102250}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.62480164, y: -4.4721961, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 489866}
+  m_RootOrder: 3
 --- !u!61 &6129872
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -171,6 +200,19 @@ EdgeCollider2D:
   m_Points:
   - {x: -1.61845696, y: .0363676548}
   - {x: 1.64477372, y: 0}
+--- !u!114 &11418400
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a51d277909ab2bb4b9db0a1035d6e8e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  rec: {fileID: 11484090}
 --- !u!114 &11459076
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -201,7 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 494e70deeea1d7549a34c8237a76dda1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 1
+  state: -1
   waypoints:
   - {fileID: 150324}
   - {fileID: 156888}

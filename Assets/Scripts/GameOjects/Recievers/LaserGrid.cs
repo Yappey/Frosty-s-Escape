@@ -3,7 +3,7 @@ using System.Collections;
 
 public class LaserGrid : BaseReceiver
 {
-    public bool _BActive = true;
+    //public bool _BActive = true;
     GameObject _LaserGrid;
    
     
@@ -16,10 +16,21 @@ public class LaserGrid : BaseReceiver
 
     // Update is called once per frame
     void Update()
-    {
+	{
+		
+		if (state == 0)
+		{
+			_LaserGrid.SetActive(false);
+			//DestroyObject(_LaserGrid, 0.1f);
+			
+		}
+		else
+		{
+			_LaserGrid.SetActive(true);
+		}
 		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
 
-		if (_BActive) {
+		if (state != 0) {
 			sound.GetComponent<SoundEffectManager>().PlayLaserGridSnd(gameObject.transform.position);
 		}
 
@@ -30,20 +41,12 @@ public class LaserGrid : BaseReceiver
 
     public override void Process()
     {
-        _BActive = !_BActive;
+        if (state == 0)
+			state = 1;
+		else
+			state = 0;
 
-        GetComponent<Harmful>().isActive = _BActive;
-
-        if (!_BActive)
-        {
-            _LaserGrid.SetActive(false);
-            //DestroyObject(_LaserGrid, 0.1f);
-
-        }
-        else
-        {
-            _LaserGrid.SetActive(true);
-        }
+		GetComponent<Harmful>().isActive = state != 0;
 
         base.Process();
     }

@@ -291,7 +291,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: state
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: speeds.Array.data[1]
@@ -1792,7 +1792,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: state
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: speeds.Array.data[1]
@@ -2027,7 +2027,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: state
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: speeds.Array.data[1]
@@ -5023,7 +5023,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: state
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: speeds.Array.data[1]
@@ -5543,7 +5543,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: state
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: speeds.Array.data[1]
@@ -5703,7 +5703,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: state
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: speeds.Array.data[1]
@@ -7555,7 +7555,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: state
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: speeds.Array.data[1]
@@ -8286,7 +8286,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: state
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: speeds.Array.data[1]
@@ -8726,7 +8726,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: state
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
@@ -9758,7 +9758,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: state
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: speeds.Array.data[1]
@@ -13390,7 +13390,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: state
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: speeds.Array.data[1]
@@ -14607,7 +14607,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: state
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: stopImmediately
@@ -14992,7 +14992,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: state
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: speeds.Array.data[1]
@@ -16612,7 +16612,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: state
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: speeds.Array.data[1]
@@ -18030,7 +18030,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: state
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: speeds.Array.data[1]
@@ -18322,7 +18322,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: state
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: speeds.Array.data[1]
@@ -18588,7 +18588,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: state
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: speeds.Array.data[1]
@@ -19408,7 +19408,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: state
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: speeds.Array.data[1]
@@ -20048,7 +20048,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: state
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: speeds.Array.data[1]
@@ -20312,7 +20312,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: state
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: speeds.Array.data[1]
@@ -20627,6 +20627,7 @@ MonoBehaviour:
   fog6: {fileID: 1857404919}
   levelTime: 0
   dontKillMe: 0
+  isDead: 1
 --- !u!114 &1733021516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22837,7 +22838,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: state
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: speeds.Array.data[1]

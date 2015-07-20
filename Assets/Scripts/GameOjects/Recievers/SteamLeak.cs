@@ -20,7 +20,7 @@ public class SteamLeak : BaseReceiver {
 	
 	// Update is called once per frame
 	void Update () {
-        if (active)
+        if (state == 0)
         {
             timer += Time.deltaTime;
             if (timer >= interval)
@@ -46,17 +46,16 @@ public class SteamLeak : BaseReceiver {
 
     public override void Process()
     {
-       if(active)
+		if (state == 0)
+			state = 1;
+		else
+			if (toggle)
+				state = 0;
+       if(state == 1)
        {
-           active = !active;
            steam.SetActive(false);
            timer = 0.0f;
            activetimer = 0.0f;
-       }
-       else
-       {
-           if (toggle)
-               active = !active;
        }
     }
 }

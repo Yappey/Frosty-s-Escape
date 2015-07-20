@@ -160,7 +160,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: state
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 461668, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: m_LocalScale.x
@@ -512,7 +512,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: state
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
@@ -1181,7 +1181,7 @@ Prefab:
       objectReference: {fileID: 1884278917}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: state
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: speeds.Array.data[0]
@@ -1962,7 +1962,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: state
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 461668, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: m_LocalScale.x
@@ -4055,7 +4055,7 @@ Prefab:
       objectReference: {fileID: 927877718}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: state
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: speeds.Array.data[0]
