@@ -63,6 +63,7 @@ public class PauseMenuScript : MonoBehaviour {
     {
 		Time.timeScale = 1.0f;
         Application.LoadLevel(Application.loadedLevel + 1);
+        gameObject.GetComponent<Animator>().StopPlayback();
     }
 
 }

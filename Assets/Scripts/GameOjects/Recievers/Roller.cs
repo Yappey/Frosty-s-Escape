@@ -23,6 +23,9 @@ public class Roller : BaseReceiver {
 		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
 
 		if (isMoving) {
+			Transform cyl = transform.FindChild("Cylinder");
+			cyl.Rotate(Vector3.up, 360.0f * Time.deltaTime);
+
 			if (gameObject.transform.position == waypoints [state].transform.position) {
 				gameObject.GetComponent<Harmful>().isActive = false;
 				timer += Time.deltaTime;

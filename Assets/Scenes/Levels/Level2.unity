@@ -1646,7 +1646,7 @@ Prefab:
       objectReference: {fileID: 340108416}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: state
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: speeds.Array.data[0]
@@ -1832,7 +1832,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: state
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: waypoints.Array.data[0]
@@ -1972,7 +1972,7 @@ Prefab:
       objectReference: {fileID: 1201991994}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: state
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: speeds.Array.data[0]
@@ -2381,6 +2381,22 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: -51.1300011
       objectReference: {fileID: 0}
+    - target: {fileID: 22451628, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22451628, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: .199999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 22495896, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22495896, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: .199999988
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
   m_IsPrefabParent: 0
@@ -2460,7 +2476,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_RootOrder: 35
 --- !u!1001 &1986417799
 Prefab:
   m_ObjectHideFlags: 0
@@ -2692,7 +2708,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: state
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
       propertyPath: waypoints.Array.data[0]

@@ -99,7 +99,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 151174}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
@@ -216,11 +216,14 @@ MonoBehaviour:
   activateRange: .699999988
   isActive: 0
   isGrounded: 0
+  isDead: 0
   headAttached: 0
   torsoAttached: 1
   baseAttached: 0
+  isNotWalking: 1
   animTimer: 1
   snowballLauncher: {fileID: 0}
+  frostyAnim: {fileID: 0}
 --- !u!114 &11448118
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -4,8 +4,11 @@ using System.Collections;
 
 public class KeyBindingsMenuScript : MonoBehaviour {
 
+	public UnityEngine.UI.Button keysButton, axesButton;
+	public GameObject keysMenu, axesMenu;
 	KeyBindButton butn;
 	bool isBinding = false;
+	bool hasOpened = false;
 	public KeyBindButton Butn
 	{
 		get{return butn;}
@@ -99,6 +102,16 @@ public class KeyBindingsMenuScript : MonoBehaviour {
 				}
 			}
 		}
+
+		if (!hasOpened)
+		{
+			keysButton.interactable = false;
+			axesButton.interactable = true;
+			
+			keysMenu.SetActive(true);
+			axesMenu.SetActive(false);
+			hasOpened = true;
+		}
 	}
 
 	void ButnNull()
@@ -124,5 +137,10 @@ public class KeyBindingsMenuScript : MonoBehaviour {
 	public void Default(string inputName)
 	{
 		KeyManager.SetButtonDefault(inputName);
+	}
+
+	public void OpenMenu()
+	{
+
 	}
 }
