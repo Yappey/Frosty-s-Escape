@@ -14,6 +14,7 @@ public class WinBox : MonoBehaviour {
     public GameObject TwoStarAnim;
     public GameObject OneStarAnim;
     public float time;
+    
 
 	// Use this for initialization
 	void Start () {

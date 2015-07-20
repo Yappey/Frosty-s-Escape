@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 8b32163716064084ea08e8077a467947
-timeCreated: 1436209691
+timeCreated: 1437406913
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -170,22 +170,22 @@ TextureImporter:
     - name: PC_HMM_catapult_10
       rect:
         serializedVersion: 2
-        x: 5
+        x: 3
         y: 11
         width: 133
         height: 102
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: PC_HMM_catapult_11
       rect:
         serializedVersion: 2
-        x: 146
+        x: 147
         y: 10
         width: 133
         height: 100
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: PC_HMM_catapult_12
       rect:
@@ -194,8 +194,8 @@ TextureImporter:
         y: 10
         width: 133
         height: 97
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: PC_HMM_catapult_13
       rect:
@@ -204,8 +204,8 @@ TextureImporter:
         y: 10
         width: 133
         height: 89
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: PC_HMM_catapult_14
       rect:
@@ -214,28 +214,28 @@ TextureImporter:
         y: 10
         width: 133
         height: 79
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: PC_HMM_catapult_15
       rect:
         serializedVersion: 2
-        x: 708
+        x: 706
         y: 10
         width: 135
         height: 70
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: PC_HMM_catapult_16
       rect:
         serializedVersion: 2
-        x: 847
+        x: 846
         y: 10
         width: 137
         height: 66
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: PC_HMM_catapult_17
       rect:
@@ -244,8 +244,8 @@ TextureImporter:
         y: 10
         width: 137
         height: 66
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

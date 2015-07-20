@@ -107,6 +107,8 @@ public class ButtonScript : MonoBehaviour {
 
     public void PlayOnClick()
     {
+        if (PlayerPrefs.GetInt("ActiveLevel") > numlevels)
+            LoadingScreenDelayed.Instance.LoadingLevels("Level1");
 		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
 		sound.GetComponent<SoundEffectManager>().PlayButtonClick();
 

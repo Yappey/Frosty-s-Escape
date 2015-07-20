@@ -178,7 +178,7 @@ public class Frostyehavior : MonoBehaviour
     //I'm sorry I know this is ugly
     void FrostyWalkAnimations()
 	{
-		float hor;
+        float hor;
 		//if (KeyManager.GetAxis("Horizontal") != 0)
 			hor = KeyManager.GetAxis("Horizontal");
 		//else
