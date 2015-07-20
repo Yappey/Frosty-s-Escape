@@ -19,7 +19,7 @@ public class CameraManager : MonoBehaviour
 		GameObject[] snows = GameObject.FindGameObjectsWithTag("Frosty");
 		foreach (GameObject body in snows)
 		{
-			if (body.GetComponent<Frostyehavior>().isActive)
+			if (body != null && body.GetComponent<Frostyehavior>() != null && body.GetComponent<Frostyehavior>().isActive)
 				_gbFollowing = body;
 		}
 		_fX = _gbFollowing.transform.position.x;
