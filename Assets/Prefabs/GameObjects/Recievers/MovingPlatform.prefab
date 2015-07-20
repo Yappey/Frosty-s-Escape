@@ -98,13 +98,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 494e70deeea1d7549a34c8237a76dda1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 1
+  state: -1
   waypoints: []
   speeds: []
   waits: []
   timer: 0
   stopImmediately: 0
   cyclical: 0
+  syncWithState: 0
 --- !u!114 &11489484
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,6 +121,7 @@ MonoBehaviour:
   instaKill: 1
   isCrushing: 1
   destroyOnCollision: 0
+  isDamagePerSecond: 0
   damage: 1
   lifetime: 2
   lifeType: 0
