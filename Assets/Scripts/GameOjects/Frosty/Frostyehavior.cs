@@ -57,7 +57,7 @@ public class Frostyehavior : MonoBehaviour
 			//Debug.Log("Horizontal Axis Update: " + hor);
 
             // Check if speed is less than max or input is opposite velocity
-            if (rgbd.velocity.x * Mathf.Sign(hor) < moveSpeed)
+			if (rgbd.velocity.x * Mathf.Sign(hor) < moveSpeed  && Time.timeScale > 0)
             {
                 FrostyWalkAnimations();
 
@@ -81,7 +81,7 @@ public class Frostyehavior : MonoBehaviour
             }
 
 
-            if (/*Input*/KeyManager.GetButtonDown("Jump") && isGrounded)
+			if (/*Input*/KeyManager.GetButtonDown("Jump") && isGrounded && Time.timeScale > 0)
             {
                 rgbd.AddForce(new Vector2(0.0f, jumpVelocity), ForceMode2D.Impulse);
                 isGrounded = false;

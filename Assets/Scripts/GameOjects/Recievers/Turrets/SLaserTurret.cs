@@ -28,7 +28,12 @@ public class SLaserTurret : LaserTurret
 
 				//timeToHit *= tVel.magnitude / projectileVelocity;
 
-				reticle.transform.position = theTarget.transform.position + new Vector3(tVel.x, tVel.y, 0.0f) * timeToHit;
+				Vector3 disp = new Vector3(tVel.x, tVel.y, 0.0f) * timeToHit;
+
+				if (disp.magnitude > 500)
+					disp *= 500 / disp.magnitude;
+
+				reticle.transform.position = theTarget.transform.position + disp;
 
 				theTarget = reticle;
 			}
