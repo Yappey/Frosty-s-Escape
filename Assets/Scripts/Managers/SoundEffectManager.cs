@@ -447,10 +447,17 @@ public class SoundEffectManager : MonoBehaviour {
 		}
 	}
 
-	public void PlayCrankSnsd()
+	public void PlayCrankSnd()
 	{
 		if (!crank.isPlaying) {
 			crank.Play();
+		}
+	}
+
+	public void StopCrankSnd()
+	{
+		if (crank.isPlaying) {
+			crank.Stop();
 		}
 	}
 
