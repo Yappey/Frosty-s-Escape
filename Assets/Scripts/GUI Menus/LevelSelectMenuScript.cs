@@ -31,7 +31,7 @@ public class LevelSelectMenuScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    if(Input.GetButtonDown("Back"))
+	    if(KeyManager.GetButtonDown("Cancel"))
         {
             gameObject.GetComponent<LoadingScreenDelayed>().LoadingLevels("MainMenu");
             //Application.LoadLevel("MainMenu");

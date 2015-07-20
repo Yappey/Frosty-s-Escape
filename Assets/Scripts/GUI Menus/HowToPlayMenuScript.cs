@@ -45,7 +45,7 @@ public class HowToPlayMenuScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Back") || Input.GetAxisRaw("Jump") > 0)
+        if (KeyManager.GetButtonDown("Back"))// || Input.GetAxisRaw("Jump") > 0)
         {
             Application.LoadLevel("MainMenu");
         }
@@ -58,11 +58,11 @@ public class HowToPlayMenuScript : MonoBehaviour
         Vector3 targetPos = new Vector3(_vOriginalPos.x + _fWidth * _iCurrentPos, _vOriginalPos.y, _vOriginalPos.z);
         if (targetPos == transform.position)//(targetPos - transform.position).magnitude <= 0.01f)
         {
-            if (Input.GetButtonDown("Left") || (Input.GetAxisRaw("Horizontal") < 0))
+            if (KeyManager.GetButtonDown("Left") || (KeyManager.GetAxisRaw("Horizontal") < 0))
             {
                 ++ICurrentPos;
             }
-            if (Input.GetButtonDown("Right") || (Input.GetAxisRaw("Horizontal") > 0))
+            if (KeyManager.GetButtonDown("Right") || (KeyManager.GetAxisRaw("Horizontal") > 0))
             {
                 --ICurrentPos;
             }

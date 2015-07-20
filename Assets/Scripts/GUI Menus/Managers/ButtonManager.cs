@@ -31,7 +31,7 @@ public class ButtonManager : MonoBehaviour
         {
 		 if (_bufferedInput <= 0.0f) {
 				
-            if (Input.GetButtonDown("Right") || Input.GetButtonDown("Down") || Input.GetAxisRaw("Horizontal") > 0 || Input.GetAxisRaw("Vertical") < 0)
+            if (KeyManager.GetButtonDown("Right") || KeyManager.GetButtonDown("Down"))// || Input.GetAxisRaw("Horizontal") > 0 || Input.GetAxisRaw("Vertical") < 0)
             {
 				if (!buttonsDuringGameplay)
                 {
@@ -78,7 +78,7 @@ public class ButtonManager : MonoBehaviour
                 _bufferedInput = _maxBufferedInput;
             }
 
-            else if (Input.GetButtonDown("Left") || Input.GetButtonDown("Up") || Input.GetAxisRaw("Horizontal") < 0 || Input.GetAxisRaw("Vertical") > 0)
+            else if (KeyManager.GetButtonDown("Left") || KeyManager.GetButtonDown("Up"))// || Input.GetAxisRaw("Horizontal") < 0 || Input.GetAxisRaw("Vertical") > 0)
             {
 				if (!buttonsDuringGameplay)
 				{
@@ -125,7 +125,7 @@ public class ButtonManager : MonoBehaviour
                 _bufferedInput = _maxBufferedInput;
             }
 
-			else if (Input.GetKeyDown(KeyCode.Return) || Input.GetAxisRaw("Jump") > 0)
+			else if (KeyManager.GetButtonDown("Submit"))//|| Input.GetAxisRaw("Jump") > 0)
             {
 				if (state == WhereAmI.Pause) {
 					GameObject pauser = GameObject.FindGameObjectWithTag("Pause");
@@ -217,7 +217,7 @@ public class ButtonManager : MonoBehaviour
 
             if (_bufferedInput <= 0.0f)
             {
-                if (Input.GetButtonDown("Up") || Input.GetAxisRaw("Vertical") > 0)
+                if (KeyManager.GetButtonDown("Up"))// || KeyManager.GetAxisRaw("Vertical") > 0)
                 {
 					if (!buttonsDuringGameplay)
 					{
@@ -243,7 +243,7 @@ public class ButtonManager : MonoBehaviour
                     _bufferedInput = _maxBufferedInput;
                 }
 
-                else if (Input.GetButtonDown("Down") || Input.GetAxisRaw("Vertical") < 0)
+                else if (KeyManager.GetButtonDown("Down"))// || Input.GetAxisRaw("Vertical") < 0)
                 {
 					if (!buttonsDuringGameplay)
 					{
@@ -348,7 +348,7 @@ public class ButtonManager : MonoBehaviour
                     _bufferedInput = _maxBufferedInput;
                 }
 
-			else if ((Input.GetKeyDown(KeyCode.Return) || Input.GetAxisRaw("Jump") > 0) && currButton == 6)
+			else if ((KeyManager.GetButtonDown("Submit")/* || Input.GetAxisRaw("Jump") > 0*/) && currButton == 6)
             {
 				if (currButton == 6  && !buttonsDuringGameplay)
 				{
@@ -385,7 +385,7 @@ public class ButtonManager : MonoBehaviour
             if (_bufferedInput <= 0.0f)
             {
 
-                if (Input.GetButtonDown("Right") || Input.GetButtonDown("Up") || Input.GetAxisRaw("Horizontal") > 0)
+                if (KeyManager.GetButtonDown("Right") || KeyManager.GetButtonDown("Up"))// || Input.GetAxisRaw("Horizontal") > 0)
                 {
 					if (!buttonsDuringGameplay)
                     {
@@ -402,7 +402,7 @@ public class ButtonManager : MonoBehaviour
                     _bufferedInput = _maxBufferedInput;
                 }
 
-                else if (Input.GetButtonDown("Left") || Input.GetButtonDown("Down") || Input.GetAxisRaw("Horizontal") < 0 || Input.GetAxisRaw("Vertical") < 0)
+                else if (KeyManager.GetButtonDown("Left") || KeyManager.GetButtonDown("Down"))// || Input.GetAxisRaw("Horizontal") < 0 || Input.GetAxisRaw("Vertical") < 0)
                 {
 					if (!buttonsDuringGameplay)
                     {
@@ -419,7 +419,7 @@ public class ButtonManager : MonoBehaviour
                     _bufferedInput = _maxBufferedInput;
                 }
 
-			else if (Input.GetKeyDown(KeyCode.Return) || Input.GetAxisRaw("Jump") > 0)
+			else if (KeyManager.GetButtonDown("Submit"))// || Input.GetAxisRaw("Jump") > 0)
             {
 				if (!buttonsDuringGameplay)
 				{
@@ -531,14 +531,14 @@ public class ButtonManager : MonoBehaviour
         {
             buttons[currButton].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
 
-			if ((Input.GetKeyDown(KeyCode.Return) || Input.GetAxisRaw("Jump") > 0) && !buttonsDuringGameplay)
+			if ((KeyManager.GetButtonDown("Submit")/* || Input.GetAxisRaw("Jump") > 0*/) && !buttonsDuringGameplay)
             {
 
 
                 buttons[currButton].GetComponent<ButtonScript>().LoadLevelOnClick();
             }
 
-			else if ((Input.GetKeyDown(KeyCode.Return) || Input.GetAxisRaw("Jump") > 0) && buttonsDuringGameplay)
+			else if ((KeyManager.GetButtonDown("Submit")/* || Input.GetAxisRaw("Jump") > 0*/) && buttonsDuringGameplay)
             {
 				GameObject pauser = GameObject.FindGameObjectWithTag("Pause");
 
