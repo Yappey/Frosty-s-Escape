@@ -4,6 +4,7 @@ using System.Collections;
 public class Crank : BaseActivator {
 
     public GameObject torso;
+    
     public GameObject frosty;
     public GameObject switchmanager;
     public float rotationspersecond;
@@ -19,6 +20,7 @@ public class Crank : BaseActivator {
     public bool activated = false;
     public bool switched = false;
     public int increment = 0;
+    Animator frostyAnim;
 
 
 
@@ -26,7 +28,9 @@ public class Crank : BaseActivator {
 	void Start () {
 		switchmanager = GameObject.FindGameObjectWithTag("SwitchManager");
 	frosty = torso = switchmanager.GetComponent<SwitchManager>().FindActive();
-            torso = torso.transform.FindChild("Torso").gameObject; 
+            torso = torso.transform.FindChild("Torso").gameObject;
+
+            frostyAnim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -53,11 +57,13 @@ public class Crank : BaseActivator {
                     rotationangle += rotationspersecond * Time.deltaTime;
                     reversed = false;
 					sound.GetComponent<SoundEffectManager>().PlayCrankSnd();
+                    GameObject.FindGameObjectWithTag("SwitchManager").GetComponent<SwitchManager>().Torso.GetComponent<Animator>().SetBool("CrankWheel", true);
                 }
                 else
                 {
                     full = true;
 					sound.GetComponent<SoundEffectManager>().StopCrankSnd();
+                    GameObject.FindGameObjectWithTag("SwitchManager").GetComponent<SwitchManager>().Torso.GetComponent<Animator>().SetBool("CrankWheel", false);
                 }
             }
             else

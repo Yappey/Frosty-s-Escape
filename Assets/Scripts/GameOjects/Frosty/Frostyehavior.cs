@@ -331,11 +331,19 @@ public class Frostyehavior : MonoBehaviour
 
     public void Melt()
     {
+        //Head Only
         if (GetComponent<Frostyehavior>().headAttached && !GetComponent<Frostyehavior>().baseAttached && !GetComponent<Frostyehavior>().torsoAttached)
         {
             frostyAnim.SetTrigger("Melt"); 
         }
 
+        //Torso Only
+        if (!GetComponent<Frostyehavior>().headAttached && !GetComponent<Frostyehavior>().baseAttached && GetComponent<Frostyehavior>().torsoAttached)
+        {
+            frostyAnim.SetTrigger("Melt");
+        }
+
+        //Base Only
         if (!GetComponent<Frostyehavior>().headAttached && GetComponent<Frostyehavior>().baseAttached && !GetComponent<Frostyehavior>().torsoAttached)
         {
             frostyAnim.SetTrigger("Melt");
