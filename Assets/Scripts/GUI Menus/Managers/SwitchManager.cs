@@ -510,6 +510,7 @@ public class SwitchManager : MonoBehaviour
     public GameObject FindActive()
     {
         GameObject[] frostys = GameObject.FindGameObjectsWithTag("Frosty");
+		if (frostys.Length > 3) Debug.Log ("Number of Frostys in FindActive():  " + frostys.Length);
         foreach (GameObject frosty in frostys)
         {
             test++;
@@ -521,7 +522,8 @@ public class SwitchManager : MonoBehaviour
 
     public GameObject FindHead()
     {
-        GameObject[] frostys = GameObject.FindGameObjectsWithTag("Frosty");
+		GameObject[] frostys = GameObject.FindGameObjectsWithTag("Frosty");
+		if (frostys.Length > 3) Debug.Log ("Number of Frostys in FindHead():  " + frostys.Length);
         foreach (GameObject frosty in frostys)
         {
             if (frosty != null && frosty.GetComponent<Frostyehavior>() != null && frosty.GetComponent<Frostyehavior>().headAttached)
@@ -532,7 +534,8 @@ public class SwitchManager : MonoBehaviour
 
     public GameObject FindTorso()
     {
-        GameObject[] frostys = GameObject.FindGameObjectsWithTag("Frosty");
+		GameObject[] frostys = GameObject.FindGameObjectsWithTag("Frosty");
+		if (frostys.Length > 3) Debug.Log ("Number of Frostys in FindTorso():  " + frostys.Length);
         foreach (GameObject frosty in frostys)
         {
             if (frosty != null && frosty.GetComponent<Frostyehavior>() != null && frosty.GetComponent<Frostyehavior>().torsoAttached)
@@ -543,7 +546,8 @@ public class SwitchManager : MonoBehaviour
 
     public GameObject FindBase()
     {
-        GameObject[] frostys = GameObject.FindGameObjectsWithTag("Frosty");
+		GameObject[] frostys = GameObject.FindGameObjectsWithTag("Frosty");
+		if (frostys.Length > 3) Debug.Log ("Number of Frostys in FindBase():  " + frostys.Length);
         foreach (GameObject frosty in frostys)
         {
             if (frosty != null && frosty.GetComponent<Frostyehavior>() != null && frosty.GetComponent<Frostyehavior>().baseAttached)
