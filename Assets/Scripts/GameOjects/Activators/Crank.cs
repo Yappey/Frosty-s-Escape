@@ -25,19 +25,18 @@ public class Crank : BaseActivator {
 	// Use this for initialization
 	void Start () {
 		switchmanager = GameObject.FindGameObjectWithTag("SwitchManager");
-	frosty = torso = switchmanager.GetComponent<SwitchManager>().FindActive();
-            torso = torso.transform.FindChild("Torso").gameObject; 
+	    frosty = torso = switchmanager.GetComponent<SwitchManager>().FindActive();
+           torso = torso.transform.FindChild("Torso").gameObject; 
 	}
 	
 	// Update is called once per frame
 	void Update () {
+	    GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
         if (!switched && switchmanager.GetComponent<SwitchManager>().Active == switchmanager.GetComponent<SwitchManager>().Torso)
         {
-		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
             frosty = torso = switchmanager.GetComponent<SwitchManager>().FindActive();
             torso = torso.transform.FindChild("Torso").gameObject; 
         }
-        if (Mathf.Abs(torso.transform.position.y - transform.position.y) < heightmanagment && Mathf.Abs(torso.transform.position.x - transform.position.x) < widthmanagment)
         if (Mathf.Abs(torso.transform.position.y - transform.position.y) < heightmanagment * 4 * transform.localScale.y && Mathf.Abs(torso.transform.position.x - transform.position.x) < widthmanagment * 4 * transform.localScale.x)
         {
             if (!torso.transform.parent.gameObject.GetComponent<Frostyehavior>().isActive)
