@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: c02d23d86634b24468ba2779040fff27
-timeCreated: 1437369239
+timeCreated: 1437402425
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -61,18 +61,18 @@ TextureImporter:
         y: 0
         width: 81
         height: 40
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .270000011, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FrostyHeadandTorso_Reattatch_1
       rect:
         serializedVersion: 2
-        x: 156
+        x: 157
         y: 0
         width: 82
         height: 39
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .270000011, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FrostyHeadandTorso_Reattatch_2
       rect:
@@ -82,7 +82,7 @@ TextureImporter:
         width: 75
         height: 61
       alignment: 9
-      pivot: {x: .255720228, y: .385165364}
+      pivot: {x: .270000011, y: .360000014}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FrostyHeadandTorso_Reattatch_3
       rect:
@@ -92,7 +92,7 @@ TextureImporter:
         width: 41
         height: 70
       alignment: 9
-      pivot: {x: .5, y: .330000013}
+      pivot: {x: .5, y: .319999993}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FrostyHeadandTorso_Reattatch_4
       rect:
@@ -102,7 +102,7 @@ TextureImporter:
         width: 46
         height: 72
       alignment: 9
-      pivot: {x: .5, y: .330000013}
+      pivot: {x: .449999988, y: .330000013}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

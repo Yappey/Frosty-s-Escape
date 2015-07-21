@@ -88,11 +88,7 @@ public class HealthBarScript : MonoBehaviour
                 health -= meltSpeed * Time.deltaTime;
                 if (health <= 0.0f)
                 {
-                    
-                        
-                   
                     health = 0.0f;
-                    frostyHead.Play("Base Layer.FrostyHead_Melting");
                     OutOfHealth();
                 }
             }
@@ -124,7 +120,6 @@ public class HealthBarScript : MonoBehaviour
             {
                 OutOfHealth();
                 frostyHead.SetTrigger("Melt");
-                frostyHead.Play("Base Layer.FrostyHead_Melting");
             }
         }
 

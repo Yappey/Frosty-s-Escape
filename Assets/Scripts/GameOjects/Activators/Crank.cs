@@ -33,6 +33,7 @@ public class Crank : BaseActivator {
 	void Update () {
         if (!switched && switchmanager.GetComponent<SwitchManager>().Active == switchmanager.GetComponent<SwitchManager>().Torso)
         {
+		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
             frosty = torso = switchmanager.GetComponent<SwitchManager>().FindActive();
             torso = torso.transform.FindChild("Torso").gameObject; 
         }
@@ -50,10 +51,12 @@ public class Crank : BaseActivator {
                     transform.Rotate(new Vector3(0,0,1), rotationspersecond * Time.deltaTime);
                     rotationangle += rotationspersecond * Time.deltaTime;
                     reversed = false;
+					sound.GetComponent<SoundEffectManager>().PlayCrankSnd();
                 }
                 else
                 {
                     full = true;
+					sound.GetComponent<SoundEffectManager>().StopCrankSnd();
                 }
             }
             else
@@ -68,11 +71,13 @@ public class Crank : BaseActivator {
                             rotationangle -= rotationspersecond * Time.deltaTime;
                             reversed = true;
                             full = false;
+							sound.GetComponent<SoundEffectManager>().PlayCrankSnd();
                         }
                         else
                         {
                             transform.rotation = new Quaternion(0, 0, 0, 0);
                             rotationangle = 0;
+							sound.GetComponent<SoundEffectManager>().StopCrankSnd();
                         }
                     } 
                 }
@@ -87,12 +92,15 @@ public class Crank : BaseActivator {
                    transform.Rotate(new Vector3(0, 0, 1), -rotationspersecond * Time.deltaTime);
                    rotationangle -= rotationspersecond * Time.deltaTime;
                    reversed = true;
-                   full = false;    
+
+                   full = false;   
+					sound.GetComponent<SoundEffectManager>().PlayCrankSnd();
                }
                else
                {
                    transform.rotation = new Quaternion(0, 0, 0, 0);
                    rotationangle = 0;
+					sound.GetComponent<SoundEffectManager>().StopCrankSnd();
                }
            } 
         }

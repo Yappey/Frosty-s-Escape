@@ -178,105 +178,86 @@ public class Frostyehavior : MonoBehaviour
     //I'm sorry I know this is ugly
     void FrostyWalkAnimations()
 	{
-        float hor;
-		//if (KeyManager.GetAxis("Horizontal") != 0)
-			hor = KeyManager.GetAxis("Horizontal");
-		//else
-		//	hor = Input.GetAxis("Horizontal");
         Rigidbody2D rgbd = GetComponent<Rigidbody2D>();
 
-        //Head only walking animation
-        if (GetComponent<Frostyehavior>().headAttached && !GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && rgbd.velocity.x > 0.01f)
+        if (Mathf.Abs(rgbd.velocity.x) > 0.01f)
         {
-            frostyAnim.Play("Base Layer.FrostyHead_WalkingLeft");
-            transform.localScale = new Vector2(1, transform.localScale.y);
+            if (rgbd.velocity.x > 0.01f)
+                transform.localScale = new Vector3(1.0f, transform.localScale.y, transform.localScale.z);
+            else if (rgbd.velocity.x < -0.01f)
+                transform.localScale = new Vector3(-1.0f, transform.localScale.y, transform.localScale.z);
 
-
-        }
-        else if (GetComponent<Frostyehavior>().headAttached && !GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && rgbd.velocity.x < -0.01f)
-        {
-            frostyAnim.Play("Base Layer.FrostyHead_WalkingLeft");
-            transform.localScale = new Vector2(-1, transform.localScale.y);
-        }
-
-        //Torso only Walking animation
-        if (GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && !GetComponent<Frostyehavior>().headAttached && rgbd.velocity.x > 0.01f)
-        {
-            if (gameObject.GetComponent<LadderAndMonkeybar>()._bMonkeyBar == true)
+            //Head only walking animation
+            if (GetComponent<Frostyehavior>().headAttached && !GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached)
             {
-                frostyAnim.SetBool("Active", true);
-                transform.localScale = new Vector2(1, transform.localScale.y);
+                //I know it says left but it is walking right I swear
+                frostyAnim.Play("Base Layer.FrostyHead_WalkingLeft");
+
+
             }
-            else if (gameObject.GetComponent<LadderAndMonkeybar>()._bLadder == true)
+            else if (GetComponent<Frostyehavior>().headAttached && !GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached)
             {
-                frostyAnim.SetBool("Climbing", true);
+                frostyAnim.Play("Base Layer.FrostyHead_WalkingLeft");
             }
-            else if (gameObject.GetComponent<LadderAndMonkeybar>()._bMonkeyBar == false && gameObject.GetComponent<LadderAndMonkeybar>()._bLadder == false)
+
+            //Torso only Walking animation
+            if (GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && !GetComponent<Frostyehavior>().headAttached)
             {
-                frostyAnim.Play("Base Layer.FrostyTorso_Walking");
-                transform.localScale = new Vector2(1, transform.localScale.y);
-                frostyAnim.SetBool("Climbing", false);
+                if (gameObject.GetComponent<LadderAndMonkeybar>()._bMonkeyBar == true)
+                {
+                    frostyAnim.SetBool("Active", true);
+                }
+                else if (gameObject.GetComponent<LadderAndMonkeybar>()._bLadder == true)
+                {
+                    frostyAnim.SetBool("Climbing", true);
+                }
+                else if (gameObject.GetComponent<LadderAndMonkeybar>()._bMonkeyBar == false && gameObject.GetComponent<LadderAndMonkeybar>()._bLadder == false)
+                {
+                    frostyAnim.Play("Base Layer.FrostyTorso_Walking");
+                    frostyAnim.SetBool("Climbing", false);
 
-                frostyAnim.SetBool("Active", false);
+                    frostyAnim.SetBool("Active", false);
+                }
             }
-        }
-        else if (GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && !GetComponent<Frostyehavior>().headAttached && rgbd.velocity.x < -0.01f)
-        {
-            if (gameObject.GetComponent<LadderAndMonkeybar>()._bMonkeyBar == true)
+            else if (GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && !GetComponent<Frostyehavior>().headAttached)
             {
-                frostyAnim.SetBool("Active", true);
-                transform.localScale = new Vector2(-1, transform.localScale.y);
+                if (gameObject.GetComponent<LadderAndMonkeybar>()._bMonkeyBar == true)
+                {
+                    frostyAnim.SetBool("Active", true);
+                }
+                else if (gameObject.GetComponent<LadderAndMonkeybar>()._bLadder == true)
+                {
+                    frostyAnim.SetBool("Climbing", true);
+                }
+                else if (gameObject.GetComponent<LadderAndMonkeybar>()._bMonkeyBar == false && gameObject.GetComponent<LadderAndMonkeybar>()._bLadder == false)
+                {
+                    frostyAnim.Play("Base Layer.FrostyTorso_Walking");
+                    frostyAnim.SetBool("Climbing", false);
+
+                    frostyAnim.SetBool("Active", false);
+                }
             }
-            else if (gameObject.GetComponent<LadderAndMonkeybar>()._bLadder == true)
+
+
+
+            //Base only Walking
+            if (!GetComponent<Frostyehavior>().headAttached && !GetComponent<Frostyehavior>().torsoAttached && GetComponent<Frostyehavior>().baseAttached)
             {
-                frostyAnim.SetBool("Climbing", true);
+                frostyAnim.Play("Base Layer.FrostyBase_Walk");
             }
-            else if (gameObject.GetComponent<LadderAndMonkeybar>()._bMonkeyBar == false && gameObject.GetComponent<LadderAndMonkeybar>()._bLadder == false)
+
+            //Head and Torso Walking
+            if (GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && GetComponent<Frostyehavior>().headAttached)
             {
-                frostyAnim.Play("Base Layer.FrostyTorso_Walking");
-                transform.localScale = new Vector2(-1, transform.localScale.y);
-                frostyAnim.SetBool("Climbing", false);
-
-                frostyAnim.SetBool("Active", false);
+                frostyAnim.Play("Base Layer.FrostyHeadTorso_Walking");
             }
-        }
 
-        //Base only Walking
-        if (!GetComponent<Frostyehavior>().headAttached && !GetComponent<Frostyehavior>().torsoAttached && GetComponent<Frostyehavior>().baseAttached && rgbd.velocity.x > 0.01f)
-        {
-            frostyAnim.Play("Base Layer.FrostyBase_Walk");
-            transform.localScale = new Vector2(1, transform.localScale.y);
-        }
-        else if (!GetComponent<Frostyehavior>().headAttached && !GetComponent<Frostyehavior>().torsoAttached && GetComponent<Frostyehavior>().baseAttached && rgbd.velocity.x < -0.01f)
-        {
-            frostyAnim.Play("Base Layer.FrostyBase_Walk");
-            transform.localScale = new Vector2(-1, transform.localScale.y);
-        }
+            //FullBody walking animation
+            if (GetComponent<Frostyehavior>().baseAttached && GetComponent<Frostyehavior>().headAttached && GetComponent<Frostyehavior>().torsoAttached)
+            {
+                frostyAnim.Play("Base Layer.Frosty_FullBody");
 
-        //Head and Torso Walking
-        if (GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && GetComponent<Frostyehavior>().headAttached && rgbd.velocity.x > 0.01f)
-        {
-            frostyAnim.Play("Base Layer.FrostyHeadTorso_Walking");
-            transform.localScale = new Vector2(1, transform.localScale.y);
-        }
-        else if (GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && GetComponent<Frostyehavior>().headAttached && rgbd.velocity.x < -0.01f)
-        {
-            frostyAnim.Play("Base Layer.FrostyHeadTorso_Walking");
-            transform.localScale = new Vector2(-1, transform.localScale.y);
-        }
-
-        //FullBody walking animation
-        if (GetComponent<Frostyehavior>().baseAttached && GetComponent<Frostyehavior>().headAttached && GetComponent<Frostyehavior>().torsoAttached && rgbd.velocity.x > 0.01f)
-        {
-            frostyAnim.Play("Base Layer.Frosty_FullBody");
-            transform.localScale = new Vector2(1, transform.localScale.y);
-
-        }
-        else if (GetComponent<Frostyehavior>().baseAttached && GetComponent<Frostyehavior>().headAttached && GetComponent<Frostyehavior>().torsoAttached && rgbd.velocity.x < -0.01f)
-        {
-            frostyAnim.Play("Base Layer.Frosty_FullBody");
-            transform.localScale = new Vector2(-1, transform.localScale.y);
-
+            }
         }
 
     }
@@ -330,6 +311,12 @@ public class Frostyehavior : MonoBehaviour
         if (GetComponent<Frostyehavior>().torsoAttached && GetComponent<Frostyehavior>().baseAttached && !GetComponent<Frostyehavior>().headAttached && isGrounded)
         {
             //frostyAnim.Play("Base Layer.FrostyTorso_Idle");
+            frostyAnim.SetTrigger("Idle");
+        }
+
+        //Torso and Base and Head
+        if (GetComponent<Frostyehavior>().torsoAttached && GetComponent<Frostyehavior>().baseAttached && GetComponent<Frostyehavior>().headAttached && isGrounded)
+        {
             frostyAnim.SetTrigger("Idle");
         }
     }
