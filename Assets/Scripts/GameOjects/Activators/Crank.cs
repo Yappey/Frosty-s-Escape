@@ -31,7 +31,7 @@ public class Crank : BaseActivator {
 	
 	// Update is called once per frame
 	void Update () {
-        if (!switched)
+        if (!switched && switchmanager.GetComponent<SwitchManager>().Active == switchmanager.GetComponent<SwitchManager>().Torso)
         {
             frosty = torso = switchmanager.GetComponent<SwitchManager>().FindActive();
             torso = torso.transform.FindChild("Torso").gameObject; 

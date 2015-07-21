@@ -10,8 +10,7 @@ public class ButtonScript : MonoBehaviour {
     public string volumetype;
 	public int BonusLevelNum;
     public int levelnumber;
-    public int testif1;
-    public int testif2;
+
     
 
 	// Use this for initialization
