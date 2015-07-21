@@ -146,12 +146,14 @@ public class SwitchManager : MonoBehaviour
                 Destroy(Torso);
                 Base = Torso = Instantiate(pretorsobase);
                 Base.transform.position = Head.transform.position;
+                Head.GetComponent<Animator>().SetTrigger("HeadFromFullBodyDetach");
             }
             else
             {
                 Destroy(Torso);
                 Torso = Instantiate(pretorso);
                 Torso.transform.position = Head.transform.position;
+                Head.GetComponent<Animator>().SetTrigger("HeadTorsoDetach");
             }
             Active = Head;
         }
@@ -176,6 +178,7 @@ public class SwitchManager : MonoBehaviour
                 Head.GetComponent<Frostyehavior>().isActive = false;
                 Base.GetComponent<Frostyehavior>().isActive = false;
                 Head.transform.position = Base.transform.position = Torso.transform.position;
+                Torso.GetComponent<Animator>().SetTrigger("HeadTorsoBaseDetach");
             }
             else if (Active.GetComponent<Frostyehavior>().headAttached)
             {
@@ -183,7 +186,8 @@ public class SwitchManager : MonoBehaviour
                 Head = Instantiate(prehead);
                 Head.GetComponent<Frostyehavior>().isActive = false;
                 Head.transform.position = Torso.transform.position;
-               // Active.GetComponent<Animator>().SetTrigger("HeadDetachFromTorso");
+                Torso.GetComponent<Animator>().SetTrigger("HeadTorsoDetach");
+               
             }
             else
             {
@@ -191,6 +195,7 @@ public class SwitchManager : MonoBehaviour
                 Base = Instantiate(prebase);
                 Base.GetComponent<Frostyehavior>().isActive = false;
                 Base.transform.position = Torso.transform.position;
+                Torso.GetComponent<Animator>().SetTrigger("TorsoBaseDetach");
             }
             Active = Torso;
         }
@@ -212,12 +217,14 @@ public class SwitchManager : MonoBehaviour
                 Destroy(Head);
                 Head = Torso = Instantiate(preheadtorso);
                 Head.transform.position = Torso.transform.position = Base.transform.position;
+                Base.GetComponent<Animator>().SetTrigger("BaseDetachFroHeadTorso");
             }
             else
             {
                 Destroy(Torso);
                 Torso = Instantiate(pretorso);
                 Torso.transform.position = Base.transform.position;
+                Base.GetComponent<Animator>().SetTrigger("TorsoBaseDetach");
             }
             Active = Base;
         }

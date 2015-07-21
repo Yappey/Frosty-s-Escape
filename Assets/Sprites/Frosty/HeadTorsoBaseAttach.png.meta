@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d131ee87717108b48a198ed06f0a88d9
-timeCreated: 1437422505
+timeCreated: 1437446392
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -50,7 +50,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 60
+  spritePixelsToUnits: 50
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
@@ -64,7 +64,7 @@ TextureImporter:
         width: 51
         height: 125
       alignment: 9
-      pivot: {x: .5, y: .230000004}
+      pivot: {x: .5, y: .170000002}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: HeadTorsoBaseAttach_3
       rect:
@@ -74,7 +74,7 @@ TextureImporter:
         width: 53
         height: 120
       alignment: 9
-      pivot: {x: .5, y: .25999999}
+      pivot: {x: .5, y: .170000002}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: HeadTorsoBaseAttach_8
       rect:
@@ -84,7 +84,7 @@ TextureImporter:
         width: 153
         height: 53
       alignment: 9
-      pivot: {x: .159999996, y: .589999974}
+      pivot: {x: .171913669, y: .400843024}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: HeadTorsoBaseAttach_12
       rect:
@@ -94,7 +94,7 @@ TextureImporter:
         width: 147
         height: 59
       alignment: 9
-      pivot: {x: .159999996, y: .589999974}
+      pivot: {x: .170000002, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: HeadTorsoBaseAttach_14
       rect:
@@ -104,7 +104,7 @@ TextureImporter:
         width: 159
         height: 104
       alignment: 9
-      pivot: {x: .159999996, y: .25999999}
+      pivot: {x: .159999996, y: .200000003}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: HeadTorsoBaseAttach_15
       rect:
@@ -114,7 +114,7 @@ TextureImporter:
         width: 136
         height: 143
       alignment: 9
-      pivot: {x: .189999998, y: .200000003}
+      pivot: {x: .189999998, y: .159999996}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: HeadTorsoBaseAttach_16
       rect:
@@ -124,7 +124,7 @@ TextureImporter:
         width: 51
         height: 155
       alignment: 9
-      pivot: {x: .5, y: .180000007}
+      pivot: {x: .5, y: .150000006}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
