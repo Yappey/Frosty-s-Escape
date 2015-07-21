@@ -4,6 +4,7 @@ using System.Collections;
 public class Crank : BaseActivator {
 
     public GameObject torso;
+    
     public GameObject frosty;
     public GameObject switchmanager;
     public float rotationspersecond;
@@ -19,24 +20,29 @@ public class Crank : BaseActivator {
     public bool activated = false;
     public bool switched = false;
     public int increment = 0;
+    Animator frostyAnim;
 
 
 
 	// Use this for initialization
 	void Start () {
 		switchmanager = GameObject.FindGameObjectWithTag("SwitchManager");
+<<<<<<< .mine
+	frosty = torso = switchmanager.GetComponent<SwitchManager>().FindActive();
+            torso = torso.transform.FindChild("Torso").gameObject;
+=======
 	    frosty = torso = switchmanager.GetComponent<SwitchManager>().FindActive();
            torso = torso.transform.FindChild("Torso").gameObject; 
+>>>>>>> .theirs
+
+            frostyAnim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	    GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-        if (!switched && switchmanager.GetComponent<SwitchManager>().Active == switchmanager.GetComponent<SwitchManager>().Torso)
-        {
-            frosty = torso = switchmanager.GetComponent<SwitchManager>().FindActive();
-            torso = torso.transform.FindChild("Torso").gameObject; 
-        }
+        frosty = torso = switchmanager.GetComponent<SwitchManager>().FindTorso();
+        torso = torso.transform.FindChild("Torso").gameObject; 
         if (Mathf.Abs(torso.transform.position.y - transform.position.y) < heightmanagment * 4 * transform.localScale.y && Mathf.Abs(torso.transform.position.x - transform.position.x) < widthmanagment * 4 * transform.localScale.x)
         {
             if (!torso.transform.parent.gameObject.GetComponent<Frostyehavior>().isActive)
@@ -51,11 +57,13 @@ public class Crank : BaseActivator {
                     rotationangle += rotationspersecond * Time.deltaTime;
                     reversed = false;
 					sound.GetComponent<SoundEffectManager>().PlayCrankSnd();
+                    GameObject.FindGameObjectWithTag("SwitchManager").GetComponent<SwitchManager>().Torso.GetComponent<Animator>().SetBool("CrankWheel", true);
                 }
                 else
                 {
                     full = true;
 					sound.GetComponent<SoundEffectManager>().StopCrankSnd();
+                    GameObject.FindGameObjectWithTag("SwitchManager").GetComponent<SwitchManager>().Torso.GetComponent<Animator>().SetBool("CrankWheel", false);
                 }
             }
             else
