@@ -68,7 +68,15 @@ public class SecurityCamera : BaseReceiver {
 	// Update is called once per frame
 	void Update () {
 		SwitchManager sw = GameObject.FindGameObjectWithTag("SwitchManager").GetComponent<SwitchManager>();
-
+		
+		if (state == 0)
+		{
+			lens.transform.FindChild("View").gameObject.GetComponent<MeshRenderer>().enabled = true;
+		}
+		else
+		{
+			lens.transform.FindChild("View").gameObject.GetComponent<MeshRenderer>().enabled = false;
+		}
 		if (state == 0)
 		{
 
@@ -250,14 +258,6 @@ public class SecurityCamera : BaseReceiver {
 	public override void Process()
 	{
 		state = (state == 0) ? 1 : 0;
-		if (state == 0)
-		{
-			lens.transform.FindChild("View").gameObject.GetComponent<MeshRenderer>().enabled = true;
-		}
-		else
-		{
-			lens.transform.FindChild("View").gameObject.GetComponent<MeshRenderer>().enabled = false;
-		}
 	}
 
 	private bool isAngleBetween(float angleToCheck, float end, float start)
