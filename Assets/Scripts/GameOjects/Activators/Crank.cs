@@ -27,13 +27,10 @@ public class Crank : BaseActivator {
 	// Use this for initialization
 	void Start () {
 		switchmanager = GameObject.FindGameObjectWithTag("SwitchManager");
-<<<<<<< .mine
+
 	frosty = torso = switchmanager.GetComponent<SwitchManager>().FindActive();
             torso = torso.transform.FindChild("Torso").gameObject;
-=======
-	    frosty = torso = switchmanager.GetComponent<SwitchManager>().FindActive();
-           torso = torso.transform.FindChild("Torso").gameObject; 
->>>>>>> .theirs
+
 
             frostyAnim = GetComponent<Animator>();
 	}

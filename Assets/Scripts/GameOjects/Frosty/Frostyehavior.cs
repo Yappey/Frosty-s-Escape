@@ -323,9 +323,16 @@ public class Frostyehavior : MonoBehaviour
 
     void FrostyActivateAnimations()
     {
+        //Head Only
         if (GetComponent<Frostyehavior>().headAttached && !GetComponent<Frostyehavior>().baseAttached && !GetComponent<Frostyehavior>().torsoAttached)
         {
             frostyAnim.Play("Base Layer.FrostyHead_PushButton");
+        }
+
+        //Torso Only
+        if (!GetComponent<Frostyehavior>().headAttached && !GetComponent<Frostyehavior>().baseAttached && GetComponent<Frostyehavior>().torsoAttached)
+        {
+            frostyAnim.Play("Base Layer.TorsoPullLever");
         }
     }
 

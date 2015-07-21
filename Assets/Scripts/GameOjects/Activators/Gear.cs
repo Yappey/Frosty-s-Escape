@@ -4,20 +4,26 @@ using System.Collections;
 public class Gear : BaseActivator {
 
 	private SwitchManager switchMan;
+    Animator frostyAnim;
 
 	// Use this for initialization
 	void Start () {
 		switchMan = GameObject.FindGameObjectWithTag("SwitchManager").GetComponent<SwitchManager>();
+
+        frostyAnim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (state == 1)
-		{
-			GameObject torso = switchMan.FindTorso();
+        if (state == 1)
+        {
+            GameObject torso = switchMan.FindTorso();
 
-			transform.position = torso.transform.position + torso.transform.up * 0.69f;
-		}
+            transform.position = torso.transform.position + torso.transform.up * 0.69f;
+            transform.GetChild(0).position = torso.transform.FindChild("Gear Position").position;
+        }
+        else
+            transform.GetChild(0).position = transform.position;
 	}
 
 	public override void Activate()
@@ -35,6 +41,7 @@ public class Gear : BaseActivator {
 				I.inventory.Add(gameObject);
 				GetComponent<PolygonCollider2D>().enabled = false;
 				GetComponent<Rigidbody2D>().gravityScale = 0.0f;
+                GameObject.FindGameObjectWithTag("SwitchManager").GetComponent<SwitchManager>().Torso.GetComponent<Animator>().SetBool("HoldingGear", true);
 			}
 			else if (state == 1)
 			{
@@ -45,6 +52,7 @@ public class Gear : BaseActivator {
 				I.inventory.Remove(gameObject);
 				GetComponent<PolygonCollider2D>().enabled = true;
 				GetComponent<Rigidbody2D>().gravityScale = 1.0f;
+                GameObject.FindGameObjectWithTag("SwitchManager").GetComponent<SwitchManager>().Torso.GetComponent<Animator>().SetBool("HoldingGear", false);
 			}
 		}
 	}
