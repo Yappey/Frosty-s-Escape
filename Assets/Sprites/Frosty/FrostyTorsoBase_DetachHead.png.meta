@@ -1,15 +1,14 @@
 fileFormatVersion: 2
-guid: 79fcc46e375dc9a469457c24c23c64c2
-timeCreated: 1437493415
+guid: 8882a075ab7c9f14c9d48a61623b09ba
+timeCreated: 1437490619
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: FrostyBase_ReattachHeadTorso_1
-    21300002: FrostyBase_ReattachHeadTorso_2
-    21300004: FrostyBase_ReattachHeadTorso_3
-    21300006: FrostyBase_ReattachHeadTorso_5
-    21300008: FrostyBase_ReattachHeadTorso_7
-    21300010: FrostyBase_ReattachHeadTorso_9
+    21300000: FrostyTorsoBase_DetachHead_0
+    21300002: FrostyTorsoBase_DetachHead_1
+    21300004: FrostyTorsoBase_DetachHead_3
+    21300006: FrostyTorsoBase_DetachHead_4
+    21300008: FrostyTorsoBase_DetachHead_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -49,71 +48,61 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 65
+  spritePixelsToUnits: 55
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: FrostyBase_ReattachHeadTorso_1
+    - name: FrostyTorsoBase_DetachHead_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 10
-        width: 105
-        height: 70
-      alignment: 9
-      pivot: {x: .258352757, y: .519999981}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: FrostyBase_ReattachHeadTorso_2
-      rect:
-        serializedVersion: 2
-        x: 193
         y: 0
-        width: 101
-        height: 68
+        width: 94
+        height: 81
       alignment: 9
-      pivot: {x: .293642849, y: .600000024}
+      pivot: {x: .25, y: .189999998}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: FrostyBase_ReattachHeadTorso_3
+    - name: FrostyTorsoBase_DetachHead_1
       rect:
         serializedVersion: 2
-        x: 383
-        y: 10
-        width: 100
-        height: 113
+        x: 156
+        y: 0
+        width: 95
+        height: 81
       alignment: 9
-      pivot: {x: .273455203, y: .300000012}
+      pivot: {x: .25, y: .189999998}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: FrostyBase_ReattachHeadTorso_5
+    - name: FrostyTorsoBase_DetachHead_3
       rect:
         serializedVersion: 2
-        x: 572
-        y: 10
-        width: 81
-        height: 138
+        x: 312
+        y: 0
+        width: 85
+        height: 81
       alignment: 9
-      pivot: {x: .343376994, y: .25}
+      pivot: {x: .280000001, y: .189999998}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: FrostyBase_ReattachHeadTorso_7
+    - name: FrostyTorsoBase_DetachHead_4
       rect:
         serializedVersion: 2
-        x: 880
-        y: 10
-        width: 53
-        height: 120
+        x: 458
+        y: 0
+        width: 78
+        height: 103
       alignment: 9
-      pivot: {x: .534195781, y: .289999992}
+      pivot: {x: .300000012, y: .150000006}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: FrostyBase_ReattachHeadTorso_9
+    - name: FrostyTorsoBase_DetachHead_5
       rect:
         serializedVersion: 2
-        x: 734
-        y: 10
-        width: 54
-        height: 141
+        x: 592
+        y: 0
+        width: 47
+        height: 112
       alignment: 9
-      pivot: {x: .533562541, y: .239999995}
+      pivot: {x: .5, y: .140000001}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

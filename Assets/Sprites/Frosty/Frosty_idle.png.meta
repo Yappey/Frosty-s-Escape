@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 6ed72260c66f4144e89ee249ca044720
-timeCreated: 1436811936
+timeCreated: 1437493312
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -61,17 +61,17 @@ TextureImporter:
         width: 53
         height: 94
       alignment: 9
-      pivot: {x: .449999988, y: .270000011}
+      pivot: {x: .449999988, y: .230000004}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Frosty_idle_1
       rect:
         serializedVersion: 2
-        x: 119
+        x: 120
         y: 0
         width: 47
         height: 94
       alignment: 9
-      pivot: {x: .449999988, y: .270000011}
+      pivot: {x: .449999988, y: .239999995}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Frosty_idle_2
       rect:
@@ -81,7 +81,7 @@ TextureImporter:
         width: 47
         height: 92
       alignment: 9
-      pivot: {x: .449999988, y: .270000011}
+      pivot: {x: .449999988, y: .239999995}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Frosty_idle_3
       rect:
@@ -91,7 +91,7 @@ TextureImporter:
         width: 50
         height: 87
       alignment: 9
-      pivot: {x: .449999988, y: .270000011}
+      pivot: {x: .449999988, y: .25}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
