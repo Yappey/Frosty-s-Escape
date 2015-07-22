@@ -7773,6 +7773,10 @@ Prefab:
       propertyPath: ThreeStars
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 451024, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
   m_IsPrefabParent: 0
@@ -10836,7 +10840,7 @@ GameObject:
   - 212: {fileID: 1802105976}
   - 61: {fileID: 1802105975}
   - 114: {fileID: 1802105973}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: MovingPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
