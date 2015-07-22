@@ -2108,11 +2108,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 451024, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -43.7200012
+      value: -73.3099976
       objectReference: {fileID: 0}
     - target: {fileID: 451024, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -16.2199993
+      value: .709999979
       objectReference: {fileID: 0}
     - target: {fileID: 11431724, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
       propertyPath: levelnumber
@@ -2194,9 +2194,21 @@ Prefab:
       propertyPath: fullLogic.Array.data[2].turnOffReceivers.Array.data[0].stateMax
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 137530, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
+      propertyPath: m_Name
+      value: winDoor Waypoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 11479862, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
+      propertyPath: Waypoint
+      value: 
+      objectReference: {fileID: 1335097237}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1335097237 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 137530, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
+  m_PrefabInternal: {fileID: 1335097236}
 --- !u!1001 &1345549049
 Prefab:
   m_ObjectHideFlags: 0
