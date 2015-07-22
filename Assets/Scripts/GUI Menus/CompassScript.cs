@@ -27,6 +27,9 @@ public class CompassScript : MonoBehaviour {
 
 			bool rtn = false;
 
+			if (turnOnReceivers.Length > 0 && turnOffReceivers.Length == 0)
+				return true;
+
 			foreach(ReceiverNode rec in turnOffReceivers)
 			{
 				if (!rec.Evaluate())
