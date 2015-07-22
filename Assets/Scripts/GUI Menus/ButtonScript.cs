@@ -113,11 +113,12 @@ public class ButtonScript : MonoBehaviour {
 
     public void PlayOnClick()
     {
-        if (PlayerPrefs.GetInt("ActiveLevel") > numlevels)
-            LoadingScreenDelayed.Instance.LoadingLevels("Level1");
 		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
 		sound.GetComponent<SoundEffectManager>().PlayButtonClick();
-
+        if (!PlayerPrefs.HasKey("ActiveLevel"))
+            LoadingScreenDelayed.Instance.LoadingLevels("Level1");
+        if (PlayerPrefs.GetInt("ActiveLevel") > numlevels)
+            LoadingScreenDelayed.Instance.LoadingLevels("Level1");
         LoadingScreenDelayed.Instance.LoadingLevels(PlayerPrefs.GetInt("ActiveLevel") + 4);
         //Application.LoadLevel(PlayerPrefs.GetInt("ActiveLevel") + 4);
     }
