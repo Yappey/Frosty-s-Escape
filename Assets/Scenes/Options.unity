@@ -1060,6 +1060,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1460502307}
     m_Modifications:
+    - target: {fileID: 11426334, guid: 2d0cf03e5bcdd8345b4639bffb3f7785, type: 2}
+      propertyPath: buttons.Array.size
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 435564, guid: 2d0cf03e5bcdd8345b4639bffb3f7785, type: 2}
       propertyPath: m_LocalPosition.x
       value: -356.152679
@@ -1132,6 +1136,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: .833333313
       objectReference: {fileID: 0}
+    - target: {fileID: 11426334, guid: 2d0cf03e5bcdd8345b4639bffb3f7785, type: 2}
+      propertyPath: buttons.Array.data[7]
+      value: 
+      objectReference: {fileID: 1207533995}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2d0cf03e5bcdd8345b4639bffb3f7785, type: 2}
   m_IsPrefabParent: 0

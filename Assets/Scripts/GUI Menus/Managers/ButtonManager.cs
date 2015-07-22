@@ -508,22 +508,35 @@ public class ButtonManager : MonoBehaviour
         {
             if (!buttonsDuringGameplay)
             {
-                GameObject[] labels = GameObject.FindGameObjectsWithTag("Play");
+				if (currButton == 0 || currButton == 1){
+					buttons[0].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
+					buttons[1].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
+				}
+				
+				else{
+					buttons[0].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
+					buttons[1].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
+				}
 
-                if (currButton == 0 || currButton == 1)
-                    labels[2].GetComponent<UnityEngine.UI.Text>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
-                else
-                    labels[2].GetComponent<UnityEngine.UI.Text>().color = new Color(1, 1, 1, 1);
+                if (currButton == 2 || currButton == 3){
+					buttons[2].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
+					buttons[3].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
+				}
 
-                if (currButton == 2 || currButton == 3)
-                    labels[1].GetComponent<UnityEngine.UI.Text>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
-                else
-                    labels[1].GetComponent<UnityEngine.UI.Text>().color = new Color(1, 1, 1, 1);
+                else{
+					buttons[2].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
+					buttons[3].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
+				}
 
-                if (currButton == 4 || currButton == 5)
-                    labels[0].GetComponent<UnityEngine.UI.Text>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
-                else
-                    labels[0].GetComponent<UnityEngine.UI.Text>().color = new Color(1, 1, 1, 1);
+				if (currButton == 4 || currButton == 5){
+					buttons[4].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
+					buttons[5].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
+				}
+				
+				else{
+					buttons[4].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
+					buttons[5].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
+				}
 
                 if (currButton == 6)
                     buttons[6].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
@@ -543,32 +556,46 @@ public class ButtonManager : MonoBehaviour
 
                 if (pauser.GetComponent<PuaseScript>().paused && pauser.GetComponent<PuaseScript>().Options.activeSelf)
                 {
-                    GameObject[] labels = GameObject.FindGameObjectsWithTag("Play");
-
-                    if (currButton == 0 || currButton == 1)
-                        labels[0].GetComponent<UnityEngine.UI.Text>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
-                    else
-                        labels[0].GetComponent<UnityEngine.UI.Text>().color = new Color(1, 1, 1, 1);
-
-                    if (currButton == 2 || currButton == 3)
-                        labels[1].GetComponent<UnityEngine.UI.Text>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
-                    else
-                        labels[1].GetComponent<UnityEngine.UI.Text>().color = new Color(1, 1, 1, 1);
-
-                    if (currButton == 4 || currButton == 5)
-                        labels[2].GetComponent<UnityEngine.UI.Text>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
-                    else
-                        labels[2].GetComponent<UnityEngine.UI.Text>().color = new Color(1, 1, 1, 1);
-
-                    if (currButton == 6)
-                        buttons[6].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
-                    else
-                        buttons[6].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
-
+					if (currButton == 0 || currButton == 1){
+						buttons[0].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
+						buttons[1].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
+					}
+					
+					else{
+						buttons[0].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
+						buttons[1].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
+					}
+					
+					if (currButton == 2 || currButton == 3){
+						buttons[2].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
+						buttons[3].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
+					}
+					
+					else{
+						buttons[2].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
+						buttons[3].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
+					}
+					
+					if (currButton == 4 || currButton == 5){
+						buttons[4].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
+						buttons[5].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
+					}
+					
+					else{
+						buttons[4].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
+						buttons[5].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
+					}
+					
+					if (currButton == 6)
+						buttons[6].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
+					else
+						buttons[6].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
+					
 					if (currButton == 7)
 						buttons[7].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
 					else
 						buttons[7].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
+
                 }
             }
         }
