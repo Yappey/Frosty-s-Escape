@@ -20,7 +20,7 @@ public class Crank : BaseActivator {
     public bool activated = false;
     public bool switched = false;
     public int increment = 0;
-    Animator frostyAnim;
+//    Animator frostyAnim;
 
 
 
@@ -31,7 +31,7 @@ public class Crank : BaseActivator {
 	    frosty = torso = switchmanager.GetComponent<SwitchManager>().FindActive();
         torso = torso.transform.FindChild("Torso").gameObject; 
 
-        frostyAnim = GetComponent<Animator>();
+        //frostyAnim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
