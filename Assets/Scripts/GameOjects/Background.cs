@@ -42,5 +42,14 @@ public class Background : MonoBehaviour {
 				}
 			}
 		}
+
+		GameObject winBox = GameObject.FindGameObjectWithTag ("Respawn");
+
+		if (winBox != null && winBox.GetComponent<WinBox>().levelIsWon) {
+			if (alertMusic.isPlaying) {
+				alertMusic.Stop ();
+				music.Play();
+			}
+		}
 	}
 }
