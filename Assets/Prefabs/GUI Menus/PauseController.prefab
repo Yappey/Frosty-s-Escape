@@ -148,6 +148,7 @@ GameObject:
   - 212: {fileID: 21214158}
   - 114: {fileID: 11479862}
   - 61: {fileID: 6119006}
+  - 61: {fileID: 6149800}
   m_Layer: 0
   m_Name: WinDoor
   m_TagString: Untagged
@@ -16536,7 +16537,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -77.1200027, y: -10.7700005, z: 0}
+  m_LocalPosition: {x: -56.0200005, y: 6.40999985, z: 0}
   m_LocalScale: {x: .351987362, y: .677785516, z: .49210912}
   m_Children: []
   m_Father: {fileID: 494980}
@@ -16560,7 +16561,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 137530}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -66.0400009, y: 5.21999979, z: 0}
+  m_LocalPosition: {x: -56.0200005, y: 10.1899996, z: 0}
   m_LocalScale: {x: .323611289, y: .677785516, z: .49210912}
   m_Children: []
   m_Father: {fileID: 494980}
@@ -16822,7 +16823,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 117682}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -76.5, y: -11.2399998, z: 0}
+  m_LocalPosition: {x: -55.5299988, y: 5.51999998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 494980}
@@ -17657,6 +17658,19 @@ MeshFilter:
   m_GameObject: {fileID: 138888}
   m_Mesh: {fileID: 4300010, guid: c2d6a9640f26a41438e9e54e97926f73, type: 3}
 --- !u!61 &6119006
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100624}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 3, y: 4.90999937}
+--- !u!61 &6149800
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -20840,50 +20854,62 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   headLogic:
   - pointAt: {fileID: 0}
+    turnOnReceivers:
+    - receiver: {fileID: 0}
+      stateMin: 0
+      stateMax: 0
+    turnOffReceivers:
+    - receiver: {fileID: 11466962}
+      stateMin: 1
+      stateMax: 1
+  - pointAt: {fileID: 0}
     turnOnReceivers: []
     turnOffReceivers:
-    - receiver: {fileID: 0}
+    - receiver: {fileID: 11466962}
       stateMin: 1
       stateMax: 1
   baseLogic:
   - pointAt: {fileID: 0}
-    turnOnReceivers: []
-    turnOffReceivers:
-    - receiver: {fileID: 0}
+    turnOnReceivers:
+    - receiver: {fileID: 11438368}
       stateMin: 1
       stateMax: 1
-  torsoLogic:
-  - pointAt: {fileID: 0}
-    turnOnReceivers: []
     turnOffReceivers:
     - receiver: {fileID: 0}
+      stateMin: 0
+      stateMax: 0
+  torsoLogic:
+  - pointAt: {fileID: 0}
+    turnOnReceivers:
+    - receiver: {fileID: 11438368}
+      stateMin: 1
+      stateMax: 1
+    turnOffReceivers:
+    - receiver: {fileID: 11438368}
+      stateMin: 1
+      stateMax: 1
+    - receiver: {fileID: 11466962}
       stateMin: 1
       stateMax: 1
   fullLogic:
   - pointAt: {fileID: 0}
-    turnOnReceivers:
-    - receiver: {fileID: 0}
-      stateMin: 1
-      stateMax: 1
-    - receiver: {fileID: 0}
-      stateMin: 1
-      stateMax: 1
-    - receiver: {fileID: 0}
-      stateMin: 1
-      stateMax: 1
+    turnOnReceivers: []
     turnOffReceivers:
-    - receiver: {fileID: 0}
+    - receiver: {fileID: 11438368}
       stateMin: 1
       stateMax: 1
   - pointAt: {fileID: 0}
     turnOnReceivers:
-    - receiver: {fileID: 0}
+    - receiver: {fileID: 11438368}
+      stateMin: 1
+      stateMax: 1
+    - receiver: {fileID: 11466962}
       stateMin: 1
       stateMax: 1
     turnOffReceivers:
-    - receiver: {fileID: 0}
-      stateMin: 2
-      stateMax: 2
+    - receiver: {fileID: 11463170}
+      stateMin: 1
+      stateMax: 1
   arrow: {fileID: 142754}
   dism: {fileID: 144150}
   assem: {fileID: 111940}
@@ -30298,10 +30324,10 @@ MonoBehaviour:
   win: {fileID: 126764}
   healthbar: {fileID: 158128}
   levelIsWon: 0
-  levelnumber: 4
-  OneStar: 100
-  TwoStars: 75
-  ThreeStars: 45
+  levelnumber: 6
+  OneStar: 180
+  TwoStars: 140
+  ThreeStars: 110
   ThreeStarAnim: {fileID: 183534}
   TwoStarAnim: {fileID: 135904}
   OneStarAnim: {fileID: 192504}
@@ -34896,6 +34922,7 @@ MonoBehaviour:
   - {fileID: 11424842}
   - {fileID: 11478646}
   - {fileID: 11490716}
+  - {fileID: 11429522}
   currButton: 0
   elapsedtime: 0
 --- !u!114 &11443968
@@ -40521,7 +40548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45ff1b75178d6b745abc860c033edacb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 120
+  health: 180
   meltMultiplier: 2
   loser: {fileID: 0}
   fog: {fileID: 143590}
@@ -40531,7 +40558,7 @@ MonoBehaviour:
   fog6: {fileID: 199072}
   levelTime: 0
   dontKillMe: 0
-  isDead: 1
+  isDead: 0
 --- !u!114 &11458508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -40812,7 +40839,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Restrart
+  m_Text: Restart
 --- !u!114 &11459424
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -48041,7 +48068,7 @@ MonoBehaviour:
   HUDSwitchOne: {fileID: 190310}
   HUDSwitchTwo: {fileID: 142940}
   HUDSwitchThree: {fileID: 189060}
-  Waypoint: {fileID: 137530}
+  Waypoint: {fileID: 0}
 --- !u!114 &11479930
 MonoBehaviour:
   m_ObjectHideFlags: 1
