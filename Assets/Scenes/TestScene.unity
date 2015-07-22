@@ -352,7 +352,7 @@ Transform:
   m_LocalScale: {x: 1.84559393, y: 2.02414203, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 25
 --- !u!1001 &245354755
 Prefab:
   m_ObjectHideFlags: 0

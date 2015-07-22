@@ -33,7 +33,7 @@ public class SwitchManager : MonoBehaviour
     public int test = 0;
 
     //Animation
-    Animator frostyAnim;
+
 
 	// Use this for initialization
     void Start()
@@ -46,7 +46,7 @@ public class SwitchManager : MonoBehaviour
 
 		CheckpointManager.Instance.Clear();
 
-        frostyAnim = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
