@@ -1,0 +1,88 @@
+fileFormatVersion: 2
+guid: e1662f670f8f9aa4c9d6478e7c757337
+timeCreated: 1437533916
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: HeadTorsoIdle_0
+    21300002: HeadTorsoIdle_1
+    21300004: HeadTorsoIdle_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 60
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: HeadTorsoIdle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 45
+        height: 72
+      alignment: 9
+      pivot: {x: .449999988, y: .340000004}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HeadTorsoIdle_1
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 1
+        width: 45
+        height: 67
+      alignment: 9
+      pivot: {x: .449999988, y: .349999994}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HeadTorsoIdle_2
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 0
+        width: 46
+        height: 69
+      alignment: 9
+      pivot: {x: .449999988, y: .330000013}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

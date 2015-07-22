@@ -66,6 +66,7 @@ MonoBehaviour:
   - Axis20
   inputButtons:
   - name: Horizontal
+    group: 0
     pos: 0
     neg: 0
     altPos: 0
@@ -87,6 +88,7 @@ MonoBehaviour:
     pressed: 0
     released: 0
   - name: Vertical
+    group: 0
     pos: 0
     neg: 0
     altPos: 0
@@ -108,6 +110,7 @@ MonoBehaviour:
     pressed: 0
     released: 0
   - name: Jump
+    group: 0
     pos: 0
     neg: 0
     altPos: 0
@@ -129,6 +132,7 @@ MonoBehaviour:
     pressed: 0
     released: 0
   - name: Throw
+    group: 0
     pos: 0
     neg: 0
     altPos: 0
@@ -150,6 +154,7 @@ MonoBehaviour:
     pressed: 0
     released: 0
   - name: Activate
+    group: 0
     pos: 0
     neg: 0
     altPos: 0
@@ -171,6 +176,7 @@ MonoBehaviour:
     pressed: 0
     released: 0
   - name: Attach
+    group: 0
     pos: 0
     neg: 0
     altPos: 0
@@ -192,6 +198,7 @@ MonoBehaviour:
     pressed: 0
     released: 0
   - name: Detach
+    group: 0
     pos: 0
     neg: 0
     altPos: 0
@@ -213,6 +220,7 @@ MonoBehaviour:
     pressed: 0
     released: 0
   - name: Head
+    group: 0
     pos: 0
     neg: 0
     altPos: 0
@@ -234,6 +242,7 @@ MonoBehaviour:
     pressed: 0
     released: 0
   - name: Torso
+    group: 0
     pos: 0
     neg: 0
     altPos: 0
@@ -255,6 +264,7 @@ MonoBehaviour:
     pressed: 0
     released: 0
   - name: Base
+    group: 0
     pos: 0
     neg: 0
     altPos: 0
@@ -276,6 +286,7 @@ MonoBehaviour:
     pressed: 0
     released: 0
   - name: Cheat
+    group: 0
     pos: 0
     neg: 0
     altPos: 0
@@ -297,6 +308,7 @@ MonoBehaviour:
     pressed: 0
     released: 0
   - name: Up
+    group: 1
     pos: 0
     neg: 0
     altPos: 0
@@ -318,6 +330,7 @@ MonoBehaviour:
     pressed: 0
     released: 0
   - name: Down
+    group: 1
     pos: 0
     neg: 0
     altPos: 0
@@ -339,6 +352,7 @@ MonoBehaviour:
     pressed: 0
     released: 0
   - name: Left
+    group: 1
     pos: 0
     neg: 0
     altPos: 0
@@ -360,6 +374,7 @@ MonoBehaviour:
     pressed: 0
     released: 0
   - name: Right
+    group: 1
     pos: 0
     neg: 0
     altPos: 0
@@ -381,6 +396,7 @@ MonoBehaviour:
     pressed: 0
     released: 0
   - name: Submit
+    group: 1
     pos: 0
     neg: 0
     altPos: 0
@@ -402,6 +418,7 @@ MonoBehaviour:
     pressed: 0
     released: 0
   - name: Cancel
+    group: 1
     pos: 0
     neg: 0
     altPos: 0
@@ -423,6 +440,7 @@ MonoBehaviour:
     pressed: 0
     released: 0
   - name: AimHorizontal
+    group: 0
     pos: 0
     neg: 0
     altPos: 0
@@ -444,6 +462,7 @@ MonoBehaviour:
     pressed: 0
     released: 0
   - name: AimVertical
+    group: 0
     pos: 0
     neg: 0
     altPos: 0

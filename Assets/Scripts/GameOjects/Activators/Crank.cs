@@ -39,6 +39,7 @@ public class Crank : BaseActivator {
 	    GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
         frosty = torso = switchmanager.GetComponent<SwitchManager>().FindTorso();
         torso = torso.transform.FindChild("Torso").gameObject; 
+
         if (Mathf.Abs(torso.transform.position.y - transform.position.y) < heightmanagment * 4 * transform.localScale.y && Mathf.Abs(torso.transform.position.x - transform.position.x) < widthmanagment * 4 * transform.localScale.x)
         {
             if (!torso.transform.parent.gameObject.GetComponent<Frostyehavior>().isActive)

@@ -12,25 +12,29 @@ public class Lever : BaseActivator {
 	
 	// Update is called once per frame
 	void Update () {
-        frosty = switchmanager.GetComponent<SwitchManager>().FindActive();
-        //if(Input.GetKeyDown(KeyCode.Tab))
-        //{
-        //    Activate();
-        //}
+        if ((state == 0 && transform.localScale.x < 0.0f) || (state != 0 && transform.localScale.x > 0.0f))
+		{
+			Vector3 scl = transform.localScale;
+			scl.x = -scl.x;
+			transform.localScale = scl;
+		}
 	}
 
     public override void Activate()
-    {
+	{
+		frosty = switchmanager.GetComponent<SwitchManager>().FindActive();
         if (frosty.GetComponent<Frostyehavior>().torsoAttached)
         {
 			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
 			sound.GetComponent<SoundEffectManager>().PlayButtonClick();
 
+			if (state == 0)
+				state = 1;
+			else
+				state = 0;
+
             foreach (BaseReceiver receiver in receivers)
             {
-                state++;
-                if (state > 1)
-                    state = 0;
                 receiver.Process();
             } 
         }

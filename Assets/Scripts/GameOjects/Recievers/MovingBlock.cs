@@ -67,7 +67,7 @@ public class MovingBlock : BaseReceiver {
 						else
 						{
 							currWaypoint--;
-							if (currWaypoint == 0)
+							if (currWaypoint < 0)
 							{
 								currWaypoint = waypoints.Length - 1;
 							}
