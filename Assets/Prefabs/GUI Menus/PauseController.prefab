@@ -147,6 +147,8 @@ GameObject:
   - 4: {fileID: 447322}
   - 212: {fileID: 21214158}
   - 114: {fileID: 11479862}
+  - 61: {fileID: 6119006}
+  - 61: {fileID: 6149800}
   m_Layer: 0
   m_Name: WinDoor
   m_TagString: Untagged
@@ -5996,6 +5998,21 @@ GameObject:
   - 4: {fileID: 421008}
   m_Layer: 0
   m_Name: transform3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &137530
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 451024}
+  m_Layer: 0
+  m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16520,11 +16537,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -59.9599991, y: -47.5699997, z: 0}
-  m_LocalScale: {x: .323611289, y: .549304008, z: .49210912}
+  m_LocalPosition: {x: -56.0200005, y: 6.40999985, z: 0}
+  m_LocalScale: {x: .351987362, y: .677785516, z: .49210912}
   m_Children: []
   m_Father: {fileID: 494980}
-  m_RootOrder: 14
+  m_RootOrder: 15
 --- !u!4 &447370
 Transform:
   m_ObjectHideFlags: 1
@@ -16537,6 +16554,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 418484}
   m_RootOrder: 0
+--- !u!4 &451024
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 137530}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -56.0200005, y: 10.1899996, z: 0}
+  m_LocalScale: {x: .323611289, y: .677785516, z: .49210912}
+  m_Children: []
+  m_Father: {fileID: 494980}
+  m_RootOrder: 14
 --- !u!4 &451326
 Transform:
   m_ObjectHideFlags: 1
@@ -16794,7 +16823,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 117682}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -59.4000015, y: -48.3400002, z: 0}
+  m_LocalPosition: {x: -55.5299988, y: 5.51999998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 494980}
@@ -16985,6 +17014,7 @@ Transform:
   - {fileID: 22403782}
   - {fileID: 22437570}
   - {fileID: 487548}
+  - {fileID: 451024}
   - {fileID: 447322}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -17627,6 +17657,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138888}
   m_Mesh: {fileID: 4300010, guid: c2d6a9640f26a41438e9e54e97926f73, type: 3}
+--- !u!61 &6119006
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100624}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 3, y: 4.90999937}
+--- !u!61 &6149800
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100624}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 3, y: 4.90999937}
 --- !u!61 &6179272
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -20798,50 +20854,62 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   headLogic:
   - pointAt: {fileID: 0}
+    turnOnReceivers:
+    - receiver: {fileID: 0}
+      stateMin: 0
+      stateMax: 0
+    turnOffReceivers:
+    - receiver: {fileID: 11466962}
+      stateMin: 1
+      stateMax: 1
+  - pointAt: {fileID: 0}
     turnOnReceivers: []
     turnOffReceivers:
-    - receiver: {fileID: 0}
+    - receiver: {fileID: 11466962}
       stateMin: 1
       stateMax: 1
   baseLogic:
   - pointAt: {fileID: 0}
-    turnOnReceivers: []
-    turnOffReceivers:
-    - receiver: {fileID: 0}
+    turnOnReceivers:
+    - receiver: {fileID: 11438368}
       stateMin: 1
       stateMax: 1
-  torsoLogic:
-  - pointAt: {fileID: 0}
-    turnOnReceivers: []
     turnOffReceivers:
     - receiver: {fileID: 0}
+      stateMin: 0
+      stateMax: 0
+  torsoLogic:
+  - pointAt: {fileID: 0}
+    turnOnReceivers:
+    - receiver: {fileID: 11438368}
+      stateMin: 1
+      stateMax: 1
+    turnOffReceivers:
+    - receiver: {fileID: 11438368}
+      stateMin: 1
+      stateMax: 1
+    - receiver: {fileID: 11466962}
       stateMin: 1
       stateMax: 1
   fullLogic:
   - pointAt: {fileID: 0}
-    turnOnReceivers:
-    - receiver: {fileID: 0}
-      stateMin: 1
-      stateMax: 1
-    - receiver: {fileID: 0}
-      stateMin: 1
-      stateMax: 1
-    - receiver: {fileID: 0}
-      stateMin: 1
-      stateMax: 1
+    turnOnReceivers: []
     turnOffReceivers:
-    - receiver: {fileID: 0}
+    - receiver: {fileID: 11438368}
       stateMin: 1
       stateMax: 1
   - pointAt: {fileID: 0}
     turnOnReceivers:
-    - receiver: {fileID: 0}
+    - receiver: {fileID: 11438368}
+      stateMin: 1
+      stateMax: 1
+    - receiver: {fileID: 11466962}
       stateMin: 1
       stateMax: 1
     turnOffReceivers:
-    - receiver: {fileID: 0}
-      stateMin: 2
-      stateMax: 2
+    - receiver: {fileID: 11463170}
+      stateMin: 1
+      stateMax: 1
   arrow: {fileID: 142754}
   dism: {fileID: 144150}
   assem: {fileID: 111940}
@@ -30256,10 +30324,10 @@ MonoBehaviour:
   win: {fileID: 126764}
   healthbar: {fileID: 158128}
   levelIsWon: 0
-  levelnumber: 1
-  OneStar: 100
-  TwoStars: 75
-  ThreeStars: 45
+  levelnumber: 6
+  OneStar: 180
+  TwoStars: 140
+  ThreeStars: 110
   ThreeStarAnim: {fileID: 183534}
   TwoStarAnim: {fileID: 135904}
   OneStarAnim: {fileID: 192504}
@@ -34854,6 +34922,7 @@ MonoBehaviour:
   - {fileID: 11424842}
   - {fileID: 11478646}
   - {fileID: 11490716}
+  - {fileID: 11429522}
   currButton: 0
   elapsedtime: 0
 --- !u!114 &11443968
@@ -40479,7 +40548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45ff1b75178d6b745abc860c033edacb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 500
+  health: 180
   meltMultiplier: 2
   loser: {fileID: 0}
   fog: {fileID: 143590}
@@ -40489,7 +40558,7 @@ MonoBehaviour:
   fog6: {fileID: 199072}
   levelTime: 0
   dontKillMe: 0
-  isDead: 1
+  isDead: 0
 --- !u!114 &11458508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -40770,7 +40839,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Restrart
+  m_Text: Restart
 --- !u!114 &11459424
 MonoBehaviour:
   m_ObjectHideFlags: 1
