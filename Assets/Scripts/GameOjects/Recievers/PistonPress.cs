@@ -27,6 +27,7 @@ public class PistonPress : BaseReceiver {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+		xposition = transform.parent.position.x;
 		gameObject.transform.position = new Vector3(xposition, gameObject.transform.position.y, gameObject.transform.position.z);
 
 		if (state == 1) {

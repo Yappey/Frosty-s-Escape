@@ -238,7 +238,23 @@ public sealed class CheckpointManager {
 
 			//sw.Active = sw.FindActive();
 
-			// Reset Receivers and Activators
+			// Reset Receivers and Activators 3 times to cover children of objects.
+			foreach (recState recS in receivers)
+			{
+				recS.Reset();
+			}
+			foreach (actState actS in activators)
+			{
+				actS.Reset();
+			}
+			foreach (recState recS in receivers)
+			{
+				recS.Reset();
+			}
+			foreach (actState actS in activators)
+			{
+				actS.Reset();
+			}
 			foreach (recState recS in receivers)
 			{
 				recS.Reset();

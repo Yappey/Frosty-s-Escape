@@ -3,7 +3,7 @@ using System.Collections;
 
 public class GearSpot : BaseActivator {
 
-
+	public int gearCode = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -43,7 +43,7 @@ public class GearSpot : BaseActivator {
 				if (item != null)
 				{
 					Gear gr = item.GetComponent<Gear>();
-					if (gr != null)
+					if (gr != null && gr.gearCode == gearCode)
 					{
 						transform.GetChild(0).gameObject.SetActive(false);
 

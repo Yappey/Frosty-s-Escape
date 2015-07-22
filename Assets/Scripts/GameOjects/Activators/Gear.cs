@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Gear : BaseActivator
 {
-
+	public int gearCode = 0;
     private SwitchManager switchMan;
 
     // Use this for initialization
