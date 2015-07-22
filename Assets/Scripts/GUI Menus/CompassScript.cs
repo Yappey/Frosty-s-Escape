@@ -82,7 +82,7 @@ public class CompassScript : MonoBehaviour {
 			GameObject frost = GameObject.FindGameObjectWithTag("SwitchManager").GetComponent<SwitchManager>().FindActive();
 			Frostyehavior active = frost.GetComponent<Frostyehavior>();
 
-			transform.position = frost.transform.position + Vector3.up * 2.0f;
+			transform.position = frost.transform.position + Vector3.up * 2.0f + Vector3.forward * -4;
 
 			int matchCount = 0;
 
