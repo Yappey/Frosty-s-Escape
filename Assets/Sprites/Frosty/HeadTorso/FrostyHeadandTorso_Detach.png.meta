@@ -1,16 +1,14 @@
 fileFormatVersion: 2
-guid: a077d981ead78c644a7cf05108455729
-timeCreated: 1437373322
+guid: 87575ce511af3c541970c402562aa58f
+timeCreated: 1437495653
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: FrostyTorsoBase_AttachHead_0
-    21300002: FrostyTorsoBase_AttachHead_1
-    21300004: FrostyTorsoBase_AttachHead_2
-    21300006: FrostyTorsoBase_AttachHead_3
-    21300008: FrostyTorsoBase_AttachHead_4
-    21300010: FrostyTorsoBase_AttachHead_5
-    21300012: FrostyTorsoBase_AttachHead_6
+    21300000: FrostyHeadandTorso_Detach_0
+    21300002: FrostyHeadandTorso_Detach_1
+    21300004: FrostyHeadandTorso_Detach_2
+    21300006: FrostyHeadandTorso_Detach_3
+    21300008: FrostyHeadandTorso_Detach_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -50,81 +48,61 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 55
+  spritePixelsToUnits: 60
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: FrostyTorsoBase_AttachHead_0
+    - name: FrostyHeadandTorso_Detach_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 94
-        height: 81
+        width: 81
+        height: 40
       alignment: 9
-      pivot: {x: .275456011, y: .270000011}
+      pivot: {x: .25999999, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: FrostyTorsoBase_AttachHead_1
+    - name: FrostyHeadandTorso_Detach_1
       rect:
         serializedVersion: 2
         x: 156
         y: 0
-        width: 97
-        height: 81
+        width: 82
+        height: 39
       alignment: 9
-      pivot: {x: .263759166, y: .270000011}
+      pivot: {x: .25999999, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: FrostyTorsoBase_AttachHead_2
-      rect:
-        serializedVersion: 2
-        x: 265
-        y: 69
-        width: 37
-        height: 42
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: FrostyTorsoBase_AttachHead_3
+    - name: FrostyHeadandTorso_Detach_2
       rect:
         serializedVersion: 2
         x: 312
         y: 0
-        width: 85
-        height: 81
+        width: 75
+        height: 61
       alignment: 9
-      pivot: {x: .301120162, y: .270000011}
+      pivot: {x: .280000001, y: .300000012}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: FrostyTorsoBase_AttachHead_4
+    - name: FrostyHeadandTorso_Detach_3
       rect:
         serializedVersion: 2
-        x: 458
+        x: 468
         y: 0
-        width: 78
-        height: 103
+        width: 41
+        height: 70
       alignment: 9
-      pivot: {x: .326617897, y: .209999993}
+      pivot: {x: .5, y: .270000011}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: FrostyTorsoBase_AttachHead_5
+    - name: FrostyHeadandTorso_Detach_4
       rect:
         serializedVersion: 2
-        x: 592
+        x: 590
         y: 0
-        width: 47
-        height: 112
+        width: 46
+        height: 72
       alignment: 9
-      pivot: {x: .531970739, y: .219999999}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: FrostyTorsoBase_AttachHead_6
-      rect:
-        serializedVersion: 2
-        x: 106
-        y: 73
-        width: 35
-        height: 31
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: .449999988, y: .270000011}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

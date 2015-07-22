@@ -33,7 +33,7 @@ public class SwitchManager : MonoBehaviour
     public int test = 0;
 
     //Animation
-    Animator frostyAnim;
+
 
 	// Use this for initialization
     void Start()
@@ -46,7 +46,7 @@ public class SwitchManager : MonoBehaviour
 
 		CheckpointManager.Instance.Clear();
 
-        frostyAnim = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -143,15 +143,25 @@ public class SwitchManager : MonoBehaviour
             Head.transform.position = Active.transform.position;
             if (Torso.GetComponent<Frostyehavior>().baseAttached)
             {
+                Vector3 scale = Base.transform.localScale;
                 Destroy(Torso);
                 Base = Torso = Instantiate(pretorsobase);
                 Base.transform.position = Head.transform.position;
+                Base.transform.localScale = scale;
+                Head.transform.localScale = scale;
+                Head.GetComponent<Animator>().SetTrigger("HeadFromFullBodyDetach");
             }
             else
             {
+                Vector3 scale = Torso.transform.localScale;
+               
                 Destroy(Torso);
                 Torso = Instantiate(pretorso);
                 Torso.transform.position = Head.transform.position;
+                Torso.transform.localScale = scale;
+                Head.transform.localScale = scale;
+               
+                Head.GetComponent<Animator>().SetTrigger("HeadTorsoDetach");
             }
             Active = Head;
         }
@@ -170,27 +180,40 @@ public class SwitchManager : MonoBehaviour
             Active.GetComponent<Frostyehavior>().isActive = false;
             if (Active.GetComponent<Frostyehavior>().headAttached && Active.GetComponent<Frostyehavior>().baseAttached)
             {
+                Vector3 scale = Base.transform.localScale;
                 Destroy(Head);
                 Head = Instantiate(prehead);
                 Base = Instantiate(prebase);
                 Head.GetComponent<Frostyehavior>().isActive = false;
                 Base.GetComponent<Frostyehavior>().isActive = false;
                 Head.transform.position = Base.transform.position = Torso.transform.position;
+                Base.transform.localScale = scale;
+                Head.transform.localScale = scale;
+                Torso.transform.localScale = scale;
+                Torso.GetComponent<Animator>().SetTrigger("HeadTorsoBaseDetach");
             }
             else if (Active.GetComponent<Frostyehavior>().headAttached)
             {
+                Vector3 scale = Head.transform.localScale;
                 Destroy(Head);
                 Head = Instantiate(prehead);
                 Head.GetComponent<Frostyehavior>().isActive = false;
                 Head.transform.position = Torso.transform.position;
-               // Active.GetComponent<Animator>().SetTrigger("HeadDetachFromTorso");
+                Head.transform.localScale = scale;
+                Torso.transform.localScale = scale;
+                Torso.GetComponent<Animator>().SetTrigger("HeadTorsoDetach");
+               
             }
             else
             {
+                Vector3 scale = Base.transform.localScale;
                 Destroy(Base);
                 Base = Instantiate(prebase);
                 Base.GetComponent<Frostyehavior>().isActive = false;
                 Base.transform.position = Torso.transform.position;
+                Base.transform.localScale = scale;
+                Torso.transform.localScale = scale;
+                Torso.GetComponent<Animator>().SetTrigger("TorsoBaseDetach");
             }
             Active = Torso;
         }
@@ -202,6 +225,7 @@ public class SwitchManager : MonoBehaviour
         {
 			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
 			sound.GetComponent<SoundEffectManager>().PlayDetachSnd();
+          
             
             Base = Instantiate(prebase);
             Base.GetComponent<Frostyehavior>().isActive = true;
@@ -209,15 +233,23 @@ public class SwitchManager : MonoBehaviour
             Active.GetComponent<Frostyehavior>().isActive = false;
             if (Active.GetComponent<Frostyehavior>().headAttached)
             {
+                Vector3 scale = Torso.transform.localScale;
                 Destroy(Head);
                 Head = Torso = Instantiate(preheadtorso);
                 Head.transform.position = Torso.transform.position = Base.transform.position;
+                Base.transform.localScale = scale;
+                Torso.transform.localScale = scale;
+                Base.GetComponent<Animator>().SetTrigger("BaseDetachFroHeadTorso");
             }
             else
             {
+                Vector3 scale = Torso.transform.localScale;
                 Destroy(Torso);
                 Torso = Instantiate(pretorso);
                 Torso.transform.position = Base.transform.position;
+                Base.transform.localScale = scale;
+                Torso.transform.localScale = scale;
+                Base.GetComponent<Animator>().SetTrigger("TorsoBaseDetach");
             }
             Active = Base;
         }
