@@ -70,35 +70,42 @@ public class ButtonScript : MonoBehaviour {
 		if(BonusLevelNum == 1)
 		{
 			int numsnowballs = 0;
-			for( int i = 0; i < 4; i++)
+			for( int i = 0; i < 12; i++)
 			{
 				numsnowballs += PlayerPrefs.GetInt("Level" + (i + 1) + "Snowballs");
 			}
-			if(numsnowballs > 9)
+            if (numsnowballs > 9)
+            {
+                Time.timeScale = 1.0f;
                 LoadingScreenDelayed.Instance.LoadingLevels(levelname);
+            }
                 //Application.LoadLevel(levelname);
 		}
 		if(BonusLevelNum == 1)
 		{
 			int numsnowballs = 0;
-			for( int i = 0; i < 4; i++)
-			{
-				numsnowballs += PlayerPrefs.GetInt("Level" + (i + 1) + "Snowballs");
-			}
-			if(numsnowballs > 9)
+            for (int i = 0; i < 12; i++)
+            {
+                numsnowballs += PlayerPrefs.GetInt("Level" + (i + 1) + "Snowballs");
+            }
+			if(numsnowballs > 18)
+            {
+                Time.timeScale = 1.0f;
                 LoadingScreenDelayed.Instance.LoadingLevels(levelname);
-                //Application.LoadLevel(levelname);
+            }                //Application.LoadLevel(levelname);
 		}
 		if(BonusLevelNum == 2)
 		{
 			int numsnowballs = 0;
-			for( int i = 0; i < 4; i++)
+			for( int i = 0; i < 12; i++)
 			{
 				numsnowballs += PlayerPrefs.GetInt("Level" + (i + 1) + "Snowballs");
 			}
-			if(numsnowballs > 9)
+			if(numsnowballs > 36)
+            {
+                Time.timeScale = 1.0f;
                 LoadingScreenDelayed.Instance.LoadingLevels(levelname);
-                //Application.LoadLevel(levelname);
+            }                //Application.LoadLevel(levelname);
 		}
 
 	}
