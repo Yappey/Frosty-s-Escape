@@ -11,7 +11,10 @@ public class LevelSelectMenuScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-      
+        if(PlayerPrefs.HasKey("ActiveLevel"))
+        {
+            PlayerPrefs.SetInt("ActiveLevvel", 1);
+        }
         for (int i = 0; i < numlevels; i++)
         {
             int snowball = PlayerPrefs.GetInt("Level" + (i + 1) + "Snowballs");
