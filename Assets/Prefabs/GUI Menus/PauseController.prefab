@@ -28790,8 +28790,6 @@ MonoBehaviour:
   volumetype: 
   BonusLevelNum: 0
   levelnumber: 0
-  testif1: 0
-  testif2: 0
 --- !u!114 &11428710
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -29503,8 +29501,6 @@ MonoBehaviour:
   volumetype: 
   BonusLevelNum: 0
   levelnumber: 0
-  testif1: 0
-  testif2: 0
 --- !u!114 &11430482
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -31035,8 +31031,6 @@ MonoBehaviour:
   volumetype: 
   BonusLevelNum: 0
   levelnumber: 0
-  testif1: 0
-  testif2: 0
 --- !u!114 &11433512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -35295,8 +35289,6 @@ MonoBehaviour:
   volumetype: 
   BonusLevelNum: 0
   levelnumber: 0
-  testif1: 0
-  testif2: 0
 --- !u!114 &11445164
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -38437,8 +38429,6 @@ MonoBehaviour:
   volumetype: Sound
   BonusLevelNum: 0
   levelnumber: 0
-  testif1: 0
-  testif2: 0
 --- !u!114 &11453186
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -39767,8 +39757,6 @@ MonoBehaviour:
   volumetype: 
   BonusLevelNum: 0
   levelnumber: 0
-  testif1: 0
-  testif2: 0
 --- !u!114 &11457096
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -40491,7 +40479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45ff1b75178d6b745abc860c033edacb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 120
+  health: 500
   meltMultiplier: 2
   loser: {fileID: 0}
   fog: {fileID: 143590}
@@ -46415,8 +46403,6 @@ MonoBehaviour:
   volumetype: Music
   BonusLevelNum: 0
   levelnumber: 0
-  testif1: 0
-  testif2: 0
 --- !u!114 &11475238
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -46660,8 +46646,6 @@ MonoBehaviour:
   volumetype: Master
   BonusLevelNum: 0
   levelnumber: 0
-  testif1: 0
-  testif2: 0
 --- !u!114 &11475596
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -47222,8 +47206,6 @@ MonoBehaviour:
   volumetype: Sound
   BonusLevelNum: 0
   levelnumber: 0
-  testif1: 0
-  testif2: 0
 --- !u!114 &11477232
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -47856,8 +47838,6 @@ MonoBehaviour:
   volumetype: Master
   BonusLevelNum: 0
   levelnumber: 0
-  testif1: 0
-  testif2: 0
 --- !u!114 &11479120
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -48019,6 +47999,7 @@ MonoBehaviour:
   HUDSwitchOne: {fileID: 190310}
   HUDSwitchTwo: {fileID: 142940}
   HUDSwitchThree: {fileID: 189060}
+  Waypoint: {fileID: 0}
 --- !u!114 &11479930
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -50463,8 +50444,6 @@ MonoBehaviour:
   volumetype: 
   BonusLevelNum: 0
   levelnumber: 0
-  testif1: 0
-  testif2: 0
 --- !u!114 &11487176
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -54985,8 +54964,6 @@ MonoBehaviour:
   volumetype: Music
   BonusLevelNum: 0
   levelnumber: 0
-  testif1: 0
-  testif2: 0
 --- !u!114 &11497824
 MonoBehaviour:
   m_ObjectHideFlags: 1
