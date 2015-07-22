@@ -1,9 +1,9 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class ButtonManager : MonoBehaviour
 {
-    public enum WhereAmI { MainMenu, Options, LevelSelect, Pause, Win, Lose, Default };
+    public enum WhereAmI { MainMenu, Options, LevelSelect, Pause, Win, Lose, KeyBindings, Default };
     public WhereAmI state;
     public bool buttonsDuringGameplay;
     public UnityEngine.UI.Button[] buttons;
@@ -234,12 +234,16 @@ public class ButtonManager : MonoBehaviour
 						}
 					}
 
-                    currButton -= 2;
+
+					if (currButton < 5)
+						currButton -= 2;
+
+					else
+						currButton--;
 
                     if (currButton < 0)
-                    {
                         currButton = buttons.Length - 1;
-                    }
+                    
                     _bufferedInput = _maxBufferedInput;
                 }
 
@@ -260,8 +264,12 @@ public class ButtonManager : MonoBehaviour
 						}
 					}
 
-                    currButton += 2;
 
+					if (currButton < 5)
+						currButton += 2;
+
+					else
+						currButton++;
 
                     if (currButton >= buttons.Length)
                     {
@@ -274,38 +282,57 @@ public class ButtonManager : MonoBehaviour
                 {
 					if (currButton < 6  && !buttonsDuringGameplay)
                     {
-
+						switch (currButton)
+						{
+						case 0:
+							buttons[0].GetComponent<ButtonScript>().VolumeMinusOnClick();
+							break;
+						case 1:
+							buttons[0].GetComponent<ButtonScript>().VolumeMinusOnClick();
+							break;
+						case 2:
+							buttons[2].GetComponent<ButtonScript>().VolumeMinusOnClick();
+							break;
+						case 3:
+							buttons[2].GetComponent<ButtonScript>().VolumeMinusOnClick();
+							break;
+						case 4:
+							buttons[4].GetComponent<ButtonScript>().VolumeMinusOnClick();
+							break;
+						case 5:
+							buttons[4].GetComponent<ButtonScript>().VolumeMinusOnClick();
+							break;
+						}
                     }
 
 					else if (buttonsDuringGameplay && currButton < 6) {
 						GameObject pauser = GameObject.FindGameObjectWithTag("Pause");
 						
 						if (pauser.GetComponent<PuaseScript>().paused) {
-
+							switch (currButton)
+							{
+							case 0:
+								buttons[0].GetComponent<ButtonScript>().VolumeMinusOnClick();
+								break;
+							case 1:
+								buttons[0].GetComponent<ButtonScript>().VolumeMinusOnClick();
+								break;
+							case 2:
+								buttons[2].GetComponent<ButtonScript>().VolumeMinusOnClick();
+								break;
+							case 3:
+								buttons[2].GetComponent<ButtonScript>().VolumeMinusOnClick();
+								break;
+							case 4:
+								buttons[4].GetComponent<ButtonScript>().VolumeMinusOnClick();
+								break;
+							case 5:
+								buttons[4].GetComponent<ButtonScript>().VolumeMinusOnClick();
+								break;
+							}
 						}
 					}
 
-                    switch (currButton)
-                    {
-                        case 0:
-                            buttons[0].GetComponent<ButtonScript>().VolumeMinusOnClick();
-                            break;
-                        case 1:
-                            buttons[0].GetComponent<ButtonScript>().VolumeMinusOnClick();
-                            break;
-                        case 2:
-                            buttons[2].GetComponent<ButtonScript>().VolumeMinusOnClick();
-                            break;
-                        case 3:
-                            buttons[2].GetComponent<ButtonScript>().VolumeMinusOnClick();
-                            break;
-                        case 4:
-                            buttons[4].GetComponent<ButtonScript>().VolumeMinusOnClick();
-                            break;
-                        case 5:
-                            buttons[4].GetComponent<ButtonScript>().VolumeMinusOnClick();
-                            break;
-                    }
                     _bufferedInput = _maxBufferedInput;
                 }
 
@@ -313,7 +340,27 @@ public class ButtonManager : MonoBehaviour
                 {
 					if (currButton < 6 && !buttonsDuringGameplay)
                     {
-
+						switch (currButton)
+						{
+						case 0:
+							buttons[1].GetComponent<ButtonScript>().VolumePlusOnClick();
+							break;
+						case 1:
+							buttons[1].GetComponent<ButtonScript>().VolumePlusOnClick();
+							break;
+						case 2:
+							buttons[3].GetComponent<ButtonScript>().VolumePlusOnClick();
+							break;
+						case 3:
+							buttons[3].GetComponent<ButtonScript>().VolumePlusOnClick();
+							break;
+						case 4:
+							buttons[5].GetComponent<ButtonScript>().VolumePlusOnClick();
+							break;
+						case 5:
+							buttons[5].GetComponent<ButtonScript>().VolumePlusOnClick();
+							break;
+						}
                     }
 
 					else if (buttonsDuringGameplay && currButton < 6) {
@@ -321,50 +368,56 @@ public class ButtonManager : MonoBehaviour
 						
 						if (pauser.GetComponent<PuaseScript>().paused) {
 
+							switch (currButton)
+							{
+							case 0:
+								buttons[1].GetComponent<ButtonScript>().VolumePlusOnClick();
+								break;
+							case 1:
+								buttons[1].GetComponent<ButtonScript>().VolumePlusOnClick();
+								break;
+							case 2:
+								buttons[3].GetComponent<ButtonScript>().VolumePlusOnClick();
+								break;
+							case 3:
+								buttons[3].GetComponent<ButtonScript>().VolumePlusOnClick();
+								break;
+							case 4:
+								buttons[5].GetComponent<ButtonScript>().VolumePlusOnClick();
+								break;
+							case 5:
+								buttons[5].GetComponent<ButtonScript>().VolumePlusOnClick();
+								break;
+							}
 						}
 					}
 
-                    switch (currButton)
-                    {
-                        case 0:
-                            buttons[1].GetComponent<ButtonScript>().VolumePlusOnClick();
-                            break;
-                        case 1:
-                            buttons[1].GetComponent<ButtonScript>().VolumePlusOnClick();
-                            break;
-                        case 2:
-                            buttons[3].GetComponent<ButtonScript>().VolumePlusOnClick();
-                            break;
-                        case 3:
-                            buttons[3].GetComponent<ButtonScript>().VolumePlusOnClick();
-                            break;
-                        case 4:
-                            buttons[5].GetComponent<ButtonScript>().VolumePlusOnClick();
-                            break;
-                        case 5:
-                            buttons[5].GetComponent<ButtonScript>().VolumePlusOnClick();
-                            break;
-                    }
                     _bufferedInput = _maxBufferedInput;
                 }
 
-			else if ((KeyManager.GetButtonDown("Submit")/* || Input.GetAxisRaw("Jump") > 0*/) && currButton == 6)
+			else if ((KeyManager.GetButtonDown("Submit")/* || Input.GetAxisRaw("Jump") > 0*/) && currButton > 5)
             {
-				if (currButton == 6  && !buttonsDuringGameplay)
-				{
-					
-				}
+				//if (currButton == 6  && !buttonsDuringGameplay)
+				//{
+				//	
+				//}
+				//
+				//else if (buttonsDuringGameplay && currButton == 6) {
+				//	GameObject pauser = GameObject.FindGameObjectWithTag("Pause");
+				//		
+				//	if (pauser.GetComponent<PuaseScript>().paused) {
+				//		
+				//	}
+				//}
 
-				else if (buttonsDuringGameplay && currButton == 6) {
-					GameObject pauser = GameObject.FindGameObjectWithTag("Pause");
-						
-					if (pauser.GetComponent<PuaseScript>().paused) {
-						
+                if (!buttonsDuringGameplay){
+					if (currButton == 6) {
+						buttons[currButton].GetComponent<ButtonScript>().LoadLevelOnClick();
 					}
-				}
 
-                if (!buttonsDuringGameplay)
-                    buttons[currButton].GetComponent<ButtonScript>().LoadLevelOnClick();
+					else
+						buttons[currButton].GetComponent<UnityEngine.UI.Button>().onClick.Invoke();
+				}
 
                 else
                 {
@@ -372,7 +425,12 @@ public class ButtonManager : MonoBehaviour
 
                     if (pauser.GetComponent<PuaseScript>().paused)
                     {
-                        buttons[currButton].GetComponent<PauseMenuScript>().OptionsToPauseOnClick();
+						if (currButton == 6) {
+							buttons[currButton].GetComponent<PauseMenuScript>().OptionsToPauseOnClick();
+						}
+						
+						else
+							buttons[currButton].GetComponent<UnityEngine.UI.Button>().onClick.Invoke();
                     }
                 }
             }
@@ -471,6 +529,12 @@ public class ButtonManager : MonoBehaviour
                     buttons[6].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
                 else
                     buttons[6].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
+
+				if (currButton == 7)
+					buttons[7].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
+				else
+					buttons[7].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
+
             }
 
             else
@@ -500,6 +564,11 @@ public class ButtonManager : MonoBehaviour
                         buttons[6].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
                     else
                         buttons[6].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
+
+					if (currButton == 7)
+						buttons[7].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
+					else
+						buttons[7].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
                 }
             }
         }

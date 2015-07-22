@@ -15,7 +15,7 @@ GameObject:
   - 114: {fileID: 11425100}
   - 95: {fileID: 9514704}
   - 114: {fileID: 11428222}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: waterDrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}

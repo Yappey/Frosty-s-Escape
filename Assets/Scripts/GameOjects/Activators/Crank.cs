@@ -4,6 +4,7 @@ using System.Collections;
 public class Crank : BaseActivator {
 
     public GameObject torso;
+    
     public GameObject frosty;
     public GameObject switchmanager;
     public float rotationspersecond;
@@ -22,11 +23,15 @@ public class Crank : BaseActivator {
 
 
 
+
 	// Use this for initialization
 	void Start () {
 		switchmanager = GameObject.FindGameObjectWithTag("SwitchManager");
-	    frosty = torso = switchmanager.GetComponent<SwitchManager>().FindActive();
-           torso = torso.transform.FindChild("Torso").gameObject; 
+
+	frosty = torso = switchmanager.GetComponent<SwitchManager>().FindActive();
+            torso = torso.transform.FindChild("Torso").gameObject;
+
+
 	}
 	
 	// Update is called once per frame
@@ -40,7 +45,7 @@ public class Crank : BaseActivator {
                 switched = true;
             else
                 switched = false;
-            if (Input.GetButton("Activate") && frosty.GetComponent<Frostyehavior>().torsoAttached)
+            if (KeyManager.GetButton("Activate") && frosty.GetComponent<Frostyehavior>().torsoAttached)
             {
                 if (!(rotationangle >= fullrotation))
                 {
@@ -48,11 +53,13 @@ public class Crank : BaseActivator {
                     rotationangle += rotationspersecond * Time.deltaTime;
                     reversed = false;
 					sound.GetComponent<SoundEffectManager>().PlayCrankSnd();
+                    GameObject.FindGameObjectWithTag("SwitchManager").GetComponent<SwitchManager>().Torso.GetComponent<Animator>().SetBool("CrankWheel", true);
                 }
                 else
                 {
                     full = true;
 					sound.GetComponent<SoundEffectManager>().StopCrankSnd();
+                    GameObject.FindGameObjectWithTag("SwitchManager").GetComponent<SwitchManager>().Torso.GetComponent<Animator>().SetBool("CrankWheel", false);
                 }
             }
             else
@@ -100,11 +107,13 @@ public class Crank : BaseActivator {
                }
            } 
         }
-        if (!incremental && rotationangle >= fullrotation && !activated)
-        {
-            Activate();
-            activated = true;
-        }
+        if (!incremental && rotationangle >= fullrotation && !activated) {
+			Activate ();
+			activated = true;
+		} else if (!incremental && rotationangle < fullrotation && activated && hold) {
+			Activate ();
+			activated = false;
+		}
         if(incremental && rotationangle > 0)
         {
             float inc = 360 / numofincrements;
@@ -162,13 +171,13 @@ public class Crank : BaseActivator {
 
     override public void Activate()
     {
-        if(!incremental && rotationangle >= fullrotation && !activated && frosty.GetComponent<Frostyehavior>().torsoAttached)
-        {
+        //if(!incremental && rotationangle >= fullrotation && !activated && frosty.GetComponent<Frostyehavior>().torsoAttached)
+        //{
             foreach(BaseReceiver receiver in receivers)
             {
                 receiver.Process();
             }
-        }
+        //}
     }
 
     private void SetState(int st)
