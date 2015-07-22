@@ -5,9 +5,6 @@ public class Gear : BaseActivator
 {
 
     private SwitchManager switchMan;
-    GameObject Head;
-    GameObject Torso;
-    GameObject Base;
 
     // Use this for initialization
     void Start()
@@ -51,10 +48,6 @@ public class Gear : BaseActivator
                 GetComponent<PolygonCollider2D>().enabled = false;
                 GetComponent<Rigidbody2D>().gravityScale = 0.0f;
                     GameObject.FindGameObjectWithTag("SwitchManager").GetComponent<SwitchManager>().Torso.GetComponent<Animator>().SetBool("HoldingGear", true);
-                if (Torso.GetComponent<Frostyehavior>().torsoAttached)
-                {
-                }
-                
             }
             else if (state == 1)
             {
