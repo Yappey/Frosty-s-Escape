@@ -58,10 +58,15 @@ public class KeyBindButton : MonoBehaviour {
 	{
 		foreach(KeyManager.inputButton btn in KeyManager.Instance.inputButtons)
 		{
-			if (KeyManager.GetButton(btn.name) && btn.name != inputName && btn.group == KeyManager.GetGroup(inputName))
+			if (btn.group == KeyManager.GetGroup(inputName) && ax == (positive ? (alt ? btn.sAltPos : btn.sPos ) : (alt ? btn.sAltNeg : btn.sNeg )))
 			{
 				return;
 			}
+			//if (KeyManager.GetButton(btn.name) && btn.name != inputName && btn.group == KeyManager.GetGroup(inputName))
+			//{
+			//	if (
+			//	return;
+			//}
 		}
 
 		axis = ax;
@@ -71,7 +76,7 @@ public class KeyBindButton : MonoBehaviour {
 
 	public void Clear(bool isAxis)
 	{
-		if (!isAxis)
+		if (isKey)
 			UpdateTextName(KeyCode.None);
 		else
 			UpdateTextName("");

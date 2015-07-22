@@ -321,7 +321,7 @@ MonoBehaviour:
     sNeg: 
     sAltPos: 
     sAltNeg: 
-    sDefPos: 
+    sDefPos: Axis2
     sDefNeg: 
     sDefAltPos: 
     sDefAltNeg: 
@@ -345,7 +345,7 @@ MonoBehaviour:
     sAltNeg: 
     sDefPos: 
     sDefNeg: 
-    sDefAltPos: 
+    sDefAltPos: Axis2
     sDefAltNeg: 
     axisValue: 0
     isDown: 0
@@ -367,7 +367,7 @@ MonoBehaviour:
     sAltNeg: 
     sDefPos: 
     sDefNeg: 
-    sDefAltPos: 
+    sDefAltPos: Axis1
     sDefAltNeg: 
     axisValue: 0
     isDown: 0
@@ -387,7 +387,7 @@ MonoBehaviour:
     sNeg: 
     sAltPos: 
     sAltNeg: 
-    sDefPos: 
+    sDefPos: Axis1
     sDefNeg: 
     sDefAltPos: 
     sDefAltNeg: 
