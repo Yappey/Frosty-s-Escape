@@ -26,6 +26,7 @@ public class KeyManager : MonoBehaviour {
 	public struct inputButton
 	{
 		public string name;
+		public int group;
 		
 		public KeyCode pos;
 		public KeyCode neg;
@@ -591,6 +592,18 @@ public class KeyManager : MonoBehaviour {
 		}
 		Debug.Log("Returning Empty Axis");
 		return "";
+	}
+
+	public static int GetGroup(string inputName)
+	{
+		foreach (inputButton btn in Instance.inputButtons) 
+		{
+			if (btn.name == inputName)
+			{
+				return btn.group;
+			}
+		}
+		return -1;
 	}
 
 	void OnDestroy()

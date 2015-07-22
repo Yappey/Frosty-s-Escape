@@ -28,7 +28,7 @@ GameObject:
   - 4: {fileID: 497410}
   - 50: {fileID: 5021270}
   m_Layer: 0
-  m_Name: Axis
+  m_Name: Axis - NOT GEAR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

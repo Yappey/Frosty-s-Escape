@@ -43,7 +43,7 @@ public class KeyBindButton : MonoBehaviour {
 	{
 		foreach(KeyManager.inputButton btn in KeyManager.Instance.inputButtons)
 		{
-			if (KeyManager.GetButton(btn.name) && btn.name != inputName)
+			if (KeyManager.GetButton(btn.name) && btn.name != inputName && btn.group == KeyManager.GetGroup(inputName))
 			{
 				return;
 			}
@@ -58,7 +58,7 @@ public class KeyBindButton : MonoBehaviour {
 	{
 		foreach(KeyManager.inputButton btn in KeyManager.Instance.inputButtons)
 		{
-			if (KeyManager.GetButton(btn.name) && btn.name != inputName)
+			if (KeyManager.GetButton(btn.name) && btn.name != inputName && btn.group == KeyManager.GetGroup(inputName))
 			{
 				return;
 			}
