@@ -49,7 +49,7 @@ public class Frostyehavior : MonoBehaviour
         {
 			float hor;
 			//if (KeyManager.GetAxis("Horizontal") != 0)
-				hor = KeyManager.GetAxis("Horizontal");
+				hor = KeyManager.GetAxisRaw("Horizontal");
             //else
 			//	hor = Input.GetAxis("Horizontal");
 			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
@@ -61,7 +61,7 @@ public class Frostyehavior : MonoBehaviour
             {
                 FrostyWalkAnimations();
 
-                rgbd.AddForce(new Vector2(moveSpeed * hor * 30.0f, 0.0f));
+                rgbd.AddForce(new Vector2(moveSpeed * hor * 15.0f, 0.0f));
 
                 if (Mathf.Abs(rgbd.velocity.x) > moveSpeed)
                 {
