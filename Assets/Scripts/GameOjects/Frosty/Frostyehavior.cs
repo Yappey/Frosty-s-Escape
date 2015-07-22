@@ -278,11 +278,17 @@ public class Frostyehavior : MonoBehaviour
         {
             frostyAnim.Play("Base Layer.FrostyTorso_Jump");
         }
-        //frostyAnim.SetTrigger("Jump");
-
+      
+        //Base Jump animation
         if (!GetComponent<Frostyehavior>().torsoAttached && GetComponent<Frostyehavior>().baseAttached && !GetComponent<Frostyehavior>().headAttached)
         {
             frostyAnim.Play("Base Layer.FrostyBase_Jump");
+        }
+
+        //Head and Torso Jump Animation
+        if (GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && GetComponent<Frostyehavior>().headAttached)
+        {
+            frostyAnim.Play("Base Layer.HeadTorso_Jump");
         }
 
     }
