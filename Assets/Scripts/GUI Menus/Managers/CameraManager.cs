@@ -16,15 +16,21 @@ public class CameraManager : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
-		GameObject[] snows = GameObject.FindGameObjectsWithTag("Frosty");
-		foreach (GameObject body in snows)
-		{
-			if (body != null && body.GetComponent<Frostyehavior>() != null && body.GetComponent<Frostyehavior>().isActive)
-				_gbFollowing = body;
-		}
-		_fX = _gbFollowing.transform.position.x;
-		_fY = _gbFollowing.transform.position.y;
-		transform.position = new Vector3(_fX, _fY, transform.position.z);
+		//GameObject[] snows = GameObject.FindGameObjectsWithTag("Frosty");
+		//foreach (GameObject body in snows)
+		//{
+		//	if (body != null && body.GetComponent<Frostyehavior>() != null && body.GetComponent<Frostyehavior>().isActive)
+		//		_gbFollowing = body;
+        //}
+        GameObject _gblob = GameObject.FindGameObjectWithTag("SwitchManager").GetComponent<SwitchManager>().FindActive();
+        if (_gblob != null)
+            _gbFollowing = _gblob;
+        if (_gbFollowing != null)
+        {
+            _fX = _gbFollowing.transform.position.x;
+            _fY = _gbFollowing.transform.position.y;
+            transform.position = new Vector3(_fX, _fY, transform.position.z);
+        }
 	}
 	
 	// Update is called once per frame
@@ -37,7 +43,7 @@ public class CameraManager : MonoBehaviour
 		//    if (body.GetComponent<Frostyehavior>().isActive)
 		//        _gbFollowing = body;
 		//}
-		_gbFollowing = GameObject.FindGameObjectWithTag("SwitchManager").GetComponent<SwitchManager>().FindActive();
+        _gbFollowing = GameObject.FindGameObjectWithTag("SwitchManager").GetComponent<SwitchManager>().Active;
 		
 		if (_gbFollowing)
 		{
