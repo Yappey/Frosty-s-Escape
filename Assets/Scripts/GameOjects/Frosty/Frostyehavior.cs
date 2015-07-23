@@ -175,6 +175,7 @@ public class Frostyehavior : MonoBehaviour
         }
     }
 
+    #region Animations
     //I'm sorry I know this is ugly
     void FrostyWalkAnimations()
     {
@@ -191,10 +192,6 @@ public class Frostyehavior : MonoBehaviour
             if (GetComponent<Frostyehavior>().headAttached && !GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached)
             {
                 //I know it says left but it is walking right I swear
-                frostyAnim.Play("Base Layer.FrostyHead_WalkingLeft");
-            }
-            else if (GetComponent<Frostyehavior>().headAttached && !GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached)
-            {
                 frostyAnim.Play("Base Layer.FrostyHead_WalkingLeft");
             }
 
@@ -240,6 +237,25 @@ public class Frostyehavior : MonoBehaviour
                     }
                 }
 
+                //Torso and Base Walking, Climing ladders, and climbing monkey bars
+                if (GetComponent<Frostyehavior>().torsoAttached && GetComponent<Frostyehavior>().baseAttached && !GetComponent<Frostyehavior>().headAttached)
+                {
+                    if (gameObject.GetComponent<LadderAndMonkeybar>()._bMonkeyBar == true)
+                    {
+                        frostyAnim.SetBool("Active", true);
+                    }
+                    else if (gameObject.GetComponent<LadderAndMonkeybar>()._bLadder == true)
+                    {
+                        frostyAnim.SetBool("Climbing", true);
+                    }
+                    else if (gameObject.GetComponent<LadderAndMonkeybar>()._bMonkeyBar == false && gameObject.GetComponent<LadderAndMonkeybar>()._bLadder == false)
+                    {
+                        frostyAnim.Play("Base Layer.TorsoBase_Walking");
+                        frostyAnim.SetBool("Climbing", false);
+
+                        frostyAnim.SetBool("Active", false);
+                    }
+                }
             }
 
             //Base only Walking
@@ -281,6 +297,12 @@ public class Frostyehavior : MonoBehaviour
         if (GetComponent<Frostyehavior>().torsoAttached && !GetComponent<Frostyehavior>().baseAttached && GetComponent<Frostyehavior>().headAttached)
         {
             frostyAnim.Play("Base Layer.HeadTorso_Jump");
+        }
+
+        //Torso and Base Jump Animation
+        if (GetComponent<Frostyehavior>().torsoAttached && GetComponent<Frostyehavior>().baseAttached && !GetComponent<Frostyehavior>().headAttached)
+        {
+            frostyAnim.Play("Base Layer.TorsoBase_Jump");
         }
     }
 
@@ -347,10 +369,17 @@ public class Frostyehavior : MonoBehaviour
         {
             frostyAnim.Play("Base Layer.HeadTorso_Lever");
         }
+
         //Head and Torso
         if (GetComponent<Frostyehavior>().headAttached && !GetComponent<Frostyehavior>().baseAttached && GetComponent<Frostyehavior>().torsoAttached)
         {
             frostyAnim.Play("Base Layer.HeadTorso_PushingButton");
+        }
+
+        //Torso and Base
+        if (!GetComponent<Frostyehavior>().headAttached && GetComponent<Frostyehavior>().baseAttached && GetComponent<Frostyehavior>().torsoAttached)
+        {
+            frostyAnim.Play("Base Layer.TorsoBase_PullLever");
         }
     }
 
@@ -379,6 +408,13 @@ public class Frostyehavior : MonoBehaviour
         {
             frostyAnim.SetTrigger("Melt");
         }
-    }
+
+        //Torso and Base Only
+        if (!GetComponent<Frostyehavior>().headAttached && GetComponent<Frostyehavior>().baseAttached && GetComponent<Frostyehavior>().torsoAttached)
+        {
+            frostyAnim.SetTrigger("Melt");
+        }
+    } 
+    #endregion
 }
 

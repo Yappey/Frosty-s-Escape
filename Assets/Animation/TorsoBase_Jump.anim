@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: FrostyTorsoBase_Idle
+  m_Name: TorsoBase_Jump
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -18,14 +18,16 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 0fd31294a48b1964890f3d677f78719c, type: 3}
-    - time: .333333343
-      value: {fileID: 21300002, guid: 0fd31294a48b1964890f3d677f78719c, type: 3}
+      value: {fileID: 21300002, guid: 2d5b232880f0436448f16d42260be7af, type: 3}
+    - time: .15384616
+      value: {fileID: 21300004, guid: 2d5b232880f0436448f16d42260be7af, type: 3}
+    - time: .461538464
+      value: {fileID: 21300004, guid: 2d5b232880f0436448f16d42260be7af, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 6
+  m_SampleRate: 13
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -39,12 +41,13 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 0fd31294a48b1964890f3d677f78719c, type: 3}
-    - {fileID: 21300002, guid: 0fd31294a48b1964890f3d677f78719c, type: 3}
+    - {fileID: 21300002, guid: 2d5b232880f0436448f16d42260be7af, type: 3}
+    - {fileID: 21300004, guid: 2d5b232880f0436448f16d42260be7af, type: 3}
+    - {fileID: 21300004, guid: 2d5b232880f0436448f16d42260be7af, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: .5
+    m_StopTime: .538461566
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
