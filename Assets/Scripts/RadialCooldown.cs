@@ -18,7 +18,10 @@ public class RadialCooldown : MonoBehaviour {
             frosty = GameObject.FindGameObjectWithTag("Frosty");
             if (cooldown.activeSelf)
             {
-                cooldown.transform.localScale = new Vector3(1 - frosty.GetComponent<Frostyehavior>().timer / frosty.GetComponent<Frostyehavior>().SnowballCooldown, 1 - frosty.GetComponent<Frostyehavior>().timer / frosty.GetComponent<Frostyehavior>().SnowballCooldown, 1 - frosty.GetComponent<Frostyehavior>().timer / frosty.GetComponent<Frostyehavior>().SnowballCooldown);
+                Frostyehavior fff = frosty.GetComponent<Frostyehavior>();
+                cooldown.transform.localScale = Vector3.zero;
+                if (fff != null)
+                    cooldown.transform.localScale = new Vector3(1 - frosty.GetComponent<Frostyehavior>().timer / frosty.GetComponent<Frostyehavior>().SnowballCooldown, 1 - frosty.GetComponent<Frostyehavior>().timer / frosty.GetComponent<Frostyehavior>().SnowballCooldown, 1 - frosty.GetComponent<Frostyehavior>().timer / frosty.GetComponent<Frostyehavior>().SnowballCooldown);
             }
             if (cooldown.transform.localScale.x <= 0.0f)
             {
