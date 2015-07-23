@@ -105,6 +105,10 @@ public class Frostyehavior : MonoBehaviour
                 buttonPressed -= Time.deltaTime;
             }
         }
+        else
+        {
+            FrostyIdleAnimations();
+        }
 
         if (/*Input*/KeyManager.GetButtonDown("Throw") /*|| Input.GetAxisRaw("Throw2") == 1*/ && Time.timeScale > 0)
         {
