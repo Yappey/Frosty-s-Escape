@@ -9,6 +9,7 @@ public class HardSetter : BaseReceiver {
 
 	public int hardSetState;
 	public int unSetState;
+	public bool useUnSet = true;
 
 	// Use this for initialization
 	void Start () {
@@ -30,7 +31,8 @@ public class HardSetter : BaseReceiver {
 		else
 		{
 			state = 0;
-			receiver.state = unSetState;
+			if (useUnSet)
+				receiver.state = unSetState;
 		}
 	}
 }

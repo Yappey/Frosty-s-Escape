@@ -56,7 +56,7 @@ public class FrostyFriend : MonoBehaviour {
 
 			PlayerPrefs.SetInt("FrostyFriendIsFound" + frostyFriendIndex, 1);
 			hasBeenFound = true;
-			GetComponent<SpriteRenderer>().color = foundColor;
+			//GetComponent<SpriteRenderer>().color = foundColor;
 			transform.position = new Vector3 (-9.0f, 10.0f);
 			GetComponent<BoxCollider2D>().isTrigger = false;
 			GetComponent<Rigidbody2D>().isKinematic = false;

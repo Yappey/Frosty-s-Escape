@@ -12,7 +12,7 @@ public class ConveyorBelt : BaseReceiver {
 	
 	// Update is called once per frame
 	void Update () {
-		GetComponent<SurfaceEffector2D>().speed = speeds[(state >= 0 && state < speeds.Length) ? state : 0];
+		GetComponent<AreaEffector2D>().forceMagnitude = speeds[(state >= 0 && state < speeds.Length) ? state : 0];
 
 		if (speeds[state] != 0.0f) {
 			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
