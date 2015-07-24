@@ -76,34 +76,34 @@ public class ButtonScript : MonoBehaviour {
 			{
 				numsnowballs += PlayerPrefs.GetInt("Level" + (i + 1) + "Snowballs");
 			}
-            if (numsnowballs > 9)
+            if (numsnowballs >= 9)
             {
                 Time.timeScale = 1.0f;
                 LoadingScreenDelayed.Instance.LoadingLevels(levelname);
             }
                 //Application.LoadLevel(levelname);
 		}
-		if(BonusLevelNum == 1)
+		if(BonusLevelNum == 2)
 		{
 			int numsnowballs = 0;
             for (int i = 0; i < 12; i++)
             {
                 numsnowballs += PlayerPrefs.GetInt("Level" + (i + 1) + "Snowballs");
             }
-			if(numsnowballs > 18)
+			if(numsnowballs >= 18)
             {
                 Time.timeScale = 1.0f;
                 LoadingScreenDelayed.Instance.LoadingLevels(levelname);
             }                //Application.LoadLevel(levelname);
 		}
-		if(BonusLevelNum == 2)
+		if(BonusLevelNum == 3)
 		{
 			int numsnowballs = 0;
 			for( int i = 0; i < 12; i++)
 			{
 				numsnowballs += PlayerPrefs.GetInt("Level" + (i + 1) + "Snowballs");
 			}
-			if(numsnowballs > 36)
+			if(numsnowballs >= 36)
             {
                 Time.timeScale = 1.0f;
                 LoadingScreenDelayed.Instance.LoadingLevels(levelname);
