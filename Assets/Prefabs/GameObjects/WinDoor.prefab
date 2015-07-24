@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 444674}
   - 212: {fileID: 21284288}
   - 114: {fileID: 11464980}
+  - 61: {fileID: 6145726}
   m_Layer: 0
   m_Name: WinDoor
   m_TagString: Untagged
@@ -24,11 +25,24 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 185002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -59.9599991, y: -47.5699997, z: 0}
+  m_LocalPosition: {x: 4.80000305, y: -7.63000011, z: -3.5}
   m_LocalScale: {x: .323611289, y: .549304008, z: .49210912}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!61 &6145726
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 185002}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 3, y: 4.90999937}
 --- !u!114 &11464980
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -43,6 +57,7 @@ MonoBehaviour:
   HUDSwitchOne: {fileID: 0}
   HUDSwitchTwo: {fileID: 0}
   HUDSwitchThree: {fileID: 0}
+  Waypoint: {fileID: 0}
 --- !u!212 &21284288
 SpriteRenderer:
   m_ObjectHideFlags: 1

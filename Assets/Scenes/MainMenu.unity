@@ -744,14 +744,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa58c595ac5d9248a87c157f1d81c70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numlevels: 0
+  numlevels: 12
   levelname: 
   filename: 
   volumetype: 
   BonusLevelNum: 0
   levelnumber: 0
-  testif1: 0
-  testif2: 0
 --- !u!1 &1239715527
 GameObject:
   m_ObjectHideFlags: 0
@@ -886,8 +884,6 @@ MonoBehaviour:
   volumetype: 
   BonusLevelNum: 0
   levelnumber: 0
-  testif1: 0
-  testif2: 0
 --- !u!1001 &1348392779
 Prefab:
   m_ObjectHideFlags: 0
@@ -1278,8 +1274,6 @@ MonoBehaviour:
   volumetype: 
   BonusLevelNum: 0
   levelnumber: 0
-  testif1: 0
-  testif2: 0
 --- !u!1 &1797576657
 GameObject:
   m_ObjectHideFlags: 0
@@ -1413,8 +1407,6 @@ MonoBehaviour:
   volumetype: 
   BonusLevelNum: 0
   levelnumber: 0
-  testif1: 0
-  testif2: 0
 --- !u!1 &1881041172
 GameObject:
   m_ObjectHideFlags: 0
@@ -1469,8 +1461,6 @@ MonoBehaviour:
   volumetype: 
   BonusLevelNum: 0
   levelnumber: 0
-  testif1: 0
-  testif2: 0
 --- !u!114 &1881041175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1684,8 +1674,6 @@ MonoBehaviour:
   volumetype: 
   BonusLevelNum: 0
   levelnumber: 0
-  testif1: 0
-  testif2: 0
 --- !u!1 &1938609387
 GameObject:
   m_ObjectHideFlags: 0
