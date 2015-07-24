@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 5995d8102890f274daf21becf6d406f5
-timeCreated: 1437679325
+timeCreated: 1437705891
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -60,7 +60,7 @@ TextureImporter:
         width: 61
         height: 114
       alignment: 9
-      pivot: {x: .5, y: .219999999}
+      pivot: {x: .5, y: .239999995}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FullBody_Climbing_1
       rect:
@@ -70,7 +70,7 @@ TextureImporter:
         width: 60
         height: 114
       alignment: 9
-      pivot: {x: .5, y: .230000004}
+      pivot: {x: .5, y: .239999995}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FullBody_Climbing_2
       rect:
@@ -80,7 +80,7 @@ TextureImporter:
         width: 59
         height: 114
       alignment: 9
-      pivot: {x: .5, y: .230000004}
+      pivot: {x: .5, y: .239999995}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

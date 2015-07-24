@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 0efcbcd6cd44f47459b2727a5c7a2e2f
-timeCreated: 1437692484
+timeCreated: 1437706066
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -61,7 +61,7 @@ TextureImporter:
         width: 53
         height: 112
       alignment: 9
-      pivot: {x: .5, y: .230000004}
+      pivot: {x: .5, y: .25999999}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FullBody_Lever_1
       rect:
@@ -71,7 +71,7 @@ TextureImporter:
         width: 56
         height: 83
       alignment: 9
-      pivot: {x: .5, y: .300000012}
+      pivot: {x: .5, y: .330000013}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FullBody_Lever_2
       rect:
@@ -81,7 +81,7 @@ TextureImporter:
         width: 56
         height: 83
       alignment: 9
-      pivot: {x: .5, y: .300000012}
+      pivot: {x: .5, y: .340000004}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FullBody_Lever_3
       rect:
@@ -91,7 +91,7 @@ TextureImporter:
         width: 54
         height: 83
       alignment: 9
-      pivot: {x: .5, y: .300000012}
+      pivot: {x: .5, y: .340000004}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

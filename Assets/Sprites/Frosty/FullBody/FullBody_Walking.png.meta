@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d40e52195e783a541937b0ecd9c3a213
-timeCreated: 1437678867
+timeCreated: 1437705840
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -60,7 +60,7 @@ TextureImporter:
         width: 55
         height: 119
       alignment: 9
-      pivot: {x: .5, y: .230000004}
+      pivot: {x: .5, y: .25}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FullBody_Walking_1
       rect:
@@ -70,7 +70,7 @@ TextureImporter:
         width: 54
         height: 112
       alignment: 9
-      pivot: {x: .5, y: .230000004}
+      pivot: {x: .5, y: .25}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FullBody_Walking_2
       rect:
@@ -80,7 +80,7 @@ TextureImporter:
         width: 53
         height: 119
       alignment: 9
-      pivot: {x: .5, y: .230000004}
+      pivot: {x: .5, y: .239999995}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

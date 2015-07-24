@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: fa1a6d6a63f3f4e47aa92fedcf3a0f95
-timeCreated: 1437691762
+timeCreated: 1437705972
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -59,7 +59,7 @@ TextureImporter:
         width: 55
         height: 97
       alignment: 9
-      pivot: {x: .5, y: .25}
+      pivot: {x: .5, y: .300000012}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: FullBody_Gear_1
       rect:
@@ -69,7 +69,7 @@ TextureImporter:
         width: 54
         height: 109
       alignment: 9
-      pivot: {x: .5, y: .230000004}
+      pivot: {x: .5, y: .25999999}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
