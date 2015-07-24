@@ -235,7 +235,7 @@ public class ButtonManager : MonoBehaviour
 					}
 
 
-					if (currButton < 5)
+					if (currButton < 6)
 						currButton -= 2;
 
 					else
@@ -442,14 +442,10 @@ public class ButtonManager : MonoBehaviour
 
             if (_bufferedInput <= 0.0f)
             {
-
-                if (KeyManager.GetButtonDown("Right") || KeyManager.GetButtonDown("Up"))// || Input.GetAxisRaw("Horizontal") > 0)
+                if (KeyManager.GetButtonDown("Right"))
                 {
-					if (!buttonsDuringGameplay)
-                    {
-						GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-						sound.GetComponent<SoundEffectManager>().PlaySelectionChange();
-                    }
+					GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+					sound.GetComponent<SoundEffectManager>().PlaySelectionChange();
 
                     currButton++;
 
@@ -460,13 +456,10 @@ public class ButtonManager : MonoBehaviour
                     _bufferedInput = _maxBufferedInput;
                 }
 
-                else if (KeyManager.GetButtonDown("Left") || KeyManager.GetButtonDown("Down"))// || Input.GetAxisRaw("Horizontal") < 0 || Input.GetAxisRaw("Vertical") < 0)
+                else if (KeyManager.GetButtonDown("Left"))
                 {
-					if (!buttonsDuringGameplay)
-                    {
-						GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-						sound.GetComponent<SoundEffectManager>().PlaySelectionChange();
-                    }
+					GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+					sound.GetComponent<SoundEffectManager>().PlaySelectionChange();
 
                     currButton--;
 
@@ -477,13 +470,43 @@ public class ButtonManager : MonoBehaviour
                     _bufferedInput = _maxBufferedInput;
                 }
 
-			else if (KeyManager.GetButtonDown("Submit"))// || Input.GetAxisRaw("Jump") > 0)
-            {
-				if (!buttonsDuringGameplay)
-				{
-					
+				else if (KeyManager.GetButtonDown("Up")) {
+					GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+					sound.GetComponent<SoundEffectManager>().PlaySelectionChange();
+
+					if (currButton > 4 && currButton < 15)
+						currButton -= 5;
+					else if (currButton < 5)
+						currButton = 16;
+					else if (currButton == 16)
+						currButton = 14;
+					else if (currButton == 15)
+						currButton = 12;
+
+					_bufferedInput = _maxBufferedInput;
 				}
 
+				else if (KeyManager.GetButtonDown("Down")) {
+					GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+					sound.GetComponent<SoundEffectManager>().PlaySelectionChange();
+
+					if (currButton < 10)
+						currButton += 5;
+
+					else if (currButton >= 10 && currButton <= 12)
+						currButton = 15;
+
+					else if (currButton >= 12 && currButton <= 14)
+						currButton = 16;
+
+					else 
+						currButton = 0;
+
+					_bufferedInput = _maxBufferedInput;
+				}
+
+			else if (KeyManager.GetButtonDown("Submit"))// || Input.GetAxisRaw("Jump") > 0)
+            { 
                 if (buttons[currButton].tag == "Play")
                     buttons[currButton].GetComponent<ButtonScript>().LoadLevelOnClick();
                 else
@@ -497,10 +520,15 @@ public class ButtonManager : MonoBehaviour
         {
             for (int i = 0; i < buttons.Length; i++)
             {
-                if (i == currButton)
-                    buttons[i].GetComponent<UnityEngine.UI.Image>().color = new Color(.5f, .5f, .5f, .4f);
+                if (i == currButton) {
+					buttons[i].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(1.14f,1.14f);
+					buttons[i].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
+				}
                 else
-                    buttons[i].GetComponent<UnityEngine.UI.Image>().color = Color.clear;
+				{
+					buttons[i].GetComponent<UnityEngine.UI.Image>().color = new Color(1,1,1,1);
+					buttons[i].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(1,1);
+				}
             }
         }
 
@@ -509,45 +537,68 @@ public class ButtonManager : MonoBehaviour
             if (!buttonsDuringGameplay)
             {
 				if (currButton == 0 || currButton == 1){
+					buttons[0].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(.24f, 1.36f);
+					buttons[1].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(.24f, 1.36f);
 					buttons[0].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
 					buttons[1].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
 				}
 				
 				else{
+					buttons[0].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(.19f,1);
+					buttons[1].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(.19f,1);
 					buttons[0].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
 					buttons[1].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
 				}
 
                 if (currButton == 2 || currButton == 3){
+					buttons[2].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(.24f, 1.36f);
+					buttons[3].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(.24f, 1.36f);
 					buttons[2].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
 					buttons[3].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
 				}
 
                 else{
+					buttons[2].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(.19f,1);
+					buttons[3].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(.19f,1);
 					buttons[2].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
 					buttons[3].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
 				}
 
 				if (currButton == 4 || currButton == 5){
+					buttons[4].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(.24f, 1.36f);
+					buttons[5].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(.24f, 1.36f);
 					buttons[4].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
 					buttons[5].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
 				}
 				
 				else{
+					buttons[4].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(.19f,1);
+					buttons[5].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(.19f,1);
 					buttons[4].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
 					buttons[5].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
 				}
 
                 if (currButton == 6)
+				{
+					buttons[6].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(1.6f, 1.6f);
                     buttons[6].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
+				}
                 else
+				{
+					buttons[6].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(1.44f,1.23f);
                     buttons[6].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
+				}
 
 				if (currButton == 7)
+				{
+					buttons[7].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(1.6f, 1.6f);
 					buttons[7].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
+				}
 				else
+				{
+					buttons[7].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(1.44f,1.23f);
 					buttons[7].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
-
+				}
             }
 
             else
@@ -557,45 +608,68 @@ public class ButtonManager : MonoBehaviour
                 if (pauser.GetComponent<PuaseScript>().paused && pauser.GetComponent<PuaseScript>().Options.activeSelf)
                 {
 					if (currButton == 0 || currButton == 1){
+						buttons[0].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(.24f, 1.36f);
+						buttons[1].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(.24f, 1.36f);
 						buttons[0].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
 						buttons[1].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
 					}
 					
 					else{
+						buttons[0].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(.19f,1);
+						buttons[1].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(.19f,1);
 						buttons[0].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
 						buttons[1].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
 					}
 					
 					if (currButton == 2 || currButton == 3){
+						buttons[2].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(.24f, 1.36f);
+						buttons[3].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(.24f, 1.36f);
 						buttons[2].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
 						buttons[3].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
 					}
 					
 					else{
+						buttons[2].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(.19f,1);
+						buttons[3].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(.19f,1);
 						buttons[2].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
 						buttons[3].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
 					}
 					
 					if (currButton == 4 || currButton == 5){
+						buttons[4].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(.24f, 1.36f);
+						buttons[5].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(.24f, 1.36f);
 						buttons[4].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
 						buttons[5].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
 					}
 					
 					else{
+						buttons[4].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(.19f,1);
+						buttons[5].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(.19f,1);
 						buttons[4].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
 						buttons[5].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
 					}
 					
 					if (currButton == 6)
+					{
+						buttons[6].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(1.6f, 1.6f);
 						buttons[6].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
+					}
 					else
+					{
+						buttons[6].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(1.44f,1.23f);
 						buttons[6].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
+					}
 					
 					if (currButton == 7)
+					{
+						buttons[7].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(1.6f, 1.6f);
 						buttons[7].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
+					}
 					else
+					{
+						buttons[7].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(1.44f,1.23f);
 						buttons[7].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
-
+					}
                 }
             }
         }
@@ -605,9 +679,9 @@ public class ButtonManager : MonoBehaviour
             for (int i = 0; i < buttons.Length; i++)
             {
                 if (i == currButton)
-                    buttons[i].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
+					buttons[i].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(1.3f, 1.3f);//(1.0f, 0.92f, 0.016f, 1.0f);
                 else
-                    buttons[i].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
+					buttons[i].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(1,1);//(0.6f, 1, 1, 1);
             }
         }
 
@@ -615,10 +689,15 @@ public class ButtonManager : MonoBehaviour
         {
             for (int i = 0; i < buttons.Length; i++)
             {
-                if (i == currButton)
+                if (i == currButton) {
                     buttons[i].GetComponent<UnityEngine.UI.Image>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
+					buttons[i].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(2f, 2f);
+				}
                 else
+				{
                     buttons[i].GetComponent<UnityEngine.UI.Image>().color = new Color(1, 1, 1, 1);
+					buttons[i].GetComponent<UnityEngine.UI.Image>().rectTransform.localScale = new Vector3(1.87f, 1.54f);
+				}
             }
         }
 
@@ -629,8 +708,6 @@ public class ButtonManager : MonoBehaviour
 
 			if ((KeyManager.GetButtonDown("Submit")/* || Input.GetAxisRaw("Jump") > 0*/) && !buttonsDuringGameplay)
             {
-
-
                 buttons[currButton].GetComponent<ButtonScript>().LoadLevelOnClick();
             }
 
@@ -640,10 +717,30 @@ public class ButtonManager : MonoBehaviour
 
                 if (pauser.GetComponent<PuaseScript>().paused && pauser.GetComponent<PuaseScript>().Help.activeSelf)
                 {
-
                     buttons[currButton].GetComponent<PauseMenuScript>().HelpToOptionsOnClick();
                 }
             }
         }
+
+		if (state == WhereAmI.KeyBindings) {
+			if (buttonsDuringGameplay) {
+				GameObject pauser = GameObject.FindGameObjectWithTag("Pause");
+				
+				if (pauser.GetComponent<PuaseScript>().paused)
+				{
+					if (KeyManager.GetButtonDown("Up") || KeyManager.GetButtonDown("Down") || KeyManager.GetButtonDown("Left") || KeyManager.GetButtonDown("Right")) {
+						GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+						sound.GetComponent<SoundEffectManager>().PlaySelectionChange();
+					}
+				}
+			}
+
+			else {
+				if (KeyManager.GetButtonDown("Up") || KeyManager.GetButtonDown("Down") || KeyManager.GetButtonDown("Left") || KeyManager.GetButtonDown("Right")) {
+					GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+					sound.GetComponent<SoundEffectManager>().PlaySelectionChange();
+				}
+			}
+		}
     }
 }
