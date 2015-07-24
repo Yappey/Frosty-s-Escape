@@ -15,6 +15,12 @@ public class LevelSelectMenuScript : MonoBehaviour {
         {
             PlayerPrefs.SetInt("ActiveLevvel", 1);
         }
+        if (!PlayerPrefs.HasKey("Master"))
+        {
+            PlayerPrefs.SetFloat("Master", 1);
+            PlayerPrefs.SetFloat("SoundEffects", 1);
+            PlayerPrefs.SetFloat("Music", 1);
+        }
         for (int i = 0; i < numlevels; i++)
         {
             int snowball = PlayerPrefs.GetInt("Level" + (i + 1) + "Snowballs");
