@@ -23,6 +23,7 @@ public class Button : BaseActivator
 
     public override void Activate()
     {
+        frosty.GetComponent<Frostyehavior>().activateAnim = Frostyehavior.WHATTOACTIVATE.BUTTON;
         if (frosty.GetComponent<Frostyehavior>().headAttached)
         {
             GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");

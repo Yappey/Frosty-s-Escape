@@ -32,6 +32,10 @@ public class Frostyehavior : MonoBehaviour
     public GameObject snowballLauncher;
     public Animator frostyAnim;
 
+    public enum WHATTOACTIVATE { BUTTON = 0, LEVER };
+
+    public WHATTOACTIVATE activateAnim = WHATTOACTIVATE.LEVER;
+
     // Use this for initialization
     void Start()
     {
@@ -95,9 +99,9 @@ public class Frostyehavior : MonoBehaviour
             {
                 if ((/*Input*/KeyManager.GetButtonDown("Activate") /*|| Input.GetAxis("ControllerActivate") > 0.1f*/) && Time.timeScale > 0)
                 {
-                    FrostyActivateAnimations();
                     ActivateNearest();
                     buttonPressed = buttonTimerMax;
+                    FrostyActivateAnimations();
                 }
             }
             else
@@ -313,7 +317,7 @@ public class Frostyehavior : MonoBehaviour
                 frostyAnim.Play("Base Layer.FrostyBase_Walk");
             }
 
-          
+
         }
 
     }
@@ -418,13 +422,14 @@ public class Frostyehavior : MonoBehaviour
         //Head and Torso
         if (GetComponent<Frostyehavior>().headAttached && !GetComponent<Frostyehavior>().baseAttached && GetComponent<Frostyehavior>().torsoAttached)
         {
-            frostyAnim.Play("Base Layer.HeadTorso_Lever");
-        }
-
-        //Head and Torso
-        if (GetComponent<Frostyehavior>().headAttached && !GetComponent<Frostyehavior>().baseAttached && GetComponent<Frostyehavior>().torsoAttached)
-        {
-            frostyAnim.Play("Base Layer.HeadTorso_PushingButton");
+            if (activateAnim == WHATTOACTIVATE.BUTTON)
+            {
+                frostyAnim.Play("Base Layer.HeadTorso_PushingButton");
+            }
+            else if (activateAnim == WHATTOACTIVATE.LEVER)
+            {
+                frostyAnim.Play("Base Layer.HeadTorso_Lever");
+            }
         }
 
         //Torso and Base
@@ -436,14 +441,17 @@ public class Frostyehavior : MonoBehaviour
         //FullBody
         if (GetComponent<Frostyehavior>().headAttached && GetComponent<Frostyehavior>().baseAttached && GetComponent<Frostyehavior>().torsoAttached)
         {
-            frostyAnim.Play("Base Layer.FullBody_Lever");
+            if (activateAnim == WHATTOACTIVATE.BUTTON)
+            {
+                frostyAnim.Play("Base Layer.FullBody_Button");
+            }
+            else if (activateAnim == WHATTOACTIVATE.LEVER)
+            {
+                frostyAnim.Play("Base Layer.FullBody_Lever");
+            }
         }
 
-        //FullBody
-        if (GetComponent<Frostyehavior>().headAttached && GetComponent<Frostyehavior>().baseAttached && GetComponent<Frostyehavior>().torsoAttached)
-        {
-            frostyAnim.Play("Base Layer.FullBody_Button");
-        }
+        activateAnim = WHATTOACTIVATE.LEVER;
     }
 
     public void Melt()
@@ -483,7 +491,7 @@ public class Frostyehavior : MonoBehaviour
         {
             frostyAnim.SetTrigger("Melt");
         }
-    } 
+    }
     #endregion
 }
 
