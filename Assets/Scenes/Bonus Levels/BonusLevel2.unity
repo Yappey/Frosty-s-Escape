@@ -3010,7 +3010,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 431918, guid: 27de72b424b169048b0f4aa4d15cfe6d, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -.00999999978
       objectReference: {fileID: 0}
     - target: {fileID: 431918, guid: 27de72b424b169048b0f4aa4d15cfe6d, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3460,7 +3460,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11472340, guid: d4717ebd3a9491c4397d81082ac8bb85, type: 2}
       propertyPath: frostyFriendIndex
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11478280, guid: d4717ebd3a9491c4397d81082ac8bb85, type: 2}
       propertyPath: m_Enabled
@@ -4577,53 +4577,44 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1213056942}
     m_Modifications:
-    - target: {fileID: 439546, guid: d4717ebd3a9491c4397d81082ac8bb85, type: 2}
+    - target: {fileID: 425560, guid: 562772d81942db24da408ad98bdb4ce4, type: 2}
       propertyPath: m_LocalPosition.x
       value: 14.5599976
       objectReference: {fileID: 0}
-    - target: {fileID: 439546, guid: d4717ebd3a9491c4397d81082ac8bb85, type: 2}
+    - target: {fileID: 425560, guid: 562772d81942db24da408ad98bdb4ce4, type: 2}
       propertyPath: m_LocalPosition.y
       value: -5.03999996
       objectReference: {fileID: 0}
-    - target: {fileID: 439546, guid: d4717ebd3a9491c4397d81082ac8bb85, type: 2}
+    - target: {fileID: 425560, guid: 562772d81942db24da408ad98bdb4ce4, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 439546, guid: d4717ebd3a9491c4397d81082ac8bb85, type: 2}
+    - target: {fileID: 425560, guid: 562772d81942db24da408ad98bdb4ce4, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 439546, guid: d4717ebd3a9491c4397d81082ac8bb85, type: 2}
+    - target: {fileID: 425560, guid: 562772d81942db24da408ad98bdb4ce4, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 439546, guid: d4717ebd3a9491c4397d81082ac8bb85, type: 2}
+    - target: {fileID: 425560, guid: 562772d81942db24da408ad98bdb4ce4, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 439546, guid: d4717ebd3a9491c4397d81082ac8bb85, type: 2}
+    - target: {fileID: 425560, guid: 562772d81942db24da408ad98bdb4ce4, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 439546, guid: d4717ebd3a9491c4397d81082ac8bb85, type: 2}
+    - target: {fileID: 425560, guid: 562772d81942db24da408ad98bdb4ce4, type: 2}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11472340, guid: d4717ebd3a9491c4397d81082ac8bb85, type: 2}
+    - target: {fileID: 11452644, guid: 562772d81942db24da408ad98bdb4ce4, type: 2}
       propertyPath: frostyFriendIndex
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 11478280, guid: d4717ebd3a9491c4397d81082ac8bb85, type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 173602, guid: d4717ebd3a9491c4397d81082ac8bb85, type: 2}
-      propertyPath: m_Name
-      value: Frosty Friend 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 11478280, guid: d4717ebd3a9491c4397d81082ac8bb85, type: 2}
-  m_ParentPrefab: {fileID: 100100000, guid: d4717ebd3a9491c4397d81082ac8bb85, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 562772d81942db24da408ad98bdb4ce4, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &795673373 stripped
 Transform:
@@ -5556,7 +5547,7 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!4 &942580841 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 439546, guid: d4717ebd3a9491c4397d81082ac8bb85, type: 2}
+  m_PrefabParentObject: {fileID: 425560, guid: 562772d81942db24da408ad98bdb4ce4, type: 2}
   m_PrefabInternal: {fileID: 794373640}
 --- !u!1 &947162302
 GameObject:
@@ -10388,7 +10379,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11472340, guid: d4717ebd3a9491c4397d81082ac8bb85, type: 2}
       propertyPath: frostyFriendIndex
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11478280, guid: d4717ebd3a9491c4397d81082ac8bb85, type: 2}
       propertyPath: m_Enabled

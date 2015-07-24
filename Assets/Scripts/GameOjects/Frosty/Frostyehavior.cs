@@ -135,7 +135,7 @@ public class Frostyehavior : MonoBehaviour
 			{
 				FrostyWalkAnimations();
 
-				rgbd.AddForce(new Vector2(moveSpeed * hor * 4.0f, 0.0f));
+				rgbd.AddForce(new Vector2(moveSpeed * hor * 2.0f, 0.0f));
 
 				if (Mathf.Abs(rgbd.velocity.x) > moveSpeed)
 				{

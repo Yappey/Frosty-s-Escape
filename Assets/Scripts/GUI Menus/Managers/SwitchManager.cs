@@ -54,8 +54,8 @@ public class SwitchManager : MonoBehaviour
     {
         if (Time.timeScale > 0.0f)
         {
-            GameObject[] frosties = GameObject.FindGameObjectsWithTag("Frosty");
-            Debug.Log("Number of Frosties" + frosties.Length);
+            //GameObject[] frosties = GameObject.FindGameObjectsWithTag("Frosty");
+            //Debug.Log("Number of Frosties" + frosties.Length);
             if (buttonTimer <= 0.0f)
             {
                 if ((/*Input*/KeyManager.GetButtonDown("Head")))// || Input.GetAxisRaw("ControllerHead") == 1))

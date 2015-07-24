@@ -247,22 +247,22 @@ public sealed class CheckpointManager {
 			{
 				actS.Reset();
 			}
-			//foreach (recState recS in receivers)
-			//{
-			//	recS.Reset();
-			//}
-			//foreach (actState actS in activators)
-			//{
-			//	actS.Reset();
-			//}
-			//foreach (recState recS in receivers)
-			//{
-			//	recS.Reset();
-			//}
-			//foreach (actState actS in activators)
-			//{
-			//	actS.Reset();
-			//}
+			foreach (recState recS in receivers)
+			{
+				recS.Reset();
+			}
+			foreach (actState actS in activators)
+			{
+				actS.Reset();
+			}
+			foreach (recState recS in receivers)
+			{
+				recS.Reset();
+			}
+			foreach (actState actS in activators)
+			{
+				actS.Reset();
+			}
 
 			Sparkle(sw.Active.transform.position);
 		}
