@@ -10,7 +10,7 @@ public class SwitchManager : MonoBehaviour
     public float attachdistance;
     float buttonTimer = 0.0f;
     float buttonTimerMax = 0.5f;
-   
+
     // Prefab GameObjects
     public GameObject Frosty;
     public GameObject prehead;
@@ -24,7 +24,7 @@ public class SwitchManager : MonoBehaviour
     public GameObject Torso;
     public GameObject Base;
     public GameObject Active;
-    
+
     public int test1 = 0;
     public int test2 = 0;
 
@@ -35,7 +35,7 @@ public class SwitchManager : MonoBehaviour
     //Animation
 
 
-	// Use this for initialization
+    // Use this for initialization
     void Start()
     {
         Head = FindHead();
@@ -44,7 +44,7 @@ public class SwitchManager : MonoBehaviour
 
         Active = FindActive();
 
-		CheckpointManager.Instance.Clear();
+        CheckpointManager.Instance.Clear();
 
 
     }
@@ -54,6 +54,8 @@ public class SwitchManager : MonoBehaviour
     {
         if (Time.timeScale > 0.0f)
         {
+            //GameObject[] frosties = GameObject.FindGameObjectsWithTag("Frosty");
+            //Debug.Log("Number of Frosties" + frosties.Length);
             if (buttonTimer <= 0.0f)
             {
                 if ((/*Input*/KeyManager.GetButtonDown("Head")))// || Input.GetAxisRaw("ControllerHead") == 1))
@@ -61,17 +63,17 @@ public class SwitchManager : MonoBehaviour
                     SwitchHead();
                     buttonTimer = buttonTimerMax;
                 }
-				else if ((/*Input*/KeyManager.GetButtonDown("Torso")))// || Input.GetAxisRaw("ControllerTorso") == 1 || Input.GetAxisRaw("ControllerTorso") == -1))
+                else if ((/*Input*/KeyManager.GetButtonDown("Torso")))// || Input.GetAxisRaw("ControllerTorso") == 1 || Input.GetAxisRaw("ControllerTorso") == -1))
                 {
                     SwitchTorso();
                     buttonTimer = buttonTimerMax;
                 }
-				else if ((/*Input*/KeyManager.GetButtonDown("Base")))// || Input.GetAxisRaw("ControllerBase") == -1))
+                else if ((/*Input*/KeyManager.GetButtonDown("Base")))// || Input.GetAxisRaw("ControllerBase") == -1))
                 {
                     SwitchBase();
                     buttonTimer = buttonTimerMax;
                 }
-				if (/*Input*/KeyManager.GetButtonDown("Detach"))// || Input.GetAxisRaw("ControllerDetach") > 0.1f)
+                if (/*Input*/KeyManager.GetButtonDown("Detach"))// || Input.GetAxisRaw("ControllerDetach") > 0.1f)
                 {
                     if (HeadSelected)
                     {
@@ -89,7 +91,7 @@ public class SwitchManager : MonoBehaviour
                         buttonTimer = buttonTimerMax;
                     }
                 }
-				if (/*Input*/KeyManager.GetButtonDown("Attach"))// || Input.GetAxisRaw("ControllerAttach") > 0.1f)
+                if (/*Input*/KeyManager.GetButtonDown("Attach"))// || Input.GetAxisRaw("ControllerAttach") > 0.1f)
                 {
                     if (HeadSelected)
                     {
@@ -106,7 +108,7 @@ public class SwitchManager : MonoBehaviour
                         BaseAttach();
                         buttonTimer = buttonTimerMax;
                     }
-                } 
+                }
             }
             else
             {
@@ -125,7 +127,7 @@ public class SwitchManager : MonoBehaviour
             else
                 Base.transform.FindChild("Base").GetComponent<MeshRenderer>().material.color = Color.blue;
 
-            
+
         }
 
     }
@@ -134,8 +136,10 @@ public class SwitchManager : MonoBehaviour
     {
         if (Head.GetComponent<Frostyehavior>().torsoAttached)
         {
-			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-			sound.GetComponent<SoundEffectManager>().PlayDetachSnd();
+            GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+            sound.GetComponent<SoundEffectManager>().PlayDetachSnd();
+
+            bool grounded = Active.GetComponent<Frostyehavior>().isGrounded;
 
             Active.GetComponent<Frostyehavior>().isActive = false;
             Head = Instantiate(prehead);
@@ -149,19 +153,20 @@ public class SwitchManager : MonoBehaviour
                 Base.transform.position = Head.transform.position;
                 Base.transform.localScale = scale;
                 Head.transform.localScale = scale;
-                Head.GetComponent<Animator>().SetTrigger("HeadFromFullBodyDetach");
+                if (grounded)
+                    Head.GetComponent<Animator>().SetTrigger("HeadFromFullBodyDetach");
             }
             else
             {
                 Vector3 scale = Torso.transform.localScale;
-               
+
                 Destroy(Torso);
                 Torso = Instantiate(pretorso);
                 Torso.transform.position = Head.transform.position;
                 Torso.transform.localScale = scale;
                 Head.transform.localScale = scale;
-               
-                Head.GetComponent<Animator>().SetTrigger("HeadTorsoDetach");
+                if (grounded)
+                    Head.GetComponent<Animator>().SetTrigger("HeadTorsoDetach");
             }
             Active = Head;
         }
@@ -171,8 +176,10 @@ public class SwitchManager : MonoBehaviour
     {
         if (Torso.GetComponent<Frostyehavior>().headAttached || Torso.GetComponent<Frostyehavior>().baseAttached)
         {
-			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-			sound.GetComponent<SoundEffectManager>().PlayDetachSnd();
+            GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+            sound.GetComponent<SoundEffectManager>().PlayDetachSnd();
+
+            bool grounded = Active.GetComponent<Frostyehavior>().isGrounded;
 
             Torso = Instantiate(pretorso);
             Torso.transform.position = Active.transform.position;
@@ -190,7 +197,8 @@ public class SwitchManager : MonoBehaviour
                 Base.transform.localScale = scale;
                 Head.transform.localScale = scale;
                 Torso.transform.localScale = scale;
-                Torso.GetComponent<Animator>().SetTrigger("HeadTorsoBaseDetach");
+                if (grounded)
+                    Torso.GetComponent<Animator>().SetTrigger("HeadTorsoBaseDetach");
             }
             else if (Active.GetComponent<Frostyehavior>().headAttached)
             {
@@ -201,8 +209,9 @@ public class SwitchManager : MonoBehaviour
                 Head.transform.position = Torso.transform.position;
                 Head.transform.localScale = scale;
                 Torso.transform.localScale = scale;
-                Torso.GetComponent<Animator>().SetTrigger("HeadTorsoDetach");
-               
+                if (grounded)
+                    Torso.GetComponent<Animator>().SetTrigger("HeadTorsoDetach");
+
             }
             else
             {
@@ -213,7 +222,8 @@ public class SwitchManager : MonoBehaviour
                 Base.transform.position = Torso.transform.position;
                 Base.transform.localScale = scale;
                 Torso.transform.localScale = scale;
-                Torso.GetComponent<Animator>().SetTrigger("TorsoBaseDetach");
+                if (grounded)
+                    Torso.GetComponent<Animator>().SetTrigger("TorsoBaseDetach");
             }
             Active = Torso;
         }
@@ -223,10 +233,11 @@ public class SwitchManager : MonoBehaviour
     {
         if (Base.GetComponent<Frostyehavior>().torsoAttached)
         {
-			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-			sound.GetComponent<SoundEffectManager>().PlayDetachSnd();
-          
-            
+            GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+            sound.GetComponent<SoundEffectManager>().PlayDetachSnd();
+
+            bool grounded = Active.GetComponent<Frostyehavior>().isGrounded;
+
             Base = Instantiate(prebase);
             Base.GetComponent<Frostyehavior>().isActive = true;
             Base.transform.position = Active.transform.position;
@@ -239,7 +250,8 @@ public class SwitchManager : MonoBehaviour
                 Head.transform.position = Torso.transform.position = Base.transform.position;
                 Base.transform.localScale = scale;
                 Torso.transform.localScale = scale;
-                Base.GetComponent<Animator>().SetTrigger("BaseDetachFroHeadTorso");
+                if (grounded)
+                    Base.GetComponent<Animator>().SetTrigger("BaseDetachFroHeadTorso");
             }
             else
             {
@@ -249,7 +261,8 @@ public class SwitchManager : MonoBehaviour
                 Torso.transform.position = Base.transform.position;
                 Base.transform.localScale = scale;
                 Torso.transform.localScale = scale;
-                Base.GetComponent<Animator>().SetTrigger("TorsoBaseDetach");
+                if (grounded)
+                    Base.GetComponent<Animator>().SetTrigger("TorsoBaseDetach");
             }
             Active = Base;
         }
@@ -261,8 +274,8 @@ public class SwitchManager : MonoBehaviour
             !Head.GetComponent<Frostyehavior>().baseAttached &&
             (Head.transform.position - Base.transform.position).magnitude < attachdistance)
         {
-			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-			sound.GetComponent<SoundEffectManager>().PlayAttachSnd();
+            GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+            sound.GetComponent<SoundEffectManager>().PlayAttachSnd();
             float scale = Active.transform.localScale.x;
             Destroy(Base);
             Active = Instantiate(Frosty);
@@ -281,8 +294,8 @@ public class SwitchManager : MonoBehaviour
             Torso.GetComponent<Frostyehavior>().baseAttached &&
             (Head.transform.position - Torso.transform.position).magnitude < attachdistance)
         {
-			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-			sound.GetComponent<SoundEffectManager>().PlayAttachSnd();
+            GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+            sound.GetComponent<SoundEffectManager>().PlayAttachSnd();
             float scale = Active.transform.localScale.x;
             Destroy(Base);
             Active = Instantiate(Frosty);
@@ -302,8 +315,8 @@ public class SwitchManager : MonoBehaviour
             !Torso.GetComponent<Frostyehavior>().baseAttached &&
             !((Head.transform.position - Base.transform.position).magnitude < attachdistance))
         {
-			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-			sound.GetComponent<SoundEffectManager>().PlayAttachSnd();
+            GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+            sound.GetComponent<SoundEffectManager>().PlayAttachSnd();
             float scale = Active.transform.localScale.x;
             Destroy(Torso);
             Active = Instantiate(preheadtorso);
@@ -322,8 +335,8 @@ public class SwitchManager : MonoBehaviour
             !Torso.GetComponent<Frostyehavior>().baseAttached &&
             (Head.transform.position - Base.transform.position).magnitude < attachdistance)
         {
-			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-			sound.GetComponent<SoundEffectManager>().PlayAttachSnd();
+            GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+            sound.GetComponent<SoundEffectManager>().PlayAttachSnd();
             float scale = Active.transform.localScale.x;
             Destroy(Base);
             Destroy(Torso);
@@ -338,7 +351,7 @@ public class SwitchManager : MonoBehaviour
             scl.x = scale;
             Active.transform.localScale = scl;
             Head.GetComponent<Animator>().SetTrigger("HeadTorsoBaseAttach");
-            
+
         }
     }
 
@@ -348,8 +361,8 @@ public class SwitchManager : MonoBehaviour
             !Torso.GetComponent<Frostyehavior>().baseAttached &&
             (Head.transform.position - Base.transform.position).magnitude < attachdistance)
         {
-			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-			sound.GetComponent<SoundEffectManager>().PlayAttachSnd();
+            GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+            sound.GetComponent<SoundEffectManager>().PlayAttachSnd();
             float scale = Active.transform.localScale.x;
             Destroy(Base);
             Active = Instantiate(Frosty);
@@ -368,8 +381,8 @@ public class SwitchManager : MonoBehaviour
             (Torso.transform.position - Head.transform.position).magnitude < attachdistance &&
             Torso.GetComponent<Frostyehavior>().baseAttached)
         {
-			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-			sound.GetComponent<SoundEffectManager>().PlayAttachSnd();
+            GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+            sound.GetComponent<SoundEffectManager>().PlayAttachSnd();
             float scale = Active.transform.localScale.x;
             Destroy(Head);
             Destroy(Base);
@@ -390,8 +403,8 @@ public class SwitchManager : MonoBehaviour
         !Torso.GetComponent<Frostyehavior>().baseAttached &&
         (Torso.transform.position - Base.transform.position).magnitude < attachdistance/* both attach*/)
         {
-			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-			sound.GetComponent<SoundEffectManager>().PlayAttachSnd();
+            GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+            sound.GetComponent<SoundEffectManager>().PlayAttachSnd();
             float scale = Active.transform.localScale.x;
             Destroy(Head);
             Destroy(Base);
@@ -406,15 +419,15 @@ public class SwitchManager : MonoBehaviour
             scl.x = scale;
             Active.transform.localScale = scl;
             Torso.GetComponent<Animator>().SetTrigger("HeadTorsoBaseAttach");
-            
+
         }
         else if (!Torso.GetComponent<Frostyehavior>().headAttached &&
             (Head.transform.position - Torso.transform.position).magnitude < attachdistance &&
             !Torso.GetComponent<Frostyehavior>().baseAttached &&
             !((Torso.transform.position - Base.transform.position).magnitude < attachdistance/* head attach*/))
         {
-			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-			sound.GetComponent<SoundEffectManager>().PlayAttachSnd();
+            GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+            sound.GetComponent<SoundEffectManager>().PlayAttachSnd();
             float scale = Active.transform.localScale.x;
             Destroy(Head);
             Active = Instantiate(preheadtorso);
@@ -433,8 +446,8 @@ public class SwitchManager : MonoBehaviour
             !Torso.GetComponent<Frostyehavior>().baseAttached &&
             (Torso.transform.position - Base.transform.position).magnitude < attachdistance /* base attach*/)
         {
-			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-			sound.GetComponent<SoundEffectManager>().PlayAttachSnd();
+            GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+            sound.GetComponent<SoundEffectManager>().PlayAttachSnd();
             float scale = Active.transform.localScale.x;
             Destroy(Base);
             Active = Instantiate(pretorsobase);
@@ -446,7 +459,7 @@ public class SwitchManager : MonoBehaviour
             Vector3 scl = Active.transform.localScale;
             scl.x = scale;
             Active.transform.localScale = scl;
-           Torso.GetComponent<Animator>().SetTrigger("BasePlusTorsoReattach");
+            Torso.GetComponent<Animator>().SetTrigger("BasePlusTorsoReattach");
         }
     }
 
@@ -456,8 +469,8 @@ public class SwitchManager : MonoBehaviour
             (Head.transform.position - Base.transform.position).magnitude < attachdistance &&
             !Base.GetComponent<Frostyehavior>().headAttached)
         {
-			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-			sound.GetComponent<SoundEffectManager>().PlayAttachSnd();
+            GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+            sound.GetComponent<SoundEffectManager>().PlayAttachSnd();
             float scale = Active.transform.localScale.x;
             Destroy(Head);
             Active = Instantiate(Frosty);
@@ -476,8 +489,8 @@ public class SwitchManager : MonoBehaviour
             (Torso.transform.position - Base.transform.position).magnitude < attachdistance &&
             Torso.GetComponent<Frostyehavior>().headAttached)
         {
-			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-			sound.GetComponent<SoundEffectManager>().PlayAttachSnd();
+            GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+            sound.GetComponent<SoundEffectManager>().PlayAttachSnd();
             float scale = Active.transform.localScale.x;
             Destroy(Head);
             Active = Instantiate(Frosty);
@@ -497,8 +510,8 @@ public class SwitchManager : MonoBehaviour
             !Torso.GetComponent<Frostyehavior>().headAttached &&
             !((Head.transform.position - Base.transform.position).magnitude < attachdistance))
         {
-			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-			sound.GetComponent<SoundEffectManager>().PlayAttachSnd();
+            GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+            sound.GetComponent<SoundEffectManager>().PlayAttachSnd();
             float scale = Active.transform.localScale.x;
             test1++;
             Destroy(Torso);
@@ -518,8 +531,8 @@ public class SwitchManager : MonoBehaviour
             !Torso.GetComponent<Frostyehavior>().headAttached &&
             ((Head.transform.position - Base.transform.position).magnitude < attachdistance))
         {
-			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-			sound.GetComponent<SoundEffectManager>().PlayAttachSnd();
+            GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+            sound.GetComponent<SoundEffectManager>().PlayAttachSnd();
             float scale = Active.transform.localScale.x;
             test2++;
             Destroy(Head);
@@ -535,14 +548,14 @@ public class SwitchManager : MonoBehaviour
             scl.x = scale;
             Active.transform.localScale = scl;
             Base.GetComponent<Animator>().SetTrigger("HeadTorsoBaseAttach");
-            
+
         }
     }
 
     public GameObject FindActive()
     {
         GameObject[] frostys = GameObject.FindGameObjectsWithTag("Frosty");
-		if (frostys.Length > 3) Debug.Log ("Number of Frostys in FindActive():  " + frostys.Length);
+        if (frostys.Length > 3) Debug.Log("Number of Frostys in FindActive():  " + frostys.Length);
         foreach (GameObject frosty in frostys)
         {
             test++;
@@ -554,8 +567,8 @@ public class SwitchManager : MonoBehaviour
 
     public GameObject FindHead()
     {
-		GameObject[] frostys = GameObject.FindGameObjectsWithTag("Frosty");
-		if (frostys.Length > 3) Debug.Log ("Number of Frostys in FindHead():  " + frostys.Length);
+        GameObject[] frostys = GameObject.FindGameObjectsWithTag("Frosty");
+        if (frostys.Length > 3) Debug.Log("Number of Frostys in FindHead():  " + frostys.Length);
         foreach (GameObject frosty in frostys)
         {
             if (frosty != null && frosty.GetComponent<Frostyehavior>() != null && frosty.GetComponent<Frostyehavior>().headAttached)
@@ -566,8 +579,8 @@ public class SwitchManager : MonoBehaviour
 
     public GameObject FindTorso()
     {
-		GameObject[] frostys = GameObject.FindGameObjectsWithTag("Frosty");
-		if (frostys.Length > 3) Debug.Log ("Number of Frostys in FindTorso():  " + frostys.Length);
+        GameObject[] frostys = GameObject.FindGameObjectsWithTag("Frosty");
+        if (frostys.Length > 3) Debug.Log("Number of Frostys in FindTorso():  " + frostys.Length);
         foreach (GameObject frosty in frostys)
         {
             if (frosty != null && frosty.GetComponent<Frostyehavior>() != null && frosty.GetComponent<Frostyehavior>().torsoAttached)
@@ -578,8 +591,8 @@ public class SwitchManager : MonoBehaviour
 
     public GameObject FindBase()
     {
-		GameObject[] frostys = GameObject.FindGameObjectsWithTag("Frosty");
-		if (frostys.Length > 3) Debug.Log ("Number of Frostys in FindBase():  " + frostys.Length);
+        GameObject[] frostys = GameObject.FindGameObjectsWithTag("Frosty");
+        if (frostys.Length > 3) Debug.Log("Number of Frostys in FindBase():  " + frostys.Length);
         foreach (GameObject frosty in frostys)
         {
             if (frosty != null && frosty.GetComponent<Frostyehavior>() != null && frosty.GetComponent<Frostyehavior>().baseAttached)
@@ -590,10 +603,11 @@ public class SwitchManager : MonoBehaviour
 
     public void SwitchHead()
     {
-		if (Active != Head) {
-			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-			sound.GetComponent<SoundEffectManager>().PlaySwitchBodyPartSnd();
-		}
+        if (Active != Head)
+        {
+            GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+            sound.GetComponent<SoundEffectManager>().PlaySwitchBodyPartSnd();
+        }
 
         HeadSelected = true;
         TorsoSelected = false;
@@ -605,10 +619,11 @@ public class SwitchManager : MonoBehaviour
 
     public void SwitchTorso()
     {
-		if (Active != Torso) {
-			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-			sound.GetComponent<SoundEffectManager>().PlaySwitchBodyPartSnd();
-		}
+        if (Active != Torso)
+        {
+            GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+            sound.GetComponent<SoundEffectManager>().PlaySwitchBodyPartSnd();
+        }
 
 
         HeadSelected = false;
@@ -621,10 +636,11 @@ public class SwitchManager : MonoBehaviour
 
     public void SwitchBase()
     {
-		if (Active != Base) {
-			GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-			sound.GetComponent<SoundEffectManager>().PlaySwitchBodyPartSnd();
-		}
+        if (Active != Base)
+        {
+            GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+            sound.GetComponent<SoundEffectManager>().PlaySwitchBodyPartSnd();
+        }
 
         HeadSelected = false;
         TorsoSelected = false;

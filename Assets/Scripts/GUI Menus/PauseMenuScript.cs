@@ -62,7 +62,7 @@ public class PauseMenuScript : MonoBehaviour {
     public void ContinueOnClick()
     {
 		Time.timeScale = 1.0f;
-        if (PlayerPrefs.GetInt("ActiveLevel") > 15)
+        if (PlayerPrefs.GetInt("ActiveLevel") > 12)
             LoadingScreenDelayed.Instance.LoadingLevels("Credits");
         Application.LoadLevel(Application.loadedLevel + 1);
         gameObject.GetComponent<Animator>().StopPlayback();

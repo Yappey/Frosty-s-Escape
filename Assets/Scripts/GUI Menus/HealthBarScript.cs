@@ -138,14 +138,19 @@ public class HealthBarScript : MonoBehaviour
             //frostyAnim.SetTrigger("Melt");
 
             GameObject[] frosties = GameObject.FindGameObjectsWithTag("Frosty");
+            GameObject toDestroy = null;
             foreach (GameObject frost in frosties)
             {
-                if (frost != null)
+                if (frost != null && frost.GetComponent<Frostyehavior>() != null)
                 {
                     frost.GetComponent<Frostyehavior>().Melt();
                     frost.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
                 }
+                else if (frost.GetComponent<Frostyehavior>() == null)
+                    toDestroy = frost;
             }
+
+            if (toDestroy != null) Destroy(toDestroy);
 
 
             if (chck.CheckPointSaved)

@@ -5,6 +5,7 @@ public class Laser : MonoBehaviour {
 
 
     public Vector3 velocity;
+	public float bounce = 1.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -25,6 +26,7 @@ public class Laser : MonoBehaviour {
         {
             velocity = Vector3.Reflect(velocity, coll.contacts[0].normal);
             transform.right = velocity.normalized;
+			velocity *= bounce;
         }
         else
         {

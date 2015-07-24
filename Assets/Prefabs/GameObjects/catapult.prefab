@@ -173,7 +173,7 @@ MonoBehaviour:
   force: {x: 30, y: 30}
   Loaded: {fileID: 0}
   Launched: {fileID: 0}
-  distance: 10
+  distance: 5
   time: -1
   timer: 1.20000005
 --- !u!212 &21246526

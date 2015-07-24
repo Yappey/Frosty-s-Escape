@@ -146,7 +146,15 @@ public class MovingBlock : BaseReceiver {
 				}
 				else
 				{
+                    if (state == 0)
+                        back = false;
+                    else if (state >= waypoints.Length - 1)
+                        back = true;
 					state += (back) ? -1 : 1;
+                    if (state < 0)
+                        state = 0;
+                    else if (state >= waypoints.Length)
+                        state = waypoints.Length - 1;
 					if (state == 0 || state == waypoints.Length - 1)
 					{
 						back = !back;
