@@ -54,14 +54,15 @@ public class Crank : BaseActivator {
                     rotationangle += rotationspersecond * Time.deltaTime;
                     reversed = false;
 					sound.GetComponent<SoundEffectManager>().PlayCrankSnd();
-                    GameObject.FindGameObjectWithTag("SwitchManager").GetComponent<SwitchManager>().Torso.GetComponent<Animator>().SetBool("CrankWheel", true);
+                    GameObject.FindGameObjectWithTag("SwitchManager").GetComponent<SwitchManager>().Torso.GetComponent<Animator>().SetTrigger("Crank Wheel");
                 }
                 else
                 {
                     full = true;
 					sound.GetComponent<SoundEffectManager>().StopCrankSnd();
-                    GameObject.FindGameObjectWithTag("SwitchManager").GetComponent<SwitchManager>().Torso.GetComponent<Animator>().SetBool("CrankWheel", false);
+                    GameObject.FindGameObjectWithTag("SwitchManager").GetComponent<SwitchManager>().Torso.GetComponent<Animator>().SetTrigger("Crank Wheel Done");
                 }
+               // GameObject.FindGameObjectWithTag("SwitchManager").GetComponent<SwitchManager>().Torso.GetComponent<Animator>().SetBool("CrankWheel", false);
             }
             else
             {

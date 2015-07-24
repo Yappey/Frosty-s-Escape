@@ -13,7 +13,7 @@ public class PressurePlate : BaseActivator {
     // Use this for initialization
     void Start()
     {
-
+		moveDistance *= transform.parent.localScale.x / 0.1292197f;
     }
 
     // Update is called once per frame
