@@ -17,7 +17,7 @@ public class Grounder : MonoBehaviour {
 	
 	void OnTriggerStay2D(Collider2D col)
 	{
-		if (!col.CompareTag("Ladder"))
+		if (!col.CompareTag("Ladder") && !col.CompareTag("MonkeyBar"))
 			frost.isGrounded = true;
 	}
 	
