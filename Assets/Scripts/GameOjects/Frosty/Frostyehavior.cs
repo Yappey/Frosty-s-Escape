@@ -61,7 +61,7 @@ public class Frostyehavior : MonoBehaviour
             {
                 FrostyWalkAnimations();
 
-                rgbd.AddForce(new Vector2(moveSpeed * hor * 15.0f, 0.0f));
+                rgbd.AddForce(new Vector2(moveSpeed * hor * 4.0f, 0.0f));
 
                 if (Mathf.Abs(rgbd.velocity.x) > moveSpeed)
                 {
@@ -111,6 +111,28 @@ public class Frostyehavior : MonoBehaviour
             LaunchSnowall();
         }
     }
+
+	void FixedUpdate()
+	{
+		Rigidbody2D rgbd = GetComponent<Rigidbody2D>();
+		if (isActive)
+		{
+			float hor = KeyManager.GetAxisRaw("Horizontal");
+
+			// Check if speed is less than max or input is opposite velocity
+			if (rgbd.velocity.x * Mathf.Sign(hor) < moveSpeed  && Time.timeScale > 0)
+			{
+				FrostyWalkAnimations();
+
+				rgbd.AddForce(new Vector2(moveSpeed * hor * 4.0f, 0.0f));
+
+				if (Mathf.Abs(rgbd.velocity.x) > moveSpeed)
+				{
+					rgbd.velocity = new Vector2(moveSpeed * Mathf.Sign(rgbd.velocity.x), 0.0f);
+				}
+			}
+		}
+	}
 
     // Activates the nearest Activator
     void ActivateNearest()
