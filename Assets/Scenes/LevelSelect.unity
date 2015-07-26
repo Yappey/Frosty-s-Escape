@@ -6011,7 +6011,7 @@ MonoBehaviour:
   levelname: BonusLevel3
   filename: 
   volumetype: 
-  BonusLevelNum: 2
+  BonusLevelNum: 3
   levelnumber: 2
 --- !u!114 &2013526434
 MonoBehaviour:

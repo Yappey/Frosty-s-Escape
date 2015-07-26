@@ -63,6 +63,24 @@ public class WinBox : MonoBehaviour {
 					if(PlayerPrefs.GetInt("ActiveLevel") == levelnumber)
 						PlayerPrefs.SetInt("ActiveLevel", levelnumber + 1);
                 }
+                else
+                {
+                    if (time < ThreeStars)
+                    {
+                        ThreeStarAnim.GetComponent<Animator>().enabled = true;
+                        ThreeStarAnim.GetComponent<Animator>().Play("Base Layer.RatingSystem3Stars");
+                    }
+                    else if (time < TwoStars)
+                    {
+                        TwoStarAnim.GetComponent<Animator>().enabled = true;
+                        TwoStarAnim.GetComponent<Animator>().Play("Base Layer.RatingSystem2Stars");
+                    }
+                    else
+                    {
+                        OneStarAnim.GetComponent<Animator>().enabled = true;
+                        OneStarAnim.GetComponent<Animator>().Play("Base Layer.RatingSystem1Star");
+                    }
+                }
 			}
 		}
 	}
