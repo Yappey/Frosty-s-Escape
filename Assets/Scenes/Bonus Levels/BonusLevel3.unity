@@ -692,6 +692,10 @@ Prefab:
       propertyPath: Waypoint
       value: 
       objectReference: {fileID: 1937781367}
+    - target: {fileID: 11484146, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
+      propertyPath: levelnum
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
   m_IsPrefabParent: 0
@@ -1798,6 +1802,10 @@ Prefab:
     - target: {fileID: 6183526, guid: 8b8db5fa4f331974b9fea9d848d450be, type: 2}
       propertyPath: m_Material
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 148594, guid: 8b8db5fa4f331974b9fea9d848d450be, type: 2}
+      propertyPath: m_TagString
+      value: Icepatch
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 25110628, guid: 8b8db5fa4f331974b9fea9d848d450be, type: 2}
@@ -6523,6 +6531,10 @@ Prefab:
     - target: {fileID: 6183526, guid: 8b8db5fa4f331974b9fea9d848d450be, type: 2}
       propertyPath: m_Material
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 148594, guid: 8b8db5fa4f331974b9fea9d848d450be, type: 2}
+      propertyPath: m_TagString
+      value: Icepatch
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 25110628, guid: 8b8db5fa4f331974b9fea9d848d450be, type: 2}
