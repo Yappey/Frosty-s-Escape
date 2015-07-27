@@ -27,7 +27,7 @@ public class DragSetter : MonoBehaviour {
 			col.gameObject.GetComponent<Rigidbody2D>().mass = mass;
 			col.gameObject.GetComponent<Rigidbody2D>().drag = drag;
 
-			col.gameObject.transform.localScale = new Vector3 (size, size, size);
+			col.gameObject.transform.localScale = new Vector3 (size * Mathf.Sign(transform.localScale.x), size, size);
 		}
 	}
 }
