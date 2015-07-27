@@ -1517,6 +1517,7 @@ MonoBehaviour:
   receiver: {fileID: 2070691649}
   hardSetState: 2
   unSetState: 0
+  useUnSet: 1
 --- !u!1001 &242131861
 Prefab:
   m_ObjectHideFlags: 0
@@ -1686,6 +1687,7 @@ MonoBehaviour:
   receiver: {fileID: 1802105973}
   hardSetState: 0
   unSetState: 0
+  useUnSet: 1
 --- !u!1001 &247865761
 Prefab:
   m_ObjectHideFlags: 0
@@ -7777,6 +7779,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 11484146, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
+      propertyPath: levelnum
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
   m_IsPrefabParent: 0
@@ -9049,6 +9055,7 @@ MonoBehaviour:
   receiver: {fileID: 2070691649}
   hardSetState: 1
   unSetState: 0
+  useUnSet: 1
 --- !u!1001 &1559203053
 Prefab:
   m_ObjectHideFlags: 0
@@ -11398,6 +11405,7 @@ MonoBehaviour:
   receiver: {fileID: 1802105973}
   hardSetState: 1
   unSetState: 1
+  useUnSet: 1
 --- !u!1001 &1866026641
 Prefab:
   m_ObjectHideFlags: 0
@@ -12469,6 +12477,7 @@ MonoBehaviour:
   receiver: {fileID: 2070691649}
   hardSetState: 3
   unSetState: 0
+  useUnSet: 1
 --- !u!1001 &2042542935
 Prefab:
   m_ObjectHideFlags: 0

@@ -1737,6 +1737,10 @@ Prefab:
       propertyPath: speeds.Array.data[3]
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11444582, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
+      propertyPath: syncWithState
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5a15cd3c114e17644a06dba5e0bf0915, type: 2}
   m_IsPrefabParent: 0
@@ -2588,7 +2592,7 @@ Transform:
   m_LocalScale: {x: 2.15762353, y: .400000006, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_RootOrder: 37
 --- !u!1 &1125652097
 GameObject:
   m_ObjectHideFlags: 0
