@@ -692,6 +692,10 @@ Prefab:
       propertyPath: Waypoint
       value: 
       objectReference: {fileID: 1937781367}
+    - target: {fileID: 11484146, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
+      propertyPath: levelnum
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
   m_IsPrefabParent: 0

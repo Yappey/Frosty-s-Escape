@@ -7,6 +7,7 @@ public class PuaseScript : MonoBehaviour {
     public GameObject Pause;
     public GameObject Help;
     public GameObject Options;
+    public GameObject KeyBindings;
     public bool paused = false;
 	System.DateTime time;
 	public float elapsedtime = 0;
@@ -27,7 +28,7 @@ public class PuaseScript : MonoBehaviour {
 		_bufferedInput -= elapsedtime;
 
 		if (_bufferedInput <= 0.0f) {
-			if (KeyManager.GetButtonDown ("Cancel"))// || Input.GetAxisRaw ("Submit") > 0) 
+			if (KeyManager.GetButtonDown ("Cancel") && Time.timeScale == 1.0)// || Input.GetAxisRaw ("Submit") > 0) 
 			{
 				if (!paused) {
 					Time.timeScale = 0.0f;
@@ -40,6 +41,7 @@ public class PuaseScript : MonoBehaviour {
 					Pause.SetActive (false);
 					Help.SetActive (false);
 					Options.SetActive (false);
+                    KeyBindings.SetActive(false);
 					paused = false;
 				}
 				_bufferedInput = _maxBufferedInput;
