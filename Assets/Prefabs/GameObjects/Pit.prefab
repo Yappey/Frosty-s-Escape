@@ -46,7 +46,7 @@ GameObject:
   - 4: {fileID: 436368}
   - 68: {fileID: 6822974}
   - 114: {fileID: 11432538}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: Pit Sound Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
