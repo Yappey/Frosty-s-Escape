@@ -1799,6 +1799,10 @@ Prefab:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 148594, guid: 8b8db5fa4f331974b9fea9d848d450be, type: 2}
+      propertyPath: m_TagString
+      value: Icepatch
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 25110628, guid: 8b8db5fa4f331974b9fea9d848d450be, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 8b8db5fa4f331974b9fea9d848d450be, type: 2}
@@ -6523,6 +6527,10 @@ Prefab:
     - target: {fileID: 6183526, guid: 8b8db5fa4f331974b9fea9d848d450be, type: 2}
       propertyPath: m_Material
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 148594, guid: 8b8db5fa4f331974b9fea9d848d450be, type: 2}
+      propertyPath: m_TagString
+      value: Icepatch
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 25110628, guid: 8b8db5fa4f331974b9fea9d848d450be, type: 2}

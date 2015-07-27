@@ -23,22 +23,17 @@ public class ElectricBox : BaseActivator {
     {
         if ( collide.gameObject.CompareTag("Snowball"))
         {
-			foreach (BaseReceiver receiver in receivers)
-			   {
-			       receiver.Process();
-			   }
 			if (state == 1) {
 				state = 0;
+
+				foreach (BaseReceiver receiver in receivers)
+				{
+					receiver.Process();
+				}
 
 				GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
 				sound.GetComponent<SoundEffectManager>().PlayElectricBoxSnd();
 			}
-
-			else {
-				state = 1;
-			}
         }
-
     }
-
 }
