@@ -80,7 +80,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132114}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -70.2900009, y: -18.3099995, z: 0}
+  m_LocalPosition: {x: -1.66975403, y: -3.35827637, z: -.0625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 459506}
@@ -95,7 +95,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 145058}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.36999989, y: -.317999989, z: 0}
+  m_LocalPosition: {x: 3.36999989, y: -1.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 408828}
@@ -119,7 +119,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 105102}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.56466675, y: -4.35300064, z: 0}
+  m_LocalPosition: {x: 5.07000017, y: -4.3499999, z: 0}
   m_LocalScale: {x: 1, y: 8.55845261, z: 1}
   m_Children: []
   m_Father: {fileID: 408828}
@@ -134,7 +134,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5367ee2cb786fd843ba8d4eca9281788, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -158,7 +158,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5367ee2cb786fd843ba8d4eca9281788, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -196,9 +196,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 3.29933167, y: -8.11833191}
+  m_Offset: {x: 3.02326202, y: -8.11833191}
   serializedVersion: 2
-  m_Size: {x: 5.27914047, y: .600070953}
+  m_Size: {x: 4.72697115, y: .600070953}
 --- !u!61 &6138372
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -251,7 +251,7 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
   - {x: -1.73632812, y: .00787353516}
-  - {x: 1.72844696, y: 0}
+  - {x: 1.48800945, y: .0149756968}
 --- !u!114 &11413752
 MonoBehaviour:
   m_ObjectHideFlags: 1
