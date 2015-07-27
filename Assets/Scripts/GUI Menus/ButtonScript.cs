@@ -181,4 +181,12 @@ public class ButtonScript : MonoBehaviour {
         }
         PlayerPrefs.SetInt("ActiveLevel", 1);
     }
+
+	public void LoadLevelClickMe(string levelName)
+	{
+		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
+		sound.GetComponent<SoundEffectManager>().PlayButtonClick();
+
+		LoadingScreenDelayed.Instance.LoadingLevels(levelName);
+	}
 }
