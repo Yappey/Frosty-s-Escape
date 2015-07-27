@@ -7,8 +7,6 @@ public class LaserTurret : BaseTurret {
     public GameObject Laser;
     protected Animator laserBlast;
 
-    protected bool charging = false;
-
 	// Use this for initialization
 	void Start () {
         BaseTurretStart();
@@ -23,13 +21,11 @@ public class LaserTurret : BaseTurret {
         //if (timer >= frequency)
         //{
         //    timer = 0.0f;
-        //    charging = true;
         //}
         //
         //
         //if (charging)
         //{
-        //    charging = false;
         //    FireLaser();
         //}
 	}
@@ -39,7 +35,6 @@ public class LaserTurret : BaseTurret {
         GameObject temp = Instantiate(Laser);
         temp.transform.position = transform.GetChild(0).position;
         temp.GetComponent<Laser>().velocity = -transform.right * projectileVelocity;
-        charging = false;
     }
 
     public override void ShootProjectile()
@@ -47,6 +42,6 @@ public class LaserTurret : BaseTurret {
         laserBlast.SetTrigger("Charge");
         Invoke("FireLaser", 0.16f);
 		GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
-		sound.GetComponent<SoundEffectManager>().PlayLaserTurretSnd(gameObject.transform.position);
+		sound.GetComponent<SoundEffectManager>().PlayNonLoopLaserTurretSnd(gameObject.transform.position);
     }
 }

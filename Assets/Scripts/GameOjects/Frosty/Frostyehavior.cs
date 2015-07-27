@@ -27,6 +27,7 @@ public class Frostyehavior : MonoBehaviour
     public bool torsoAttached;
     public bool baseAttached;
     public bool isNotWalking = true;
+    public bool cantReattach = false;
     public float animTimer = 1.0f;
 
     public GameObject snowballLauncher;
@@ -143,6 +144,7 @@ public class Frostyehavior : MonoBehaviour
 				}
 			}
 		}
+        
 	}
 
     // Activates the nearest Activator
@@ -205,6 +207,22 @@ public class Frostyehavior : MonoBehaviour
 
             GameObject sound = GameObject.FindGameObjectWithTag("SoundEffectManager");
             sound.GetComponent<SoundEffectManager>().PlaySnowballThrowSnd();
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "CantReattach")
+        {
+            cantReattach = true;   
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "CantReattach")
+        {
+            cantReattach = false;
         }
     }
 
