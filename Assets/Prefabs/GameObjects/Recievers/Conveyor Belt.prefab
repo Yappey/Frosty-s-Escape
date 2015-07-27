@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11490958}
   - 68: {fileID: 6874434}
   - 249: {fileID: 24980072}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: Conveyor Belt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 164964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -34.5099983, y: 29.1299992, z: -.129999995}
+  m_LocalPosition: {x: -157.789993, y: 10.0100002, z: -.129999995}
   m_LocalScale: {x: 6.7750001, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -87,7 +87,7 @@ EdgeCollider2D:
   m_Material: {fileID: 6200000, guid: 5f7bd2ab0637a1747b77db47f9aeeb6c, type: 2}
   m_IsTrigger: 1
   m_UsedByEffector: 1
-  m_Offset: {x: 0, y: .5}
+  m_Offset: {x: 0, y: .550000012}
   m_Points:
   - {x: -.506056905, y: .000102996826}
   - {x: .506180763, y: 0}
