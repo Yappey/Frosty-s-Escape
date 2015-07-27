@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21280454}
   - 61: {fileID: 6133638}
   - 114: {fileID: 11444582}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: MovingPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}

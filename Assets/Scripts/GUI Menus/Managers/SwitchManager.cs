@@ -46,7 +46,7 @@ public class SwitchManager : MonoBehaviour
 
         CheckpointManager.Instance.Clear();
 
-
+		Time.timeScale = 1.0f;
     }
 
     // Update is called once per frame
@@ -91,7 +91,7 @@ public class SwitchManager : MonoBehaviour
                         buttonTimer = buttonTimerMax;
                     }
                 }
-                if (/*Input*/KeyManager.GetButtonDown("Attach"))// || Input.GetAxisRaw("ControllerAttach") > 0.1f)
+                if (/*Input*/KeyManager.GetButtonDown("Attach") && Active.GetComponent<Frostyehavior>().cantReattach == false)// || Input.GetAxisRaw("ControllerAttach") > 0.1f)
                 {
                     if (HeadSelected)
                     {

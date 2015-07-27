@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21245162}
   - 61: {fileID: 6155242}
   - 114: {fileID: 11468322}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: Icepatch
   m_TagString: Icepatch
   m_Icon: {fileID: 0}

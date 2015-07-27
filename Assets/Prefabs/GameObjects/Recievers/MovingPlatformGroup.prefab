@@ -44,7 +44,7 @@ GameObject:
   - 212: {fileID: 21226550}
   - 61: {fileID: 6129872}
   - 114: {fileID: 11484090}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: MovingPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 489866}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: MovingPlatformGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
