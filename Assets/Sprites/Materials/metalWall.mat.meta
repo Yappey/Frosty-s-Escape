@@ -1,9 +1,7 @@
 fileFormatVersion: 2
-guid: 6a2e3ddc68940c74cb11fb973af7fa5f
-labels:
-- Concrete
-- Industrial
-- Pattern
+guid: 5367ee2cb786fd843ba8d4eca9281788
+timeCreated: 1438009286
+licenseType: Free
 NativeFormatImporter:
   userData: 
   assetBundleName: 
