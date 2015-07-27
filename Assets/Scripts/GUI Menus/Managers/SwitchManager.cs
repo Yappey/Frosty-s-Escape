@@ -46,7 +46,7 @@ public class SwitchManager : MonoBehaviour
 
         CheckpointManager.Instance.Clear();
 
-
+		Time.timeScale = 1.0f;
     }
 
     // Update is called once per frame
