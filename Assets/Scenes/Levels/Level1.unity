@@ -3548,6 +3548,10 @@ Prefab:
       propertyPath: receivers.Array.data[0]
       value: 
       objectReference: {fileID: 1747017288}
+    - target: {fileID: 11470102, guid: d7294442931eba34893c99663969e891, type: 2}
+      propertyPath: state
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7294442931eba34893c99663969e891, type: 2}
   m_IsPrefabParent: 0
