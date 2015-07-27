@@ -91,7 +91,7 @@ public class SwitchManager : MonoBehaviour
                         buttonTimer = buttonTimerMax;
                     }
                 }
-                if (/*Input*/KeyManager.GetButtonDown("Attach"))// || Input.GetAxisRaw("ControllerAttach") > 0.1f)
+                if (/*Input*/KeyManager.GetButtonDown("Attach") && Active.GetComponent<Frostyehavior>().cantReattach == false)// || Input.GetAxisRaw("ControllerAttach") > 0.1f)
                 {
                     if (HeadSelected)
                     {
