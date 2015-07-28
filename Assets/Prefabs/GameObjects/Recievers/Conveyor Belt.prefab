@@ -8,12 +8,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 437740}
-  - 33: {fileID: 3351390}
-  - 23: {fileID: 2303928}
   - 61: {fileID: 6173040}
   - 114: {fileID: 11490958}
   - 68: {fileID: 6874434}
   - 249: {fileID: 24980072}
+  - 212: {fileID: 21265470}
   m_Layer: 21
   m_Name: Conveyor Belt
   m_TagString: Untagged
@@ -28,42 +27,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 164964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -157.789993, y: 10.0100002, z: -.129999995}
-  m_LocalScale: {x: 6.7750001, y: 1, z: 1}
+  m_LocalPosition: {x: -110.709999, y: -60.8699989, z: -.129999995}
+  m_LocalScale: {x: 9.04390049, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!23 &2303928
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 164964}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 8abfee995b582654aae538e449eb7204, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!33 &3351390
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 164964}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!61 &6173040
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -76,7 +44,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.25, y: .360000014}
 --- !u!68 &6874434
 EdgeCollider2D:
   m_ObjectHideFlags: 1
@@ -87,10 +55,10 @@ EdgeCollider2D:
   m_Material: {fileID: 6200000, guid: 5f7bd2ab0637a1747b77db47f9aeeb6c, type: 2}
   m_IsTrigger: 1
   m_UsedByEffector: 1
-  m_Offset: {x: 0, y: .550000012}
+  m_Offset: {x: 0, y: .200000003}
   m_Points:
-  - {x: -.506056905, y: .000102996826}
-  - {x: .506180763, y: 0}
+  - {x: -.627867103, y: -.0151982605}
+  - {x: .617839277, y: -.0153012574}
 --- !u!114 &11490958
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -104,9 +72,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   speeds:
-  - 10
-  - 0
-  - -10
+  - 1
+--- !u!212 &21265470
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164964}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 1dd379ace63ff5c4c87807a95063da1c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!249 &24980072
 AreaEffector2D:
   serializedVersion: 2
