@@ -8,7 +8,9 @@ public class MainMenuScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+        PlayerPrefs.SetFloat("Master", PlayerPrefs.GetFloat("Master", 1));
+        PlayerPrefs.SetFloat("SoundEffects", PlayerPrefs.GetFloat("SoundEffects", 1));
+        PlayerPrefs.SetFloat("Music", PlayerPrefs.GetFloat("Music", 1));
 	}
 	
 	// Update is called once per frame
