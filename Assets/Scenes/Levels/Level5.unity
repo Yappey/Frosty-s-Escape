@@ -433,6 +433,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 437740, guid: b5915d83519fb9649be059add8bbd6f5, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 6.28999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490958, guid: b5915d83519fb9649be059add8bbd6f5, type: 2}
+      propertyPath: speeds.Array.data[0]
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b5915d83519fb9649be059add8bbd6f5, type: 2}
   m_IsPrefabParent: 0
@@ -1044,6 +1052,14 @@ Prefab:
       propertyPath: m_Name
       value: Conveyor Belt 2
       objectReference: {fileID: 0}
+    - target: {fileID: 437740, guid: b5915d83519fb9649be059add8bbd6f5, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 6.28999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490958, guid: b5915d83519fb9649be059add8bbd6f5, type: 2}
+      propertyPath: speeds.Array.data[0]
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b5915d83519fb9649be059add8bbd6f5, type: 2}
   m_IsPrefabParent: 0
@@ -1252,15 +1268,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 437740, guid: b5915d83519fb9649be059add8bbd6f5, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -25.6359787
+      value: -26.2099991
       objectReference: {fileID: 0}
     - target: {fileID: 437740, guid: b5915d83519fb9649be059add8bbd6f5, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 12.6609182
+      value: 12.6599998
       objectReference: {fileID: 0}
     - target: {fileID: 437740, guid: b5915d83519fb9649be059add8bbd6f5, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 4.74499989
+      value: 4.73999977
       objectReference: {fileID: 0}
     - target: {fileID: 437740, guid: b5915d83519fb9649be059add8bbd6f5, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1285,6 +1301,14 @@ Prefab:
     - target: {fileID: 164964, guid: b5915d83519fb9649be059add8bbd6f5, type: 2}
       propertyPath: m_Name
       value: Conveyor Belt 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 437740, guid: b5915d83519fb9649be059add8bbd6f5, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 6.28999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490958, guid: b5915d83519fb9649be059add8bbd6f5, type: 2}
+      propertyPath: speeds.Array.data[0]
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b5915d83519fb9649be059add8bbd6f5, type: 2}
@@ -2578,15 +2602,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 437740, guid: b5915d83519fb9649be059add8bbd6f5, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -25.6359787
+      value: -26.3500004
       objectReference: {fileID: 0}
     - target: {fileID: 437740, guid: b5915d83519fb9649be059add8bbd6f5, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 17.8909187
+      value: 17.8899994
       objectReference: {fileID: 0}
     - target: {fileID: 437740, guid: b5915d83519fb9649be059add8bbd6f5, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 4.74499989
+      value: 4.73999977
       objectReference: {fileID: 0}
     - target: {fileID: 437740, guid: b5915d83519fb9649be059add8bbd6f5, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2611,6 +2635,14 @@ Prefab:
     - target: {fileID: 164964, guid: b5915d83519fb9649be059add8bbd6f5, type: 2}
       propertyPath: m_Name
       value: Conveyor Belt 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 437740, guid: b5915d83519fb9649be059add8bbd6f5, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 6.28999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490958, guid: b5915d83519fb9649be059add8bbd6f5, type: 2}
+      propertyPath: speeds.Array.data[0]
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b5915d83519fb9649be059add8bbd6f5, type: 2}
