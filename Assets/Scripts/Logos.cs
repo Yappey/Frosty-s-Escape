@@ -20,6 +20,7 @@ public class Logos : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		Time.timeScale = 1.0f;
 		timer += Time.deltaTime;
 		gametime += Time.deltaTime;
 		//click.GetComponent<UnityEngine.UI.Image>().color -= new Color(0, 0, 0,  Time.deltaTime);
