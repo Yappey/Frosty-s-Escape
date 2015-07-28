@@ -6,6 +6,7 @@ public class Laser : MonoBehaviour {
 
     public Vector3 velocity;
 	public float bounce = 1.0f;
+	public GameObject pivot;
 
 	// Use this for initialization
 	void Start () {
@@ -26,6 +27,7 @@ public class Laser : MonoBehaviour {
         {
             velocity = Vector3.Reflect(velocity, coll.contacts[0].normal);
             transform.right = velocity.normalized;
+			transform.position = new Vector3 (coll.contacts[0].point.x, coll.contacts[0].point.y, transform.position.y) - (transform.position - pivot.transform.position);
 			velocity *= bounce;
         }
         else

@@ -3,6 +3,8 @@ using System.Collections;
 
 public class SwitchManager : MonoBehaviour
 {
+	private const float HeadToTorsoDistance = 1.0f;
+	private const float TorsoToBaseDistance = 1.15f;
 
     public bool HeadSelected;
     public bool TorsoSelected;
@@ -650,6 +652,13 @@ public class SwitchManager : MonoBehaviour
         Active = Base;
     }
 
+	private Vector3 GetWallPosition(float range, Transform trans)
+	{
+		Vector3 rtn;
+		RaycastHit2D hit = Physics2D.Raycast(trans.position, trans.right, range);
+		rtn = hit.point;
 
+		return rtn;
+	}
 }
 
