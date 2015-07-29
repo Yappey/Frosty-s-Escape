@@ -71,8 +71,8 @@ MonoBehaviour:
     neg: 0
     altPos: 0
     altNeg: 0
-    defPos: 275
-    defNeg: 276
+    defPos: 276
+    defNeg: 275
     defAltPos: 97
     defAltNeg: 100
     sPos: 

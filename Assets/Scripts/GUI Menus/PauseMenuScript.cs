@@ -66,7 +66,8 @@ public class PauseMenuScript : MonoBehaviour {
         if (levelnum >= 12)
             LoadingScreenDelayed.Instance.LoadingLevels("Credits");
         Application.LoadLevel(Application.loadedLevel + 1);
-        gameObject.GetComponent<Animator>().StopPlayback();
+		if (gameObject.GetComponent<Animator>() != null)
+			gameObject.GetComponent<Animator>().StopPlayback();
     }
 
 }

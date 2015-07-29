@@ -121,7 +121,7 @@ public class ButtonScript : MonoBehaviour {
             LoadingScreenDelayed.Instance.LoadingLevels("Level1");
         if (PlayerPrefs.GetInt("ActiveLevel") > numlevels)
             LoadingScreenDelayed.Instance.LoadingLevels("Level1");
-        LoadingScreenDelayed.Instance.LoadingLevels(PlayerPrefs.GetInt("ActiveLevel") + 4);
+        LoadingScreenDelayed.Instance.LoadingLevels(PlayerPrefs.GetInt("ActiveLevel") + 5);
         //Application.LoadLevel(PlayerPrefs.GetInt("ActiveLevel") + 4);
     }
 

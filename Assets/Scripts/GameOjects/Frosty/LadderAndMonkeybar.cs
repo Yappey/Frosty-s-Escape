@@ -38,8 +38,7 @@ public class LadderAndMonkeybar : MonoBehaviour
                 GetComponent<Rigidbody2D>().velocity = new Vector3(GetComponent<Rigidbody2D>().velocity.x, 0);
             }
         }
-
-        if (_bMonkeyBar)
+		else if (_bMonkeyBar)
         {
             gameObject.GetComponent<Animator>().SetBool("Active", true);
             if (GetComponent<Frostyehavior>().isActive)

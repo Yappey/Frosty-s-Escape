@@ -7616,11 +7616,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22495896, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22495896, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: .199999988
       objectReference: {fileID: 0}
     - target: {fileID: 22451628, guid: cfcc9f79efb781740880e1d2c80c4d77, type: 2}
       propertyPath: m_AnchorMax.x
