@@ -3,6 +3,9 @@ using System.Collections;
 
 public class SwitchManager : MonoBehaviour
 {
+	private const float HeadToTorsoDistance = 1.0f;
+	private const float TorsoToBaseDistance = 1.15f;
+	private const float DetachTime = 0.63f;
 
     public bool HeadSelected;
     public bool TorsoSelected;
@@ -25,12 +28,14 @@ public class SwitchManager : MonoBehaviour
     public GameObject Base;
     public GameObject Active;
 
-    public int test1 = 0;
-    public int test2 = 0;
+	public LayerMask detachRaycastMask;
+
+    private int test1 = 0;
+    private int test2 = 0;
 
 
     //test ints
-    public int test = 0;
+    private int test = 0;
 
     //Animation
 
@@ -168,6 +173,7 @@ public class SwitchManager : MonoBehaviour
                 if (grounded)
                     Head.GetComponent<Animator>().SetTrigger("HeadTorsoDetach");
             }
+			PostDetachHead();
             Active = Head;
         }
     }
@@ -199,6 +205,7 @@ public class SwitchManager : MonoBehaviour
                 Torso.transform.localScale = scale;
                 if (grounded)
                     Torso.GetComponent<Animator>().SetTrigger("HeadTorsoBaseDetach");
+				PostDetachTorso(true, true);
             }
             else if (Active.GetComponent<Frostyehavior>().headAttached)
             {
@@ -210,10 +217,11 @@ public class SwitchManager : MonoBehaviour
                 Head.transform.localScale = scale;
                 Torso.transform.localScale = scale;
                 if (grounded)
-                    Torso.GetComponent<Animator>().SetTrigger("HeadTorsoDetach");
-
-            }
-            else
+					Torso.GetComponent<Animator>().SetTrigger("HeadTorsoDetach");
+				PostDetachTorso(true, false);
+				
+			}
+			else
             {
                 Vector3 scale = Base.transform.localScale;
                 Destroy(Base);
@@ -223,9 +231,10 @@ public class SwitchManager : MonoBehaviour
                 Base.transform.localScale = scale;
                 Torso.transform.localScale = scale;
                 if (grounded)
-                    Torso.GetComponent<Animator>().SetTrigger("TorsoBaseDetach");
-            }
-            Active = Torso;
+					Torso.GetComponent<Animator>().SetTrigger("TorsoBaseDetach");
+				PostDetachTorso(false, true);
+			}
+			Active = Torso;
         }
     }
 
@@ -264,6 +273,7 @@ public class SwitchManager : MonoBehaviour
                 if (grounded)
                     Base.GetComponent<Animator>().SetTrigger("TorsoBaseDetach");
             }
+			PostDetachBase();
             Active = Base;
         }
     }
@@ -648,8 +658,95 @@ public class SwitchManager : MonoBehaviour
         Active.GetComponent<Frostyehavior>().isActive = false;
         Base.GetComponent<Frostyehavior>().isActive = true;
         Active = Base;
-    }
+	}
 
+	private void LockOn(GameObject parent, GameObject child)
+	{
+		child.transform.SetParent(parent.transform);
+		//child.GetComponent<Rigidbody2D>().isKinematic = true;
+	}
 
+	private void LockOff(GameObject parent, GameObject child)
+	{
+		child.transform.SetParent(parent.transform.parent);
+		//child.GetComponent<Rigidbody2D>().isKinematic = false;
+		//child.GetComponent<Rigidbody2D>().velocity = parent.GetComponent<Rigidbody2D>().velocity;
+	}
+	
+	private void PostDetachHead()
+	{
+		LockOn (Head, Torso);
+		Invoke("InvDetachHead", 0.63f);
+	}
+	
+	private void PostDetachTorso(bool detachedHead, bool detachedBase)
+	{
+		if (detachedHead)
+		{
+			LockOn (Torso, Head);
+		}
+		if (detachedBase)
+		{
+			LockOn (Torso, Base);
+		}
+
+		if (detachedHead && detachedBase)
+			Invoke("InvDetachTorsoHB", DetachTime);
+		else if (detachedHead)
+			Invoke("InvDetachTorsoH", DetachTime);
+		else if (detachedBase)
+			Invoke("InvDetachTorsoB", DetachTime);
+	}
+
+	private void PostDetachBase()
+	{
+		LockOn (Base, Torso);
+		Invoke("InvDetachBase", 0.68f);
+	}
+	
+	private void InvDetachHead()
+	{
+		LockOff(Head, Torso);
+		Head.transform.position = GetWallPosition(HeadToTorsoDistance, Torso.transform);
+
+	}
+	
+	private void InvDetachTorsoH()
+	{
+		LockOff(Torso, Head);
+		Head.transform.position = GetWallPosition(HeadToTorsoDistance, Torso.transform);
+	}
+	
+	private void InvDetachTorsoHB()
+	{
+		LockOff(Torso, Head);
+		LockOff(Torso, Base);
+		Torso.transform.position = GetWallPosition(TorsoToBaseDistance, Base.transform);
+		Head.transform.position = GetWallPosition(HeadToTorsoDistance, Torso.transform);
+	}
+	
+	private void InvDetachTorsoB()
+	{
+		LockOff(Torso, Base);
+		Torso.transform.position = GetWallPosition(TorsoToBaseDistance, Base.transform);
+	}
+	
+	private void InvDetachBase()
+	{
+		LockOff (Base, Torso);
+		Torso.transform.position = GetWallPosition(TorsoToBaseDistance, Base.transform);
+	}
+
+	private Vector3 GetWallPosition(float range, Transform trans)
+	{
+		Vector3 rtn;
+		RaycastHit2D hit = Physics2D.Raycast(trans.position, trans.right, range, detachRaycastMask);
+		if (hit.collider != null)
+			rtn = new Vector3(hit.point.x, hit.point.y, trans.position.z);
+		else
+			rtn = trans.position + trans.right * range * trans.localScale.x;
+
+		return rtn;
+	}
 }
 

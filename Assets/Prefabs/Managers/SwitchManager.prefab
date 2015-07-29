@@ -53,9 +53,9 @@ MonoBehaviour:
   Torso: {fileID: 0}
   PPtr<Object>: {fileID: 0}
   Active: {fileID: 0}
-  test1: 0
-  test2: 0
-  test: 0
+  detachRaycastMask:
+    serializedVersion: 2
+    m_Bits: 4290430152
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
