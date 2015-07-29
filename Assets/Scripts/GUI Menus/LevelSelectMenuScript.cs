@@ -14,7 +14,7 @@ public class LevelSelectMenuScript : MonoBehaviour {
         //if(!PlayerPrefs.HasKey("ActiveLevel"))
         //{
         //    PlayerPrefs.SetInt("ActiveLevvel", 1);
-		PlayerPrefs.SetInt ("ActiveLevvel", PlayerPrefs.GetInt("ActiveLevvel", 1));
+		PlayerPrefs.SetInt ("ActiveLevel", PlayerPrefs.GetInt("ActiveLevel", 1));
         //}
         //if (!PlayerPrefs.HasKey("Master"))
         //{
